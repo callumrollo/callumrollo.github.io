@@ -7,7 +7,7 @@ SITENAME = 'Callum Rollo'
 SITETITLE = AUTHOR
 SITESUBTITLE = 'Oceanographer'
 SITEDESCRIPTION = "Science should be open. Software should be free. Borders are kind of rubbish "
-SITEURL = 'https://callumrollo.github.io/'
+SITEURL = ''
 SITELOGO = SITEURL + '/images/mug.jpg'
 FAVICON = SITEURL + '/images/favicon.ico'
 

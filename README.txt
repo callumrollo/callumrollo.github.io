@@ -1,3 +1,7 @@
 callumrollo serve with 
 
-make devserver
+make github
+
+test with
+
+make html && make serve
