@@ -1,0 +1,9 @@
+name: web-dev0
+channels:
+        - conda-forge
+dependencies:
+       - pelican
+       - markdown
+       - typogrify
+       - ghp-import
+
