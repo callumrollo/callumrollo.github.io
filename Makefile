@@ -8,6 +8,8 @@ OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
+GITHUB_PAGES_BRANCH=source
+
 
 DEBUG ?= 0
 ifeq ($(DEBUG), 1)
@@ -32,6 +34,7 @@ help:
 	@echo '   make devserver [PORT=8000]          serve and regenerate together      '
 	@echo '   make ssh_upload                     upload the web site via SSH        '
 	@echo '   make rsync_upload                   upload the web site via rsync+ssh  '
+	@echo '   make github                         upload the web site via gh-pages   '
 	@echo '                                                                          '
 	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html   '
 	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
@@ -71,5 +74,9 @@ endif
 publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
+github: publish
+	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
+	git push origin $(GITHUB_PAGES_BRANCH)
 
-.PHONY: html help clean regenerate serve serve-global devserver stopserver publish 
+
+.PHONY: html help clean regenerate serve serve-global devserver publish github
