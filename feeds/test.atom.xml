@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Callum Rollo - Test</title><link href="/" rel="alternate"></link><link href="/feeds/test.atom.xml" rel="self"></link><id>/</id><updated>2032-12-05T19:30:00+00:00</updated><subtitle>Oceanographer</subtitle><entry><title>Testing one two</title><link href="/my-super-post.html" rel="alternate"></link><published>2032-12-03T10:20:00+00:00</published><updated>2032-12-05T19:30:00+00:00</updated><author><name>Callum Rollo</name></author><id>tag:None,2032-12-03:/my-super-post.html</id><summary type="html">&lt;p&gt;Testing the post making feature&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is acieved by&lt;/p&gt;
-&lt;p&gt;posting an image&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Pelican" src="/moi.png"&gt;&lt;/p&gt;
-&lt;p&gt;And some text&lt;/p&gt;</content><category term="Test"></category><category term="pelican"></category><category term="publishing"></category></entry></feed>
