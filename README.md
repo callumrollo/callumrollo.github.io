@@ -1,4 +1,6 @@
-##Steps to making this github pages site:
+repo for the website https://callumrollo.github.io/
+
+## Steps to making this github pages site:
 
 - Install and activate the environment in the yaml file
 - Create core files with `pelican-quickstart`, including YES to github pages
