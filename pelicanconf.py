@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from datetime import datetime
 
 AUTHOR = 'Callum Rollo'
-SITEURL = 'https://callumrollo.github.io'
+SITEURL = 'https://callumrollo.github.io/'
 SITENAME = 'Callum Rollo'
 SITETITLE = 'Callum Rollo'
 SITESUBTITLE = 'Oceanographer'
@@ -32,7 +32,7 @@ AUTHOR_FEED_RSS = None
 
 USE_FOLDER_AS_CATEGORY = False
 MAIN_MENU = True
-HOME_HIDE_TAGS = True
+HOME_HIDE_TAGS = False
 
 SOCIAL = (
 	('twitter', 	'https://twitter.com/callum_rollo'),
@@ -54,9 +54,6 @@ DEFAULT_PAGINATION = 10
 
 
 STATIC_PATHS = ['images', 'figures']
-RELATIVE_URLS = True
-
-Port = 8888
 
 
 
