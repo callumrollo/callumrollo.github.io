@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Callum Rollo - Test</title><link href="https://callumrollo.github.io/" rel="alternate"></link><link href="https://callumrollo.github.io/feeds/test.atom.xml" rel="self"></link><id>https://callumrollo.github.io/</id><updated>2020-06-16T10:20:00+01:00</updated><subtitle>Oceanographer in training</subtitle><entry><title>Steal this website</title><link href="https://callumrollo.github.io/howto.html" rel="alternate"></link><published>2020-06-16T10:20:00+01:00</published><updated>2020-06-16T10:20:00+01:00</updated><author><name>Callum Rollo</name></author><id>tag:callumrollo.github.io,2020-06-16:/howto.html</id><summary type="html">&lt;p&gt;How to build this website&lt;/p&gt;</summary><content type="html">&lt;p&gt;You may look at this content-poor, lazily formatted website and think "wow, I want one of those!". I so, I have good news for you. The steps to build this website are laid out in the &lt;a href="https://github.com/callumrollo/callumrollo.github.io"&gt;github repo&lt;/a&gt;.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Callum Rollo - Test</title><link href="https://callumrollo.github.io/" rel="alternate"></link><link href="https://callumrollo.github.io/feeds/test.atom.xml" rel="self"></link><id>https://callumrollo.github.io/</id><updated>2020-06-16T10:20:00+01:00</updated><subtitle>Oceanographer in training</subtitle><entry><title>Steal this website</title><link href="https://callumrollo.github.io/howto.html" rel="alternate"></link><published>2020-06-16T10:20:00+01:00</published><updated>2020-06-16T10:20:00+01:00</updated><author><name>Callum Rollo</name></author><id>tag:callumrollo.github.io,2020-06-16:/howto.html</id><summary type="html">&lt;p&gt;How to build this website&lt;/p&gt;</summary><content type="html">&lt;p&gt;You may look at this content-poor, lazily formatted website and think "wow, I want one of those!". If so, I have good news for you. The steps to build this website are laid out in the &lt;a href="https://github.com/callumrollo/callumrollo.github.io"&gt;github repo&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Very little programming expertise is required. As long as you are comfortable creating a &lt;a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html"&gt;conda environment&lt;/a&gt; and a &lt;a href="https://help.github.com/en/enterprise/2.14/user/articles/create-a-repo"&gt;GitHub repository&lt;/a&gt;, the rest is ludicrously simple. &lt;/p&gt;
 &lt;p&gt;I spent an excessive amount of time looking for academic sites to emulate/shamelessly copy before making this one. There are some great sites out there that provide all their source code online. I highly recommend finding one you like; imitation is, after all, the highest form of flattery. Here are some samples:&lt;/p&gt;
 &lt;table&gt;
@@ -21,6 +21,10 @@
 &lt;tr&gt;
 &lt;td&gt;&lt;a href="https://kieranhealy.org/"&gt;Kieran Healy&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;a href="https://github.com/kjhealy/kieranhealy.hugo/"&gt;source&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://alxd.org/pages/about.html#about"&gt;Pawel Ngei&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="https://github.com/pawelngei/alxd.org"&gt;source&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</content><category term="Test"></category><category term="pelican"></category><category term="publishing"></category><category term="academia"></category></entry></feed>
