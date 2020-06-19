@@ -33,3 +33,18 @@ Integrated Master of Science (MSci) geophysics with study abroad First class, Un
 
 Thesis title: Approximating 3D seismic velocities under Sumatra using ambient noise tomography. 
 Supervisor: Dr Nicholas Harmon
+
+## Contact me
+
+Public key
+
+`D089 31A4 EDAF 1F2F E4DB  0687 2B49 3F69 048F 1A24`
+	
+expires: 2022-06-19
+
+[download key](../images/mykey.asc)
+
+#### what is that?
+A secure way to contact me, assuming you trust that I have control of this website. You can use [Public key cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography) to securely exchange information with me over any text communication channel; be that email, SMS or notes pushed under a door. I personally use [GNU Privacy Guard](https://en.wikipedia.org/wiki/GNU_Privacy_Guard).
+
+If you have my phone number, please contact me using [Signal](https://www.signal.org/).
