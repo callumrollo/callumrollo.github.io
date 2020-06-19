@@ -4,10 +4,12 @@ from __future__ import unicode_literals
 from datetime import datetime
 
 AUTHOR = 'Callum Rollo'
-SITEURL = 'https://callumrollo.github.io/'
+SITEURL = 'https://callumrollo.github.io'
+DOMAIN = SITEURL
+FEED_DOMAIN = SITEURL
 SITENAME = 'Callum Rollo'
 SITETITLE = 'Callum Rollo'
-SITESUBTITLE = 'Oceanographer'
+SITESUBTITLE = 'Oceanographer in training'
 SITEDESCRIPTION = "Science should be open. Software should be free. Borders are kind of rubbish "
 SITELOGO = SITEURL + '/images/mug.jpg'
 FAVICON = SITEURL + '/images/favicon.ico'
