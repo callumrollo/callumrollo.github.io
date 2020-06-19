@@ -54,6 +54,9 @@ DEFAULT_PAGINATION = 10
 
 
 STATIC_PATHS = ['images', 'figures']
+RELATIVE_URLS = True
+
+Port = 8888
 
 
 
