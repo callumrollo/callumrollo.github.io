@@ -12,6 +12,10 @@ I am an amateur pythonista, leader of [UEA python](https://ueapy.github.io/) and
 
 [download pdf](../images/callumrollo-cv-2020-short.pdf)
 
+### Publications
+
+2020 [Glider Observations of the Northwestern Iberian Margin During an Exceptional Summer Upwelling Season](https://doi.org/10.1029/2019JC015804)
+
 ## Career
 **2017- present** Postgraduate Researcher UEA 
 
@@ -27,7 +31,7 @@ I am an amateur pythonista, leader of [UEA python](https://ueapy.github.io/) and
 
 [Dr. Alex Phillips](https://www.noc.ac.uk/people/abp)
 
-## Academic background
+### Academic background
 
 Integrated Master of Science (MSci) geophysics with study abroad First class, University of Southampton, UK. Included a year studying at Utrecht University, Netherlands under the Erasmus program
 
@@ -48,3 +52,11 @@ expires: 2022-06-19
 A secure way to contact me, assuming you trust that I have control of this website. You can use [Public key cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography) to securely exchange information with me over any text communication channel; be that email, SMS or notes pushed under a door. I personally use [GNU Privacy Guard](https://en.wikipedia.org/wiki/GNU_Privacy_Guard).
 
 If you have my phone number, please contact me using [Signal](https://www.signal.org/).
+
+Various internet presences:
+
+- [university web page](https://people.uea.ac.uk/c_rollo)
+- [github](https://github.com/callumrollo)
+- [twitter](https://twitter.com/callum_rollo)
+- [stack overflow](https://stackoverflow.com/users/13208790/bystander)
+- [ORDID](https://orcid.org/0000-0002-5134-7886)
