@@ -4,9 +4,11 @@ Category: Generic
 Slug: aboutme
 Summary: All about me
 
-I work with marine gliders, specifically the integration on Acoustic Doppler Current Profilers (ADCPs) onto gliders to directly measure currents in the ocean. The specific glider I work with is SG637 "Omura" equipped with a 1MHz ADCP. Data and live location information from this glider and others in the UEA glider fleet is available on the [UEA glider website](ueaglider.uea.ac.uk/). I am open to collaborations in physical oceanography. Especially projects involving ADCPs on autonomous platforms, shelf break processes and open source science initiatives.
+I work with marine gliders, specifically the integration on Acoustic Doppler Current Profilers (ADCPs) onto gliders to directly measure currents in the ocean. The specific glider I work with is SG637 "Omura" equipped with a 1MHz ADCP.
 
-I am an amateur pythonista, leader of [UEA python](https://ueapy.github.io/) and proponent of free software for science. Several of my projects are available on my [github](https://github.com/callumrollo). 
+Data and live location information from this glider, and others in the fleet, is available on the [UEA glider website](ueaglider.uea.ac.uk/). I am open to collaborations in physical oceanography. Especially projects involving ADCPs on autonomous platforms, shelf break processes and open source science initiatives.
+
+I am an amateur Pythonista, leader of [UEA python](https://ueapy.github.io/) and proponent of free software for science. Several of my projects are available on my [github](https://github.com/callumrollo). 
 
 ### Curriculum Vitae
 
@@ -16,7 +18,9 @@ I am an amateur pythonista, leader of [UEA python](https://ueapy.github.io/) and
 
 2020 [Glider Observations of the Northwestern Iberian Margin During an Exceptional Summer Upwelling Season](https://doi.org/10.1029/2019JC015804)
 
-To request a copy of any publications, please email me
+My [ORCID](https://orcid.org/0000-0002-5134-7886) profile is usually more up to date.
+
+To request a copy of any publications, please email me.
 
 ### Career
 **2017- present** Postgraduate Researcher UEA 
@@ -65,16 +69,20 @@ If you have my phone number, please contact me using [Signal](https://www.signal
 
 ### Things I enjoy talking about
 
-With varying levels of competence but a universal enthusiasm
+With varying levels of competence but a universal level of enthusiasm
 
-- Ocean currents
+- Ocean slope currents
+- Cross shelf exchange
 - Standardisation of data processing
 - FOSS in the geosciences
 - The pros/cons of preprints and open peer review
+- Making maps and the relative benefits of various [projections](https://xkcd.com/977/)
 - Perceptually uniform colourmaps
 - Learning languages (human and programming)
-- Climate change
+- Climate breakdown
+- Heterodox economics 
 - Rewilding as a method of environmental and social regeneration
 - Traditional forest management
-- Math rock, Irish/Scottish folk, UK hop-hop, music in general
+- Infosec, cryptography, online security, and why you shouldn't blindly follow [links](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+- Math rock, Irish/Scottish folk, UK hip-hop, music in general
 - Trail cameras for wildlife observation
