@@ -61,4 +61,4 @@ Various internet presences:
 - [github](https://github.com/callumrollo)
 - [twitter](https://twitter.com/callum_rollo)
 - [stack overflow](https://stackoverflow.com/users/13208790/bystander)
-- [ORDID](https://orcid.org/0000-0002-5134-7886)
+- [ORCID](https://orcid.org/0000-0002-5134-7886)

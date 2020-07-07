@@ -30,11 +30,14 @@ Summary: The tools I use
 - Perceptually uniform colourmaps by
 	- [Kristen Thyng (cmococean)](https://matplotlib.org/cmocean/) for oceanographic data
 	- [Fabio Crameri (cmcrameri)](http://www.fabiocrameri.ch/colourmaps.php) for more general geophysical data
-I maintain cmcrameri as a Python package on [PyPi](https://pypi.org/project/cmcrameri/) and [conda-forge](https://github.com/conda-forge/cmcrameri-feedstock) 
-
+	
 ### Graphics
 - [Inkscape](https://inkscape.org/)
 - [GIMP](https://www.gimp.org/)
+
+### Tools I have contributed to
+- I maintain Fabio Crameri's colourmaps as a Python package on [PyPi](https://pypi.org/project/cmcrameri/) and [conda-forge](https://github.com/conda-forge/cmcrameri-feedstock) 
+- A Python program to generate geotiffs from EMODnet, GEBCO or user supplied bathymetry <https://github.com/callumrollo/geotiff-generator>
 
 ### Miscellaneous
 - [Clementine](https://www.clementine-player.org/) is my preferred music player
