@@ -16,6 +16,8 @@ I am an amateur pythonista, leader of [UEA python](https://ueapy.github.io/) and
 
 2020 [Glider Observations of the Northwestern Iberian Margin During an Exceptional Summer Upwelling Season](https://doi.org/10.1029/2019JC015804)
 
+To request a copy of any publications, please email me
+
 ## Career
 **2017- present** Postgraduate Researcher UEA 
 
