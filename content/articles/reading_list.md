@@ -25,6 +25,10 @@ Georgo Monbiot - [Honourable theft (on sci-hub)](https://www.monbiot.com/2018/09
 
 Jonathan P Tennant - [Time to stop the exploitation of free academic labour](https://ese.arphahub.com/article/51839/download/pdf/428643)
 
+### Work
+
+Tim Barry - [just too efficient](https://www.tbray.org/ongoing/When/202x/2020/07/05/Too-Efficient)
+
 
 ### Rewilding
 George Monbiot - [Rewilding Manifesto](https://www.monbiot.com/2013/05/27/a-manifesto-for-rewilding-the-world/)
