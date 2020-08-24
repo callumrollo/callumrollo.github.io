@@ -8,11 +8,15 @@ Summary: What I'm reading
 
 ## Articles
 
-### Academic
+### Oeanography
 
 Erik M. Bruvik, Ilker Fer, Kjetil Våge, and Peter M. Haugan - [A revised ocean glider concept to realize Stommel’s vision and supplement Argo floats](https://os.copernicus.org/articles/16/291/2020/os-16-291-2020.pdf)
 
 Fabio Crameri - [The Rainbow Colour Map (repeatedly) considered harmful](https://blogs.egu.eu/divisions/gd/2017/08/23/the-rainbow-colour-map/)
+
+Joseph Gum - [Resproducible Science](https://github.com/asx-/reproducible-science/blob/master/reproducible_science.pdf)
+
+Ocean best practices - [EGO netCDF version 1.3 glider data standardised format](https://repository.oceanbestpractices.org/handle/11329/1253)
 
 ### Climate
 
