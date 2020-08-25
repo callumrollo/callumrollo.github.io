@@ -13,12 +13,13 @@ Two weeks ago I attended Oceanhackweek 2020. As an oceanographer by trade and fr
 
 If you have yet to dip your toes in the wonderful world of free software, the concept of hacking may be alarming. Aren't hackers the bad guys in black hoodies and guy fawkes masks trying to steal my tesco clubcard points?
 
-![](../images/hacker.png)
+![hoodie hacker](../images/hacker.png)
 
 If this is the image that "hack" conjures in your mind, don't be alarmed! Hacking is not a selfish, destructive criminal activity. [Definitions](http://catb.org/~esr/faqs/hacker-howto.html#what_is) [vary](https://www.hackspace.org.uk/foundation/define.md), partly because many hackers aren't fond of top down definition of anything. In my own opinion, hacking means working inventively to produce new, useful functionality from existing tools and systems. Hacking commonly involves a strong co-operative element, often with people you have never met offline. Hacking is inventive, ingenious and *fun*. Think more [hackspaces](https://en.wikipedia.org/wiki/Hackerspace) or [hacker culture](https://en.wikipedia.org/wiki/Hacker_culture) and less Hollywood hacking of mainframes.
 
-In a hackathon, you work with other like minded people to make cool stuff. This can be a brand new idea, picking up a neglected project, or adding functionaility to an existing popular project (this is often referred to as a *sprint*). In the context of a hackweek, it's about team work
-![](https://media3.giphy.com/media/1MayKbFuSKE1O/giphy.gif?cid=ecf05e47a73r2pqbn4qxfheuu1z4nsj8u2rknlh9t4i84ovl&rid=giphy.gif)
+In a hackathon, you work with other like minded people to make cool stuff. This can be a brand new idea, picking up a neglected project, or adding functionaility to an existing popular project (this is often referred to as a *sprint*). In the context of a hackweek, it's about team work.
+
+![doggo teamwork](https://media3.giphy.com/media/1MayKbFuSKE1O/giphy.gif?cid=ecf05e47a73r2pqbn4qxfheuu1z4nsj8u2rknlh9t4i84ovl&rid=giphy.gif)
 
 
 
@@ -44,7 +45,7 @@ The real benefit of OHW20 for me however, was the collaborative project. I start
 
 
 
-During OHW I felt like I was working with people I understood, on problems I cared about. I learned from disciplines I never would have searched for on my own, the sessions I would have skipped at a conference: ecosystem modelling, machine learning, satellite oceanography. Much of the time, scientist in these disparate fields are grappling with the same issues I am. Where do I find data? How can I combine it? How should I process it? Where should I store it? 
+During OHW I felt like I was working with people I understood, on problems I cared about. I learned from disciplines I never would have searched for on my own, the sessions I would have skipped at a conference: ecosystem modelling, machine learning, satellite oceanography. Much of the time, scientist in these disparate fields are grappling with the same issues I am. Where do I find data? How can I combine it? How should I process it? Where should I store it? These are common problems, OHW can help you discover good solutions.
 
 
 
@@ -68,5 +69,5 @@ If you want updates on future OHW activity, You can follow them on [twitter](htt
 
 How does such a great event come together and provide such a great venue for learning and hacking? I assume it takes a lot of effort, organising and ingenuity from [the committee](https://oceanhackweek.github.io/our-team.html) (once more a massive thank you, you're all awesome), but I suspect [Filipe](https://twitter.com/ocefpaf) would say it's
 
-![](https://media.giphy.com/media/12NUbkX6p4xOO4/giphy.gif)
+![Inigo Montoya](https://media.giphy.com/media/12NUbkX6p4xOO4/giphy.gif)
 
