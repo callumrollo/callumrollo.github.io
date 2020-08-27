@@ -14,3 +14,5 @@ This income is supplemented by the work I do teaching and assisting in class at 
 I own no property, stocks, or shares.
 
 You can read a short article on the pros and cons of publishing salaries [here](https://time.com/5353848/salary-pay-transparency-work/). The practice is becoming more common, in some countries it is [mandatory](https://www.bbc.co.uk/news/magazine-40669239). Until that is the case in the UK, I will publish mine here. 
+
+Last updated August 2020
