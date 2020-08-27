@@ -1,6 +1,6 @@
 Title: Articles of interest
 Date: 2020-07-13 10:20
-Modified: 2020-07-16 20:05
+Modified: 2020-08-27 11:25
 Category: Test
 Tags: articles, opinion, academia
 Slug: reading
@@ -21,6 +21,15 @@ Ocean best practices - [EGO netCDF version 1.3 glider data standardised format](
 ### Climate
 
 Milan Klöwer, Debbie Hopkins, Myles Allen & James Higham - [An analysis of ways to decarbonize conference travel after COVID-19](https://www.nature.com/articles/d41586-020-02057-2)
+
+### Academic software
+
+Wilkinson et al -  [The FAIR Guiding Principles for scientific data management and stewardship](https://www.nature.com/articles/sdata201618)
+
+Ryan Abernathey - [The scientific paper is outdated (paywalled, free account sign up)](https://www.chronicle.com/article/the-scientific-paper-is-outdated/)
+
+James Somers - [The Scientific Paper Is Obsolete](https://www.theatlantic.com/science/archive/2018/04/the-scientific-paper-is-obsolete/556676/)
+
 ### Academic Publishing
 
 George Monbiot - [Academic publishers are wealth extracting monopolists](https://www.monbiot.com/2011/08/29/the-lairds-of-learning/)
@@ -43,6 +52,10 @@ Ben Macdonald - [On restoring grouse moors, economic and patrimonial argument](h
 
 ## Books that have affected my world view
 
+### Ocean
+
+Ian Urbina -  [The Outlaw Ocean](https://www.nytimes.com/2019/08/19/books/review/outlaw-ocean-ian-urbina.html)
+
 ### Nature/Rewilding
 
 George Monbiot - [Feral](https://www.monbiot.com/2013/05/24/feral-searching-for-enchantment-on-the-frontiers-of-rewilding/)
@@ -52,5 +65,5 @@ Aldo Leopold - [Sand County Almanac](https://www.aldoleopold.org/about/aldo-leop
 ### Privacy/Surveillance
 
 Edward Snowden - [Permanent Record](https://www.goodreads.com/book/show/46223297-permanent-record)
-
 Cory Doctorow - [Little Brother](https://craphound.com/littlebrother/download/)
+Kevin Mitnic - [The Art of Invisibility](https://www.mitnicksecurity.com/the-art-of-invisibility-mitnick-security)
