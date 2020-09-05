@@ -38,13 +38,17 @@ Georgo Monbiot - [Honourable theft (on sci-hub)](https://www.monbiot.com/2018/09
 
 Jonathan P Tennant - [Time to stop the exploitation of free academic labour](https://ese.arphahub.com/article/51839/download/pdf/428643)
 
+James Heathers [Demand pay for reviewing papers for profit making publishers](https://medium.com/@jamesheathers/the-450-movement-1f86132a29bd)
+
 ### Work
 
 Tim Barry - [just too efficient](https://www.tbray.org/ongoing/When/202x/2020/07/05/Too-Efficient)
 
 
-### Rewilding
+### Rewilding and land rigths
 George Monbiot - [Rewilding Manifesto](https://www.monbiot.com/2013/05/27/a-manifesto-for-rewilding-the-world/)
+
+Mark Cocker - [The need for more publicily accessible green space](https://www.newstatesman.com/british-countryside-access-wild-child-patrick-barkham-bringing-back-beaver-derek-gow-trespass-nick-hayes-framing-nature-lawrence-rose-review)
 
 WildEast in East Anglia - [Set aside a fifth of land for nature + acredit and reward nature friendly farming](https://www.theguardian.com/environment/2020/jul/14/farmers-wildeast-hatch-plan-return-area-size-dorset-wild-nature-east-anglia)
 
@@ -56,14 +60,22 @@ Ben Macdonald - [On restoring grouse moors, economic and patrimonial argument](h
 
 Ian Urbina -  [The Outlaw Ocean](https://www.nytimes.com/2019/08/19/books/review/outlaw-ocean-ian-urbina.html)
 
-### Nature/Rewilding
+### Nature/Land
 
 George Monbiot - [Feral](https://www.monbiot.com/2013/05/24/feral-searching-for-enchantment-on-the-frontiers-of-rewilding/)
 Isabella Tree - [Wilding](https://www.goodreads.com/book/show/38891828-wilding)
 Aldo Leopold - [Sand County Almanac](https://www.aldoleopold.org/about/aldo-leopold/sand-county-almanac/)
+Nick Hayes - [The Book of Trespass](https://www.theguardian.com/books/2020/aug/10/the-book-of-trespass-by-nick-hayes-review-a-trespassers-radical-manifesto)
 
 ### Privacy/Surveillance
 
 Edward Snowden - [Permanent Record](https://www.goodreads.com/book/show/46223297-permanent-record)
 Cory Doctorow - [Little Brother](https://craphound.com/littlebrother/download/)
 Kevin Mitnic - [The Art of Invisibility](https://www.mitnicksecurity.com/the-art-of-invisibility-mitnick-security)
+
+## Sites I visit when I Should Be Writing
+
+- [Existential comics](https://existentialcomics.com/) an entertainingly good intro to various schools of philisophy
+- [Bruce Schneier facts](https://www.schneierfacts.com) crypto jokes
+- [xkcd](xkcd.com) (duh)
+- [what the commit](http://whatthecommit.com/) spice up your git commits by pulling a random message from here
