@@ -1,7 +1,7 @@
 Title: Steal this website
 Date: 2020-06-16 10:20
 Modified: 2020-06-16 10:20
-Category: Test
+Category: FOSS
 Tags: pelican, publishing, academia
 Slug: howto
 Summary: How to build this website
@@ -12,7 +12,7 @@ Very little programming expertise is required. As long as you are comfortable cr
 
 I spent an excessive amount of time looking for academic sites to emulate/shamelessly copy before making this one. There are some great sites out there that provide all their source code online. I highly recommend finding one you like; imitation is, after all, the highest form of flattery. Here are some samples:
 
-|Link to website| Link to source code|
+|Website| Source code|
 |---------|----------|
 |[Denis Sergeev](https://dennissergeev.github.io/) |[source](https://github.com/dennissergeev/dennissergeev.github.io)|
 |[Leo Uida](https://www.leouieda.com/)|[source](https://github.com/leouieda/website)|
