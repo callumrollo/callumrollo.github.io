@@ -29,4 +29,32 @@
 &lt;p&gt;I would encourage any oceanographer who wants to better understand the computational tools of our trade, or learn how to give back to the free software community to take part in OHW. The pace was great, the online delivery was seamless and the people were awesome. I hope the organisers are able to run the event again in future years. There is a real demand for more free software and the expertise to operate it in oceanography.&lt;/p&gt;
 &lt;p&gt;If you want updates on future OHW activity, You can follow them on &lt;a href="https://twitter.com/oceanhackweek"&gt;twitter&lt;/a&gt; or sign up to their low volume &lt;a href="http://mailman11.u.washington.edu/mailman/listinfo/oceanhackweek"&gt;mailing list&lt;/a&gt;. I am also happy to answer questions about my experience of it.&lt;/p&gt;
 &lt;p&gt;How does such a great event come together to provide a perfect venue for learning and hacking? I assume it takes a lot of effort, organising, and ingenuity from &lt;a href="https://oceanhackweek.github.io/our-team.html"&gt;the committee&lt;/a&gt; (once more a massive thank you, you're all awesome). But I suspect &lt;a href="https://twitter.com/ocefpaf"&gt;Filipe&lt;/a&gt; would say it's&lt;/p&gt;
-&lt;p&gt;&lt;img alt="magic" src="https://media.giphy.com/media/12NUbkX6p4xOO4/giphy.gif"&gt;&lt;/p&gt;</content><category term="FOSS"></category><category term="academia"></category><category term="FOSS"></category><category term="hack"></category><category term="oceanography"></category></entry></feed>
+&lt;p&gt;&lt;img alt="magic" src="https://media.giphy.com/media/12NUbkX6p4xOO4/giphy.gif"&gt;&lt;/p&gt;</content><category term="FOSS"></category><category term="academia"></category><category term="FOSS"></category><category term="hack"></category><category term="oceanography"></category></entry><entry><title>Steal this website</title><link href="https://callumrollo.github.io/howto.html" rel="alternate"></link><published>2020-06-16T10:20:00+01:00</published><updated>2020-06-16T10:20:00+01:00</updated><author><name>Callum Rollo</name></author><id>tag:callumrollo.github.io,2020-06-16:/howto.html</id><summary type="html">&lt;p&gt;How to build this website&lt;/p&gt;</summary><content type="html">&lt;p&gt;You may look at this content-poor, lazily formatted website and think "wow, I want one of those!". If so, I have good news for you. The steps to build this website are laid out in the &lt;a href="https://github.com/callumrollo/callumrollo.github.io"&gt;github repo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Very little programming expertise is required. As long as you are comfortable creating a &lt;a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html"&gt;conda environment&lt;/a&gt; and a &lt;a href="https://help.github.com/en/enterprise/2.14/user/articles/create-a-repo"&gt;GitHub repository&lt;/a&gt;, the rest is ludicrously simple. &lt;/p&gt;
+&lt;p&gt;I spent an excessive amount of time looking for academic sites to emulate/shamelessly copy before making this one. There are some great sites out there that provide all their source code online. I highly recommend finding one you like; imitation is, after all, the highest form of flattery. Here are some samples:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Website&lt;/th&gt;
+&lt;th&gt;Source code&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://dennissergeev.github.io/"&gt;Denis Sergeev&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="https://github.com/dennissergeev/dennissergeev.github.io"&gt;source&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.leouieda.com/"&gt;Leo Uida&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="https://github.com/leouieda/website"&gt;source&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://kieranhealy.org/"&gt;Kieran Healy&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="https://github.com/kjhealy/kieranhealy.hugo/"&gt;source&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://alxd.org/pages/about.html#about"&gt;Pawel Ngei&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="https://github.com/pawelngei/alxd.org"&gt;source&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</content><category term="FOSS"></category><category term="pelican"></category><category term="publishing"></category><category term="academia"></category></entry></feed>
