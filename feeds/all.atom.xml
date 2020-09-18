@@ -42,6 +42,8 @@
 &lt;p&gt;These videos were edited together (poorly) with the &lt;a href="https://www.openshot.org/"&gt;openshot free video editor&lt;/a&gt;&lt;/p&gt;</content><category term="Trailcam"></category><category term="trailcam"></category><category term="nature"></category><category term="non-work"></category></entry><entry><title>Articles of interest</title><link href="https://callumrollo.github.io/reading.html" rel="alternate"></link><published>2020-07-13T10:20:00+01:00</published><updated>2020-08-27T11:25:00+01:00</updated><author><name>Callum Rollo</name></author><id>tag:callumrollo.github.io,2020-07-13:/reading.html</id><summary type="html">&lt;p&gt;What I'm reading&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Articles&lt;/h2&gt;
 &lt;h3&gt;Oeanography&lt;/h3&gt;
 &lt;p&gt;Erik M. Bruvik, Ilker Fer, Kjetil Våge, and Peter M. Haugan - &lt;a href="https://os.copernicus.org/articles/16/291/2020/os-16-291-2020.pdf"&gt;A revised ocean glider concept to realize Stommel’s vision and supplement Argo floats&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Annie P. S. Wong et. al. &lt;a href="https://www.frontiersin.org/articles/10.3389/fmars.2020.00700/full"&gt;20 years of ARGO. Great overview with tech details, error sources and more&lt;/a&gt;
+Wenbo Wu, Zhongwen Zhan1, Shirui Peng, Sidao Ni, Jörn Callies &lt;a href="https://science.sciencemag.org/content/369/6510/1510"&gt;Hearing the heat - Seismic ocean thermometry&lt;/a&gt; (paywalled)&lt;/p&gt;
 &lt;p&gt;Fabio Crameri - &lt;a href="https://blogs.egu.eu/divisions/gd/2017/08/23/the-rainbow-colour-map/"&gt;The Rainbow Colour Map (repeatedly) considered harmful&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Joseph Gum - &lt;a href="https://github.com/asx-/reproducible-science/blob/master/reproducible_science.pdf"&gt;Reproducible Science&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Ocean best practices - &lt;a href="https://repository.oceanbestpractices.org/handle/11329/1253"&gt;EGO netCDF version 1.3 glider data standardised format&lt;/a&gt;&lt;/p&gt;
@@ -57,7 +59,8 @@
 &lt;p&gt;Jonathan P Tennant - &lt;a href="https://ese.arphahub.com/article/51839/download/pdf/428643"&gt;Time to stop the exploitation of free academic labour&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;James Heathers &lt;a href="https://medium.com/@jamesheathers/the-450-movement-1f86132a29bd"&gt;Demand pay for reviewing papers for profit making publishers&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;Work&lt;/h3&gt;
-&lt;p&gt;Tim Barry - &lt;a href="https://www.tbray.org/ongoing/When/202x/2020/07/05/Too-Efficient"&gt;just too efficient&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Tim Barry - &lt;a href="https://www.tbray.org/ongoing/When/202x/2020/07/05/Too-Efficient"&gt;Just Too Efficient&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;David Graber - &lt;a href="https://www.strike.coop/bullshit-jobs/"&gt;Bullshit Jobs&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;Rewilding and land rights&lt;/h3&gt;
 &lt;p&gt;George Monbiot - &lt;a href="https://www.monbiot.com/2013/05/27/a-manifesto-for-rewilding-the-world/"&gt;Rewilding Manifesto&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Mark Cocker - &lt;a href="https://www.newstatesman.com/british-countryside-access-wild-child-patrick-barkham-bringing-back-beaver-derek-gow-trespass-nick-hayes-framing-nature-lawrence-rose-review"&gt;The need for more publicly accessible green space&lt;/a&gt;&lt;/p&gt;
@@ -71,6 +74,8 @@
 &lt;p&gt;Isabella Tree - &lt;a href="https://www.goodreads.com/book/show/38891828-wilding"&gt;Wilding&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Aldo Leopold - &lt;a href="https://www.aldoleopold.org/about/aldo-leopold/sand-county-almanac/"&gt;Sand County Almanac&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Nick Hayes - &lt;a href="https://www.theguardian.com/books/2020/aug/10/the-book-of-trespass-by-nick-hayes-review-a-trespassers-radical-manifesto"&gt;The Book of Trespass&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Economics/Society&lt;/h3&gt;
+&lt;p&gt;David Graeber - &lt;a href="https://www.goodreads.com/book/show/6617037-debt"&gt;Debt: The First 5000 Years&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;Privacy/Surveillance&lt;/h3&gt;
 &lt;p&gt;Edward Snowden - &lt;a href="https://www.goodreads.com/book/show/46223297-permanent-record"&gt;Permanent Record&lt;/a&gt;
 Cory Doctorow - &lt;a href="https://craphound.com/littlebrother/download/"&gt;Little Brother&lt;/a&gt;
@@ -105,6 +110,10 @@ Kevin Mitnic - &lt;a href="https://www.mitnicksecurity.com/the-art-of-invisibili
 &lt;tr&gt;
 &lt;td&gt;&lt;a href="https://alxd.org/pages/about.html#about"&gt;Pawel Ngei&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;a href="https://github.com/pawelngei/alxd.org"&gt;source&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://clarkrichards.org/"&gt;Clark Richards&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="https://github.com/richardsc/richardsc.github.io"&gt;source&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</content><category term="FOSS"></category><category term="pelican"></category><category term="publishing"></category><category term="academia"></category></entry></feed>
