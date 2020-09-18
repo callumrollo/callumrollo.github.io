@@ -18,3 +18,4 @@ I spent an excessive amount of time looking for academic sites to emulate/shamel
 |[Leo Uida](https://www.leouieda.com/)|[source](https://github.com/leouieda/website)|
 |[Kieran Healy](https://kieranhealy.org/)|[source](https://github.com/kjhealy/kieranhealy.hugo/)|
 |[Pawel Ngei](https://alxd.org/pages/about.html#about) |[source](https://github.com/pawelngei/alxd.org) | 
+| [Clark Richards](https://clarkrichards.org/) | [source](https://github.com/richardsc/richardsc.github.io) |

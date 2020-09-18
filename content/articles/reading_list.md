@@ -12,6 +12,9 @@ Summary: What I'm reading
 
 Erik M. Bruvik, Ilker Fer, Kjetil Våge, and Peter M. Haugan - [A revised ocean glider concept to realize Stommel’s vision and supplement Argo floats](https://os.copernicus.org/articles/16/291/2020/os-16-291-2020.pdf)
 
+Annie P. S. Wong et. al. [20 years of ARGO. Great overview with tech details, error sources and more](https://www.frontiersin.org/articles/10.3389/fmars.2020.00700/full)
+Wenbo Wu, Zhongwen Zhan1, Shirui Peng, Sidao Ni, Jörn Callies [Hearing the heat - Seismic ocean thermometry](https://science.sciencemag.org/content/369/6510/1510) (paywalled)
+
 Fabio Crameri - [The Rainbow Colour Map (repeatedly) considered harmful](https://blogs.egu.eu/divisions/gd/2017/08/23/the-rainbow-colour-map/)
 
 Joseph Gum - [Reproducible Science](https://github.com/asx-/reproducible-science/blob/master/reproducible_science.pdf)
@@ -42,7 +45,9 @@ James Heathers [Demand pay for reviewing papers for profit making publishers](ht
 
 ### Work
 
-Tim Barry - [just too efficient](https://www.tbray.org/ongoing/When/202x/2020/07/05/Too-Efficient)
+Tim Barry - [Just Too Efficient](https://www.tbray.org/ongoing/When/202x/2020/07/05/Too-Efficient)
+
+David Graber - [Bullshit Jobs](https://www.strike.coop/bullshit-jobs/)
 
 
 ### Rewilding and land rights
@@ -69,6 +74,10 @@ Isabella Tree - [Wilding](https://www.goodreads.com/book/show/38891828-wilding)
 Aldo Leopold - [Sand County Almanac](https://www.aldoleopold.org/about/aldo-leopold/sand-county-almanac/)
 
 Nick Hayes - [The Book of Trespass](https://www.theguardian.com/books/2020/aug/10/the-book-of-trespass-by-nick-hayes-review-a-trespassers-radical-manifesto)
+
+### Economics/Society
+
+David Graeber - [Debt: The First 5000 Years](https://www.goodreads.com/book/show/6617037-debt)
 
 ### Privacy/Surveillance
 
