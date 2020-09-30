@@ -12,7 +12,7 @@ I am an amateur Pythonista, leader of [UEA python](https://ueapy.github.io/) and
 
 ### Curriculum Vitae
 
-[download pdf](../images/callumrollo-cv-2020-short.pdf)
+[download pdf](../images/callum-rollo-cv-2020.pdf)
 
 ### Publications
 
