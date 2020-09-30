@@ -9,7 +9,7 @@ Summary: The tools I use
 - [Vim](https://www.vim.org/) for text editing (or [gedit](https://wiki.gnome.org/Apps/Gedit) when no one is looking)
 - [Python](https://www.python.org/) for any extended coding task
 - [git](https://git-scm.com/) for version control
-- [FOSS](https://en.wikipedia.org/wiki/Free_and_open-source_software) (free open source software) wherever possible
+- I use [FOSS](https://en.wikipedia.org/wiki/Free_and_open-source_software) (free open source software) wherever possible
 
 
 ### Writing
@@ -17,10 +17,11 @@ Summary: The tools I use
 - Latex using [Texmaker](https://www.xm1math.net/texmaker/)
 - [libreoffice](https://www.libreoffice.org/) For MS Office compatible documents
 - [Zotero](https://www.zotero.org/) to manage references
+- [Pandoc](https://pandoc.org/installing.html) to covert between document types
 
 ### Oceanography
 - I work mainly in [Python](https://www.python.org/). Core libraries for my work include [numpy](https://numpy.org/), [pandas](https://pandas.pydata.org/), [xarray](http://xarray.pydata.org/en/stable/) and [gdal](https://pypi.org/project/GDAL/)
-- I write my code in [PyCharm](https://www.jetbrains.com/pycharm/) and [Jupyter notebooks](https://jupyter.org/). I prefer the latter for teaching
+- I write my code in vim, [PyCharm](https://www.jetbrains.com/pycharm/) and [Jupyter notebooks](https://jupyter.org/). I prefer the latter for teaching
 - [Gibbs Seawater Equations](https://teos-10.github.io/GSW-Python/) for oceanographic variable calculations
 - [QGIS](https://www.qgis.org/en/site/) for geospatial work
 - [Julia](https://julialang.org/) for numerically intensive work
@@ -35,9 +36,10 @@ Summary: The tools I use
 - [Inkscape](https://inkscape.org/)
 - [GIMP](https://www.gimp.org/)
 
-### Tools I have contributed to
-- I maintain Fabio Crameri's colourmaps as a Python package on [PyPi](https://pypi.org/project/cmcrameri/) and [conda-forge](https://github.com/conda-forge/cmcrameri-feedstock) 
-- A Python program to generate geotiffs from EMODnet, GEBCO or user supplied bathymetry <https://github.com/callumrollo/geotiff-generator>
+### Tools I have creataed/contributed to
+- [cmcrameri](https://github.com/callumrollo/cmcrameri) I maintain Fabio Crameri's Scientific Colourmaps as a Python package on [PyPi](https://pypi.org/project/cmcrameri/) and [conda-forge](https://github.com/conda-forge/cmcrameri-feedstock) 
+- [gliderpy](https://github.com/ioos/gliderpy) A Python tool to fetch glider data from ERDDAP servers. This is in the initial stages of development.
+- [geotiff-generator](https://github.com/callumrollo/geotiff-generato) A Python program to generate geotiffs from EMODnet, GEBCO or user supplied bathymetry.
 
 ### Miscellaneous
 - [Clementine](https://www.clementine-player.org/) is my preferred music player
