@@ -4,7 +4,7 @@
 &lt;p&gt;*If you're not already on some flavour of unix, check out &lt;a href="http://matt.might.net/articles/basic-unix/"&gt;this guide&lt;/a&gt; to get up to speed. It's way more fun than you might think, I promise.&lt;/p&gt;
 &lt;p&gt;For the purpose of this article the &lt;strong&gt;command line/shell/bash&lt;/strong&gt; all refer to the same thing. Namely, that little black box you summon with ctrl + alt + T that makes you feel like a badass 90s cyberpunk in wrap around shades who's about to hack the mainframe. Mine looks like this&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Default terminal" src="../images/terminal.png"&gt;&lt;/p&gt;
-&lt;p&gt;Yours may differ, but as long as tying &lt;code&gt;ls&lt;/code&gt; in it returns a list of directories, you should be good to go. Check out the link to &lt;a href="http://matt.might.net/articles/basic-unix/"&gt;Matt Might's page&lt;/a&gt; above for a nice intro to the shell.&lt;/p&gt;
+&lt;p&gt;Yours may differ, but as long as typing &lt;code&gt;ls&lt;/code&gt; in it and hitting &lt;code&gt;enter&lt;/code&gt; returns a list of directories, you should be good to go. Check out the link to &lt;a href="http://matt.might.net/articles/basic-unix/"&gt;Matt Might's page&lt;/a&gt; above for a nice intro to the shell.&lt;/p&gt;
 &lt;p&gt;A &lt;strong&gt;one liner&lt;/strong&gt; is a command that is one line long
 An &lt;strong&gt;alias&lt;/strong&gt; is a short name you give to a longer command, like a nickname for your favourite code snippets. You can make one right now like this:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="terminal alias" src="../images/terminal1.png"&gt;&lt;/p&gt;
