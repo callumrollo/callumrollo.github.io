@@ -7,7 +7,7 @@
 &lt;p&gt;Yours may differ, but as long as tying &lt;code&gt;ls&lt;/code&gt; in it returns a list of directories, you should be good to go. Check out the link to &lt;a href="http://matt.might.net/articles/basic-unix/"&gt;Matt Might's page&lt;/a&gt; above for a nice intro to the shell.&lt;/p&gt;
 &lt;p&gt;A &lt;strong&gt;one liner&lt;/strong&gt; is a command that is one line long
 An &lt;strong&gt;alias&lt;/strong&gt; is a short name you give to a longer command, like a nickname for your favourite code snippets. You can make one right now like this:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Default terminal" src="../images/terminal1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="terminal alias" src="../images/terminal1.png"&gt;&lt;/p&gt;
 &lt;p&gt;Now your coputer can cheerfully greet you with the time of day in 4 keystrokes, neat huh?&lt;/p&gt;
 &lt;p&gt;A &lt;strong&gt;shell script&lt;/strong&gt; is a series of instructions to be executed by your shell. This can range from a one liner, to sprawling programs. The advantage of writing shell scripts rather than, say Python scripts, is that any *nix system you use will have a shell and some core utilities. No need to install dependencies. For this reason shell scripts are &lt;em&gt;portable&lt;/em&gt;, never leave the house without them! (If when you read this we are still experiencing a global pandemic, maybe don't leave the house at all if you can avoid it.)&lt;/p&gt;
 &lt;p&gt;Now we've covered the terminology, on to the good stuff.&lt;/p&gt;
@@ -52,7 +52,7 @@ An &lt;strong&gt;alias&lt;/strong&gt; is a short name you give to a longer comma
 &lt;p&gt;&lt;code&gt;yolo='git add -A &amp;amp;&amp;amp; git commit -m "$(curl --silent --fail http://whatthecommit.com/index.txt)" &amp;amp;&amp;amp; git push'&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;After building up a suitably useful/infuriating series of commit messages, you can make a pretty git commit tree to admire them &lt;a href="https://stackoverflow.com/questions/1838873/visualizing-branch-topology-in-git/34467298#34467298"&gt;credit&lt;/a&gt;
   &lt;code&gt;lg="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'"&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Default terminal" src="../images/terminal2.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="terminal tree" src="../images/terminal2.png"&gt;&lt;/p&gt;
 &lt;h3&gt;Ugly but useful shell scripts&lt;/h3&gt;
 &lt;p&gt;These have saved me many hours of tedious manual tasks. Though I think some more time to write than they have yet saved me...&lt;/p&gt;
 &lt;p&gt;Use &lt;a href="https://ffmpeg.org/"&gt;ffmpeg&lt;/a&gt; to apply fade in and out to a bunch of mp3 files&lt;/p&gt;
@@ -229,7 +229,7 @@ awk -F , &lt;span class="s1"&gt;&amp;#39;NF&amp;gt;=3&amp;#39;&lt;/span&gt; min_
 
 &lt;h3&gt;Scripts shamelessly copied from other, wiser people&lt;/h3&gt;
 &lt;p&gt;&lt;a href="http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/"&gt;3 shell scripts to improve your writing, or "My Ph.D. advisor rewrote himself in bash."&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;I think these are great, so I've archived a version &lt;a href="../images/might-scripts.html"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I think these are great, so I've archived a version &lt;a href="../images/might-scripts.zip"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;[1] (https://xkcd.com/285/)
  [2] (https://xkcd.com/462)&lt;/p&gt;</content><category term="FOSS"></category><category term="linux"></category><category term="bash"></category><category term="software"></category><category term="optimise"></category></entry><entry><title>Why you (yes, you!) should take part in a hackathon</title><link href="https://callumrollo.github.io/hackweek.html" rel="alternate"></link><published>2020-08-25T10:00:00+01:00</published><updated>2020-08-27T12:50:00+01:00</updated><author><name>Callum Rollo</name></author><id>tag:callumrollo.github.io,2020-08-25:/hackweek.html</id><summary type="html">&lt;p&gt;Recounting my experience at Oceanhackweek 2020&lt;/p&gt;</summary><content type="html">&lt;p&gt;Two weeks ago I attended Oceanhackweek 2020. As an oceanographer by trade and free software nerd by heart, I loved the idea of an event that combined the two. I looked forward to learning from other oceanographers and coders, and perhaps giving something back to the free software community.&lt;/p&gt;

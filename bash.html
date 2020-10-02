@@ -155,7 +155,7 @@
 <p>Yours may differ, but as long as tying <code>ls</code> in it returns a list of directories, you should be good to go. Check out the link to <a href="http://matt.might.net/articles/basic-unix/">Matt Might's page</a> above for a nice intro to the shell.</p>
 <p>A <strong>one liner</strong> is a command that is one line long
 An <strong>alias</strong> is a short name you give to a longer command, like a nickname for your favourite code snippets. You can make one right now like this:</p>
-<p><img alt="Default terminal" src="../images/terminal1.png"></p>
+<p><img alt="terminal alias" src="../images/terminal1.png"></p>
 <p>Now your coputer can cheerfully greet you with the time of day in 4 keystrokes, neat huh?</p>
 <p>A <strong>shell script</strong> is a series of instructions to be executed by your shell. This can range from a one liner, to sprawling programs. The advantage of writing shell scripts rather than, say Python scripts, is that any *nix system you use will have a shell and some core utilities. No need to install dependencies. For this reason shell scripts are <em>portable</em>, never leave the house without them! (If when you read this we are still experiencing a global pandemic, maybe don't leave the house at all if you can avoid it.)</p>
 <p>Now we've covered the terminology, on to the good stuff.</p>
@@ -200,7 +200,7 @@ An <strong>alias</strong> is a short name you give to a longer command, like a n
 <p><code>yolo='git add -A &amp;&amp; git commit -m "$(curl --silent --fail http://whatthecommit.com/index.txt)" &amp;&amp; git push'</code></p>
 <p>After building up a suitably useful/infuriating series of commit messages, you can make a pretty git commit tree to admire them <a href="https://stackoverflow.com/questions/1838873/visualizing-branch-topology-in-git/34467298#34467298">credit</a>
   <code>lg="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'"</code></p>
-<p><img alt="Default terminal" src="../images/terminal2.png"></p>
+<p><img alt="terminal tree" src="../images/terminal2.png"></p>
 <h3>Ugly but useful shell scripts</h3>
 <p>These have saved me many hours of tedious manual tasks. Though I think some more time to write than they have yet saved me...</p>
 <p>Use <a href="https://ffmpeg.org/">ffmpeg</a> to apply fade in and out to a bunch of mp3 files</p>
@@ -377,7 +377,7 @@ awk -F , <span class="s1">&#39;NF&gt;=3&#39;</span> min_v.txt &gt;&gt; min_volts
 
 <h3>Scripts shamelessly copied from other, wiser people</h3>
 <p><a href="http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/">3 shell scripts to improve your writing, or "My Ph.D. advisor rewrote himself in bash."</a></p>
-<p>I think these are great, so I've archived a version <a href="../images/might-scripts.html">here</a></p>
+<p>I think these are great, so I've archived a version <a href="../images/might-scripts.zip">here</a></p>
 <hr>
 <p>[1] (https://xkcd.com/285/)
  [2] (https://xkcd.com/462)</p>
