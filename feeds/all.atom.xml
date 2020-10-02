@@ -1,5 +1,238 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Callum Rollo</title><link href="https://callumrollo.github.io/" rel="alternate"></link><link href="https://callumrollo.github.io/feeds/all.atom.xml" rel="self"></link><id>https://callumrollo.github.io/</id><updated>2020-08-27T12:50:00+01:00</updated><subtitle>Oceanographer in training</subtitle><entry><title>Why you (yes, you!) should take part in a hackathon</title><link href="https://callumrollo.github.io/hackweek.html" rel="alternate"></link><published>2020-08-25T10:00:00+01:00</published><updated>2020-08-27T12:50:00+01:00</updated><author><name>Callum Rollo</name></author><id>tag:callumrollo.github.io,2020-08-25:/hackweek.html</id><summary type="html">&lt;p&gt;Recounting my experience at Oceanhackweek 2020&lt;/p&gt;</summary><content type="html">&lt;p&gt;Two weeks ago I attended Oceanhackweek 2020. As an oceanographer by trade and free software nerd by heart, I loved the idea of an event that combined the two. I looked forward to learning from other oceanographers and coders, and perhaps giving something back to the free software community.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Callum Rollo</title><link href="https://callumrollo.github.io/" rel="alternate"></link><link href="https://callumrollo.github.io/feeds/all.atom.xml" rel="self"></link><id>https://callumrollo.github.io/</id><updated>2020-10-02T18:20:00+01:00</updated><subtitle>Oceanographer in training</subtitle><entry><title>Shell games</title><link href="https://callumrollo.github.io/bash.html" rel="alternate"></link><published>2020-10-02T18:20:00+01:00</published><updated>2020-10-02T18:20:00+01:00</updated><author><name>Callum Rollo</name></author><id>tag:callumrollo.github.io,2020-10-02:/bash.html</id><summary type="html">&lt;p&gt;Excerpts from my .bashrc and shell scripts&lt;/p&gt;</summary><content type="html">&lt;h3&gt;First off, what's a shell?&lt;/h3&gt;
+&lt;p&gt;The shell is how you, mighty keyboard warrior, maintain control over the awe-inspiring power of your &lt;a href="https://www.youtube.com/watch?v=SpLRTAGa6bU"&gt;unix system&lt;/a&gt;*.  Here I have collected some of my favourite one liners, aliases and shell scripts that I use to reduce repetitive typing, quickly analyse data, improve my writing and more.&lt;/p&gt;
+&lt;p&gt;*If you're not already on some flavour of unix, check out &lt;a href="http://matt.might.net/articles/basic-unix/"&gt;this guide&lt;/a&gt; to get up to speed. It's way more fun than you might think, I promise.&lt;/p&gt;
+&lt;p&gt;For the purpose of this article the &lt;strong&gt;command line/shell/bash&lt;/strong&gt; all refer to the same thing. Namely, that little black box you summon with ctrl + alt + T that makes you feel like a badass 90s cyberpunk in wrap around shades who's about to hack the mainframe. Mine looks like this&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Default terminal" src="../images/terminal.png"&gt;&lt;/p&gt;
+&lt;p&gt;Yours may differ, but as long as tying &lt;code&gt;ls&lt;/code&gt; in it returns a list of directories, you should be good to go. Check out the link to &lt;a href="http://matt.might.net/articles/basic-unix/"&gt;Matt Might's page&lt;/a&gt; above for a nice intro to the shell.&lt;/p&gt;
+&lt;p&gt;A &lt;strong&gt;one liner&lt;/strong&gt; is a command that is one line long
+An &lt;strong&gt;alias&lt;/strong&gt; is a short name you give to a longer command, like a nickname for your favourite code snippets. You can make one right now like this:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Default terminal" src="../images/terminal1.png"&gt;&lt;/p&gt;
+&lt;p&gt;Now your coputer can cheerfully greet you with the time of day in 4 keystrokes, neat huh?&lt;/p&gt;
+&lt;p&gt;A &lt;strong&gt;shell script&lt;/strong&gt; is a series of instructions to be executed by your shell. This can range from a one liner, to sprawling programs. The advantage of writing shell scripts rather than, say Python scripts, is that any *nix system you use will have a shell and some core utilities. No need to install dependencies. For this reason shell scripts are &lt;em&gt;portable&lt;/em&gt;, never leave the house without them! (If when you read this we are still experiencing a global pandemic, maybe don't leave the house at all if you can avoid it.)&lt;/p&gt;
+&lt;p&gt;Now we've covered the terminology, on to the good stuff.&lt;/p&gt;
+&lt;h3&gt;My favourite aliases&lt;/h3&gt;
+&lt;p&gt;Some of these are original thoughts, many are adapted from examples I've found in various corners of the internet. Using these functions can boost your productivity, increase your net worth and make you more significantly more attractive [&lt;a href="https://xkcd.com/285/"&gt;1&lt;/a&gt;][&lt;a href="https://xkcd.com/462"&gt;2&lt;/a&gt;]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;..='cd ..'&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;please='sudo'&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;duh='du -h --max-depth=1'&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gcb='git checkout -b'&lt;/code&gt; and a whole lot of other git shortcuts&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gdiff=" git diff --word-diff"&lt;/code&gt; check what changes you have staged in a file&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hpc='ssh -XY username@uni.hpc.server&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;nb='jupyter notebook'&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;space='du -hS | sort -n -r |more'&lt;/code&gt; to find what's using most space in a directory&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;wet='curl http://v2.wttr.in/Norwich'&lt;/code&gt; why visit a weather site when you can find out form the command line why it's not worth leaving the house today?&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aliasg='alias | grep'&lt;/code&gt; for when I forget what I called my aliases&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;set -o vi&lt;/code&gt; vim keybindings in shell. &lt;strong&gt;Only use if you love vim&lt;/strong&gt;. emacs users can try &lt;a href="https://youtu.be/dQw4w9WgXcQ?t=43"&gt;this&lt;/a&gt; instead.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can create an alias straight from the terminal as I did with &lt;code&gt;gday&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;alias please='sudo'&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Note the quote marks and lack of spaces round the &lt;code&gt;=&lt;/code&gt;, these are not  optional.&lt;/p&gt;
+&lt;p&gt;Aliases created in such a way will only last through your terminal session. To persist aliases, they must be copied into your shell's &lt;code&gt;rc&lt;/code&gt; file. This will be located in your home directory and typically hidden. For me it is &lt;code&gt;/home/callum/.zshrc&lt;/code&gt;. Simply copy the aliases to the end of your &lt;code&gt;rc&lt;/code&gt; file.&lt;/p&gt;
+&lt;p&gt;You can also set up slightly more complicated commands in the &lt;code&gt;rc&lt;/code&gt; file like so&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;mcd () {&lt;/span&gt;
+&lt;span class="err"&gt;    mkdir -p $1&lt;/span&gt;
+&lt;span class="err"&gt;    cd $1&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This command makes a directory then moves you into it. Try out &lt;code&gt;mcd test&lt;/code&gt; then &lt;code&gt;ls&lt;/code&gt; to check where you are&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;com () {&lt;/span&gt;
+&lt;span class="err"&gt;    git add -A&lt;/span&gt;
+&lt;span class="err"&gt;    git commit -m &amp;quot;$1&amp;quot;&lt;/span&gt;
+&lt;span class="err"&gt;    git push&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This will add all files to the staging area, set a commit message of your choice and push upstream. Usage: &lt;code&gt;com "never push to master on Friday my dudes"&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;If you can't think of a useful git commit message, fear not &lt;a href="https://github.com/lwe/whatthecommit"&gt;whatthecommit&lt;/a&gt; has you covered. Try out my favourite alias &lt;code&gt;yolo&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;yolo='git add -A &amp;amp;&amp;amp; git commit -m "$(curl --silent --fail http://whatthecommit.com/index.txt)" &amp;amp;&amp;amp; git push'&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;After building up a suitably useful/infuriating series of commit messages, you can make a pretty git commit tree to admire them &lt;a href="https://stackoverflow.com/questions/1838873/visualizing-branch-topology-in-git/34467298#34467298"&gt;credit&lt;/a&gt;
+  &lt;code&gt;lg="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'"&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Default terminal" src="../images/terminal2.png"&gt;&lt;/p&gt;
+&lt;h3&gt;Ugly but useful shell scripts&lt;/h3&gt;
+&lt;p&gt;These have saved me many hours of tedious manual tasks. Though I think some more time to write than they have yet saved me...&lt;/p&gt;
+&lt;p&gt;Use &lt;a href="https://ffmpeg.org/"&gt;ffmpeg&lt;/a&gt; to apply fade in and out to a bunch of mp3 files&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; i in *.mp3&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+    ffmpeg -i &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$i&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; -filter_complex &lt;span class="s2"&gt;&amp;quot;afade=d=0.5, areverse, afade=d=0.5, areverse&amp;quot;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;`basename &amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$i&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot; .mp3`f.mp3&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;For clipping a dataset of interest from a larger geographical dataset before plotting. Requires &lt;a href="https://gdal.org/"&gt;gdal&lt;/a&gt; library.&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#! /bin/bash&lt;/span&gt;
+&lt;span class="c1"&gt;# &lt;/span&gt;
+ogr2ogr -f &lt;span class="s2"&gt;&amp;quot;ESRI Shapefile&amp;quot;&lt;/span&gt; hidf_land.shp /media/callum/storage/Documents/global_datasets/osm_land/land_polygons.shp -clipsrc &lt;span class="nv"&gt;$1&lt;/span&gt; &lt;span class="nv"&gt;$2&lt;/span&gt; &lt;span class="nv"&gt;$3&lt;/span&gt; &lt;span class="nv"&gt;$4&lt;/span&gt;
+&lt;span class="c1"&gt;# four numbers at end are western bound southern bound eastern bound and northern bound in degrees. Longitude is from -180 to 180&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Move your mouse every 30 seconds to prevent sleep mode. Inspired by &lt;a href="https://xkcd.com/196/"&gt;xkcd&lt;/a&gt;&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4
+5
+6
+7&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+  xdotool mousemove &lt;span class="m"&gt;300&lt;/span&gt; &lt;span class="m"&gt;250&lt;/span&gt;
+  sleep &lt;span class="m"&gt;30&lt;/span&gt;
+  xdotool mousemove &lt;span class="m"&gt;300&lt;/span&gt; &lt;span class="m"&gt;850&lt;/span&gt;
+  sleep &lt;span class="m"&gt;30&lt;/span&gt;
+&lt;span class="k"&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Use &lt;a href="https://imagemagick.org/index.php"&gt;imagemagick&lt;/a&gt; to crop and animate a bunch of figures into a gif. Written the night before a conference, don't judge me!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;#/bin/bash
+
+for i in bar*.png
+do
+num=&lt;span class="cp"&gt;${&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="cp"&gt;}&lt;/span&gt;
+
+filen=&amp;quot;clip&lt;span class="nv"&gt;$num.png&lt;/span&gt;&amp;quot;
+filen2=&amp;quot;crop&lt;span class="nv"&gt;$num.png&lt;/span&gt;&amp;quot;
+convert &lt;span class="nv"&gt;$i&lt;/span&gt; -trim +repage &lt;span class="nv"&gt;$filen&lt;/span&gt;
+convert -crop -800-300 &lt;span class="nv"&gt;$filen&lt;/span&gt; &lt;span class="nv"&gt;$filen2&lt;/span&gt;
+done
+convert -delay 20 -loop 1 crop*.png animation.gif
+echo foo
+convert animation.gif  -trim +repage ani.gif
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;More imagemagick to make tight figuures (rmeove all whitespace from edges)&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+
+rsync --recursive --filter&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;-! */&amp;quot;&lt;/span&gt; figures figures_crop
+
+&lt;span class="nb"&gt;shopt&lt;/span&gt; -s extglob nullglob globstar
+&lt;span class="k"&gt;for&lt;/span&gt; file in figures/**/*.png
+&lt;span class="k"&gt;do&lt;/span&gt;
+    &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$file&lt;/span&gt;
+    convert &lt;span class="nv"&gt;$file&lt;/span&gt; -trim +repage &lt;span class="s2"&gt;&amp;quot;figures_crop/&lt;/span&gt;&lt;span class="nv"&gt;$file&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Get altimeter data from Seaglider log files&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class="c1"&gt;# if directory not passed, use working directory&lt;/span&gt;
+&lt;span class="nv"&gt;_dir&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;1&lt;/span&gt;&lt;span class="k"&gt;:-&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;PWD&lt;/span&gt;&lt;span class="si"&gt;}}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Die if given a bad directory path&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt; ! -d &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$_dir&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Error: Directory &lt;/span&gt;&lt;span class="nv"&gt;$_dir&lt;/span&gt;&lt;span class="s2"&gt; not found.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nb"&gt;exit&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="o"&gt;}&lt;/span&gt;
+
+&amp;gt; alti.txt
+
+
+&lt;span class="nb"&gt;printf&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;dive_no,altim_ping_depth,altim_bottom_ping,bottom_dist&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; alti.txt
+
+&lt;span class="k"&gt;for&lt;/span&gt; i in &lt;span class="nv"&gt;$1&lt;/span&gt;/*.log&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+    &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt;
+    awk -F, &lt;span class="s1"&gt;&amp;#39;$1 == &amp;quot;$DIVE&amp;quot; {printf &amp;quot;\n&amp;quot; ; printf $2}&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt; &amp;gt;&amp;gt; alti.txt
+    awk -F, &lt;span class="s1"&gt;&amp;#39;$1 == &amp;quot;$ALTIM_PING_DEPTH&amp;quot; {$2=&amp;quot;,&amp;quot;$2; printf $2}&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt; &amp;gt;&amp;gt; alti.txt
+    awk -F, &lt;span class="s1"&gt;&amp;#39;$1 == &amp;quot;$ALTIM_BOTTOM_PING&amp;quot; {$2=&amp;quot;,&amp;quot;$2&amp;quot;,&amp;quot;; printf $2 $3}&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt; &amp;gt;&amp;gt; alti.txt
+&lt;span class="k"&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Get voltage minima from Seaglider logs&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class="c1"&gt;# if directory not passed, use working directory&lt;/span&gt;
+&lt;span class="nv"&gt;_dir&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;1&lt;/span&gt;&lt;span class="k"&gt;:-&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;PWD&lt;/span&gt;&lt;span class="si"&gt;}}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Die if given a bad directory path&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt; ! -d &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$_dir&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Error: Directory &lt;/span&gt;&lt;span class="nv"&gt;$_dir&lt;/span&gt;&lt;span class="s2"&gt; not found.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nb"&gt;exit&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="o"&gt;}&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Make a blank text file&lt;/span&gt;
+&amp;gt; min_v.txt
+
+&lt;span class="c1"&gt;# Print row names&lt;/span&gt;
+&lt;span class="nb"&gt;printf&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;dive_no,min_10V,min_24V&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; min_v.txt
+
+&lt;span class="c1"&gt;# Search the log files for minimum voltages of both batteries&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; i in &lt;span class="nv"&gt;$_dir&lt;/span&gt;/p*.log&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+
+    &lt;span class="nv"&gt;num&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;i&lt;/span&gt;&lt;span class="p"&gt;: -8:&lt;/span&gt;&lt;span class="nv"&gt;4&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;
+    &lt;span class="nb"&gt;printf&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;\n&lt;/span&gt;&lt;span class="nv"&gt;$num&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; min_v.txt
+    &lt;span class="c1"&gt;#awk -F, &amp;#39;$1 == &amp;quot;$10V_AH&amp;quot; {printf &amp;quot;\n&amp;quot; ; printf $2}&amp;#39; $i &amp;gt;&amp;gt; min_v.txt&lt;/span&gt;
+    awk -F, &lt;span class="s1"&gt;&amp;#39;$1 == &amp;quot;$10V_AH&amp;quot; {$2=&amp;quot;,&amp;quot;$2; printf $2}&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt; &amp;gt;&amp;gt; min_v.txt
+    awk -F, &lt;span class="s1"&gt;&amp;#39;$1 == &amp;quot;$24V_AH&amp;quot; {$2=&amp;quot;,&amp;quot;$2; printf $2}&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt; &amp;gt;&amp;gt; min_v.txt
+&lt;span class="k"&gt;done&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Remove rows with less than three values (typically dive 0000)&lt;/span&gt;
+awk -F , &lt;span class="s1"&gt;&amp;#39;NF&amp;gt;=3&amp;#39;&lt;/span&gt; min_v.txt &amp;gt;&amp;gt; min_volts.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;h3&gt;Scripts shamelessly copied from other, wiser people&lt;/h3&gt;
+&lt;p&gt;&lt;a href="http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/"&gt;3 shell scripts to improve your writing, or "My Ph.D. advisor rewrote himself in bash."&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I think these are great, so I've archived a version &lt;a href="../images/might-scripts.html"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;[1] (https://xkcd.com/285/)
+ [2] (https://xkcd.com/462)&lt;/p&gt;</content><category term="FOSS"></category><category term="linux"></category><category term="bash"></category><category term="software"></category><category term="optimise"></category></entry><entry><title>Why you (yes, you!) should take part in a hackathon</title><link href="https://callumrollo.github.io/hackweek.html" rel="alternate"></link><published>2020-08-25T10:00:00+01:00</published><updated>2020-08-27T12:50:00+01:00</updated><author><name>Callum Rollo</name></author><id>tag:callumrollo.github.io,2020-08-25:/hackweek.html</id><summary type="html">&lt;p&gt;Recounting my experience at Oceanhackweek 2020&lt;/p&gt;</summary><content type="html">&lt;p&gt;Two weeks ago I attended Oceanhackweek 2020. As an oceanographer by trade and free software nerd by heart, I loved the idea of an event that combined the two. I looked forward to learning from other oceanographers and coders, and perhaps giving something back to the free software community.&lt;/p&gt;
 &lt;h1&gt;What is a hackweek/hackathon?&lt;/h1&gt;
 &lt;p&gt;If you have yet to dip your toes in the wonderful world of free software, the concept of hacking may be alarming. Aren't hackers the bad guys in black hoodies and guy fawkes masks trying to steal my tesco clubcard points?&lt;/p&gt;
 &lt;p&gt;&lt;img alt="hoodie hacker" src="../images/hacker.png"&gt;&lt;/p&gt;
@@ -80,6 +313,9 @@ Wenbo Wu, Zhongwen Zhan1, Shirui Peng, Sidao Ni, Jörn Callies &lt;a href="https
 &lt;p&gt;Edward Snowden - &lt;a href="https://www.goodreads.com/book/show/46223297-permanent-record"&gt;Permanent Record&lt;/a&gt;
 Cory Doctorow - &lt;a href="https://craphound.com/littlebrother/download/"&gt;Little Brother&lt;/a&gt;
 Kevin Mitnic - &lt;a href="https://www.mitnicksecurity.com/the-art-of-invisibility-mitnick-security"&gt;The Art of Invisibility&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Academics' websites I enjoy&lt;/h3&gt;
+&lt;p&gt;In my experience, the more poorly formatted the website, the better the quality of ideas.&lt;/p&gt;
+&lt;p&gt;http://matt.might.net&lt;/p&gt;
 &lt;h2&gt;Sites I visit when I Should Be Writing&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://existentialcomics.com/"&gt;Existential comics&lt;/a&gt; an entertainingly good intro to various schools of philosophy&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.schneierfacts.com"&gt;Bruce Schneier facts&lt;/a&gt; crypto jokes&lt;/p&gt;
