@@ -115,10 +115,10 @@ while [ 1 ]; do
 done
 ```
 
-Use [imagemagick](https://imagemagick.org/index.php) to crop and animate a bunch of figures into a gif. Written the night before a conference, don't judge me!
+Use [imagemagick](https://imagemagick.org/index.php) to crop and animate a bunch of figures into a gif. Written the night before a conference, don't judge me.
 
 ```
-#/bin/bash
+#/!bin/bash
 
 for i in bar*.png
 do
@@ -134,7 +134,7 @@ echo foo
 convert animation.gif  -trim +repage ani.gif
 ```
 
-More imagemagick to make tight figuures (rmeove all whitespace from edges)
+More imagemagick to make tight figures (remove all whitespace from edges)
 
 ```
 #!/bin/bash
