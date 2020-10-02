@@ -21,7 +21,7 @@ Yours may differ, but as long as tying `ls` in it returns a list of directories,
 A **one liner** is a command that is one line long
 An **alias** is a short name you give to a longer command, like a nickname for your favourite code snippets. You can make one right now like this:
 
-![Default terminal](../images/terminal1.png)
+![terminal alias](../images/terminal1.png)
 
 Now your coputer can cheerfully greet you with the time of day in 4 keystrokes, neat huh?
 
@@ -81,7 +81,7 @@ If you can't think of a useful git commit message, fear not [whatthecommit](http
 After building up a suitably useful/infuriating series of commit messages, you can make a pretty git commit tree to admire them [credit](https://stackoverflow.com/questions/1838873/visualizing-branch-topology-in-git/34467298#34467298)
   `lg="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'"`
 
-![Default terminal](../images/terminal2.png)
+![terminal tree](../images/terminal2.png)
 
 ### Ugly but useful shell scripts
 
@@ -204,7 +204,7 @@ awk -F , 'NF>=3' min_v.txt >> min_volts.txt
 
 [3 shell scripts to improve your writing, or "My Ph.D. advisor rewrote himself in bash."](http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/)
 
-I think these are great, so I've archived a version [here](../images/might-scripts.html)
+I think these are great, so I've archived a version [here](../images/might-scripts.zip)
 
 ----------------------
  [1] (https://xkcd.com/285/)
