@@ -16,7 +16,7 @@ For the purpose of this article the **command line/shell/bash** all refer to the
 
 ![Default terminal](../images/terminal.png)
 
-Yours may differ, but as long as tying `ls` in it returns a list of directories, you should be good to go. Check out the link to [Matt Might's page](http://matt.might.net/articles/basic-unix/) above for a nice intro to the shell.
+Yours may differ, but as long as typing `ls` in it and hitting `enter` returns a list of directories, you should be good to go. Check out the link to [Matt Might's page](http://matt.might.net/articles/basic-unix/) above for a nice intro to the shell.
 
 A **one liner** is a command that is one line long
 An **alias** is a short name you give to a longer command, like a nickname for your favourite code snippets. You can make one right now like this:
@@ -116,6 +116,7 @@ done
 ```
 
 Use [imagemagick](https://imagemagick.org/index.php) to crop and animate a bunch of figures into a gif. Written the night before a conference, don't judge me!
+
 ```
 #/bin/bash
 
@@ -198,7 +199,6 @@ done
 # Remove rows with less than three values (typically dive 0000)
 awk -F , 'NF>=3' min_v.txt >> min_volts.txt
 ```
-
 
 ### Scripts shamelessly copied from other, wiser people
 
