@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+ <title>3 shell scripts: Kill weasel words, avoid the passive, eliminate duplicates</title>
+
+ <link rel="alternate" type="application/rss+xml" title="RSS" href="http://matt.might.net/articles/feed.rss" />
+
+ <link rel="stylesheet" href="../../css/raised-paper-2.css" /> 
+
+
+ <meta name="viewport" content="width=480, initial-scale=1" />
+ <link rel="stylesheet" media="screen and (max-device-width: 480px)" href="../../css/raised-paper-2-handheld.css" />
+
+ <script type="text/javascript" src="../../matt.might.js"></script>
+ <script type="text/javascript">
+  var ArticleVersion = 2 ;
+ </script>
+ <script>
+ <!--
+  include("article-style.js");
+ //-->
+ </script>
+ <script type="text/javascript" src="../manifest.js"></script>
+ <script type="text/javascript" src="../index-manifest.js"></script>
+
+ <script type="text/javascript">
+ <!--
+//  var Key = "[an error occurred while processing the directive]";
+ var Pathname = location.pathname ;
+ var PathParts = Pathname.split(/\//) ;
+ var Key = PathParts[PathParts.length-1] ;
+ if (Key == "")
+  Key = PathParts[PathParts.length-2] ;
+ //-->
+ </script>
+
+</head>
+
+
+
+<body>
+
+<div id="body">
+
+
+
+
+
+
+
+<div id="abstract-container" class="module">
+<div id="abstract-content" class="fat-content">
+
+ <h1>3 shell scripts to improve your writing, or "My Ph.D. advisor rewrote himself in bash."
+</h1>
+
+ <div>
+ [<a href="../">article index</a>]
+ [<script>
+       var emailMatt = '<a href="mai'+'lto:matt-blog'+'@'+'migh'+'t.net">email me</a>'
+document.write(emailMatt);
+ //-->
+</script>] 
+ [<a href="http://twitter.com/mattmight">@mattmight</a>]
+ [<a href="../feed.rss">rss</a>]
+ </div>
+
+ <p> The hardest part of advising Ph.D. students is teaching
+them how to write.</p>
+
+<p>Fortunately, I've seen patterns emerge over the past couple years.</p>
+
+<p>
+So, I've decided to replace myself with a shell script.
+</p>
+
+<p> In particular, I've created shell scripts for catching three problems:
+<ol>
+<li>abuse of the passive voice,</li>
+<li>weasel words, and</li>
+<li>lexical illusions.</li>
+</ol>
+</p>
+
+<p> And, I've integrated these into the build system of our LaTeX documents.  </p>
+
+
+<p> The point of these scripts is not to ban all use of constructs
+like the passive voice.
+
+(When it comes to writing, there are exceptions to every "rule.")
+</p>
+
+<p>
+The point of these scripts is to make sure that my students and I make a
+<em>conscious</em> choice to use these constructs.
+</p>
+
+<p> When these scripts highlight a sentence, my students should ask
+themselves, "Is there a better way to say what I said--a way to make
+the text read with more clarity and precision?"  Often enough, the
+answer is "yes."  </p>
+
+
+<p> The meta-point of this article is that writers should learn their
+individual weaknesses.
+
+And, when writers are programmers, we should enlist automation to
+combat these weaknesses.<sup>1</sup></p>
+
+
+
+  
+</div> <!-- /#content -->
+</div> <!-- /#content-container -->
+
+
+
+
+  
+<div id="content-container" class="module">
+<div id="article-content">
+
+  <script type="text/javascript">
+<!--
+ Might.enableSyntaxHighlighting("Perl") ;
+ Might.enableSyntaxHighlighting("Bash") ;
+//-->
+</script>
+
+<h2>More resources</h2>
+
+<p>
+There are four books at arm's length in my office:
+</p>
+
+<ul>
+  <li>
+
+  Strunk and White's
+  <a href="http://www.amazon.com/gp/product/0205632645?ie=UTF8&tag=ucmbread-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=0205632645">The Elements of Style</a><img src="http://www.assoc-amazon.com/e/ir?t=ucmbread-20&l=as2&o=1&a=0205632645" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
+  is still a good, if not perfect, reference on style.
+
+  Young writers should calibrate their reading of <em>Elements</em>
+  in light of 
+  <a href="http://chronicle.com/article/50-Years-of-Stupid-Grammar/25497">criticism</a>
+  from linguistic experts.
+
+  Experts claim that the good parts of Strunk and White are common sense.
+
+  I take issue only with their application of the modifier <em>common</em>.
+
+  My counterparts in linguistics and the humanities must have never
+  seen the aggressive absence of style that permeates writing
+  in science, engineering and mathematics.  </li>
+
+
+  <li>
+  
+  After reading this post, my colleague <a href="http://cseweb.ucsd.edu/~ztatlock/">Zachary Tatlock</a>
+  recommended
+<a href="http://www.amazon.com/gp/product/0205605354?ie=UTF8&tag=ucmbread-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=0205605354">Style: The Basics of Clarity and Grace</a><img src="http://www.assoc-amazon.com/e/ir?t=ucmbread-20&l=as2&o=1&a=0205605354" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /> as a better reference than Strunk and White.
+
+   Having had a chance to read it, I agree with Zachary.
+
+   If you can get only one book, this is the one to get.
+
+   (I'd still recommend a thoughtful reading of both.)
+  
+  </li>
+
+  
+  <li>
+
+ When I have a dispute,
+
+  <a href="http://www.amazon.com/gp/product/0226104206?ie=UTF8&tag=ucmbread-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=0226104206">The Chicago Manual of Style</a><img src="http://www.assoc-amazon.com/e/ir?t=ucmbread-20&l=as2&o=1&a=0226104206" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+ends it.
+  
+  </li>
+
+
+
+  <li>
+
+  <a href="http://www.amazon.com/gp/product/0226823377?ie=UTF8&tag=ucmbread-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=0226823377">A Manual for Writers of Research Papers, Theses, and Dissertations</a><img src="http://www.assoc-amazon.com/e/ir?t=ucmbread-20&l=as2&o=1&a=0226823377" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
+  is the Chicago manual for technical writing.
+  
+  </li>
+  
+</ul>
+
+
+
+<h2>Precision and clarity</h2>
+
+<p> My Ph.D. advisor, <a href="http://www.ccs.neu.edu/home/shivers/">Olin Shivers</a>, taught me that technical writing is a balancing
+act between precision, clarity and marketing. </p>
+
+<p> After a recent round of paper submissions with my own
+Ph.D. students, I've identified mechanically recognizable ways that
+precision and clarity leak out of a paper: weasel words and abuse of
+the passive voice.</p>
+
+<p> So, I've written shell scripts to detect these leaks.  </p>
+
+
+<p> (I don't think I'll ever be able to write a shell script that
+detects bad marketing for a scientific idea.)  </p>
+
+
+
+
+<h2>Weasel words</h2>
+
+<p>Weasel words--phrases or words that sound good without conveying
+information--obscure precision.  </p>
+
+
+<p> I notice three kinds of weasel words in my students' writing: (1)
+salt and pepper words, (2) beholder words and (3) lazy words.  </p>
+
+
+<h3>Salt and pepper words</h3>
+
+<p> New grad students sprinkle in salt and pepper words for seasoning.
+
+These words look and feel like technical words, but convey nothing.  </p>
+
+
+<p> My favorite salt and pepper words/phrases are <em>various</em>,
+<em>a number of</em>, <em>fairly</em>, and <em>quite</em>.
+
+Sentences that cut these words out become stronger.
+</p>
+
+
+<pre>
+ Bad:    It is quite difficult to find untainted samples.
+ Better: It is difficult to find untainted samples.
+</pre>
+
+<pre>
+ Bad:    We used various methods to isolate four samples.
+ Better: We isolated four samples.
+</pre>
+
+
+
+<h3>Beholder words</h3>
+
+<p>
+Beholder words are those whose meaning is a function of the reader; for example:
+<em>interestingly</em>,
+<em>surprisingly</em>,
+<em>remarkably</em>,
+or
+<em>clearly</em>.
+</p>
+
+
+<p>
+Peer reviewers don't like judgments drawn for them.
+</p>
+
+<pre>
+Bad:    False positives were surprisingly low.
+Better: To our surprise, false positives were low.
+Good:   To our surprise, false positives were low (3%).
+</pre>
+
+
+<h3>Lazy words</h3>
+
+<p> Students insert lazy words in order to avoid making a quantitative
+characterization.
+
+They give the impression that the author has not yet conducted 
+said characterization.
+</p>
+
+<p>
+These words make the science feel unfirm and unfinished.
+</p>
+
+
+<p> The two worst offenders in this category are the words
+<em>very</em> and <em>extremely</em>.  These two adverbs are never
+excusable in technical writing.  Never. </p>
+
+
+<p> Other offenders include <em>several</em>, <em>exceedingly</em>,
+<em>many</em>, <em>most</em>, <em>few</em>, <em>vast</em>.  </p>
+
+
+<pre>
+ Bad:    There is very close match between the two semantics.
+ Better: There is a close match between the two semantics.
+</pre>
+
+
+<h3>Adverbs</h3>
+
+<p>
+In technical writing, adverbs tend to come off as weasel words.
+</p>
+
+<p> I'd even go so far as to say that the removal of all adverbs from
+any technical writing would be a net positive for my newest graduate
+students.
+
+(That is, new graduate students weaken a sentence when they insert adverbs more frequently than they strengthen it.)</p>
+
+
+<pre>
+ Bad:    We offer a completely different formulation of CFA.
+ Better: We offer a different formulation of CFA.
+</pre>
+
+
+<h3>A script to find weasel words</h3>
+
+<p> With this script, you can supply an alternate list of weasel words
+in a file if you don't like the default: </p>
+
+<pre class="brush: bash; gutter: false;">
+#!/bin/bash
+
+weasels="many|various|very|fairly|several|extremely\
+|exceedingly|quite|remarkably|few|surprisingly\
+|mostly|largely|huge|tiny|((are|is) a number)\
+|excellent|interestingly|significantly\
+|substantially|clearly|vast|relatively|completely"
+
+wordfile=""
+
+# Check for an alternate weasel file
+if [ -f $HOME/etc/words/weasels ]; then
+    wordfile="$HOME/etc/words/weasels"
+fi
+
+if [ -f $WORDSDIR/weasels ]; then
+    wordfile="$WORDSDIR/weasels"
+fi
+
+if [ -f words/weasels ]; then
+    wordfile="words/weasels"
+fi
+
+if [ ! "$wordfile" = "" ]; then
+    weasels="xyzabc123";
+    for w in `cat $wordfile`; do
+        weasels="$weasels|$w"
+    done
+fi
+
+
+if [ "$1" = "" ]; then
+ echo "usage: `basename $0` &lt;file&gt; ..."
+ exit
+fi
+
+egrep -i -n --color "\\b($weasels)\\b" $*
+
+exit $?
+
+
+
+
+
+
+</pre>
+
+
+
+<h2>Passive voice</h2>
+
+<p> There are times when the passive voice is acceptable in
+technical writing. </p>
+
+
+<p> I also believe, as with adverbs, that removal of the passive voice would have been a net improvement for over half the technical writing I've edited.
+
+(That is, students abuse the passive voice more often than
+they use it well.)
+</p>
+
+<p>
+Of course, I do not advocate dogmatic removal of the passive voice.
+</p>
+
+
+<p>
+The passive voice is tough to shake.
+
+Even while writing this article, I caught myself defaulting to the passive
+in situations where the active was better.
+</p>
+
+<p>
+The passive voice is bad when it hides relevant or explanatory information:
+</p>
+
+<pre>
+ Bad:    Termination is guaranteed on any input.
+ Better: Termination is guaranteed on any input by a finite state-space.
+ OK:     A finite state-space guarantees termination on any input.
+</pre>
+
+<p>
+In the first sentence, the passive hides relevant information.
+</p>
+
+<p> The second sentence includes the relevant information, but the passive misplaces the emphasis.  </p>
+
+<p>
+The third sentence contains all the relevant information, and it feels crisp.
+</p>
+
+
+<p> There's one case where I think the passive is preferrable in technical writing--when the subject is truly irrelevant: </p>
+
+
+<pre>
+ OK: 4 mL HCl were added to the solution.
+</pre>
+
+<p>
+Even in this example, I personally don't believe it's egregious to use <em>we</em>:
+</p>
+
+<pre>
+ OK (to me): We added 4 mL HCl to the solution.
+</pre>
+
+
+<p>
+In summary, 
+for each use of the passive highlighted by my script, ask the following questions:
+</p>
+
+<ol>
+  <li>Is the agent relevant yet unclear?</li>
+  <li>Does the text read better with the sentence in the active?</li>
+</ol>
+
+<p> If the answer to both questions is "yes," then change to the active.  </p>
+
+<p> If only the answer to the first question is "yes," then specify the agent. </p>
+
+
+<h3>A script to find passive voice</h3>
+<pre class="brush: bash; gutter: false;">
+#!/bin/bash
+
+irregulars="awoken|\
+been|born|beat|\
+become|begun|bent|\
+beset|bet|bid|\
+bidden|bound|bitten|\
+bled|blown|broken|\
+bred|brought|broadcast|\
+built|burnt|burst|\
+bought|cast|caught|\
+chosen|clung|come|\
+cost|crept|cut|\
+dealt|dug|dived|\
+done|drawn|dreamt|\
+driven|drunk|eaten|fallen|\
+fed|felt|fought|found|\
+fit|fled|flung|flown|\
+forbidden|forgotten|\
+foregone|forgiven|\
+forsaken|frozen|\
+gotten|given|gone|\
+ground|grown|hung|\
+heard|hidden|hit|\
+held|hurt|kept|knelt|\
+knit|known|laid|led|\
+leapt|learnt|left|\
+lent|let|lain|lighted|\
+lost|made|meant|met|\
+misspelt|mistaken|mown|\
+overcome|overdone|overtaken|\
+overthrown|paid|pled|proven|\
+put|quit|read|rid|ridden|\
+rung|risen|run|sawn|said|\
+seen|sought|sold|sent|\
+set|sewn|shaken|shaven|\
+shorn|shed|shone|shod|\
+shot|shown|shrunk|shut|\
+sung|sunk|sat|slept|\
+slain|slid|slung|slit|\
+smitten|sown|spoken|sped|\
+spent|spilt|spun|spit|\
+split|spread|sprung|stood|\
+stolen|stuck|stung|stunk|\
+stridden|struck|strung|\
+striven|sworn|swept|\
+swollen|swum|swung|taken|\
+taught|torn|told|thought|\
+thrived|thrown|thrust|\
+trodden|understood|upheld|\
+upset|woken|worn|woven|\
+wed|wept|wound|won|\
+withheld|withstood|wrung|\
+written"
+
+if [ "$1" = "" ]; then
+ echo "usage: `basename $0` &lt;file&gt; ..."
+ exit
+fi
+
+egrep -n -i --color \
+ "\\b(am|are|were|being|is|been|was|be)\
+\\b[ ]*(\w+ed|($irregulars))\\b" $*
+
+exit $?
+</pre>
+
+
+
+<h2>A script to find lexical illusions</h2>
+
+<p>
+Read the following text:
+</p>
+
+ <pre>
+ Many readers are not aware that the
+ the brain will automatically ignore
+ a second instance of the word "the"
+ when it starts a new line. </pre>
+
+<p>
+Read that same text again, but with different line breaks:
+</p>
+
+ <pre>
+ Many readers are not aware that the the
+ brain will automatically ignore a second
+ instance of the word "the" when it starts
+ a new line. </pre>
+
+<p>Duplicating words is a phenomenon of electronic composition.  </p>
+
+<p> They seem to happen as cut and paste accidents, and most
+frequently it's with the word <em>the</em>.</p>
+
+<p> Unfortunately, it can be difficult to proofread away duplicate
+words, because this lexical illusion prevents us from finding
+them.</p>
+
+<p> No reviewer will shoot down a submission solely because it contains
+duplicate words, but when small mistakes like spelling errors and
+duplicate words pile up, they convey a lack of proofreading. </p>
+
+<p> Reviewers will (rightfully) interpret inadequate proofreading as a
+lack of respect for their time and attention.  </p>
+
+<p>
+Fortunately, a short perl script hunts these bugs down:
+</p>
+
+<pre class="brush: pl; gutter: false;">
+#!/usr/bin/env perl
+
+# Finds duplicate adjacent words.
+
+use strict ;
+
+my $DupCount = 0 ;
+
+if (!@ARGV) {
+  print "usage: dups &lt;file&gt; ...\n" ;
+  exit ;
+}
+
+while (1) {
+  my $FileName = shift @ARGV ;
+
+  # Exit code = number of duplicates found.  
+  exit $DupCount if (!$FileName) ;
+
+  open FILE, $FileName or die $!; 
+  
+  my $LastWord = "" ;
+  my $LineNum = 0 ;
+  
+  while (&lt;FILE&gt;) {
+    chomp ;
+
+    $LineNum ++ ;
+    
+    my @words = split (/(\W+)/) ;
+    
+    foreach my $word (@words) {
+      # Skip spaces:
+      next if $word =~ /^\s*$/ ;
+
+      # Skip punctuation:
+      if ($word =~ /^\W+$/) {
+        $LastWord = "" ;
+        next ;
+      }
+      
+      # Found a dup? 
+      if (lc($word) eq lc($LastWord)) {
+        print "$FileName:$LineNum $word\n" ;
+        $DupCount ++ ;
+      } # Thanks to Sean Cronin for tip on case.
+
+      # Mark this as the last word:
+      $LastWord = $word ;
+    }
+  }
+  
+  close FILE ;
+}
+
+
+</pre>
+
+
+
+<h2>Makefile integration</h2>
+
+<p> I keep a local copy of the scripts in the <code>bin/</code>
+directory of each paper's repository.
+
+Then, I add a <code>make proof</code> rule to Makefile: </p>
+
+<pre>
+# Check style:
+proof:
+        echo "weasel words: "
+        sh bin/weasel *.tex
+        echo
+        echo "passive voice: "
+        sh bin/passive *.tex
+        echo
+        echo "duplicates: "
+        perl bin/dups *.tex
+</pre>
+
+
+
+<h2>A few words on marketing</h2>
+
+<p> A grad student's first impulse when she starts grad school is to
+assume that, as long as she tells the whole truth and nothing but the
+truth, everything she writes has to be accepted for publication.</p>
+
+<p>
+But, there are a lot of true things.
+</p>
+
+<p> Given the volume of submissions to top peer-reviewed venues, there
+will always be more than enough technically correct papers to fill the
+venue. </p>
+
+<p> The function of peer review has become to decide which true
+things are worth knowing.  </p>
+
+<p> In that sense, peer reviewers are the guardians of the scientific
+community's most limited resource: our collective attention span.  </p>
+
+<p> To market a paper, the author must make a compelling case for why
+her idea deserves access to that resource.</p>
+
+
+
+<h2>Resources</h2>
+
+<ul>
+  <li>
+Benjamin Beckwith has contributed a
+<a href="http://github.com/bnbeckwith/writegood-mode">"writegood"</a> mode for emacs inspired by these scripts.
+  </li>
+</ul>
+
+
+
+<hr />
+
+<p> [1] For example, my colleague <a href="http://blog.regehr.org/">John Regehr,</a> suggested simple scripts to catch
+students' use of superfluous phrases like, "Note that," and "Notice that."
+
+Others have suggested scripts for using the future tense in technical writing.
+</p>
+
+
+
+<script type="text/javascript">
+<!--
+ SyntaxHighlighter.all() ;
+//-->
+</script>
+  
+
+ <hr />
+
+ <div id="footer-links">
+ [<a href="../">article index</a>]
+ [<script>
+       var emailMatt = '<a href="mai'+'lto:matt-blog'+'@'+'migh'+'t.net">email me</a>'
+document.write(emailMatt);
+ //-->
+</script>] 
+ [<a href="http://twitter.com/mattmight">@mattmight</a>]
+ [<a href="../feed.rss">rss</a>]
+ </div>
+
+
+  
+</div> <!-- /#content -->
+</div> <!-- /#content-container -->
+
+
+
+
+
+
+<div id="footer-linode" class="module fat-container">
+ <div class="fat-content"> 
+ <center>
+ matt.might.net is powered by <b><a href="http://www.linode.com/?r=bf5d4e7c8a1af61855b5227279a6744c3bde8a8a">linode</a></b> | 
+   <a href="../legal/">legal information</a>
+ </center>
+ </div>
+</div>
+
+
+
+
+
+
+</div> <!-- /#body -->
+
+
+
+
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3661244-1");
+pageTracker._trackPageview();
+</script>
+
+
+
+
+</body>
+
+</html>

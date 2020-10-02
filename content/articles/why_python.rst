@@ -28,6 +28,12 @@ Why does this matter for oceanography? For one thing, **matlab is not free as in
 
 Even if an individual or institution can spare the funding for the licensing (what could your department better do with the thousands it's spending on matlab licences?) **matlab is not free as in freedom**. Even when you purchase a licence, you cannot see the source code of matlab. You cannot know how it works. If mathworks were to fold tomorrow, you have no recourse to. With Python, everything you write can be shared, examined and reproduced. Free software is a critical step to opening science and lowering barriers to entry.
 
+A bunch of useful links to linux resources
+
+A great series of practical intorductory texts by Matt Might
+
+http://matt.might.net/articles/basic-unix/
+
 If you feel like taking the plunge, Python is always open to you
 
 <https://phillipmfeldman.org/Python/Advantages_of_Python_Over_Matlab.html>

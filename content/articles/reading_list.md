@@ -85,6 +85,12 @@ Edward Snowden - [Permanent Record](https://www.goodreads.com/book/show/46223297
 Cory Doctorow - [Little Brother](https://craphound.com/littlebrother/download/)
 Kevin Mitnic - [The Art of Invisibility](https://www.mitnicksecurity.com/the-art-of-invisibility-mitnick-security)
 
+
+### Academics' websites I enjoy
+
+In my experience, the more poorly formatted the website, the better the quality of ideas.
+
+http://matt.might.net
 ## Sites I visit when I Should Be Writing
 
 [Existential comics](https://existentialcomics.com/) an entertainingly good intro to various schools of philosophy
