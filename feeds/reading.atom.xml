@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Callum Rollo - Reading</title><link href="https://callumrollo.github.io/" rel="alternate"></link><link href="https://callumrollo.github.io/feeds/reading.atom.xml" rel="self"></link><id>https://callumrollo.github.io/</id><updated>2020-08-27T11:25:00+01:00</updated><subtitle>Oceanographer in training</subtitle><entry><title>Articles of interest</title><link href="https://callumrollo.github.io/reading.html" rel="alternate"></link><published>2020-07-13T10:20:00+01:00</published><updated>2020-08-27T11:25:00+01:00</updated><author><name>Callum Rollo</name></author><id>tag:callumrollo.github.io,2020-07-13:/reading.html</id><summary type="html">&lt;p&gt;What I'm reading&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Articles&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Callum Rollo - Reading</title><link href="https://callumrollo.github.io/" rel="alternate"></link><link href="https://callumrollo.github.io/feeds/reading.atom.xml" rel="self"></link><id>https://callumrollo.github.io/</id><updated>2020-10-10T11:25:00+01:00</updated><subtitle>Oceanographer in training</subtitle><entry><title>Articles of interest</title><link href="https://callumrollo.github.io/reading.html" rel="alternate"></link><published>2020-07-13T10:20:00+01:00</published><updated>2020-10-10T11:25:00+01:00</updated><author><name>Callum Rollo</name></author><id>tag:callumrollo.github.io,2020-07-13:/reading.html</id><summary type="html">&lt;p&gt;What I'm reading&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Articles&lt;/h2&gt;
 &lt;h3&gt;Oeanography&lt;/h3&gt;
 &lt;p&gt;Erik M. Bruvik, Ilker Fer, Kjetil Våge, and Peter M. Haugan - &lt;a href="https://os.copernicus.org/articles/16/291/2020/os-16-291-2020.pdf"&gt;A revised ocean glider concept to realize Stommel’s vision and supplement Argo floats&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Annie P. S. Wong et. al. &lt;a href="https://www.frontiersin.org/articles/10.3389/fmars.2020.00700/full"&gt;20 years of ARGO. Great overview with tech details, error sources and more&lt;/a&gt;
-Wenbo Wu, Zhongwen Zhan1, Shirui Peng, Sidao Ni, Jörn Callies &lt;a href="https://science.sciencemag.org/content/369/6510/1510"&gt;Hearing the heat - Seismic ocean thermometry&lt;/a&gt; (paywalled)&lt;/p&gt;
+&lt;p&gt;Annie P. S. Wong et. al. &lt;a href="https://www.frontiersin.org/articles/10.3389/fmars.2020.00700/full"&gt;20 years of ARGO. Great overview with tech details, error sources and more&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Wenbo Wu, Zhongwen Zhan1, Shirui Peng, Sidao Ni, Jörn Callies &lt;a href="https://science.sciencemag.org/content/369/6510/1510"&gt;Hearing the heat - Seismic ocean thermometry&lt;/a&gt; (paywalled)&lt;/p&gt;
 &lt;p&gt;Fabio Crameri - &lt;a href="https://blogs.egu.eu/divisions/gd/2017/08/23/the-rainbow-colour-map/"&gt;The Rainbow Colour Map (repeatedly) considered harmful&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Joseph Gum - &lt;a href="https://github.com/asx-/reproducible-science/blob/master/reproducible_science.pdf"&gt;Reproducible Science&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Ocean best practices - &lt;a href="https://repository.oceanbestpractices.org/handle/11329/1253"&gt;EGO netCDF version 1.3 glider data standardised format&lt;/a&gt;&lt;/p&gt;
@@ -37,9 +37,11 @@ Wenbo Wu, Zhongwen Zhan1, Shirui Peng, Sidao Ni, Jörn Callies &lt;a href="https
 &lt;h3&gt;Economics/Society&lt;/h3&gt;
 &lt;p&gt;David Graeber - &lt;a href="https://www.goodreads.com/book/show/6617037-debt"&gt;Debt: The First 5000 Years&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;Privacy/Surveillance&lt;/h3&gt;
-&lt;p&gt;Edward Snowden - &lt;a href="https://www.goodreads.com/book/show/46223297-permanent-record"&gt;Permanent Record&lt;/a&gt;
-Cory Doctorow - &lt;a href="https://craphound.com/littlebrother/download/"&gt;Little Brother&lt;/a&gt;
-Kevin Mitnic - &lt;a href="https://www.mitnicksecurity.com/the-art-of-invisibility-mitnick-security"&gt;The Art of Invisibility&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Edward Snowden - &lt;a href="https://www.goodreads.com/book/show/46223297-permanent-record"&gt;Permanent Record&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Cory Doctorow - &lt;a href="https://craphound.com/littlebrother/download/"&gt;Little Brother&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Kevin Mitnic - &lt;a href="https://www.mitnicksecurity.com/the-art-of-invisibility-mitnick-security"&gt;The Art of Invisibility&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Some great authors&lt;/h3&gt;
+&lt;p&gt;Neal Stephenson, Iain (M) Banks, Cory Doctorow, Charlie Stross&lt;/p&gt;
 &lt;h3&gt;Academics' websites I enjoy&lt;/h3&gt;
 &lt;p&gt;In my experience, the more poorly formatted the website, the better the quality of ideas.&lt;/p&gt;
 &lt;p&gt;http://matt.might.net&lt;/p&gt;
