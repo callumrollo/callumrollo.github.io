@@ -1,6 +1,6 @@
 Title: Articles of interest
 Date: 2020-07-13 10:20
-Modified: 2020-08-27 11:25
+Modified: 2020-10-10 11:25
 Category: Reading
 Tags: articles, opinion, academia, nature
 Slug: reading
@@ -13,6 +13,7 @@ Summary: What I'm reading
 Erik M. Bruvik, Ilker Fer, Kjetil Våge, and Peter M. Haugan - [A revised ocean glider concept to realize Stommel’s vision and supplement Argo floats](https://os.copernicus.org/articles/16/291/2020/os-16-291-2020.pdf)
 
 Annie P. S. Wong et. al. [20 years of ARGO. Great overview with tech details, error sources and more](https://www.frontiersin.org/articles/10.3389/fmars.2020.00700/full)
+
 Wenbo Wu, Zhongwen Zhan1, Shirui Peng, Sidao Ni, Jörn Callies [Hearing the heat - Seismic ocean thermometry](https://science.sciencemag.org/content/369/6510/1510) (paywalled)
 
 Fabio Crameri - [The Rainbow Colour Map (repeatedly) considered harmful](https://blogs.egu.eu/divisions/gd/2017/08/23/the-rainbow-colour-map/)
@@ -82,8 +83,14 @@ David Graeber - [Debt: The First 5000 Years](https://www.goodreads.com/book/show
 ### Privacy/Surveillance
 
 Edward Snowden - [Permanent Record](https://www.goodreads.com/book/show/46223297-permanent-record)
+
 Cory Doctorow - [Little Brother](https://craphound.com/littlebrother/download/)
+
 Kevin Mitnic - [The Art of Invisibility](https://www.mitnicksecurity.com/the-art-of-invisibility-mitnick-security)
+
+### Some great authors
+
+Neal Stephenson, Iain (M) Banks, Cory Doctorow, Charlie Stross
 
 
 ### Academics' websites I enjoy

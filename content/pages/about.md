@@ -69,7 +69,7 @@ If you have my phone number, please contact me using [Signal](https://www.signal
 
 ### Things I enjoy talking about
 
-With varying levels of competence but a universal level of enthusiasm
+With varying levels of competence but universal enthusiasm
 
 - Ocean slope currents
 - Cross shelf exchange
@@ -86,3 +86,11 @@ With varying levels of competence but a universal level of enthusiasm
 - Infosec, cryptography, online security, and why you shouldn't blindly follow [links](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 - Math rock, Irish/Scottish folk, UK hip-hop, music in general
 - Trail cameras for wildlife observation
+
+See also [reading list](https://callumrollo.github.io/reading.html#reading)
+
+### About this website
+
+Source code is available on my [Github](https://github.com/callumrollo/callumrollo.github.io), see [this article](https://callumrollo.github.io/howto.html#howto) for more info on why I promote open sharing  of source code and some more academic websites that do the same
+
+This website has no trackers, cookies, data collection or visitor logging. This is a deliberate choice.
