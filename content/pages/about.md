@@ -18,16 +18,16 @@ I am an amateur Pythonista, leader of [UEA python](https://ueapy.github.io/) and
 
 2020 [Glider Observations of the Northwestern Iberian Margin During an Exceptional Summer Upwelling Season](https://doi.org/10.1029/2019JC015804)
 
-My [ORCID](https://orcid.org/0000-0002-5134-7886) profile is usually more up to date.
+To request a copy of any of my publications that have ended up behind a paywall, please email me. This is completely legal and scientists actively encourage it.
 
-To request a copy of any publications, please email me.
+### Selected posters
+
+2017 [Marine Autonomy and Techology Showcase](../images/poster_omura_17.pdf)
 
 ### Career
-**2017- present** Postgraduate Researcher UEA 
+**2017- present** Postgraduate Researcher University of East Anglia
 
-**2013-2017 **MSci Geophysics University of Southampton
-
-
+**2013-2017 ** MSci Geophysics University of Southampton
 
 ### Supervisory Team
 
@@ -44,6 +44,8 @@ Integrated Master of Science (MSci) geophysics with study abroad First class, Un
 Thesis title: Approximating 3D seismic velocities under Sumatra using ambient noise tomography. 
 Supervisor: Dr Nicholas Harmon
 
+-----------------------
+
 ### Contact me
 
 Public key
@@ -54,7 +56,8 @@ expires: 2022-06-19
 
 [download key](../images/mykey.asc)
 
-### *What is that?*
+ *What's that?*
+ 
 A secure way to contact me, assuming you trust that I have control of this website. You can use [Public key cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography) to securely exchange information with me over any text communication channel; be that email, SMS or, notes pushed under a door. I use [GNU Privacy Guard](https://en.wikipedia.org/wiki/GNU_Privacy_Guard).
 
 If you have my phone number, please contact me using [Signal](https://www.signal.org/).
@@ -66,6 +69,7 @@ If you have my phone number, please contact me using [Signal](https://www.signal
 - [twitter](https://twitter.com/callum_rollo)
 - [stack overflow](https://stackoverflow.com/users/13208790/bystander)
 - [ORCID](https://orcid.org/0000-0002-5134-7886)
+- [UEA Python presentations](https://ueapy.github.io/author/callum-rollo.html) 
 
 ### Things I enjoy talking about
 
@@ -89,8 +93,10 @@ With varying levels of competence but universal enthusiasm
 
 See also [reading list](https://callumrollo.github.io/reading.html#reading)
 
+-------------------
+
 ### About this website
 
-Source code is available on my [Github](https://github.com/callumrollo/callumrollo.github.io), see [this article](https://callumrollo.github.io/howto.html#howto) for more info on why I promote open sharing  of source code and some more academic websites that do the same
+Source code is available on my [Github](https://github.com/callumrollo/callumrollo.github.io). See [this article](https://callumrollo.github.io/howto.html#howto) for more info on why I promote open sharing  of source code, as well as links to academic websites that do the same.
 
 This website has no trackers, cookies, data collection or visitor logging. This is a deliberate choice.
