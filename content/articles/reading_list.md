@@ -34,6 +34,8 @@ Ryan Abernathey - [The scientific paper is outdated (paywalled, free account sig
 
 James Somers - [The Scientific Paper Is Obsolete](https://www.theatlantic.com/science/archive/2018/04/the-scientific-paper-is-obsolete/556676/)
 
+Mike Jackson - [How to cite academic software](https://software.ac.uk/how-cite-software)
+
 ### Academic Publishing
 
 George Monbiot - [Academic publishers are wealth extracting monopolists](https://www.monbiot.com/2011/08/29/the-lairds-of-learning/)
@@ -98,6 +100,8 @@ Neal Stephenson, Iain (M) Banks, Cory Doctorow, Charlie Stross
 In my experience, the more poorly formatted the website, the better the quality of ideas.
 
 http://matt.might.net
+
+https://betterfigures.org/
 ## Sites I visit when I Should Be Writing
 
 [Existential comics](https://existentialcomics.com/) an entertainingly good intro to various schools of philosophy

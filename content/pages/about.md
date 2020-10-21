@@ -4,15 +4,17 @@ Category: Generic
 Slug: aboutme
 Summary: All about me
 
-I work with marine gliders, specifically the integration on Acoustic Doppler Current Profilers (ADCPs) onto gliders to directly measure currents in the ocean. The specific glider I work with is SG637 "Omura" equipped with a 1MHz ADCP.
+I am currently a final year PhD student at the University of East Anglia (UEA) in Norwich, UK. I work with marine gliders, specifically the integration on Acoustic Doppler Current Profilers (ADCPs) onto gliders to directly measure currents in the ocean. The specific glider I work with is SG637 "Omura" equipped with a 1MHz ADCP.
 
 Data and live location information from this glider, and others in the fleet, is available on the [UEA glider website](ueaglider.uea.ac.uk/). I am open to collaborations in physical oceanography. Especially projects involving ADCPs on autonomous platforms, shelf break processes and open source science initiatives.
 
 I am an amateur Pythonista, leader of [UEA python](https://ueapy.github.io/) and proponent of free software for science. Several of my projects are available on my [github](https://github.com/callumrollo). 
 
+[Blog posts](https://callumrollo.github.io/)
+
 ### Curriculum Vitae
 
-[download pdf](../images/callum-rollo-cv-2020.pdf)
+[Download pdf](../images/callum-rollo-cv-2020.pdf)
 
 ### Publications
 
@@ -73,10 +75,11 @@ If you have my phone number, please contact me using [Signal](https://www.signal
 
 ### Things I enjoy talking about
 
-With varying levels of competence but universal enthusiasm
+With varying levels of competence but universal enthusiasm.
 
-- Ocean slope currents
+- Slope currents
 - Cross shelf exchange
+- Glider data processing
 - Standardisation of data processing
 - FOSS in the geosciences
 - The pros/cons of preprints and open peer review
@@ -99,4 +102,4 @@ See also [reading list](https://callumrollo.github.io/reading.html#reading)
 
 Source code is available on my [Github](https://github.com/callumrollo/callumrollo.github.io). See [this article](https://callumrollo.github.io/howto.html#howto) for more info on why I promote open sharing  of source code, as well as links to academic websites that do the same.
 
-This website has no trackers, cookies, data collection or visitor logging. This is a deliberate choice.
+This website has no trackers, cookies, data collection or visitor logging. I am opposed to online surveillance.
