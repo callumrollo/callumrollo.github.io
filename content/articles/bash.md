@@ -1,6 +1,6 @@
 Title: Shell games
 Date: 2020-10-02 18:20
-Modified: 2020-10-02 18:20
+Modified: 2020-10-26 10:50
 Category: FOSS
 Tags:  linux, bash, software, optimise
 Slug: bash
@@ -8,41 +8,45 @@ Summary: Excerpts from my .bashrc and shell scripts
 
 ### First off, what's a shell?
 
-The shell is how you, mighty keyboard warrior, maintain control over the awe-inspiring power of your [unix system](https://www.youtube.com/watch?v=SpLRTAGa6bU)*.  Here I have collected some of my favourite one liners, aliases and shell scripts that I use to reduce repetitive typing, quickly analyse data, improve my writing and more.
+The shell is how you, the mighty keyboard warrior, exert control over the awe-inspiring power of your [unix system](https://www.youtube.com/watch?v=SpLRTAGa6bU)*.  Here I have collected some of my favourite one liners, aliases and shell scripts that I use to reduce repetitive typing, quickly analyse data, improve my writing, and more.
 
 *If you're not already on some flavour of unix, check out [this guide](http://matt.might.net/articles/basic-unix/) to get up to speed. It's way more fun than you might think, I promise.
 
-For the purpose of this article the **command line/shell/bash** all refer to the same thing. Namely, that little black box you summon with ctrl + alt + T that makes you feel like a badass 90s cyberpunk in wrap around shades who's about to hack the mainframe. Mine looks like this
+For the purpose of this article the terms **command line/shell/bash** all refer to the same thing. Namely, that little black box you summon with ctrl + alt + T that makes you feel like a badass 90s cyberpunk about to hack the mainframe. Mine looks like this
 
 ![Default terminal](../images/terminal.png)
 
-Yours may differ, but as long as typing `ls` in it and hitting `enter` returns a list of directories, you should be good to go. Check out the link to [Matt Might's page](http://matt.might.net/articles/basic-unix/) above for a nice intro to the shell.
+Yours may differ in appearance, but as long as typing `ls` in it and hitting `enter` returns a list of directory contents, you should be good to go. Check out the link to [Matt Might's page](http://matt.might.net/articles/basic-unix/) above for a nice intro to the shell.
 
-A **one liner** is a command that is one line long
+### Some terms
+
+A **one liner** is a command that is one line long.
+
 An **alias** is a short name you give to a longer command, like a nickname for your favourite code snippets. You can make one right now like this:
 
 ![terminal alias](../images/terminal1.png)
 
 Now your coputer can cheerfully greet you with the time of day in 4 keystrokes, neat huh?
 
-A **shell script** is a series of instructions to be executed by your shell. This can range from a one liner, to sprawling programs. The advantage of writing shell scripts rather than, say Python scripts, is that any \*nix system you use will have a shell and some core utilities. No need to install dependencies. For this reason shell scripts are *portable*, never leave the house without them! (If when you read this we are still experiencing a global pandemic, maybe don't leave the house at all if you can avoid it.)
+A **shell script** is a series of instructions to be executed by your shell. This can range from a one liner, to sprawling programs. The advantage of writing shell scripts rather than, say Python scripts, is that any \*nix system you use will have a shell and some core utilities. No need to install dependencies. For this reason shell scripts are *portable*, never leave the house without them! (If when you read this we are still experiencing a global pandemic, maybe don't leave the house at all if you can avoid it).
 
 Now we've covered the terminology, on to the good stuff.
 
 ### My favourite aliases
 
-Some of these are original thoughts, many are adapted from examples I've found in various corners of the internet. Using these functions can boost your productivity, increase your net worth and make you more significantly more attractive [[1](https://xkcd.com/285/)][[2](https://xkcd.com/462)]
+Some of these are original thoughts, many are adapted from examples I've found in various corners of the internet. Using these functions can boost your productivity, increase your net worth and make you more significantly more attractive [[1](https://xkcd.com/285/)][[2](https://xkcd.com/462)].
 
 - `..='cd ..'`
 - `please='sudo'`
 - `duh='du -h --max-depth=1'`
 - `gcb='git checkout -b'` and a whole lot of other git shortcuts
 - `gdiff=" git diff --word-diff"` check what changes you have staged in a file
-- `hpc='ssh -XY username@uni.hpc.server`
+- `hpc='ssh -XY username@uni.hpc.server` access my uni hpc login node. I have many other aliases for quick remote access. Pro-tip: if you [set up ssh access keys](https://www.ssh.com/ssh/copy-id) with `ssh-copy-id` you won't even need to enter a password
 - `nb='jupyter notebook'`
 - `space='du -hS | sort -n -r |more'` to find what's using most space in a directory
 - `wet='curl http://v2.wttr.in/Norwich'` why visit a weather site when you can find out form the command line why it's not worth leaving the house today?
 - `aliasg='alias | grep'` for when I forget what I called my aliases
+- `histg=history | grep` as above for command history
 - ` set -o vi` vim keybindings in shell. **Only use if you love vim**. emacs users can try [this](https://youtu.be/dQw4w9WgXcQ?t=43) instead.
 
 You can create an alias straight from the terminal as I did with `gday`
@@ -55,16 +59,16 @@ Aliases created in such a way will only last through your terminal session. To p
 
 You can also set up slightly more complicated commands in the `rc` file like so
 
-```
+```bash
 mcd () {
     mkdir -p $1
     cd $1
 }
 ```
 
-This command makes a directory then moves you into it. Try out `mcd test` then `ls` to check where you are
+This command makes a directory then moves you into it. Try out `mcd test` then `pwd` to check where you are.
 
-```
+```bash
 com () {
     git add -A
     git commit -m "$1"
@@ -78,14 +82,17 @@ If you can't think of a useful git commit message, fear not [whatthecommit](http
 
 `yolo='git add -A && git commit -m "$(curl --silent --fail http://whatthecommit.com/index.txt)" && git push'`
 
-After building up a suitably useful/infuriating series of commit messages, you can make a pretty git commit tree to admire them [credit](https://stackoverflow.com/questions/1838873/visualizing-branch-topology-in-git/34467298#34467298)
-  `lg="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'"`
+After building up a suitably useful/infuriating series of commit messages, you can make a pretty git commit tree to admire them [(from this stackoverflow answer)](https://stackoverflow.com/questions/1838873/visualizing-branch-topology-in-git/34467298#34467298)
+
+ `lg="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'"`
+
+Sample output, commit messages courtesy of whatthecommit:
 
 ![terminal tree](../images/terminal2.png)
 
 ### Ugly but useful shell scripts
 
-These have saved me many hours of tedious manual tasks. Though I think some more time to write than they have yet saved me...
+These have saved me many hours of tedious manual tasks. Though I think some took more time to write than they have yet saved me...
 
 Use [ffmpeg](https://ffmpeg.org/) to apply fade in and out to a bunch of mp3 files
 
@@ -96,9 +103,9 @@ for i in *.mp3; do
 done
 ```
 
-For clipping a dataset of interest from a larger geographical dataset before plotting. Requires [gdal](https://gdal.org/) library.
+For clipping a dataset of interest from a larger geographical dataset of shapefiles before plotting. Requires [gdal](https://gdal.org/) library.
 ```
-#! /bin/bash
+#!/bin/bash
 # 
 ogr2ogr -f "ESRI Shapefile" hidf_land.shp /media/callum/storage/Documents/global_datasets/osm_land/land_polygons.shp -clipsrc $1 $2 $3 $4
 # four numbers at end are western bound southern bound eastern bound and northern bound in degrees. Longitude is from -180 to 180
@@ -118,7 +125,7 @@ done
 Use [imagemagick](https://imagemagick.org/index.php) to crop and animate a bunch of figures into a gif. Written the night before a conference, don't judge me.
 
 ```
-#/!bin/bash
+#!/bin/bash
 
 for i in bar*.png
 do
@@ -204,8 +211,9 @@ awk -F , 'NF>=3' min_v.txt >> min_volts.txt
 
 [3 shell scripts to improve your writing, or "My Ph.D. advisor rewrote himself in bash."](http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/)
 
-I think these are great, so I've archived a version [here](../images/might-scripts.zip)
+I think these are great, so I've archived a version [here](../images/might-scripts.zip).
 
 ----------------------
  [1] (https://xkcd.com/285/)
+ 
  [2] (https://xkcd.com/462)
