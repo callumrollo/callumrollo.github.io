@@ -51,7 +51,7 @@
 <meta property="og:url" content="https://callumrollo.github.io/bash.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2020-10-02 18:20:00+01:00"/>
-<meta property="article:modified_time" content="2020-10-02 18:20:00+01:00"/>
+<meta property="article:modified_time" content="2020-10-26 10:50:00+00:00"/>
 <meta property="article:author" content="https://callumrollo.github.io/author/callum-rollo.html">
 <meta property="article:section" content="FOSS"/>
 <meta property="article:tag" content="linux"/>
@@ -148,30 +148,32 @@
 
   <div>
     <h3>First off, what's a shell?</h3>
-<p>The shell is how you, mighty keyboard warrior, maintain control over the awe-inspiring power of your <a href="https://www.youtube.com/watch?v=SpLRTAGa6bU">unix system</a>*.  Here I have collected some of my favourite one liners, aliases and shell scripts that I use to reduce repetitive typing, quickly analyse data, improve my writing and more.</p>
+<p>The shell is how you, the mighty keyboard warrior, exert control over the awe-inspiring power of your <a href="https://www.youtube.com/watch?v=SpLRTAGa6bU">unix system</a>*.  Here I have collected some of my favourite one liners, aliases and shell scripts that I use to reduce repetitive typing, quickly analyse data, improve my writing, and more.</p>
 <p>*If you're not already on some flavour of unix, check out <a href="http://matt.might.net/articles/basic-unix/">this guide</a> to get up to speed. It's way more fun than you might think, I promise.</p>
-<p>For the purpose of this article the <strong>command line/shell/bash</strong> all refer to the same thing. Namely, that little black box you summon with ctrl + alt + T that makes you feel like a badass 90s cyberpunk in wrap around shades who's about to hack the mainframe. Mine looks like this</p>
+<p>For the purpose of this article the terms <strong>command line/shell/bash</strong> all refer to the same thing. Namely, that little black box you summon with ctrl + alt + T that makes you feel like a badass 90s cyberpunk about to hack the mainframe. Mine looks like this</p>
 <p><img alt="Default terminal" src="../images/terminal.png"></p>
-<p>Yours may differ, but as long as typing <code>ls</code> in it and hitting <code>enter</code> returns a list of directories, you should be good to go. Check out the link to <a href="http://matt.might.net/articles/basic-unix/">Matt Might's page</a> above for a nice intro to the shell.</p>
-<p>A <strong>one liner</strong> is a command that is one line long
-An <strong>alias</strong> is a short name you give to a longer command, like a nickname for your favourite code snippets. You can make one right now like this:</p>
+<p>Yours may differ in appearance, but as long as typing <code>ls</code> in it and hitting <code>enter</code> returns a list of directory contents, you should be good to go. Check out the link to <a href="http://matt.might.net/articles/basic-unix/">Matt Might's page</a> above for a nice intro to the shell.</p>
+<h3>Some terms</h3>
+<p>A <strong>one liner</strong> is a command that is one line long.</p>
+<p>An <strong>alias</strong> is a short name you give to a longer command, like a nickname for your favourite code snippets. You can make one right now like this:</p>
 <p><img alt="terminal alias" src="../images/terminal1.png"></p>
 <p>Now your coputer can cheerfully greet you with the time of day in 4 keystrokes, neat huh?</p>
-<p>A <strong>shell script</strong> is a series of instructions to be executed by your shell. This can range from a one liner, to sprawling programs. The advantage of writing shell scripts rather than, say Python scripts, is that any *nix system you use will have a shell and some core utilities. No need to install dependencies. For this reason shell scripts are <em>portable</em>, never leave the house without them! (If when you read this we are still experiencing a global pandemic, maybe don't leave the house at all if you can avoid it.)</p>
+<p>A <strong>shell script</strong> is a series of instructions to be executed by your shell. This can range from a one liner, to sprawling programs. The advantage of writing shell scripts rather than, say Python scripts, is that any *nix system you use will have a shell and some core utilities. No need to install dependencies. For this reason shell scripts are <em>portable</em>, never leave the house without them! (If when you read this we are still experiencing a global pandemic, maybe don't leave the house at all if you can avoid it).</p>
 <p>Now we've covered the terminology, on to the good stuff.</p>
 <h3>My favourite aliases</h3>
-<p>Some of these are original thoughts, many are adapted from examples I've found in various corners of the internet. Using these functions can boost your productivity, increase your net worth and make you more significantly more attractive [<a href="https://xkcd.com/285/">1</a>][<a href="https://xkcd.com/462">2</a>]</p>
+<p>Some of these are original thoughts, many are adapted from examples I've found in various corners of the internet. Using these functions can boost your productivity, increase your net worth and make you more significantly more attractive [<a href="https://xkcd.com/285/">1</a>][<a href="https://xkcd.com/462">2</a>].</p>
 <ul>
 <li><code>..='cd ..'</code></li>
 <li><code>please='sudo'</code></li>
 <li><code>duh='du -h --max-depth=1'</code></li>
 <li><code>gcb='git checkout -b'</code> and a whole lot of other git shortcuts</li>
 <li><code>gdiff=" git diff --word-diff"</code> check what changes you have staged in a file</li>
-<li><code>hpc='ssh -XY username@uni.hpc.server</code></li>
+<li><code>hpc='ssh -XY username@uni.hpc.server</code> access my uni hpc login node. I have many other aliases for quick remote access. Pro-tip: if you <a href="https://www.ssh.com/ssh/copy-id">set up ssh access keys</a> with <code>ssh-copy-id</code> you won't even need to enter a password</li>
 <li><code>nb='jupyter notebook'</code></li>
 <li><code>space='du -hS | sort -n -r |more'</code> to find what's using most space in a directory</li>
 <li><code>wet='curl http://v2.wttr.in/Norwich'</code> why visit a weather site when you can find out form the command line why it's not worth leaving the house today?</li>
 <li><code>aliasg='alias | grep'</code> for when I forget what I called my aliases</li>
+<li><code>histg=history | grep</code> as above for command history</li>
 <li><code>set -o vi</code> vim keybindings in shell. <strong>Only use if you love vim</strong>. emacs users can try <a href="https://youtu.be/dQw4w9WgXcQ?t=43">this</a> instead.</li>
 </ul>
 <p>You can create an alias straight from the terminal as I did with <code>gday</code></p>
@@ -179,30 +181,31 @@ An <strong>alias</strong> is a short name you give to a longer command, like a n
 <p>Note the quote marks and lack of spaces round the <code>=</code>, these are not  optional.</p>
 <p>Aliases created in such a way will only last through your terminal session. To persist aliases, they must be copied into your shell's <code>rc</code> file. This will be located in your home directory and typically hidden. For me it is <code>/home/callum/.zshrc</code>. Simply copy the aliases to the end of your <code>rc</code> file.</p>
 <p>You can also set up slightly more complicated commands in the <code>rc</code> file like so</p>
-<div class="highlight"><pre><span></span><code><span class="err">mcd () {</span>
-<span class="err">    mkdir -p $1</span>
-<span class="err">    cd $1</span>
-<span class="err">}</span>
+<div class="highlight"><pre><span></span><code>mcd <span class="o">()</span> <span class="o">{</span>
+    mkdir -p <span class="nv">$1</span>
+    <span class="nb">cd</span> <span class="nv">$1</span>
+<span class="o">}</span>
 </code></pre></div>
 
 
-<p>This command makes a directory then moves you into it. Try out <code>mcd test</code> then <code>ls</code> to check where you are</p>
-<div class="highlight"><pre><span></span><code><span class="err">com () {</span>
-<span class="err">    git add -A</span>
-<span class="err">    git commit -m &quot;$1&quot;</span>
-<span class="err">    git push</span>
-<span class="err">}</span>
+<p>This command makes a directory then moves you into it. Try out <code>mcd test</code> then <code>pwd</code> to check where you are.</p>
+<div class="highlight"><pre><span></span><code>com <span class="o">()</span> <span class="o">{</span>
+    git add -A
+    git commit -m <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
+    git push
+<span class="o">}</span>
 </code></pre></div>
 
 
 <p>This will add all files to the staging area, set a commit message of your choice and push upstream. Usage: <code>com "never push to master on Friday my dudes"</code></p>
 <p>If you can't think of a useful git commit message, fear not <a href="https://github.com/lwe/whatthecommit">whatthecommit</a> has you covered. Try out my favourite alias <code>yolo</code></p>
 <p><code>yolo='git add -A &amp;&amp; git commit -m "$(curl --silent --fail http://whatthecommit.com/index.txt)" &amp;&amp; git push'</code></p>
-<p>After building up a suitably useful/infuriating series of commit messages, you can make a pretty git commit tree to admire them <a href="https://stackoverflow.com/questions/1838873/visualizing-branch-topology-in-git/34467298#34467298">credit</a>
-  <code>lg="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'"</code></p>
+<p>After building up a suitably useful/infuriating series of commit messages, you can make a pretty git commit tree to admire them <a href="https://stackoverflow.com/questions/1838873/visualizing-branch-topology-in-git/34467298#34467298">(from this stackoverflow answer)</a></p>
+<p><code>lg="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'"</code></p>
+<p>Sample output, commit messages courtesy of whatthecommit:</p>
 <p><img alt="terminal tree" src="../images/terminal2.png"></p>
 <h3>Ugly but useful shell scripts</h3>
-<p>These have saved me many hours of tedious manual tasks. Though I think some more time to write than they have yet saved me...</p>
+<p>These have saved me many hours of tedious manual tasks. Though I think some took more time to write than they have yet saved me...</p>
 <p>Use <a href="https://ffmpeg.org/">ffmpeg</a> to apply fade in and out to a bunch of mp3 files</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -214,11 +217,11 @@ An <strong>alias</strong> is a short name you give to a longer command, like a n
 </code></pre></div>
 </td></tr></table>
 
-<p>For clipping a dataset of interest from a larger geographical dataset before plotting. Requires <a href="https://gdal.org/">gdal</a> library.</p>
+<p>For clipping a dataset of interest from a larger geographical dataset of shapefiles before plotting. Requires <a href="https://gdal.org/">gdal</a> library.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#! /bin/bash</span>
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 <span class="c1"># </span>
 ogr2ogr -f <span class="s2">&quot;ESRI Shapefile&quot;</span> hidf_land.shp /media/callum/storage/Documents/global_datasets/osm_land/land_polygons.shp -clipsrc <span class="nv">$1</span> <span class="nv">$2</span> <span class="nv">$3</span> <span class="nv">$4</span>
 <span class="c1"># four numbers at end are western bound southern bound eastern bound and northern bound in degrees. Longitude is from -180 to 180</span>
@@ -243,22 +246,35 @@ ogr2ogr -f <span class="s2">&quot;ESRI Shapefile&quot;</span> hidf_land.shp /med
 </td></tr></table>
 
 <p>Use <a href="https://imagemagick.org/index.php">imagemagick</a> to crop and animate a bunch of figures into a gif. Written the night before a conference, don't judge me.</p>
-<div class="highlight"><pre><span></span><code>#/!bin/bash
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
-for i in bar*.png
-do
-num=<span class="cp">${</span><span class="n">i</span><span class="p">:</span> <span class="mi">3</span><span class="p">:</span><span class="mi">3</span><span class="cp">}</span>
+<span class="k">for</span> i in bar*.png
+<span class="k">do</span>
+<span class="nv">num</span><span class="o">=</span><span class="si">${</span><span class="nv">i</span><span class="p">: 3:</span><span class="nv">3</span><span class="si">}</span>
 
-filen=&quot;clip<span class="nv">$num.png</span>&quot;
-filen2=&quot;crop<span class="nv">$num.png</span>&quot;
+<span class="nv">filen</span><span class="o">=</span><span class="s2">&quot;clip</span><span class="nv">$num</span><span class="s2">.png&quot;</span>
+<span class="nv">filen2</span><span class="o">=</span><span class="s2">&quot;crop</span><span class="nv">$num</span><span class="s2">.png&quot;</span>
 convert <span class="nv">$i</span> -trim +repage <span class="nv">$filen</span>
 convert -crop -800-300 <span class="nv">$filen</span> <span class="nv">$filen2</span>
-done
-convert -delay 20 -loop 1 crop*.png animation.gif
-echo foo
+<span class="k">done</span>
+convert -delay <span class="m">20</span> -loop <span class="m">1</span> crop*.png animation.gif
+<span class="nb">echo</span> foo
 convert animation.gif  -trim +repage ani.gif
 </code></pre></div>
-
+</td></tr></table>
 
 <p>More imagemagick to make tight figures (remove all whitespace from edges)</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -377,10 +393,10 @@ awk -F , <span class="s1">&#39;NF&gt;=3&#39;</span> min_v.txt &gt;&gt; min_volts
 
 <h3>Scripts shamelessly copied from other, wiser people</h3>
 <p><a href="http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/">3 shell scripts to improve your writing, or "My Ph.D. advisor rewrote himself in bash."</a></p>
-<p>I think these are great, so I've archived a version <a href="../images/might-scripts.zip">here</a></p>
+<p>I think these are great, so I've archived a version <a href="../images/might-scripts.zip">here</a>.</p>
 <hr>
-<p>[1] (https://xkcd.com/285/)
- [2] (https://xkcd.com/462)</p>
+<p>[1] (https://xkcd.com/285/)</p>
+<p>[2] (https://xkcd.com/462)</p>
   </div>
   <div class="tag-cloud">
     <p>
