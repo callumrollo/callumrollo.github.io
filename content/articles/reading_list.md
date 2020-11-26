@@ -40,11 +40,13 @@ Mike Jackson - [How to cite academic software](https://software.ac.uk/how-cite-s
 
 George Monbiot - [Academic publishers are wealth extracting monopolists](https://www.monbiot.com/2011/08/29/the-lairds-of-learning/)
 
-Georgo Monbiot - [Honourable theft (on sci-hub)](https://www.monbiot.com/2018/09/17/honourable-theft/)
+George Monbiot - [Honourable theft (on sci-hub)](https://www.monbiot.com/2018/09/17/honourable-theft/)
 
 Jonathan P Tennant - [Time to stop the exploitation of free academic labour](https://ese.arphahub.com/article/51839/download/pdf/428643)
 
-James Heathers [Demand pay for reviewing papers for profit making publishers](https://medium.com/@jamesheathers/the-450-movement-1f86132a29bd)
+James Heathers - [Demand pay for reviewing papers for profit making publishers](https://medium.com/@jamesheathers/the-450-movement-1f86132a29bd)
+
+Bjorn Brembs - [Academic publishers vs scihub. Suggested installation of spyware on university library servers](http://bjoern.brembs.net/2020/10/is-the-snsi-the-new-prism/)
 
 ### Work
 
