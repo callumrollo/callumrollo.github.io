@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://callumrollo.github.io/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://callumrollo.github.io/theme/pygments/monokai.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="https://callumrollo.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://callumrollo.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://callumrollo.github.io/theme/font-awesome/css/solid.css">
+
+
+    <link href="https://callumrollo.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Callum Rollo Atom">
+
+
+    <link rel="shortcut icon" href="https://callumrollo.github.io/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://callumrollo.github.io/images/favicon.ico" type="image/x-icon">
+
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Microsoft EDGE -->
+    <meta name="msapplication-TileColor" content="#333333">
+
+<meta name="author" content="Callum Rollo" />
+<meta name="description" content="What do package download stats mean?" />
+<meta name="keywords" content="python, foss, science, packaging, conda">
+
+
+<meta property="og:site_name" content="Callum Rollo"/>
+<meta property="og:title" content="Package download stats"/>
+<meta property="og:description" content="What do package download stats mean?"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://callumrollo.github.io/drafts/package_trust.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2010-11-06 22:00:00+00:00"/>
+<meta property="article:modified_time" content="2010-11-06 22:00:00+00:00"/>
+<meta property="article:author" content="https://callumrollo.github.io/author/callum-rollo.html">
+<meta property="article:section" content="foss"/>
+<meta property="article:tag" content="python"/>
+<meta property="article:tag" content="foss"/>
+<meta property="article:tag" content="science"/>
+<meta property="article:tag" content="packaging"/>
+<meta property="article:tag" content="conda"/>
+<meta property="og:image" content="https://callumrollo.github.io/images/mug.jpg">
+
+  <title>Callum Rollo &ndash; Package download stats</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://callumrollo.github.io">
+        <img src="https://callumrollo.github.io/images/mug.jpg" alt="Callum Rollo" title="Callum Rollo">
+      </a>
+
+      <h1>
+        <a href="https://callumrollo.github.io">Callum Rollo</a>
+      </h1>
+
+<p>Oceanographer in training</p>
+
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_self"
+                   href="https://callumrollo.github.io/pages/aboutme.html#aboutme">
+                  About
+                </a>
+              </li>
+              <li>
+                <a target="_self"
+                   href="https://callumrollo.github.io/pages/pay.html#pay">
+                  My income
+                </a>
+              </li>
+              <li>
+                <a target="_self"
+                   href="https://callumrollo.github.io/pages/teaching.html#teaching">
+                  Teaching
+                </a>
+              </li>
+              <li>
+                <a target="_self"
+                   href="https://callumrollo.github.io/pages/toolbox.html#toolbox">
+                  Toolbox
+                </a>
+              </li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/callum_rollo" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-github" href="https://github.com/callumrollo" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://callumrollo.github.io">Home</a>
+
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="https://callumrollo.github.io/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="package_trust">Package download stats</h1>
+    <p>
+      Posted on Sat 06 November 2010 in <a href="https://callumrollo.github.io/category/foss.html">foss</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>About 6 months ago, I published my first package. It was nothing significant, just a Python wrapper around Fabio Crameri's <a class="reference external" href="http://www.fabiocrameri.ch/colourmaps.php">Scientific Colour Maps</a>. Being too lazy to download and unzip the colourmaps and run the 2 lines of Python necessary to load each colourmap in my scripts, I decided to port the colourmaps to <a class="reference external" href="https://pypi.org/project/cmcrameri/">PyPI</a> and <a class="reference external" href="https://github.com/conda-forge/cmcrameri-feedstock">conda forge</a>. My aims in doing this were:</p>
+<ol class="arabic simple">
+<li>Make it easier to use Fabio's colourmaps</li>
+<li>Learn how to package Python libraries</li>
+<li>Gauge interest in the Python community for perceptually uniform colourmaps</li>
+</ol>
+<p>I achieved 1. with my first successful version of the colourmaps. They can now be installed with the simple expedient of either</p>
+<p><tt class="docutils literal">pip install cmcrameri</tt></p>
+<p>or for conda</p>
+<p><tt class="docutils literal">conda install <span class="pre">-c</span> <span class="pre">conda-forge</span> cmcrameri</tt></p>
+<p>Objective 2. was completed along the way. I still need to write up my notes, as creating a package was quite a learning journey and something I hope to do again in future.</p>
+<p>Objective 3. presents a conundrum. How do you measure community engagement with a package? I had no intention of polling people or advertising the new package. I had created it principally for my own convenience, but wanted to give back to the open source community if I could. The most obvious way to measure interaction with package was how many people were using it. And to use it, they'd have to download it.</p>
+<p>Both pip and conda provide running totals of the number of times a package has been downloaded. At time of writing, after being online for 6 months, these numbers were surprisingly high: <a class="reference external" href="https://pepy.tech/project/cmcrameri">over 6000 for pip</a> and <a class="reference external" href="https://anaconda.org/conda-forge/cmcrameri">500 for conda-forge</a>.</p>
+<p><strong>But do these downloads mean that people are using the package?</strong></p>
+<p>I have heard anecdotally that these package stats are flawed. They can be artificially inflated by the package being downloaded as an unused dependency by another package, by mirroring services and by testing systems. On the flip side, downloads may underestimate usage if users acquire the package from an unofficial mirror, or copy it locally.</p>
+<p>To make a start at understanding this, I started to monitor the number of downloads from conda-forge, as this seemed the smaller, more stable counter. To this end, I wrote a short script and deployed it to a linux server I maintain, to run as an hourly cron job. The scripts is quick and dirty:</p>
+<blockquote>
+<p>curl <a class="reference external" href="https://anaconda.org/conda-forge/cmcrameri">https://anaconda.org/conda-forge/cmcrameri</a> -o &quot;/home/callum/personal/condaforgepage.txt&quot;</p>
+<p>printf 'n%s' &quot;$(date &quot;+%Y-%m-%dT%H:%M:%S&quot;)&quot; &gt;&gt; /home/callum/personal/page_stats.txt</p>
+<p>printf &quot;, &quot; &gt;&gt; /home/callum/personal/page_stats.txt</p>
+<p>grep totaldownloads /home/callum/personal/condaforgepage.txt | tr -d -c 0-9 &gt;&gt; /home/callum/personal/page_stats.txt</p>
+</blockquote>
+<p>It downloads the stats page from conda forge as plaintext, searches for <tt class="docutils literal">total</tt> extracts the number from that line, and prints it to a file with a timestamp <a class="footnote-reference" href="#id2" id="id1">[1]</a>.</p>
+<p>This was also inspired by chatter on the RSE Slack about the sustainability of our current software packaging excosystem. With massive data throughput with no thought. Someone, somewhere has to pay and the environmental cost of shuttling all this data around is enormous</p>
+<p>Methodology</p>
+<p>Interpretation</p>
+<p>Results</p>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>If you like poorly formatted hacky shell scripts, you'll love my shell blog post <a class="reference external" href="https://callumrollo.github.io/bash.html#bash">https://callumrollo.github.io/bash.html#bash</a></td></tr>
+</tbody>
+</table>
+
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://callumrollo.github.io/tag/python.html">python</a>
+      <a href="https://callumrollo.github.io/tag/foss.html">foss</a>
+      <a href="https://callumrollo.github.io/tag/science.html">science</a>
+      <a href="https://callumrollo.github.io/tag/packaging.html">packaging</a>
+      <a href="https://callumrollo.github.io/tag/conda.html">conda</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>
+  &copy;  2020 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Callum Rollo ",
+  "url" : "https://callumrollo.github.io",
+  "image": "https://callumrollo.github.io/images/mug.jpg",
+  "description": "Science should be open. Software should be free. Borders are kind of rubbish "
+}
+</script>
+
+
+</body>
+</html>
