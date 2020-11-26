@@ -22,9 +22,11 @@ I am an amateur Pythonista, leader of [UEA python](https://ueapy.github.io/) and
 
 To request a copy of any of my publications that have ended up behind a paywall, please email me. This is completely legal and scientists actively encourage it.
 
-### Selected posters
+### Selected posters and talks
 
 2017 [Marine Autonomy and Techology Showcase](../images/poster_omura_17.pdf)
+
+2020 [COAS seminar](../images/Rollo_COAS_2020_low_res.pdf)
 
 ### Career
 **2017- present** Postgraduate Researcher University of East Anglia
@@ -60,7 +62,7 @@ expires: 2022-06-19
 
  *What's that?*
  
-A secure way to contact me, assuming you trust that I have control of this website. You can use [Public key cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography) to securely exchange information with me over any text communication channel; be that email, SMS or, notes pushed under a door. I use [GNU Privacy Guard](https://en.wikipedia.org/wiki/GNU_Privacy_Guard).
+A secure way to contact me, assuming you trust that I have control of this website. You can use [Public key cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography) to securely exchange information with me over any text communication channel; be that email, SMS or, notes pushed under a door. I use [GNU Privacy Guard](https://en.wikipedia.org/wiki/GNU_Privacy_Guard). To get setup and encypting, check out [this guide](https://www.devdungeon.com/content/gpg-tutorial).
 
 If you have my phone number, please contact me using [Signal](https://www.signal.org/).
 

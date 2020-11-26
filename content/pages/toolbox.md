@@ -9,6 +9,8 @@ Summary: The tools I use
 - [Vim](https://www.vim.org/) for text editing (or [gedit](https://wiki.gnome.org/Apps/Gedit) when no one is looking)
 - [Python](https://www.python.org/) for any extended coding task
 - [git](https://git-scm.com/) for version control
+- [GNU make](https://www.gnu.org/software/make/) for build automation
+- [cron](https://en.wikipedia.org/wiki/Cron) for task scheduling
 - I use [FOSS](https://en.wikipedia.org/wiki/Free_and_open-source_software) (free open source software) wherever possible
 
 
@@ -36,7 +38,7 @@ Summary: The tools I use
 - [Inkscape](https://inkscape.org/)
 - [GIMP](https://www.gimp.org/)
 
-### Tools I have creataed/contributed to
+### Tools I have created/contributed to
 - [cmcrameri](https://github.com/callumrollo/cmcrameri) I maintain Fabio Crameri's Scientific Colourmaps as a Python package on [PyPi](https://pypi.org/project/cmcrameri/) and [conda-forge](https://github.com/conda-forge/cmcrameri-feedstock) 
 - [gliderpy](https://github.com/ioos/gliderpy) A Python tool to fetch glider data from ERDDAP servers. This is in the initial stages of development.
 - [geotiff-generator](https://github.com/callumrollo/geotiff-generato) A Python program to generate geotiffs from EMODnet, GEBCO or user supplied bathymetry.
@@ -45,11 +47,13 @@ Summary: The tools I use
 - [Clementine](https://www.clementine-player.org/) is my preferred music player
 - I manage my music library with the CLI Python package [beets](http://beets.io/) and the GUI [EasyTAG](https://wiki.gnome.org/Apps/EasyTAG)
 - [Calibre](https://calibre-ebook.com/) for e-book organisation and conversion
+- [FFmpeg](https://ffmpeg.org/) and [ImageMagick](https://imagemagick.org/index.php) for commandline manipulation of sound, image and video files
 - I run [folding at home](https://foldingathome.org/) with my spare CPU cycles
 - [Conky](https://github.com/brndnmtthws/conky) for an infinitely customisable system monitor
 - [Signal](https://www.signal.org/) for secure communication
 - [Meld](https://meldmerge.org/) for when diff doesn't cut it to compare two text files
 - [Pelican](https://blog.getpelican.com/) to make this static website
+
 
 
 

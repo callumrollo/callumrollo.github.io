@@ -62,6 +62,10 @@ WildEast in East Anglia - [Set aside a fifth of land for nature + credit and rew
 
 Ben Macdonald - [On restoring grouse moors, economic and patrimonial argument](https://www.spectator.co.uk/article/the-scourge-of-the-grouse-moor)
 
+### Privacy/Surveillance
+
+Edward Snowden - [How to reclaim your privacy](https://theintercept.com/2015/11/12/edward-snowden-explains-how-to-reclaim-your-privacy/)
+
 ## Books that have affected my world view
 
 ### Ocean
