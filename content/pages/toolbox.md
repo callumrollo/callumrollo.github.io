@@ -51,7 +51,7 @@ Summary: The tools I use
 - I run [folding at home](https://foldingathome.org/) with my spare CPU cycles
 - [Conky](https://github.com/brndnmtthws/conky) for an infinitely customisable system monitor
 - [Signal](https://www.signal.org/) for secure communication
-- [Meld](https://meldmerge.org/) for when diff doesn't cut it to compare two text files
+- [Meld](https://meldmerge.org/) for when diff doesn't cut it to compare two text files. Bonus: use git difftool to call meld on git diffs.
 - [Pelican](https://blog.getpelican.com/) to make this static website
 
 

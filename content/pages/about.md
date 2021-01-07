@@ -105,3 +105,5 @@ See also [reading list](https://callumrollo.github.io/reading.html#reading)
 Source code is available on my [Github](https://github.com/callumrollo/callumrollo.github.io). See [this article](https://callumrollo.github.io/howto.html#howto) for more info on why I promote open sharing  of source code, as well as links to academic websites that do the same.
 
 This website has no trackers, cookies, data collection or visitor logging. I am opposed to online surveillance.
+
+[egu abstract](../images/egu_2021_abstract.txt)

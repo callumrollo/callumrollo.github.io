@@ -48,6 +48,9 @@ James Heathers - [Demand pay for reviewing papers for profit making publishers](
 
 Bjorn Brembs - [Academic publishers vs scihub. Suggested installation of spyware on university library servers](http://bjoern.brembs.net/2020/10/is-the-snsi-the-new-prism/)
 
+### FOSS
+Daniel Oberhaus - [Succint history of free software vs open source](https://www.vice.com/en/article/43zak3/the-internet-was-built-on-the-free-labor-of-open-source-developers-is-that-sustainable)
+
 ### Work
 
 Tim Barry - [Just Too Efficient](https://www.tbray.org/ongoing/When/202x/2020/07/05/Too-Efficient)
