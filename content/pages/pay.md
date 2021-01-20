@@ -11,8 +11,14 @@ I receive the [minimum UKRI PhD stipend](https://www.ukri.org/skills/funding-for
 
 This income is supplemented by the work I do teaching and assisting in class at UEA. This typically earns me around **£500 - £1'000** per annum.
 
-I own no property, stocks, or shares.
+During January and Febuary 2021, I took a two month break from my PhD. During these months I worked as a technician Grade 6 in the seaglider facility at UEA. I was paid **£13.90 / hour**, equivalent to an annual salary of **~ £30'000**
 
 You can read a short article on the pros and cons of publishing salaries [here](https://time.com/5353848/salary-pay-transparency-work/). The practice is becoming more common, in some countries it is [mandatory](https://www.bbc.co.uk/news/magazine-40669239). Until that is the case in the UK, I will publish mine here. 
 
-Last updated August 2020
+I own no property or commercial shares.
+
+I have invested **£6'000** in community shares in [The Locks Inn Community Pub Limited](http://www.savethelocks.com/). These are non-profit bearing shares. This is a community takeover of a well loved local pub.
+
+
+
+Last updated January 2021
