@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://callumrollo.github.io/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://callumrollo.github.io/theme/pygments/monokai.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="https://callumrollo.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://callumrollo.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://callumrollo.github.io/theme/font-awesome/css/solid.css">
+
+
+    <link href="https://callumrollo.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Callum Rollo Atom">
+
+
+    <link rel="shortcut icon" href="https://callumrollo.github.io/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://callumrollo.github.io/images/favicon.ico" type="image/x-icon">
+
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Microsoft EDGE -->
+    <meta name="msapplication-TileColor" content="#333333">
+
+<meta name="author" content="Callum Rollo" />
+<meta name="description" content="How to package your Python code to PyPI and conda-forge" />
+<meta name="keywords" content="FOSS, Python, tutorial">
+
+
+<meta property="og:site_name" content="Callum Rollo"/>
+<meta property="og:title" content="Packaging Python"/>
+<meta property="og:description" content="How to package your Python code to PyPI and conda-forge"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://callumrollo.github.io/packaging.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2021-02-17 21:00:00+00:00"/>
+<meta property="article:modified_time" content="2021-02-17 21:00:00+00:00"/>
+<meta property="article:author" content="https://callumrollo.github.io/author/callum-rollo.html">
+<meta property="article:section" content="FOSS"/>
+<meta property="article:tag" content="FOSS"/>
+<meta property="article:tag" content="Python"/>
+<meta property="article:tag" content="tutorial"/>
+<meta property="og:image" content="https://callumrollo.github.io/images/mug.jpg">
+
+  <title>Callum Rollo &ndash; Packaging Python</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://callumrollo.github.io">
+        <img src="https://callumrollo.github.io/images/mug.jpg" alt="Callum Rollo" title="Callum Rollo">
+      </a>
+
+      <h1>
+        <a href="https://callumrollo.github.io">Callum Rollo</a>
+      </h1>
+
+<p>Oceanographer in training</p>
+
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_self"
+                   href="https://callumrollo.github.io/pages/aboutme.html#aboutme">
+                  About
+                </a>
+              </li>
+              <li>
+                <a target="_self"
+                   href="https://callumrollo.github.io/pages/pay.html#pay">
+                  My income
+                </a>
+              </li>
+              <li>
+                <a target="_self"
+                   href="https://callumrollo.github.io/pages/teaching.html#teaching">
+                  Teaching
+                </a>
+              </li>
+              <li>
+                <a target="_self"
+                   href="https://callumrollo.github.io/pages/toolbox.html#toolbox">
+                  Toolbox
+                </a>
+              </li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/callum_rollo" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-github" href="https://github.com/callumrollo" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://callumrollo.github.io">Home</a>
+
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="https://callumrollo.github.io/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="packaging">Packaging Python</h1>
+    <p>
+      Posted on Wed 17 February 2021 in <a href="https://callumrollo.github.io/category/foss.html">FOSS</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <p><em>Opening points for talk</em></p>
+<ul>
+<li>Explain why we package</li>
+<li>Show that the package we're about to make is not there already</li>
+<li>Explain how conda is downstream of pip, pip is generalist</li>
+</ul>
+<h3>The scenario</h3>
+<p>You've written a kick-ass Python script for solving your knotty scientific problem and you want to share it with your peers, great! How do you do this though? Sure, you could email it to interested parties like it's 1995, post it on twitter, or seed USBs loaded with code in strategic university car parks. There is, however, a far superior solution. Packaging.</p>
+<p><img alt="" src="../images/package.jpeg"> </p>
+<p>Packaging is the act of wrapping your code up into a well defined, stand-alone form and distributing it over the Information Superhighway. Packaging allows to distribute you code in a way that is</p>
+<ul>
+<li>Transparent</li>
+<li>Reproducible</li>
+<li>Upgradable</li>
+<li>Easy to integrate</li>
+</ul>
+<p>If you've coded more than a <code>hello world</code>in Python you've already used packages. When you interact with pip/conda environment or <code>import numpy as np</code> you are leveraging Python's extensive packaging ecosystem, standing on the shoulders of giants.</p>
+<p>Wouldn't it be great if, when people inquired about your awesome code, you could tell that installing it is a simple as <code>pip install my_awesome_package</code>?</p>
+<p>Strap yourself in buddy, because in this tutorial, that's exactly what we're going to do.</p>
+<h3>Prerequisites</h3>
+<ul>
+<li>A basic understanding of the terminal, Python and git </li>
+<li>An account on <a href="https://github.com/join">GitHub</a></li>
+<li>An account on <a href="https://test.pypi.org/account/register/">TestPyPI</a></li>
+<li>A cool script*</li>
+</ul>
+<p>*for the purpose of this tutorial, a <code>hello world</code> is fine</p>
+<h3>Disclaimers</h3>
+<ol>
+<li>
+<p><strong>Surely this has been done before?</strong> There are loads of other guides out there, check out <em>sources</em> at the bottom of this page for several of them. Other people have done it before and better. I'm only writing this because, when I created my first package, I couldn't find this info all in one place. Also PyPI went through a major revamp in 2017, so tutorials written before then can be very confusing.</p>
+</li>
+<li>
+<p><strong>I did x and it didn't work/I got an error/my cat is now on fire.</strong> You will very likely hit snags when following this tutorial with your own package. All code is unique, search engines are your friend, but feel free to email me if you get really stuck!</p>
+</li>
+<li>
+<p><strong>Is this hard to do/will people laugh at me if I lack mad hacker skillz?</strong> No! The FOSS community is far from perfect, but everyone has they're first time doing this stuff. Your merges will screw up the codebase, your CI checks will fail, your package will ship with half the parts missing. This is fine. In software, failure is cheap and part of learning.</p>
+</li>
+</ol>
+<h1>Let's go!</h1>
+<p>You start off with a script. A beautiful script. Maybe it does something super useful like doubling a number. In a script called <code>bignumber.py</code>, you have a function:</p>
+<div class="highlight"><pre><span></span><code><span class="err">def double_number(input):</span>
+<span class="err">    return 2 * input</span>
+</code></pre></div>
+
+
+<p>This is some pretty complex stuff, so we'll include a README.md so readers can get the précis of our project.</p>
+<div class="highlight"><pre><span></span><code><span class="cp"># Doubler</span>
+
+<span class="n">This</span> <span class="n">package</span> <span class="n">is</span> <span class="k">for</span> <span class="n">a</span> <span class="n">function</span> <span class="n">that</span> <span class="n">doubles</span> <span class="n">your</span> <span class="n">numbers</span><span class="p">,</span> <span class="n">making</span> <span class="n">them</span> <span class="n">twice</span> <span class="n">as</span> <span class="n">good</span><span class="p">.</span>
+
+<span class="p">[</span><span class="n">website</span> <span class="n">here</span><span class="p">](</span><span class="n">doubler</span><span class="o">-</span><span class="n">docs</span><span class="p">.</span><span class="n">org</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p><a href="https://www.markdownguide.org/cheat-sheet/">Hold up, what's markdown?</a></p>
+<p>We create a <strong>directory</strong> for our script. This will be the name of the package, so check that it's not already taken on PyPI. I'll use the name doubler.
+<img alt="" src="../images/doubler-pypi.png"> </p>
+<p>We'll want a licence too, go and grab one from <a href="https://opensource.org/licenses">opensource.org</a>. In this case I've gone with the simple and permissive MIT license. Just dump the text into a file called LICENSE in the base directory</p>
+<p>After all this we have the following structure:</p>
+<div class="highlight"><pre><span></span><code><span class="err">packaging-dir  (this name doesn&#39;t matter)</span>
+<span class="err">├── doubler (your package name)</span>
+<span class="err">│   └── bignumber.py (the actual code)</span>
+<span class="err">├── LICENSE</span>
+<span class="err">├── README.md</span>
+<span class="err">└── setup.py (explained in the next section)</span>
+</code></pre></div>
+
+
+<h3>Add your project to git</h3>
+<p>Now is as good a time as any. You'll need it on there when we get to the conda-forge section.</p>
+<h3>Add setup.py</h3>
+<p>We'll need some boilerplate in <strong>setup.py</strong>. This contains the human and machine readable information on our package. This is essential for the ship to PyPI, so check you get the info right.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">setuptools</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;README.md&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
+    <span class="n">long_description</span> <span class="o">=</span> <span class="n">fh</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="n">setuptools</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;doubler&quot;</span><span class="p">,</span> 
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;0.0.1&quot;</span><span class="p">,</span>
+    <span class="n">author</span><span class="o">=</span><span class="s2">&quot;Callum Rollo&quot;</span><span class="p">,</span>
+    <span class="n">author_email</span><span class="o">=</span><span class="s2">&quot;c.rollo@outlook.com&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A demo package for test PyPI&quot;</span><span class="p">,</span>
+    <span class="n">long_description</span><span class="o">=</span><span class="n">long_description</span><span class="p">,</span>
+    <span class="n">long_description_content_type</span><span class="o">=</span><span class="s2">&quot;text/markdown&quot;</span><span class="p">,</span>
+    <span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://github.com/callumrollo/doubler&quot;</span><span class="p">,</span>
+    <span class="n">classifiers</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;Programming Language :: Python :: 3&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;License :: OSI Approved :: MIT License&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Operating System :: OS Independent&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">packages</span><span class="o">=</span><span class="n">setuptools</span><span class="o">.</span><span class="n">find_packages</span><span class="p">(),</span>
+    <span class="n">python_requires</span><span class="o">=</span><span class="s1">&#39;&gt;=3.6&#39;</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>You'll find detail on all these in the <a href="https://packaging.python.org/tutorials/packaging-projects/#packaging-your-project">python.org article</a>.</p>
+<p>Now, we package the code using <strong>setuptools</strong>. If you haven't got it installed it already, it's on pip and conda-forge. Then from the command line in the package base directory, run:
+<code>python setup.py sdist</code></p>
+<h3>Shipping to PyPI</h3>
+<p>For (test)PyPI to accept your package, you'll need the correct credentials. These go in a file called <strong>.pypirc</strong> in your home folder:</p>
+<div class="highlight"><pre><span></span><code><span class="o">[</span>distutils<span class="o">]</span>
+index-servers<span class="o">=</span>
+    testpypi
+    pypi
+
+<span class="o">[</span>testpypi<span class="o">]</span>
+<span class="nv">repository</span> <span class="o">=</span> https://testpypi.python.org/pypi
+<span class="nv">username</span> <span class="o">=</span> &lt;account_name&gt;
+<span class="nv">password</span> <span class="o">=</span> &lt;account_password&gt;
+
+<span class="o">[</span>pypi<span class="o">]</span>
+<span class="nv">repository</span> <span class="o">=</span> https://test.pypi.org/legacy/
+<span class="nv">username</span> <span class="o">=</span> &lt;account_name&gt;
+<span class="nv">password</span> <span class="o">=</span> &lt;account_password&gt;
+</code></pre></div>
+
+
+<p>Just change the stuff in the angle brackets. You probably shouldn't <a href="https://xkcd.com/792/">reuse your password</a>.</p>
+<p>You ship the package to test-PyPI with <code>twine</code>, this is also availble via pip and conda.</p>
+<p><code>python -m twine upload  dist/* --repository testpypi</code></p>
+<p>And that's it! Go check out your work on test.pypi.org</p>
+<p>You can now install your package anywhere in the world with
+<code>pip install -i https://test.pypi.org/simple/ doubler==0.0.1</code></p>
+<p>Once that works, do it for real on pyPI by dropping the --repository testpypi.</p>
+<h3>Shipping to conda-forge</h3>
+<p>Conda-forge is the community run package repository that is fully compatible with conda core but way bigger. It works from PyPI packages which is why we do it second.</p>
+<p>Adding to conda-forge is a little tricker, as it will need to be approved by a moderator. This gives your project a big visibility boost though, especially with scientist. And scrutiny of your code is a good thing!</p>
+<h3>Updating</h3>
+<p>Updating is simple. You fork the feedstock to your git hub account, bump the version number in recipe/meta.yaml</p>
+<p>What version number should I go to? I like <a href="https://semver.org/">semantic versioning</a>. Other sytems are fine too, just be consistent.</p>
+<p>Remember to change the SHAsum too, (you can find this on the PyPI download page in Downloads &gt;&gt; hashes) or the CI checks will fail.</p>
+<p>There are good instructions on this in the README of the feedstock itself.</p>
+<p>In short, you need to:</p>
+<ul>
+<li>Create a branch on the feedstock from your own fork</li>
+<li>Update the SHAsum to correspond to that on pypi</li>
+<li>re-render the feedstock</li>
+</ul>
+<p>Sources</p>
+<p>https://packaging.python.org/tutorials/packaging-projects/#packaging-your-project</p>
+<p>https://blog.jonasneubert.com/2017/09/13/publishing-your-first-pypi-package/</p>
+<p>https://blog.jetbrains.com/pycharm/2017/05/how-to-publish-your-package-on-pypi/</p>
+<p>https://conda-forge.org/docs/maintainer/00_intro.html</p>
+<h3>How about a real package?</h3>
+<p>Copy the structure of something similar if you can. The first package I made for PyPI was a series of colourmaps, so I based it off the excellent <a href="https://github.com/matplotlib/cmocean">cmocean</a>. I would advise pushing to git and getting a package on test-PyPI early in development, so you can make all the early packaging mistakes before going to PyPI official.</p>
+<p>Write down your process! It will save you a world of pain when you need to update the package a year later.</p>
+<h3>Acronyms and terminology</h3>
+<ul>
+<li><strong>CI</strong> Contiuouns Integration. When we push code to github we have automated tests and linting</li>
+<li><strong>Shipping</strong> to upload code to the public (not to be confused with frieght forwarding of fanfic)</li>
+</ul>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://callumrollo.github.io/tag/foss.html">FOSS</a>
+      <a href="https://callumrollo.github.io/tag/python.html">Python</a>
+      <a href="https://callumrollo.github.io/tag/tutorial.html">tutorial</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>
+  &copy;  2021 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Callum Rollo ",
+  "url" : "https://callumrollo.github.io",
+  "image": "https://callumrollo.github.io/images/mug.jpg",
+  "description": "Science should be open. Software should be free. Borders are kind of rubbish "
+}
+</script>
+
+
+</body>
+</html>
