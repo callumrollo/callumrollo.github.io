@@ -36,6 +36,8 @@ James Somers - [The Scientific Paper Is Obsolete](https://www.theatlantic.com/sc
 
 Mike Jackson - [How to cite academic software](https://software.ac.uk/how-cite-software)
 
+Ryan Abernathy - [Organising projects for reproducibility]https://rabernat.github.io/research_computing/organization-and-packaging-of-python-projects.html
+
 ### Academic Publishing
 
 George Monbiot - [Academic publishers are wealth extracting monopolists](https://www.monbiot.com/2011/08/29/the-lairds-of-learning/)
