@@ -45,6 +45,7 @@ Strap yourself in buddy, because in this tutorial, that's exactly what we're goi
 4. 
 # Let's go!
 
+
 You start off with a script. A beautiful script. Maybe it does something super useful like doubling a number. In a script called `bignumber.py`, you have a function:
 
 ```python
@@ -70,7 +71,20 @@ We create a **directory** for our script. This will be the name of the package, 
 
 ![](../images/doubler-pypi.png) 
 
-We'll want a licence too, go and grab one from [opensource.org](https://opensource.org/licenses). In this case I've gone with the simple and permissive MIT license. Just dump the text into a file called LICENSE in the base directory, adding your name and the current year at the top
+We put the script bignumber.py in this directory, and add another file called `__init__.py` next to it. This file will enable our directory to be imported as a module later.
+
+__init__.py
+```python
+from __future__ import absolute_import
+from . import doubler
+
+
+__authors__ = ['Callum Rollo <c.rollo@outlook.com>']
+
+__version__ = "0.0.1"
+```
+
+We'll want a licence too, go and grab one from [opensource.org](https://opensource.org/licenses). In this case I've gone with the simple and permissive MIT license. Just dump the text into a file called LICENSE in the base directory, adding your name and the current year at the top.
 
 After all this we have the following structure:
 ```shell
@@ -161,25 +175,24 @@ username = <account_name>
 password = <account_password>
 ```
 
-
-
-
-
-
-
 ### Shipping to conda-forge
 
-Conda-forge is the community run package repository that is fully compatible with conda core but way bigger. It works from PyPI packages which is why we do it second.
+[Conda-forge](https://conda-forge.org/) is the community run package repository that is fully compatible with conda core but way bigger. Conda-forge packages pull from from PyPI packages which is why we do it second. Conda-forge packages (called recipes) are managed through github, so you'll need to be familiar with creating pull requests.
 
-Adding to conda-forge is a little tricker, as it will need to be approved by a moderator. This gives your project a big visibility boost though, especially with scientist. And scrutiny of your code is a good thing!
+Adding a package to conda-forge is a little tricker, as it will need to be approved by a moderator. This gives your project a big visibility boost though. Also scrutiny of your code is a good thing! Conda-forge admins will check that you have things like a valid open source license and functioning tests before your package is distributed.
+
+The process for adding a recipe to conda-forge is outlined on their [website](https://conda-forge.org/#add_recipe). The core action is creating a pull request on conda-forge/staged recipes that points to your PyPI package and contains key information on build requirements. 
 
 
 ### Updating
 
-
-Updating is simple. You fork the feedstock to your git hub account, bump the version number in recipe/meta.yaml
+To update your PyPI package, you need to update to a higher version number, otherwise the tarball you make will have the same name and PyPI will reject it. Note that you need to update the version number in `setup.py` and `__init__.py`.
 
 What version number should I go to? I like [semantic versioning](https://semver.org/). Other sytems are fine too, just be consistent.
+
+
+Updating on conda-forge is simple. You fork the feedstock to your git hub account, bump the version number in recipe/meta.yaml
+
 
 Remember to change the SHAsum too, (you can find this on the PyPI download page in Downloads >> hashes) or the CI checks will fail.
 
