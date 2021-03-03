@@ -1,4 +1,4 @@
-name: web-dev0
+name: webdev
 channels:
         - conda-forge
 dependencies:

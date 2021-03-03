@@ -6,13 +6,6 @@ Tags:  FOSS, Python, tutorial
 Slug: packaging
 Summary: How to package your Python code to PyPI and conda-forge
 
-*Opening points for talk*
-
-- Explain why we package
-- Show that the package we're about to make is not there already
-- Explain how conda is downstream of pip, pip is generalist
-
-
 ### The scenario
 
 You've written a kick-ass Python script for solving your knotty scientific problem and you want to share it with your peers, great! How do you do this though? Sure, you could email it to interested parties like it's 1995, post it on twitter, or seed USBs loaded with code in strategic university car parks. There is, however, a far superior solution. Packaging.
@@ -22,13 +15,13 @@ You've written a kick-ass Python script for solving your knotty scientific probl
 Packaging is the act of wrapping your code up into a well defined, stand-alone form and distributing it over the Information Superhighway. Packaging allows to distribute you code in a way that is
 
 - Transparent
-- Reproducible
+- Scalable
 - Upgradable
 - Easy to integrate
 
-If you've coded more than a `hello world`in Python you've already used packages. When you interact with pip/conda environment or `import numpy as np` you are leveraging Python's extensive packaging ecosystem, standing on the shoulders of giants.
+If you've coded more than a `hello world` in Python you've already used packages. When you interact with pip/conda environment or `import numpy as np` you are leveraging Python's extensive packaging ecosystem, standing on the shoulders of giants.
 
-Wouldn't it be great if, when people inquired about your awesome code, you could tell that installing it is a simple as `pip install my_awesome_package`?
+Wouldn't it be great if, when people inquired about your awesome code, you could tell that installing it is a simple as `pip install my_cool_package`?
 
 Strap yourself in buddy, because in this tutorial, that's exactly what we're going to do.
 
@@ -49,32 +42,35 @@ Strap yourself in buddy, because in this tutorial, that's exactly what we're goi
 2. **I did x and it didn't work/I got an error/my cat is now on fire.** You will very likely hit snags when following this tutorial with your own package. All code is unique, search engines are your friend, but feel free to email me if you get really stuck!
 
 3. **Is this hard to do/will people laugh at me if I lack mad hacker skillz?** No! The FOSS community is far from perfect, but everyone has they're first time doing this stuff. Your merges will screw up the codebase, your CI checks will fail, your package will ship with half the parts missing. This is fine. In software, failure is cheap and part of learning.
+4. 
 # Let's go!
 
 You start off with a script. A beautiful script. Maybe it does something super useful like doubling a number. In a script called `bignumber.py`, you have a function:
 
+bignumber.py
 ```
 def double_number(input):
 	return 2 * input
 ```
 
-This is some pretty complex stuff, so we'll include a README.md so readers can get the précis of our project.
+This is some pretty complex stuff, so we'll include a README.md so readers can get the précis of our project:
 
-```markdown
+README.md
+```
 # Doubler
 
 This package is for a function that doubles your numbers, making them twice as good.
 
-[website here](doubler-docs.org)
+[website here](www.doubler-documentation.com)
 
 ```
 
-[Hold up, what's markdown?](https://www.markdownguide.org/cheat-sheet/)
+[*Hold up, what's markdown?*](https://www.markdownguide.org/cheat-sheet/)
 
-We create a **directory** for our script. This will be the name of the package, so check that it's not already taken on PyPI. I'll use the name doubler.
+We create a **directory** for our script. This will be the name of the package, so check that it's not already taken on PyPI. I'm using the name doubler.
 ![](../images/doubler-pypi.png) 
 
-We'll want a licence too, go and grab one from [opensource.org](https://opensource.org/licenses). In this case I've gone with the simple and permissive MIT license. Just dump the text into a file called LICENSE in the base directory
+We'll want a licence too, go and grab one from [opensource.org](https://opensource.org/licenses). In this case I've gone with the simple and permissive MIT license. Just dump the text into a file called LICENSE in the base directory, adding your name and the current year at the top
 
 After all this we have the following structure:
 ```
@@ -86,14 +82,15 @@ packaging-dir  (this name doesn't matter)
 └── setup.py (explained in the next section)
 ```
 
-### Add your project to git
+### Put your project on github
 
-Now is as good a time as any. You'll need it on there when we get to the conda-forge section.
+Now is as good a time as any. You can point to this in the README so people know where to go if they have bug reports or improvements for your code. Don't forget to commit regularly.
 
 ### Add setup.py
 
 We'll need some boilerplate in **setup.py**. This contains the human and machine readable information on our package. This is essential for the ship to PyPI, so check you get the info right.
 
+setup.py:
 ```python
 import setuptools
 
@@ -101,7 +98,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="doubler", 
+    name="doubler",
     version="0.0.1",
     author="Callum Rollo",
     author_email="c.rollo@outlook.com",
@@ -118,15 +115,33 @@ setuptools.setup(
     python_requires='>=3.6',
 )
 ```
-You'll find detail on all these in the [python.org article](https://packaging.python.org/tutorials/packaging-projects/#packaging-your-project).
+You'll find detail on all these in this [python.org article](https://packaging.python.org/tutorials/packaging-projects/#packaging-your-project).
 
-Now, we package the code using **setuptools**. If you haven't got it installed it already, it's on pip and conda-forge. Then from the command line in the package base directory, run:
+Now, we package the code using **setuptools**. If you haven't got it installed it already, it's on pip and conda-forge. From the command line in the package base directory (packaging-dir in this case), run:
+
 `python setup.py sdist`
+
+This will create a directory `dist` that contains a tar archive of your packaged code. You will notice that the name of this archive is named using the `name` and `version` fields from setup.py.
 
 
 ### Shipping to PyPI
 
-For (test)PyPI to accept your package, you'll need the correct credentials. These go in a file called **.pypirc** in your home folder:
+Now that we've made out package, we want to put it somewhere everyone can access it. The most popular site for Python packages as PyPI. When we're starting out however, it's best to use the sandbox test PyPI, which works exactly like the real PyPI but is a safe place to make mistakes while we practice.
+
+Just change the stuff in the angle brackets. You probably shouldn't [reuse your password](https://xkcd.com/792/).
+
+You ship the package to test-PyPI with `twine`, this is also availble via pip and conda.
+
+`python -m twine upload  dist/* --repository testpypi`
+
+And that's it! Go check out your work on test.pypi.org
+
+You can now install your package anywhere in the world with
+`pip install -i https://test.pypi.org/simple/ doubler==0.0.1`
+
+Once that works, do it for real on pyPI by dropping the --repository testpypi.
+
+For (test)PyPI to accept your package, you'll need the correct credentials. You can type these in the command line each time you upload your package, or add them to a  file called **.pypirc** in your home folder:
 
 ```shell
 [distutils]
@@ -144,18 +159,11 @@ repository = https://test.pypi.org/legacy/
 username = <account_name>
 password = <account_password>
 ```
-Just change the stuff in the angle brackets. You probably shouldn't [reuse your password](https://xkcd.com/792/).
 
-You ship the package to test-PyPI with `twine`, this is also availble via pip and conda.
 
-`python -m twine upload  dist/* --repository testpypi`
 
-And that's it! Go check out your work on test.pypi.org
 
-You can now install your package anywhere in the world with
-`pip install -i https://test.pypi.org/simple/ doubler==0.0.1`
 
-Once that works, do it for real on pyPI by dropping the --repository testpypi.
 
 
 ### Shipping to conda-forge
@@ -201,8 +209,8 @@ Write down your process! It will save you a world of pain when you need to updat
 
 ### Acronyms and terminology
 
-- **CI** Contiuouns Integration. When we push code to github we have automated tests and linting
-- **Shipping** to upload code to the public (not to be confused with frieght forwarding of fanfic)
+- **CI** Contiuouns Integration. When we push code to github we have automated tests and linting.
+- **Shipping** to upload code to the public (not to be confused with frieght forwarding or fanfic)
 
 
 
