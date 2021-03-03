@@ -47,8 +47,7 @@ Strap yourself in buddy, because in this tutorial, that's exactly what we're goi
 
 You start off with a script. A beautiful script. Maybe it does something super useful like doubling a number. In a script called `bignumber.py`, you have a function:
 
-bignumber.py
-```
+```python
 def double_number(input):
 	return 2 * input
 ```
@@ -68,12 +67,13 @@ This package is for a function that doubles your numbers, making them twice as g
 [*Hold up, what's markdown?*](https://www.markdownguide.org/cheat-sheet/)
 
 We create a **directory** for our script. This will be the name of the package, so check that it's not already taken on PyPI. I'm using the name doubler.
+
 ![](../images/doubler-pypi.png) 
 
 We'll want a licence too, go and grab one from [opensource.org](https://opensource.org/licenses). In this case I've gone with the simple and permissive MIT license. Just dump the text into a file called LICENSE in the base directory, adding your name and the current year at the top
 
 After all this we have the following structure:
-```
+```shell
 packaging-dir  (this name doesn't matter)
 ├── doubler (your package name)
 │   └── bignumber.py (the actual code)
@@ -137,6 +137,7 @@ You ship the package to test-PyPI with `twine`, this is also availble via pip an
 And that's it! Go check out your work on test.pypi.org
 
 You can now install your package anywhere in the world with
+
 `pip install -i https://test.pypi.org/simple/ doubler==0.0.1`
 
 Once that works, do it for real on pyPI by dropping the --repository testpypi.
