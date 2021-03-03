@@ -1,22 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Callum Rollo - FOSS</title><link href="https://callumrollo.github.io/" rel="alternate"></link><link href="https://callumrollo.github.io/feeds/foss.atom.xml" rel="self"></link><id>https://callumrollo.github.io/</id><updated>2021-02-17T21:00:00+00:00</updated><subtitle>Oceanographer in training</subtitle><entry><title>Packaging Python</title><link href="https://callumrollo.github.io/packaging.html" rel="alternate"></link><published>2021-02-17T21:00:00+00:00</published><updated>2021-02-17T21:00:00+00:00</updated><author><name>Callum Rollo</name></author><id>tag:callumrollo.github.io,2021-02-17:/packaging.html</id><summary type="html">&lt;p&gt;How to package your Python code to PyPI and conda-forge&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;em&gt;Opening points for talk&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Explain why we package&lt;/li&gt;
-&lt;li&gt;Show that the package we're about to make is not there already&lt;/li&gt;
-&lt;li&gt;Explain how conda is downstream of pip, pip is generalist&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;The scenario&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Callum Rollo - FOSS</title><link href="https://callumrollo.github.io/" rel="alternate"></link><link href="https://callumrollo.github.io/feeds/foss.atom.xml" rel="self"></link><id>https://callumrollo.github.io/</id><updated>2021-02-17T21:00:00+00:00</updated><subtitle>Oceanographer in training</subtitle><entry><title>Packaging Python</title><link href="https://callumrollo.github.io/packaging.html" rel="alternate"></link><published>2021-02-17T21:00:00+00:00</published><updated>2021-02-17T21:00:00+00:00</updated><author><name>Callum Rollo</name></author><id>tag:callumrollo.github.io,2021-02-17:/packaging.html</id><summary type="html">&lt;p&gt;How to package your Python code to PyPI and conda-forge&lt;/p&gt;</summary><content type="html">&lt;h3&gt;The scenario&lt;/h3&gt;
 &lt;p&gt;You've written a kick-ass Python script for solving your knotty scientific problem and you want to share it with your peers, great! How do you do this though? Sure, you could email it to interested parties like it's 1995, post it on twitter, or seed USBs loaded with code in strategic university car parks. There is, however, a far superior solution. Packaging.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="../images/package.jpeg"&gt; &lt;/p&gt;
 &lt;p&gt;Packaging is the act of wrapping your code up into a well defined, stand-alone form and distributing it over the Information Superhighway. Packaging allows to distribute you code in a way that is&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Transparent&lt;/li&gt;
-&lt;li&gt;Reproducible&lt;/li&gt;
+&lt;li&gt;Scalable&lt;/li&gt;
 &lt;li&gt;Upgradable&lt;/li&gt;
 &lt;li&gt;Easy to integrate&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;If you've coded more than a &lt;code&gt;hello world&lt;/code&gt;in Python you've already used packages. When you interact with pip/conda environment or &lt;code&gt;import numpy as np&lt;/code&gt; you are leveraging Python's extensive packaging ecosystem, standing on the shoulders of giants.&lt;/p&gt;
-&lt;p&gt;Wouldn't it be great if, when people inquired about your awesome code, you could tell that installing it is a simple as &lt;code&gt;pip install my_awesome_package&lt;/code&gt;?&lt;/p&gt;
+&lt;p&gt;If you've coded more than a &lt;code&gt;hello world&lt;/code&gt; in Python you've already used packages. When you interact with pip/conda environment or &lt;code&gt;import numpy as np&lt;/code&gt; you are leveraging Python's extensive packaging ecosystem, standing on the shoulders of giants.&lt;/p&gt;
+&lt;p&gt;Wouldn't it be great if, when people inquired about your awesome code, you could tell that installing it is a simple as &lt;code&gt;pip install my_cool_package&lt;/code&gt;?&lt;/p&gt;
 &lt;p&gt;Strap yourself in buddy, because in this tutorial, that's exactly what we're going to do.&lt;/p&gt;
 &lt;h3&gt;Prerequisites&lt;/h3&gt;
 &lt;ul&gt;
@@ -37,48 +31,48 @@
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Is this hard to do/will people laugh at me if I lack mad hacker skillz?&lt;/strong&gt; No! The FOSS community is far from perfect, but everyone has they're first time doing this stuff. Your merges will screw up the codebase, your CI checks will fail, your package will ship with half the parts missing. This is fine. In software, failure is cheap and part of learning.&lt;/p&gt;
 &lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1&gt;Let's go!&lt;/h1&gt;
 &lt;p&gt;You start off with a script. A beautiful script. Maybe it does something super useful like doubling a number. In a script called &lt;code&gt;bignumber.py&lt;/code&gt;, you have a function:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;def double_number(input):&lt;/span&gt;
-&lt;span class="err"&gt;    return 2 * input&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;double_number&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="nb"&gt;input&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
-&lt;p&gt;This is some pretty complex stuff, so we'll include a README.md so readers can get the précis of our project.&lt;/p&gt;
+&lt;p&gt;This is some pretty complex stuff, so we'll include a README.md so readers can get the précis of our project:&lt;/p&gt;
+&lt;p&gt;README.md&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;# Doubler&lt;/span&gt;
 
 &lt;span class="n"&gt;This&lt;/span&gt; &lt;span class="n"&gt;package&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;function&lt;/span&gt; &lt;span class="n"&gt;that&lt;/span&gt; &lt;span class="n"&gt;doubles&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;numbers&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;making&lt;/span&gt; &lt;span class="n"&gt;them&lt;/span&gt; &lt;span class="n"&gt;twice&lt;/span&gt; &lt;span class="n"&gt;as&lt;/span&gt; &lt;span class="n"&gt;good&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
 
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="n"&gt;here&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="n"&gt;doubler&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;docs&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;org&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="n"&gt;here&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="n"&gt;www&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;doubler&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;documentation&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
-&lt;p&gt;&lt;a href="https://www.markdownguide.org/cheat-sheet/"&gt;Hold up, what's markdown?&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;We create a &lt;strong&gt;directory&lt;/strong&gt; for our script. This will be the name of the package, so check that it's not already taken on PyPI. I'll use the name doubler.
-&lt;img alt="" src="../images/doubler-pypi.png"&gt; &lt;/p&gt;
-&lt;p&gt;We'll want a licence too, go and grab one from &lt;a href="https://opensource.org/licenses"&gt;opensource.org&lt;/a&gt;. In this case I've gone with the simple and permissive MIT license. Just dump the text into a file called LICENSE in the base directory&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.markdownguide.org/cheat-sheet/"&gt;&lt;em&gt;Hold up, what's markdown?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;We create a &lt;strong&gt;directory&lt;/strong&gt; for our script. This will be the name of the package, so check that it's not already taken on PyPI. I'm using the name doubler.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="../images/doubler-pypi.png"&gt; &lt;/p&gt;
+&lt;p&gt;We'll want a licence too, go and grab one from &lt;a href="https://opensource.org/licenses"&gt;opensource.org&lt;/a&gt;. In this case I've gone with the simple and permissive MIT license. Just dump the text into a file called LICENSE in the base directory, adding your name and the current year at the top&lt;/p&gt;
 &lt;p&gt;After all this we have the following structure:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;packaging-dir  (this name doesn&amp;#39;t matter)&lt;/span&gt;
-&lt;span class="err"&gt;├── doubler (your package name)&lt;/span&gt;
-&lt;span class="err"&gt;│   └── bignumber.py (the actual code)&lt;/span&gt;
-&lt;span class="err"&gt;├── LICENSE&lt;/span&gt;
-&lt;span class="err"&gt;├── README.md&lt;/span&gt;
-&lt;span class="err"&gt;└── setup.py (explained in the next section)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;packaging-dir  &lt;span class="o"&gt;(&lt;/span&gt;this name doesn&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;t matter&lt;span class="o"&gt;)&lt;/span&gt;
+├── doubler &lt;span class="o"&gt;(&lt;/span&gt;your package name&lt;span class="o"&gt;)&lt;/span&gt;
+│   └── bignumber.py &lt;span class="o"&gt;(&lt;/span&gt;the actual code&lt;span class="o"&gt;)&lt;/span&gt;
+├── LICENSE
+├── README.md
+└── setup.py &lt;span class="o"&gt;(&lt;/span&gt;explained in the next section&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
-&lt;h3&gt;Add your project to git&lt;/h3&gt;
-&lt;p&gt;Now is as good a time as any. You'll need it on there when we get to the conda-forge section.&lt;/p&gt;
+&lt;h3&gt;Put your project on github&lt;/h3&gt;
+&lt;p&gt;Now is as good a time as any. You can point to this in the README so people know where to go if they have bug reports or improvements for your code. Don't forget to commit regularly.&lt;/p&gt;
 &lt;h3&gt;Add setup.py&lt;/h3&gt;
 &lt;p&gt;We'll need some boilerplate in &lt;strong&gt;setup.py&lt;/strong&gt;. This contains the human and machine readable information on our package. This is essential for the ship to PyPI, so check you get the info right.&lt;/p&gt;
+&lt;p&gt;setup.py:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;setuptools&lt;/span&gt;
 
 &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;README.md&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;r&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;encoding&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;utf-8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;fh&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="n"&gt;long_description&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;fh&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 
 &lt;span class="n"&gt;setuptools&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setup&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-    &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;doubler&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
+    &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;doubler&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;version&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;0.0.1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;author&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Callum Rollo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;author_email&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;c.rollo@outlook.com&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -96,12 +90,20 @@
 &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
-&lt;p&gt;You'll find detail on all these in the &lt;a href="https://packaging.python.org/tutorials/packaging-projects/#packaging-your-project"&gt;python.org article&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Now, we package the code using &lt;strong&gt;setuptools&lt;/strong&gt;. If you haven't got it installed it already, it's on pip and conda-forge. Then from the command line in the package base directory, run:
-&lt;code&gt;python setup.py sdist&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;You'll find detail on all these in this &lt;a href="https://packaging.python.org/tutorials/packaging-projects/#packaging-your-project"&gt;python.org article&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Now, we package the code using &lt;strong&gt;setuptools&lt;/strong&gt;. If you haven't got it installed it already, it's on pip and conda-forge. From the command line in the package base directory (packaging-dir in this case), run:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;python setup.py sdist&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This will create a directory &lt;code&gt;dist&lt;/code&gt; that contains a tar archive of your packaged code. You will notice that the name of this archive is named using the &lt;code&gt;name&lt;/code&gt; and &lt;code&gt;version&lt;/code&gt; fields from setup.py.&lt;/p&gt;
 &lt;h3&gt;Shipping to PyPI&lt;/h3&gt;
-&lt;p&gt;For (test)PyPI to accept your package, you'll need the correct credentials. These go in a file called &lt;strong&gt;.pypirc&lt;/strong&gt; in your home folder:&lt;/p&gt;
+&lt;p&gt;Now that we've made out package, we want to put it somewhere everyone can access it. The most popular site for Python packages as PyPI. When we're starting out however, it's best to use the sandbox test PyPI, which works exactly like the real PyPI but is a safe place to make mistakes while we practice.&lt;/p&gt;
+&lt;p&gt;Just change the stuff in the angle brackets. You probably shouldn't &lt;a href="https://xkcd.com/792/"&gt;reuse your password&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You ship the package to test-PyPI with &lt;code&gt;twine&lt;/code&gt;, this is also availble via pip and conda.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;python -m twine upload  dist/* --repository testpypi&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;And that's it! Go check out your work on test.pypi.org&lt;/p&gt;
+&lt;p&gt;You can now install your package anywhere in the world with&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pip install -i https://test.pypi.org/simple/ doubler==0.0.1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Once that works, do it for real on pyPI by dropping the --repository testpypi.&lt;/p&gt;
+&lt;p&gt;For (test)PyPI to accept your package, you'll need the correct credentials. You can type these in the command line each time you upload your package, or add them to a  file called &lt;strong&gt;.pypirc&lt;/strong&gt; in your home folder:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;[&lt;/span&gt;distutils&lt;span class="o"&gt;]&lt;/span&gt;
 index-servers&lt;span class="o"&gt;=&lt;/span&gt;
     testpypi
@@ -118,14 +120,6 @@ index-servers&lt;span class="o"&gt;=&lt;/span&gt;
 &lt;span class="nv"&gt;password&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &amp;lt;account_password&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
-&lt;p&gt;Just change the stuff in the angle brackets. You probably shouldn't &lt;a href="https://xkcd.com/792/"&gt;reuse your password&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;You ship the package to test-PyPI with &lt;code&gt;twine&lt;/code&gt;, this is also availble via pip and conda.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;python -m twine upload  dist/* --repository testpypi&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;And that's it! Go check out your work on test.pypi.org&lt;/p&gt;
-&lt;p&gt;You can now install your package anywhere in the world with
-&lt;code&gt;pip install -i https://test.pypi.org/simple/ doubler==0.0.1&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Once that works, do it for real on pyPI by dropping the --repository testpypi.&lt;/p&gt;
 &lt;h3&gt;Shipping to conda-forge&lt;/h3&gt;
 &lt;p&gt;Conda-forge is the community run package repository that is fully compatible with conda core but way bigger. It works from PyPI packages which is why we do it second.&lt;/p&gt;
 &lt;p&gt;Adding to conda-forge is a little tricker, as it will need to be approved by a moderator. This gives your project a big visibility boost though, especially with scientist. And scrutiny of your code is a good thing!&lt;/p&gt;
@@ -150,8 +144,8 @@ index-servers&lt;span class="o"&gt;=&lt;/span&gt;
 &lt;p&gt;Write down your process! It will save you a world of pain when you need to update the package a year later.&lt;/p&gt;
 &lt;h3&gt;Acronyms and terminology&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CI&lt;/strong&gt; Contiuouns Integration. When we push code to github we have automated tests and linting&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Shipping&lt;/strong&gt; to upload code to the public (not to be confused with frieght forwarding of fanfic)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CI&lt;/strong&gt; Contiuouns Integration. When we push code to github we have automated tests and linting.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Shipping&lt;/strong&gt; to upload code to the public (not to be confused with frieght forwarding or fanfic)&lt;/li&gt;
 &lt;/ul&gt;</content><category term="FOSS"></category><category term="FOSS"></category><category term="Python"></category><category term="tutorial"></category></entry><entry><title>Shell games</title><link href="https://callumrollo.github.io/bash.html" rel="alternate"></link><published>2020-10-02T18:20:00+01:00</published><updated>2020-10-26T10:50:00+00:00</updated><author><name>Callum Rollo</name></author><id>tag:callumrollo.github.io,2020-10-02:/bash.html</id><summary type="html">&lt;p&gt;Excerpts from my .bashrc and shell scripts&lt;/p&gt;</summary><content type="html">&lt;h3&gt;First off, what's a shell?&lt;/h3&gt;
 &lt;p&gt;The shell is how you, the mighty keyboard warrior, exert control over the awe-inspiring power of your &lt;a href="https://www.youtube.com/watch?v=SpLRTAGa6bU"&gt;unix system&lt;/a&gt;*.  Here I have collected some of my favourite one liners, aliases and shell scripts that I use to reduce repetitive typing, quickly analyse data, improve my writing, and more.&lt;/p&gt;
 &lt;p&gt;*If you're not already on some flavour of unix, check out &lt;a href="http://matt.might.net/articles/basic-unix/"&gt;this guide&lt;/a&gt; to get up to speed. It's way more fun than you might think, I promise.&lt;/p&gt;
@@ -192,7 +186,6 @@ index-servers&lt;span class="o"&gt;=&lt;/span&gt;
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;This command makes a directory then moves you into it. Try out &lt;code&gt;mcd test&lt;/code&gt; then &lt;code&gt;pwd&lt;/code&gt; to check where you are.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;com &lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
     git add -A
@@ -200,7 +193,6 @@ index-servers&lt;span class="o"&gt;=&lt;/span&gt;
     git push
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;This will add all files to the staging area, set a commit message of your choice and push upstream. Usage: &lt;code&gt;com "never push to master on Friday my dudes"&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;If you can't think of a useful git commit message, fear not &lt;a href="https://github.com/lwe/whatthecommit"&gt;whatthecommit&lt;/a&gt; has you covered. Try out my favourite alias &lt;code&gt;yolo&lt;/code&gt;&lt;/p&gt;
@@ -221,7 +213,6 @@ index-servers&lt;span class="o"&gt;=&lt;/span&gt;
 &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;For clipping a dataset of interest from a larger geographical dataset of shapefiles before plotting. Requires &lt;a href="https://gdal.org/"&gt;gdal&lt;/a&gt; library.&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
 2
@@ -232,7 +223,6 @@ ogr2ogr -f &lt;span class="s2"&gt;&amp;quot;ESRI Shapefile&amp;quot;&lt;/span&gt
 &lt;span class="c1"&gt;# four numbers at end are western bound southern bound eastern bound and northern bound in degrees. Longitude is from -180 to 180&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;Move your mouse every 30 seconds to prevent sleep mode. Inspired by &lt;a href="https://xkcd.com/196/"&gt;xkcd&lt;/a&gt;&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
 2
@@ -249,7 +239,6 @@ ogr2ogr -f &lt;span class="s2"&gt;&amp;quot;ESRI Shapefile&amp;quot;&lt;/span&gt
 &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;Use &lt;a href="https://imagemagick.org/index.php"&gt;imagemagick&lt;/a&gt; to crop and animate a bunch of figures into a gif. Written the night before a conference, don't judge me.&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
  2
@@ -280,7 +269,6 @@ convert -delay &lt;span class="m"&gt;20&lt;/span&gt; -loop &lt;span class="m"&gt
 convert animation.gif  -trim +repage ani.gif
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;More imagemagick to make tight figures (remove all whitespace from edges)&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
  2
@@ -303,7 +291,6 @@ rsync --recursive --filter&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2
 &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;Get altimeter data from Seaglider log files&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
  2
@@ -342,7 +329,6 @@ rsync --recursive --filter&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2
 &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;Get voltage minima from Seaglider logs&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
  2
@@ -395,7 +381,6 @@ rsync --recursive --filter&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2
 awk -F , &lt;span class="s1"&gt;&amp;#39;NF&amp;gt;=3&amp;#39;&lt;/span&gt; min_v.txt &amp;gt;&amp;gt; min_volts.txt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;h3&gt;Scripts shamelessly copied from other, wiser people&lt;/h3&gt;
 &lt;p&gt;&lt;a href="http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/"&gt;3 shell scripts to improve your writing, or "My Ph.D. advisor rewrote himself in bash."&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I think these are great, so I've archived a version &lt;a href="../images/might-scripts.zip"&gt;here&lt;/a&gt;.&lt;/p&gt;

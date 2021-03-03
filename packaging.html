@@ -146,24 +146,18 @@
 
 
   <div>
-    <p><em>Opening points for talk</em></p>
-<ul>
-<li>Explain why we package</li>
-<li>Show that the package we're about to make is not there already</li>
-<li>Explain how conda is downstream of pip, pip is generalist</li>
-</ul>
-<h3>The scenario</h3>
+    <h3>The scenario</h3>
 <p>You've written a kick-ass Python script for solving your knotty scientific problem and you want to share it with your peers, great! How do you do this though? Sure, you could email it to interested parties like it's 1995, post it on twitter, or seed USBs loaded with code in strategic university car parks. There is, however, a far superior solution. Packaging.</p>
 <p><img alt="" src="../images/package.jpeg"> </p>
 <p>Packaging is the act of wrapping your code up into a well defined, stand-alone form and distributing it over the Information Superhighway. Packaging allows to distribute you code in a way that is</p>
 <ul>
 <li>Transparent</li>
-<li>Reproducible</li>
+<li>Scalable</li>
 <li>Upgradable</li>
 <li>Easy to integrate</li>
 </ul>
-<p>If you've coded more than a <code>hello world</code>in Python you've already used packages. When you interact with pip/conda environment or <code>import numpy as np</code> you are leveraging Python's extensive packaging ecosystem, standing on the shoulders of giants.</p>
-<p>Wouldn't it be great if, when people inquired about your awesome code, you could tell that installing it is a simple as <code>pip install my_awesome_package</code>?</p>
+<p>If you've coded more than a <code>hello world</code> in Python you've already used packages. When you interact with pip/conda environment or <code>import numpy as np</code> you are leveraging Python's extensive packaging ecosystem, standing on the shoulders of giants.</p>
+<p>Wouldn't it be great if, when people inquired about your awesome code, you could tell that installing it is a simple as <code>pip install my_cool_package</code>?</p>
 <p>Strap yourself in buddy, because in this tutorial, that's exactly what we're going to do.</p>
 <h3>Prerequisites</h3>
 <ul>
@@ -184,48 +178,48 @@
 <li>
 <p><strong>Is this hard to do/will people laugh at me if I lack mad hacker skillz?</strong> No! The FOSS community is far from perfect, but everyone has they're first time doing this stuff. Your merges will screw up the codebase, your CI checks will fail, your package will ship with half the parts missing. This is fine. In software, failure is cheap and part of learning.</p>
 </li>
+<li></li>
 </ol>
 <h1>Let's go!</h1>
 <p>You start off with a script. A beautiful script. Maybe it does something super useful like doubling a number. In a script called <code>bignumber.py</code>, you have a function:</p>
-<div class="highlight"><pre><span></span><code><span class="err">def double_number(input):</span>
-<span class="err">    return 2 * input</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">double_number</span><span class="p">(</span><span class="nb">input</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="nb">input</span>
 </code></pre></div>
 
-
-<p>This is some pretty complex stuff, so we'll include a README.md so readers can get the précis of our project.</p>
+<p>This is some pretty complex stuff, so we'll include a README.md so readers can get the précis of our project:</p>
+<p>README.md</p>
 <div class="highlight"><pre><span></span><code><span class="cp"># Doubler</span>
 
 <span class="n">This</span> <span class="n">package</span> <span class="n">is</span> <span class="k">for</span> <span class="n">a</span> <span class="n">function</span> <span class="n">that</span> <span class="n">doubles</span> <span class="n">your</span> <span class="n">numbers</span><span class="p">,</span> <span class="n">making</span> <span class="n">them</span> <span class="n">twice</span> <span class="n">as</span> <span class="n">good</span><span class="p">.</span>
 
-<span class="p">[</span><span class="n">website</span> <span class="n">here</span><span class="p">](</span><span class="n">doubler</span><span class="o">-</span><span class="n">docs</span><span class="p">.</span><span class="n">org</span><span class="p">)</span>
+<span class="p">[</span><span class="n">website</span> <span class="n">here</span><span class="p">](</span><span class="n">www</span><span class="p">.</span><span class="n">doubler</span><span class="o">-</span><span class="n">documentation</span><span class="p">.</span><span class="n">com</span><span class="p">)</span>
 </code></pre></div>
 
-
-<p><a href="https://www.markdownguide.org/cheat-sheet/">Hold up, what's markdown?</a></p>
-<p>We create a <strong>directory</strong> for our script. This will be the name of the package, so check that it's not already taken on PyPI. I'll use the name doubler.
-<img alt="" src="../images/doubler-pypi.png"> </p>
-<p>We'll want a licence too, go and grab one from <a href="https://opensource.org/licenses">opensource.org</a>. In this case I've gone with the simple and permissive MIT license. Just dump the text into a file called LICENSE in the base directory</p>
+<p><a href="https://www.markdownguide.org/cheat-sheet/"><em>Hold up, what's markdown?</em></a></p>
+<p>We create a <strong>directory</strong> for our script. This will be the name of the package, so check that it's not already taken on PyPI. I'm using the name doubler.</p>
+<p><img alt="" src="../images/doubler-pypi.png"> </p>
+<p>We'll want a licence too, go and grab one from <a href="https://opensource.org/licenses">opensource.org</a>. In this case I've gone with the simple and permissive MIT license. Just dump the text into a file called LICENSE in the base directory, adding your name and the current year at the top</p>
 <p>After all this we have the following structure:</p>
-<div class="highlight"><pre><span></span><code><span class="err">packaging-dir  (this name doesn&#39;t matter)</span>
-<span class="err">├── doubler (your package name)</span>
-<span class="err">│   └── bignumber.py (the actual code)</span>
-<span class="err">├── LICENSE</span>
-<span class="err">├── README.md</span>
-<span class="err">└── setup.py (explained in the next section)</span>
+<div class="highlight"><pre><span></span><code>packaging-dir  <span class="o">(</span>this name doesn<span class="err">&#39;</span>t matter<span class="o">)</span>
+├── doubler <span class="o">(</span>your package name<span class="o">)</span>
+│   └── bignumber.py <span class="o">(</span>the actual code<span class="o">)</span>
+├── LICENSE
+├── README.md
+└── setup.py <span class="o">(</span>explained in the next section<span class="o">)</span>
 </code></pre></div>
 
-
-<h3>Add your project to git</h3>
-<p>Now is as good a time as any. You'll need it on there when we get to the conda-forge section.</p>
+<h3>Put your project on github</h3>
+<p>Now is as good a time as any. You can point to this in the README so people know where to go if they have bug reports or improvements for your code. Don't forget to commit regularly.</p>
 <h3>Add setup.py</h3>
 <p>We'll need some boilerplate in <strong>setup.py</strong>. This contains the human and machine readable information on our package. This is essential for the ship to PyPI, so check you get the info right.</p>
+<p>setup.py:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">setuptools</span>
 
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;README.md&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
     <span class="n">long_description</span> <span class="o">=</span> <span class="n">fh</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
 <span class="n">setuptools</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span>
-    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;doubler&quot;</span><span class="p">,</span> 
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;doubler&quot;</span><span class="p">,</span>
     <span class="n">version</span><span class="o">=</span><span class="s2">&quot;0.0.1&quot;</span><span class="p">,</span>
     <span class="n">author</span><span class="o">=</span><span class="s2">&quot;Callum Rollo&quot;</span><span class="p">,</span>
     <span class="n">author_email</span><span class="o">=</span><span class="s2">&quot;c.rollo@outlook.com&quot;</span><span class="p">,</span>
@@ -243,12 +237,20 @@
 <span class="p">)</span>
 </code></pre></div>
 
-
-<p>You'll find detail on all these in the <a href="https://packaging.python.org/tutorials/packaging-projects/#packaging-your-project">python.org article</a>.</p>
-<p>Now, we package the code using <strong>setuptools</strong>. If you haven't got it installed it already, it's on pip and conda-forge. Then from the command line in the package base directory, run:
-<code>python setup.py sdist</code></p>
+<p>You'll find detail on all these in this <a href="https://packaging.python.org/tutorials/packaging-projects/#packaging-your-project">python.org article</a>.</p>
+<p>Now, we package the code using <strong>setuptools</strong>. If you haven't got it installed it already, it's on pip and conda-forge. From the command line in the package base directory (packaging-dir in this case), run:</p>
+<p><code>python setup.py sdist</code></p>
+<p>This will create a directory <code>dist</code> that contains a tar archive of your packaged code. You will notice that the name of this archive is named using the <code>name</code> and <code>version</code> fields from setup.py.</p>
 <h3>Shipping to PyPI</h3>
-<p>For (test)PyPI to accept your package, you'll need the correct credentials. These go in a file called <strong>.pypirc</strong> in your home folder:</p>
+<p>Now that we've made out package, we want to put it somewhere everyone can access it. The most popular site for Python packages as PyPI. When we're starting out however, it's best to use the sandbox test PyPI, which works exactly like the real PyPI but is a safe place to make mistakes while we practice.</p>
+<p>Just change the stuff in the angle brackets. You probably shouldn't <a href="https://xkcd.com/792/">reuse your password</a>.</p>
+<p>You ship the package to test-PyPI with <code>twine</code>, this is also availble via pip and conda.</p>
+<p><code>python -m twine upload  dist/* --repository testpypi</code></p>
+<p>And that's it! Go check out your work on test.pypi.org</p>
+<p>You can now install your package anywhere in the world with</p>
+<p><code>pip install -i https://test.pypi.org/simple/ doubler==0.0.1</code></p>
+<p>Once that works, do it for real on pyPI by dropping the --repository testpypi.</p>
+<p>For (test)PyPI to accept your package, you'll need the correct credentials. You can type these in the command line each time you upload your package, or add them to a  file called <strong>.pypirc</strong> in your home folder:</p>
 <div class="highlight"><pre><span></span><code><span class="o">[</span>distutils<span class="o">]</span>
 index-servers<span class="o">=</span>
     testpypi
@@ -265,14 +267,6 @@ index-servers<span class="o">=</span>
 <span class="nv">password</span> <span class="o">=</span> &lt;account_password&gt;
 </code></pre></div>
 
-
-<p>Just change the stuff in the angle brackets. You probably shouldn't <a href="https://xkcd.com/792/">reuse your password</a>.</p>
-<p>You ship the package to test-PyPI with <code>twine</code>, this is also availble via pip and conda.</p>
-<p><code>python -m twine upload  dist/* --repository testpypi</code></p>
-<p>And that's it! Go check out your work on test.pypi.org</p>
-<p>You can now install your package anywhere in the world with
-<code>pip install -i https://test.pypi.org/simple/ doubler==0.0.1</code></p>
-<p>Once that works, do it for real on pyPI by dropping the --repository testpypi.</p>
 <h3>Shipping to conda-forge</h3>
 <p>Conda-forge is the community run package repository that is fully compatible with conda core but way bigger. It works from PyPI packages which is why we do it second.</p>
 <p>Adding to conda-forge is a little tricker, as it will need to be approved by a moderator. This gives your project a big visibility boost though, especially with scientist. And scrutiny of your code is a good thing!</p>
@@ -297,8 +291,8 @@ index-servers<span class="o">=</span>
 <p>Write down your process! It will save you a world of pain when you need to update the package a year later.</p>
 <h3>Acronyms and terminology</h3>
 <ul>
-<li><strong>CI</strong> Contiuouns Integration. When we push code to github we have automated tests and linting</li>
-<li><strong>Shipping</strong> to upload code to the public (not to be confused with frieght forwarding of fanfic)</li>
+<li><strong>CI</strong> Contiuouns Integration. When we push code to github we have automated tests and linting.</li>
+<li><strong>Shipping</strong> to upload code to the public (not to be confused with frieght forwarding or fanfic)</li>
 </ul>
   </div>
   <div class="tag-cloud">
