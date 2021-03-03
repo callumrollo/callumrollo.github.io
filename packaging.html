@@ -198,7 +198,18 @@
 <p><a href="https://www.markdownguide.org/cheat-sheet/"><em>Hold up, what's markdown?</em></a></p>
 <p>We create a <strong>directory</strong> for our script. This will be the name of the package, so check that it's not already taken on PyPI. I'm using the name doubler.</p>
 <p><img alt="" src="../images/doubler-pypi.png"> </p>
-<p>We'll want a licence too, go and grab one from <a href="https://opensource.org/licenses">opensource.org</a>. In this case I've gone with the simple and permissive MIT license. Just dump the text into a file called LICENSE in the base directory, adding your name and the current year at the top</p>
+<p>We put the script bignumber.py in this directory, and add another file called <code>__init__.py</code> next to it. This file will enable our directory to be imported as a module later.</p>
+<p><strong>init</strong>.py</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">absolute_import</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">doubler</span>
+
+
+<span class="n">__authors__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Callum Rollo &lt;c.rollo@outlook.com&gt;&#39;</span><span class="p">]</span>
+
+<span class="n">__version__</span> <span class="o">=</span> <span class="s2">&quot;0.0.1&quot;</span>
+</code></pre></div>
+
+<p>We'll want a licence too, go and grab one from <a href="https://opensource.org/licenses">opensource.org</a>. In this case I've gone with the simple and permissive MIT license. Just dump the text into a file called LICENSE in the base directory, adding your name and the current year at the top.</p>
 <p>After all this we have the following structure:</p>
 <div class="highlight"><pre><span></span><code>packaging-dir  <span class="o">(</span>this name doesn<span class="err">&#39;</span>t matter<span class="o">)</span>
 ├── doubler <span class="o">(</span>your package name<span class="o">)</span>
@@ -268,11 +279,13 @@ index-servers<span class="o">=</span>
 </code></pre></div>
 
 <h3>Shipping to conda-forge</h3>
-<p>Conda-forge is the community run package repository that is fully compatible with conda core but way bigger. It works from PyPI packages which is why we do it second.</p>
-<p>Adding to conda-forge is a little tricker, as it will need to be approved by a moderator. This gives your project a big visibility boost though, especially with scientist. And scrutiny of your code is a good thing!</p>
+<p><a href="https://conda-forge.org/">Conda-forge</a> is the community run package repository that is fully compatible with conda core but way bigger. Conda-forge packages pull from from PyPI packages which is why we do it second. Conda-forge packages (called recipes) are managed through github, so you'll need to be familiar with creating pull requests.</p>
+<p>Adding a package to conda-forge is a little tricker, as it will need to be approved by a moderator. This gives your project a big visibility boost though. Also scrutiny of your code is a good thing! Conda-forge admins will check that you have things like a valid open source license and functioning tests before your package is distributed.</p>
+<p>The process for adding a recipe to conda-forge is outlined on their <a href="https://conda-forge.org/#add_recipe">website</a>. The core action is creating a pull request on conda-forge/staged recipes that points to your PyPI package and contains key information on build requirements. </p>
 <h3>Updating</h3>
-<p>Updating is simple. You fork the feedstock to your git hub account, bump the version number in recipe/meta.yaml</p>
+<p>To update your PyPI package, you need to update to a higher version number, otherwise the tarball you make will have the same name and PyPI will reject it. Note that you need to update the version number in <code>setup.py</code> and <code>__init__.py</code>.</p>
 <p>What version number should I go to? I like <a href="https://semver.org/">semantic versioning</a>. Other sytems are fine too, just be consistent.</p>
+<p>Updating on conda-forge is simple. You fork the feedstock to your git hub account, bump the version number in recipe/meta.yaml</p>
 <p>Remember to change the SHAsum too, (you can find this on the PyPI download page in Downloads &gt;&gt; hashes) or the CI checks will fail.</p>
 <p>There are good instructions on this in the README of the feedstock itself.</p>
 <p>In short, you need to:</p>
