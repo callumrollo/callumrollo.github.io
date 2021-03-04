@@ -12,7 +12,7 @@ You've written a kick-ass Python script for solving your knotty scientific probl
 
 ![](../images/package.jpeg) 
 
-Packaging is the act of wrapping your code up into a well defined, stand-alone form and distributing it over the Information Superhighway. Packaging allows to distribute you code in a way that is
+Packaging is the art of wrapping your code up into a well defined, stand-alone form and distributing it over the Information Superhighway. Packaging allows you to distribute your code in a way that is
 
 - Transparent
 - Scalable
@@ -23,7 +23,7 @@ If you've coded more than a `hello world` in Python you've already used packages
 
 Wouldn't it be great if, when people inquired about your awesome code, you could tell that installing it is a simple as `pip install my_cool_package`?
 
-Strap yourself in buddy, because in this tutorial, that's exactly what we're going to do.
+Strap yourself in buddy, because in this tutorial, we're going to make that dream a reality.
 
 ### Prerequisites
 
@@ -39,10 +39,10 @@ Strap yourself in buddy, because in this tutorial, that's exactly what we're goi
 
 1. **Surely this has been done before?** There are loads of other guides out there, check out *sources* at the bottom of this page for several of them. Other people have done it before and better. I'm only writing this because, when I created my first package, I couldn't find this info all in one place. Also PyPI went through a major revamp in 2017, so tutorials written before then can be very confusing.
 
-2. **I did x and it didn't work/I got an error/my cat is now on fire.** You will very likely hit snags when following this tutorial with your own package. All code is unique, search engines are your friend, but feel free to email me if you get really stuck!
+2. **I did x and it didn't work/I got an error/my cat is now on fire.** You will very likely hit snags when following this tutorial with your own package. All code is unique, search engines are your friend, but feel free to email me if you get stuck!
 
 3. **Is this hard to do/will people laugh at me if I lack mad hacker skillz?** No! The FOSS community is far from perfect, but everyone has they're first time doing this stuff. Your merges will screw up the codebase, your CI checks will fail, your package will ship with half the parts missing. This is fine. In software, failure is cheap and part of learning.
-4. 
+
 # Let's go!
 
 
@@ -53,7 +53,7 @@ def double_number(input):
 	return 2 * input
 ```
 
-This is some pretty complex stuff, so we'll include a README.md so readers can get the précis of our project:
+This is some pretty complex stuff, so we'll include a markdown file, `README.md`, so readers can get the précis of our project:
 
 README.md
 ```
@@ -71,7 +71,7 @@ We create a **directory** for our script. This will be the name of the package, 
 
 ![](../images/doubler-pypi.png) 
 
-We put the script bignumber.py in this directory, and add another file called `__init__.py` next to it. This file will enable our directory to be imported as a module later.
+We put the script `bignumber.py` in this directory, and add another file called `__init__.py` next to it. This file will enable our directory to be imported as a module later.
 
 __init__.py
 ```python
@@ -84,12 +84,13 @@ __authors__ = ['Callum Rollo <c.rollo@outlook.com>']
 __version__ = "0.0.1"
 ```
 
-We'll want a licence too, go and grab one from [opensource.org](https://opensource.org/licenses). In this case I've gone with the simple and permissive MIT license. Just dump the text into a file called LICENSE in the base directory, adding your name and the current year at the top.
+We'll want a licence too, go and grab one from [opensource.org](https://opensource.org/licenses). In this case I've gone with the simple and permissive MIT license. Just dump the text into a file called LICENSE in the base directory, adding your name and the current year at the top. The license is what makes this a rad open source project that other people are free to remix. Code posted without a license will default to being your private intellectual property, which isn't rad at all.
 
 After all this we have the following structure:
 ```shell
-packaging-dir  (this name doesn't matter)
+packaging-dir  (this directory name doesn't matter)
 ├── doubler (your package name)
+│   ├── __init__.py
 │   └── bignumber.py (the actual code)
 ├── LICENSE
 ├── README.md
@@ -98,7 +99,7 @@ packaging-dir  (this name doesn't matter)
 
 ### Put your project on github
 
-Now is as good a time as any. You can point to this in the README so people know where to go if they have bug reports or improvements for your code. Don't forget to commit regularly.
+Now is as good a time as any. You can point the github repo in the README so people know where to go if they have bug reports or improvements for your code. Don't forget to commit regularly!
 
 ### Add setup.py
 
@@ -142,13 +143,15 @@ This will create a directory `dist` that contains a tar archive of your packaged
 
 Now that we've made out package, we want to put it somewhere everyone can access it. The most popular site for Python packages as PyPI. When we're starting out however, it's best to use the sandbox test PyPI, which works exactly like the real PyPI but is a safe place to make mistakes while we practice.
 
-Just change the stuff in the angle brackets. You probably shouldn't [reuse your password](https://xkcd.com/792/).
 
 You ship the package to test-PyPI with `twine`, this is also availble via pip and conda.
 
 `python -m twine upload  dist/* --repository testpypi`
 
 And that's it! Go check out your work on test.pypi.org
+
+![](../images/doubler-pypi-done.png) 
+
 
 You can now install your package anywhere in the world with
 
@@ -175,13 +178,15 @@ username = <account_name>
 password = <account_password>
 ```
 
+Just change the stuff in the angle brackets. You probably shouldn't [reuse your password](https://xkcd.com/792/).
+
 ### Shipping to conda-forge
 
-[Conda-forge](https://conda-forge.org/) is the community run package repository that is fully compatible with conda core but way bigger. Conda-forge packages pull from from PyPI packages which is why we do it second. Conda-forge packages (called recipes) are managed through github, so you'll need to be familiar with creating pull requests.
+[Conda-forge](https://conda-forge.org/) is the community run package repository that is fully compatible with conda core but way bigger. Conda-forge packages build from from PyPI packages which is why we PyPI first. Conda-forge packages (called recipes) are managed through github, so you'll need to be familiar with creating pull requests.
 
-Adding a package to conda-forge is a little tricker, as it will need to be approved by a moderator. This gives your project a big visibility boost though. Also scrutiny of your code is a good thing! Conda-forge admins will check that you have things like a valid open source license and functioning tests before your package is distributed.
+Adding a package to conda-forge is a little tricker, as it will need to be approved by a moderator. This gives your project a big visibility boost though, especially among scientists. Also scrutiny of your code is a good thing! Conda-forge admins will check that you have things like a valid open source license and functioning tests before your package is distributed.
 
-The process for adding a recipe to conda-forge is outlined on their [website](https://conda-forge.org/#add_recipe). The core action is creating a pull request on conda-forge/staged recipes that points to your PyPI package and contains key information on build requirements. 
+The process for adding a recipe to conda-forge is outlined on their [website](https://conda-forge.org/#add_recipe). The core action is creating a pull request on conda-forge/staged recipes that points to your PyPI package and contains key information on build requirements.
 
 
 ### Updating
@@ -204,7 +209,16 @@ In short, you need to:
 - Update the SHAsum to correspond to that on pypi
 - re-render the feedstock
 
-Sources
+
+
+### How about a real package?
+
+Copy the structure of something similar if you can. The first package I made for PyPI was a series of colourmaps, so I based it off the excellent [cmocean](https://github.com/matplotlib/cmocean). I would advise pushing to git and getting a package on test-PyPI early in development, so you can make all the early packaging mistakes before going to PyPI official.
+
+Write down your process! It will save you a world of pain when you need to update the package a year later.
+
+
+### Sources
 
 https://packaging.python.org/tutorials/packaging-projects/#packaging-your-project
 
@@ -214,14 +228,7 @@ https://blog.jetbrains.com/pycharm/2017/05/how-to-publish-your-package-on-pypi/
 
 https://conda-forge.org/docs/maintainer/00_intro.html
 
-
-### How about a real package?
-
-Copy the structure of something similar if you can. The first package I made for PyPI was a series of colourmaps, so I based it off the excellent [cmocean](https://github.com/matplotlib/cmocean). I would advise pushing to git and getting a package on test-PyPI early in development, so you can make all the early packaging mistakes before going to PyPI official.
-
-Write down your process! It will save you a world of pain when you need to update the package a year later.
-
-### Acronyms and terminology
+### Acronyms and terminology TODO
 
 - **CI** Contiuouns Integration. When we push code to github we have automated tests and linting.
 - **Shipping** to upload code to the public (not to be confused with frieght forwarding or fanfic)
