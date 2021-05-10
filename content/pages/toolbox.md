@@ -8,14 +8,14 @@ Summary: The tools I use
 - [Linux](https://en.wikipedia.org/wiki/Linux), typically [debian](https://www.debian.org/), [Mint](https://linuxmint.com/) or [Ubuntu LTS](https://wiki.ubuntu.com/LTS). One day I will use [Arch](https://www.archlinux.org/) btw
 - [Vim](https://www.vim.org/) for text editing (or [gedit](https://wiki.gnome.org/Apps/Gedit) when no one is looking)
 - [Python](https://www.python.org/) for any extended coding task
-- [git](https://git-scm.com/) for version control
+- [Git](https://git-scm.com/) for version control
 - [GNU make](https://www.gnu.org/software/make/) for build automation
 - [cron](https://en.wikipedia.org/wiki/Cron) for task scheduling
 - I use [FOSS](https://en.wikipedia.org/wiki/Free_and_open-source_software) (free open source software) wherever possible
 
 
 ### Writing
-- [Markdown](https://www.markdownguide.org/basic-syntax/) using [Remarkable](https://remarkableapp.github.io/) or [Apostrophe](https://github.com/ApostropheEditor/Apostrophe)
+- [Markdown](https://www.markdownguide.org/basic-syntax/) using [ReText](https://github.com/retext-project/retext)
 - Latex using [Texmaker](https://www.xm1math.net/texmaker/)
 - [libreoffice](https://www.libreoffice.org/) For MS Office compatible documents
 - [Zotero](https://www.zotero.org/) to manage references
@@ -33,14 +33,15 @@ Summary: The tools I use
 - Perceptually uniform colourmaps by
 	- [Kristen Thyng (cmococean)](https://matplotlib.org/cmocean/) for oceanographic data
 	- [Fabio Crameri (cmcrameri)](http://www.fabiocrameri.ch/colourmaps.php) for more general geophysical data
-	
+
 ### Graphics
 - [Inkscape](https://inkscape.org/)
 - [GIMP](https://www.gimp.org/)
 
 ### Tools I have created/contributed to
-- [cmcrameri](https://github.com/callumrollo/cmcrameri) I maintain Fabio Crameri's Scientific Colourmaps as a Python package on [PyPi](https://pypi.org/project/cmcrameri/) and [conda-forge](https://github.com/conda-forge/cmcrameri-feedstock) 
+- [cmcrameri](https://github.com/callumrollo/cmcrameri) I maintain Fabio Crameri's Scientific Colourmaps as a Python package on [PyPi](https://pypi.org/project/cmcrameri/) and [conda-forge](https://github.com/conda-forge/cmcrameri-feedstock)
 - [gliderpy](https://github.com/ioos/gliderpy) A Python tool to fetch glider data from ERDDAP servers. This is in the initial stages of development.
+- [GliderTools](https://github.com/GliderToolsCommunity/GliderTools) a collaborative toolbox for glider data processing.
 - [geotiff-generator](https://github.com/callumrollo/geotiff-generato) A Python program to generate geotiffs from EMODnet, GEBCO or user supplied bathymetry.
 
 ### Miscellaneous
@@ -52,6 +53,7 @@ Summary: The tools I use
 - [Conky](https://github.com/brndnmtthws/conky) for an infinitely customisable system monitor
 - [Signal](https://www.signal.org/) for secure communication
 - [Meld](https://meldmerge.org/) for when diff doesn't cut it to compare two text files. Bonus: use git difftool to call meld on git diffs.
+- [liferea](https://lzone.de/liferea/) to aggregate RSS feeds
 - [Pelican](https://blog.getpelican.com/) to make this static website
 
 

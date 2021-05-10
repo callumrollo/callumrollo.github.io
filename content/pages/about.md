@@ -6,9 +6,9 @@ Summary: All about me
 
 I am currently a final year PhD student at the University of East Anglia (UEA) in Norwich, UK. I work with marine gliders, specifically the integration on Acoustic Doppler Current Profilers (ADCPs) onto gliders to directly measure currents in the ocean. The specific glider I work with is SG637 "Omura" equipped with a 1MHz ADCP.
 
-Data and live location information from this glider, and others in the fleet, is available on the [UEA glider website](ueaglider.uea.ac.uk/). I am open to collaborations in physical oceanography. Especially projects involving ADCPs on autonomous platforms, shelf break processes and open source science initiatives.
+Data and live location information from this glider, and others in the fleet, is available on the [UEA glider website](https://ueaglider.com). I am open to collaborations in physical oceanography, especially projects involving ADCPs on autonomous platforms, shelf break processes and open source science initiatives.
 
-I am an amateur Pythonista, leader of [UEA python](https://ueapy.github.io/) and proponent of free software for science. Several of my projects are available on my [github](https://github.com/callumrollo). 
+I am an amateur Pythonista, leader of [UEA python](https://ueapy.github.io/) and proponent of free software for science. Several of my projects are available on my [github](https://github.com/callumrollo).
 
 [Blog posts](https://callumrollo.github.io/)
 
@@ -45,7 +45,7 @@ To request a copy of any of my publications that have ended up behind a paywall,
 
 Integrated Master of Science (MSci) geophysics with study abroad First class, University of Southampton, UK. Included a year studying at Utrecht University, Netherlands under the Erasmus program
 
-Thesis title: Approximating 3D seismic velocities under Sumatra using ambient noise tomography. 
+Thesis title: Approximating 3D seismic velocities under Sumatra using ambient noise tomography.
 Supervisor: Dr Nicholas Harmon
 
 -----------------------
@@ -105,5 +105,3 @@ See also [reading list](https://callumrollo.github.io/reading.html#reading)
 Source code is available on my [Github](https://github.com/callumrollo/callumrollo.github.io). See [this article](https://callumrollo.github.io/howto.html#howto) for more info on why I promote open sharing  of source code, as well as links to academic websites that do the same.
 
 This website has no trackers, cookies, data collection or visitor logging. I am opposed to online surveillance.
-
-[egu abstract](../images/egu_2021_abstract.txt)
