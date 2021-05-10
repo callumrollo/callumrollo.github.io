@@ -185,7 +185,6 @@
     <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="nb">input</span>
 </code></pre></div>
 
-
 <p>This is some pretty complex stuff, so we'll include a markdown file, <code>README.md</code>, so readers can get the précis of our project:</p>
 <p>README.md</p>
 <div class="highlight"><pre><span></span><code><span class="cp"># Doubler</span>
@@ -194,7 +193,6 @@
 
 <span class="p">[</span><span class="n">website</span> <span class="n">here</span><span class="p">](</span><span class="n">www</span><span class="p">.</span><span class="n">doubler</span><span class="o">-</span><span class="n">documentation</span><span class="p">.</span><span class="n">com</span><span class="p">)</span>
 </code></pre></div>
-
 
 <p><a href="https://www.markdownguide.org/cheat-sheet/"><em>Hold up, what's markdown?</em></a></p>
 <p>We create a <strong>directory</strong> for our script. This will be the name of the package, so check that it's not already taken on PyPI. I'm using the name doubler.</p>
@@ -210,7 +208,6 @@
 <span class="n">__version__</span> <span class="o">=</span> <span class="s2">&quot;0.0.1&quot;</span>
 </code></pre></div>
 
-
 <p>We'll want a licence too, go and grab one from <a href="https://opensource.org/licenses">opensource.org</a>. In this case I've gone with the simple and permissive MIT license. Just dump the text into a file called LICENSE in the base directory, adding your name and the current year at the top. The license is what makes this a rad open source project that other people are free to remix. Code posted without a license will default to being your private intellectual property, which isn't rad at all.</p>
 <p>After all this we have the following structure:</p>
 <div class="highlight"><pre><span></span><code>packaging-dir  <span class="o">(</span>this directory name doesn<span class="err">&#39;</span>t matter<span class="o">)</span>
@@ -221,7 +218,6 @@
 ├── README.md
 └── setup.py <span class="o">(</span>explained in the next section<span class="o">)</span>
 </code></pre></div>
-
 
 <h3>Put your project on github</h3>
 <p>Now is as good a time as any. You can point the github repo in the README so people know where to go if they have bug reports or improvements for your code. Don't forget to commit regularly!</p>
@@ -252,7 +248,6 @@
 <span class="p">)</span>
 </code></pre></div>
 
-
 <p>You'll find detail on all these in this <a href="https://packaging.python.org/tutorials/packaging-projects/#packaging-your-project">python.org article</a>.</p>
 <p>Now, we package the code using <strong>setuptools</strong>. If you haven't got it installed it already, it's on pip and conda-forge. From the command line in the package base directory (packaging-dir in this case), run:</p>
 <p><code>python setup.py sdist</code></p>
@@ -282,7 +277,6 @@ index-servers<span class="o">=</span>
 <span class="nv">username</span> <span class="o">=</span> &lt;account_name&gt;
 <span class="nv">password</span> <span class="o">=</span> &lt;account_password&gt;
 </code></pre></div>
-
 
 <p>Just change the stuff in the angle brackets. You probably shouldn't <a href="https://xkcd.com/792/">reuse your password</a>.</p>
 <h3>Shipping to conda-forge</h3>

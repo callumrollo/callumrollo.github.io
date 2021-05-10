@@ -187,7 +187,6 @@
 <span class="o">}</span>
 </code></pre></div>
 
-
 <p>This command makes a directory then moves you into it. Try out <code>mcd test</code> then <code>pwd</code> to check where you are.</p>
 <div class="highlight"><pre><span></span><code>com <span class="o">()</span> <span class="o">{</span>
     git add -A
@@ -195,7 +194,6 @@
     git push
 <span class="o">}</span>
 </code></pre></div>
-
 
 <p>This will add all files to the staging area, set a commit message of your choice and push upstream. Usage: <code>com "never push to master on Friday my dudes"</code></p>
 <p>If you can't think of a useful git commit message, fear not <a href="https://github.com/lwe/whatthecommit">whatthecommit</a> has you covered. Try out my favourite alias <code>yolo</code></p>
@@ -216,7 +214,6 @@
 <span class="k">done</span>
 </code></pre></div>
 </td></tr></table>
-
 <p>For clipping a dataset of interest from a larger geographical dataset of shapefiles before plotting. Requires <a href="https://gdal.org/">gdal</a> library.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -227,7 +224,6 @@ ogr2ogr -f <span class="s2">&quot;ESRI Shapefile&quot;</span> hidf_land.shp /med
 <span class="c1"># four numbers at end are western bound southern bound eastern bound and northern bound in degrees. Longitude is from -180 to 180</span>
 </code></pre></div>
 </td></tr></table>
-
 <p>Move your mouse every 30 seconds to prevent sleep mode. Inspired by <a href="https://xkcd.com/196/">xkcd</a></p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -244,7 +240,6 @@ ogr2ogr -f <span class="s2">&quot;ESRI Shapefile&quot;</span> hidf_land.shp /med
 <span class="k">done</span>
 </code></pre></div>
 </td></tr></table>
-
 <p>Use <a href="https://imagemagick.org/index.php">imagemagick</a> to crop and animate a bunch of figures into a gif. Written the night before a conference, don't judge me.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -275,7 +270,6 @@ convert -delay <span class="m">20</span> -loop <span class="m">1</span> crop*.pn
 convert animation.gif  -trim +repage ani.gif
 </code></pre></div>
 </td></tr></table>
-
 <p>More imagemagick to make tight figures (remove all whitespace from edges)</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -298,7 +292,6 @@ rsync --recursive --filter<span class="o">=</span><span class="s2">&quot;-! */&q
 <span class="k">done</span>
 </code></pre></div>
 </td></tr></table>
-
 <p>Get altimeter data from Seaglider log files</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -337,7 +330,6 @@ rsync --recursive --filter<span class="o">=</span><span class="s2">&quot;-! */&q
 <span class="k">done</span>
 </code></pre></div>
 </td></tr></table>
-
 <p>Get voltage minima from Seaglider logs</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -390,7 +382,6 @@ rsync --recursive --filter<span class="o">=</span><span class="s2">&quot;-! */&q
 awk -F , <span class="s1">&#39;NF&gt;=3&#39;</span> min_v.txt &gt;&gt; min_volts.txt
 </code></pre></div>
 </td></tr></table>
-
 <h3>Scripts shamelessly copied from other, wiser people</h3>
 <p><a href="http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/">3 shell scripts to improve your writing, or "My Ph.D. advisor rewrote himself in bash."</a></p>
 <p>I think these are great, so I've archived a version <a href="../images/might-scripts.zip">here</a>.</p>

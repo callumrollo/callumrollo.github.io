@@ -38,7 +38,6 @@
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="nb"&gt;input&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;This is some pretty complex stuff, so we'll include a markdown file, &lt;code&gt;README.md&lt;/code&gt;, so readers can get the précis of our project:&lt;/p&gt;
 &lt;p&gt;README.md&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;# Doubler&lt;/span&gt;
@@ -47,7 +46,6 @@
 
 &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="n"&gt;here&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="n"&gt;www&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;doubler&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;documentation&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;&lt;a href="https://www.markdownguide.org/cheat-sheet/"&gt;&lt;em&gt;Hold up, what's markdown?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;We create a &lt;strong&gt;directory&lt;/strong&gt; for our script. This will be the name of the package, so check that it's not already taken on PyPI. I'm using the name doubler.&lt;/p&gt;
@@ -63,7 +61,6 @@
 &lt;span class="n"&gt;__version__&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;0.0.1&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;We'll want a licence too, go and grab one from &lt;a href="https://opensource.org/licenses"&gt;opensource.org&lt;/a&gt;. In this case I've gone with the simple and permissive MIT license. Just dump the text into a file called LICENSE in the base directory, adding your name and the current year at the top. The license is what makes this a rad open source project that other people are free to remix. Code posted without a license will default to being your private intellectual property, which isn't rad at all.&lt;/p&gt;
 &lt;p&gt;After all this we have the following structure:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;packaging-dir  &lt;span class="o"&gt;(&lt;/span&gt;this directory name doesn&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;t matter&lt;span class="o"&gt;)&lt;/span&gt;
@@ -74,7 +71,6 @@
 ├── README.md
 └── setup.py &lt;span class="o"&gt;(&lt;/span&gt;explained in the next section&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;h3&gt;Put your project on github&lt;/h3&gt;
 &lt;p&gt;Now is as good a time as any. You can point the github repo in the README so people know where to go if they have bug reports or improvements for your code. Don't forget to commit regularly!&lt;/p&gt;
@@ -105,7 +101,6 @@
 &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;You'll find detail on all these in this &lt;a href="https://packaging.python.org/tutorials/packaging-projects/#packaging-your-project"&gt;python.org article&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Now, we package the code using &lt;strong&gt;setuptools&lt;/strong&gt;. If you haven't got it installed it already, it's on pip and conda-forge. From the command line in the package base directory (packaging-dir in this case), run:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;python setup.py sdist&lt;/code&gt;&lt;/p&gt;
@@ -135,7 +130,6 @@ index-servers&lt;span class="o"&gt;=&lt;/span&gt;
 &lt;span class="nv"&gt;username&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &amp;lt;account_name&amp;gt;
 &lt;span class="nv"&gt;password&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &amp;lt;account_password&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;Just change the stuff in the angle brackets. You probably shouldn't &lt;a href="https://xkcd.com/792/"&gt;reuse your password&lt;/a&gt;.&lt;/p&gt;
 &lt;h3&gt;Shipping to conda-forge&lt;/h3&gt;
@@ -206,7 +200,6 @@ index-servers&lt;span class="o"&gt;=&lt;/span&gt;
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;This command makes a directory then moves you into it. Try out &lt;code&gt;mcd test&lt;/code&gt; then &lt;code&gt;pwd&lt;/code&gt; to check where you are.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;com &lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
     git add -A
@@ -214,7 +207,6 @@ index-servers&lt;span class="o"&gt;=&lt;/span&gt;
     git push
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;This will add all files to the staging area, set a commit message of your choice and push upstream. Usage: &lt;code&gt;com "never push to master on Friday my dudes"&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;If you can't think of a useful git commit message, fear not &lt;a href="https://github.com/lwe/whatthecommit"&gt;whatthecommit&lt;/a&gt; has you covered. Try out my favourite alias &lt;code&gt;yolo&lt;/code&gt;&lt;/p&gt;
@@ -235,7 +227,6 @@ index-servers&lt;span class="o"&gt;=&lt;/span&gt;
 &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;For clipping a dataset of interest from a larger geographical dataset of shapefiles before plotting. Requires &lt;a href="https://gdal.org/"&gt;gdal&lt;/a&gt; library.&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
 2
@@ -246,7 +237,6 @@ ogr2ogr -f &lt;span class="s2"&gt;&amp;quot;ESRI Shapefile&amp;quot;&lt;/span&gt
 &lt;span class="c1"&gt;# four numbers at end are western bound southern bound eastern bound and northern bound in degrees. Longitude is from -180 to 180&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;Move your mouse every 30 seconds to prevent sleep mode. Inspired by &lt;a href="https://xkcd.com/196/"&gt;xkcd&lt;/a&gt;&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
 2
@@ -263,7 +253,6 @@ ogr2ogr -f &lt;span class="s2"&gt;&amp;quot;ESRI Shapefile&amp;quot;&lt;/span&gt
 &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;Use &lt;a href="https://imagemagick.org/index.php"&gt;imagemagick&lt;/a&gt; to crop and animate a bunch of figures into a gif. Written the night before a conference, don't judge me.&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
  2
@@ -294,7 +283,6 @@ convert -delay &lt;span class="m"&gt;20&lt;/span&gt; -loop &lt;span class="m"&gt
 convert animation.gif  -trim +repage ani.gif
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;More imagemagick to make tight figures (remove all whitespace from edges)&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
  2
@@ -317,7 +305,6 @@ rsync --recursive --filter&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2
 &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;Get altimeter data from Seaglider log files&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
  2
@@ -356,7 +343,6 @@ rsync --recursive --filter&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2
 &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;Get voltage minima from Seaglider logs&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
  2
@@ -409,7 +395,6 @@ rsync --recursive --filter&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2
 awk -F , &lt;span class="s1"&gt;&amp;#39;NF&amp;gt;=3&amp;#39;&lt;/span&gt; min_v.txt &amp;gt;&amp;gt; min_volts.txt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;h3&gt;Scripts shamelessly copied from other, wiser people&lt;/h3&gt;
 &lt;p&gt;&lt;a href="http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/"&gt;3 shell scripts to improve your writing, or "My Ph.D. advisor rewrote himself in bash."&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I think these are great, so I've archived a version &lt;a href="../images/might-scripts.zip"&gt;here&lt;/a&gt;.&lt;/p&gt;
