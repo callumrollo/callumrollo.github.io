@@ -16,7 +16,7 @@
 &lt;h1&gt;Thoughts on this path&lt;/h1&gt;
 &lt;p&gt;From informal discussions with other earth scientists, mine is a fairly typical experience. Most of us are not formally trained software engineers. I was very lucky to get on that intro to Python in the first year of my PhD. I had the luxury of taking a month to re-orient myself to open source. This is a very fragile pipeline though. There are people making great efforts to improve software literacy within research groups, particulalry &lt;a href="https://carpentries.org/"&gt;The Carpentries&lt;/a&gt; and the &lt;a href="https://society-rse.org/"&gt;Society of Research Software Engineering&lt;/a&gt;. Change is slow in academia, but recognition of the value of open source is growing. There are many resources I wish I'd known about sooner. I try to help point junior researchers in my School to find the information they need and build more of a community. It's hard work, but in my view, more important than the research I produce in my 9-5.&lt;/p&gt;</content><category term="FOSS"></category><category term="software"></category><category term="foss"></category><category term="oceanography"></category></entry><entry><title>Packaging Python</title><link href="https://callumrollo.github.io/packaging.html" rel="alternate"></link><published>2021-02-17T21:00:00+00:00</published><updated>2021-02-17T21:00:00+00:00</updated><author><name>Callum Rollo</name></author><id>tag:callumrollo.github.io,2021-02-17:/packaging.html</id><summary type="html">&lt;p&gt;How to package your Python code to PyPI and conda-forge&lt;/p&gt;</summary><content type="html">&lt;h3&gt;The scenario&lt;/h3&gt;
 &lt;p&gt;You've written a kick-ass Python script for solving your knotty scientific problem and you want to share it with your peers, great! How do you do this though? Sure, you could email it to interested parties like it's 1995, post it on twitter, or seed USBs loaded with code in strategic university car parks. There is, however, a far superior solution. Packaging.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="../images/package.jpeg"&gt; &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pile of cardboard boxes" src="../images/package.jpeg"&gt; &lt;/p&gt;
 &lt;p&gt;Packaging is the art of wrapping your code up into a well defined, stand-alone form and distributing it over the Information Superhighway. Packaging allows you to distribute your code in a way that is&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Transparent&lt;/li&gt;
@@ -64,7 +64,7 @@
 
 &lt;p&gt;&lt;a href="https://www.markdownguide.org/cheat-sheet/"&gt;&lt;em&gt;Hold up, what's markdown?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;We create a &lt;strong&gt;directory&lt;/strong&gt; for our script. This will be the name of the package, so check that it's not already taken on PyPI. I'm using the name doubler.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="../images/doubler-pypi.png"&gt; &lt;/p&gt;
+&lt;p&gt;&lt;img alt="PyPI search results for &amp;quot;doubler&amp;quot; no relevant results found" src="../images/doubler-pypi.png"&gt; &lt;/p&gt;
 &lt;p&gt;We put the script &lt;code&gt;bignumber.py&lt;/code&gt; in this directory, and add another file called &lt;code&gt;__init__.py&lt;/code&gt; next to it. This file will enable our directory to be imported as a module later.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;init&lt;/strong&gt;.py&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;__future__&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;absolute_import&lt;/span&gt;
@@ -125,7 +125,7 @@
 &lt;p&gt;You ship the package to test-PyPI with &lt;code&gt;twine&lt;/code&gt;, this is also availble via pip and conda.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;python -m twine upload  dist/* --repository testpypi&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;And that's it! Go check out your work on test.pypi.org&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="../images/doubler-pypi-done.png"&gt; &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Test PyPI search results for &amp;quot;doubler&amp;quot; package is now present" src="../images/doubler-pypi-done.png"&gt; &lt;/p&gt;
 &lt;p&gt;You can now install your package anywhere in the world with&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;pip install -i https://test.pypi.org/simple/ doubler==0.0.1&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Once that works, do it for real on pyPI by dropping the --repository testpypi.&lt;/p&gt;

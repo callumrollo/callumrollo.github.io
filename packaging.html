@@ -148,7 +148,7 @@
   <div>
     <h3>The scenario</h3>
 <p>You've written a kick-ass Python script for solving your knotty scientific problem and you want to share it with your peers, great! How do you do this though? Sure, you could email it to interested parties like it's 1995, post it on twitter, or seed USBs loaded with code in strategic university car parks. There is, however, a far superior solution. Packaging.</p>
-<p><img alt="" src="../images/package.jpeg"> </p>
+<p><img alt="Pile of cardboard boxes" src="../images/package.jpeg"> </p>
 <p>Packaging is the art of wrapping your code up into a well defined, stand-alone form and distributing it over the Information Superhighway. Packaging allows you to distribute your code in a way that is</p>
 <ul>
 <li>Transparent</li>
@@ -196,7 +196,7 @@
 
 <p><a href="https://www.markdownguide.org/cheat-sheet/"><em>Hold up, what's markdown?</em></a></p>
 <p>We create a <strong>directory</strong> for our script. This will be the name of the package, so check that it's not already taken on PyPI. I'm using the name doubler.</p>
-<p><img alt="" src="../images/doubler-pypi.png"> </p>
+<p><img alt="PyPI search results for &quot;doubler&quot; no relevant results found" src="../images/doubler-pypi.png"> </p>
 <p>We put the script <code>bignumber.py</code> in this directory, and add another file called <code>__init__.py</code> next to it. This file will enable our directory to be imported as a module later.</p>
 <p><strong>init</strong>.py</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">absolute_import</span>
@@ -257,7 +257,7 @@
 <p>You ship the package to test-PyPI with <code>twine</code>, this is also availble via pip and conda.</p>
 <p><code>python -m twine upload  dist/* --repository testpypi</code></p>
 <p>And that's it! Go check out your work on test.pypi.org</p>
-<p><img alt="" src="../images/doubler-pypi-done.png"> </p>
+<p><img alt="Test PyPI search results for &quot;doubler&quot; package is now present" src="../images/doubler-pypi-done.png"> </p>
 <p>You can now install your package anywhere in the world with</p>
 <p><code>pip install -i https://test.pypi.org/simple/ doubler==0.0.1</code></p>
 <p>Once that works, do it for real on pyPI by dropping the --repository testpypi.</p>
