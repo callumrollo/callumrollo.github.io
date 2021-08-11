@@ -36,7 +36,9 @@ James Somers - [The Scientific Paper Is Obsolete](https://www.theatlantic.com/sc
 
 Mike Jackson - [How to cite academic software](https://software.ac.uk/how-cite-software)
 
-Ryan Abernathy - [Organising projects for reproducibility]https://rabernat.github.io/research_computing/organization-and-packaging-of-python-projects.html
+Ryan Abernathy - [Organising projects for reproducibility](https://rabernat.github.io/research_computing/organization-and-packaging-of-python-projects.html)
+
+Philip Grylls - [The complicated relationship between early career researchers and reproducible research](https://www.software.ac.uk/blog/2021-06-07-complicated-relationship-between-early-career-researchers-and-reproducible-research?mc_cid=b626a8dd63&mc_eid=95a7d9b4e9)
 
 ### Academic Publishing
 

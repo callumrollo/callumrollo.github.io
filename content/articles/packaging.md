@@ -10,7 +10,7 @@ Summary: How to package your Python code to PyPI and conda-forge
 
 You've written a kick-ass Python script for solving your knotty scientific problem and you want to share it with your peers, great! How do you do this though? Sure, you could email it to interested parties like it's 1995, post it on twitter, or seed USBs loaded with code in strategic university car parks. There is, however, a far superior solution. Packaging.
 
-![](../images/package.jpeg) 
+![Pile of cardboard boxes](../images/package.jpeg) 
 
 Packaging is the art of wrapping your code up into a well defined, stand-alone form and distributing it over the Information Superhighway. Packaging allows you to distribute your code in a way that is
 
@@ -69,7 +69,7 @@ This package is for a function that doubles your numbers, making them twice as g
 
 We create a **directory** for our script. This will be the name of the package, so check that it's not already taken on PyPI. I'm using the name doubler.
 
-![](../images/doubler-pypi.png) 
+![PyPI search results for "doubler" no relevant results found](../images/doubler-pypi.png) 
 
 We put the script `bignumber.py` in this directory, and add another file called `__init__.py` next to it. This file will enable our directory to be imported as a module later.
 
@@ -150,7 +150,7 @@ You ship the package to test-PyPI with `twine`, this is also availble via pip an
 
 And that's it! Go check out your work on test.pypi.org
 
-![](../images/doubler-pypi-done.png) 
+![Test PyPI search results for "doubler" package is now present](../images/doubler-pypi-done.png) 
 
 
 You can now install your package anywhere in the world with
