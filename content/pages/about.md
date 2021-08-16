@@ -4,11 +4,11 @@ Category: Generic
 Slug: aboutme
 Summary: All about me
 
-I am currently a final year PhD student at the University of East Anglia (UEA) in Norwich, UK. I work with marine gliders, specifically the integration on Acoustic Doppler Current Profilers (ADCPs) onto gliders to directly measure currents in the ocean. The specific glider I work with is SG637 "Omura" equipped with a 1MHz ADCP.
+I am a final year PhD student at the University of East Anglia (UEA) in Norwich, UK. I work with marine gliders, specifically the integration on Acoustic Doppler Current Profilers (ADCPs) onto gliders to directly measure currents in the ocean. The specific glider I work with is SG637 "Omura" equipped with a 1MHz ADCP.
 
-Data and live location information from this glider, and others in the fleet, is available on the [UEA glider website](https://ueaglider.com). I am open to collaborations in physical oceanography, especially projects involving ADCPs on autonomous platforms, shelf break processes and open source science initiatives.
+Data and live location information from this glider, and others in the fleet, is available on the [UEA glider website](https://ueaglider.uea.ac.uk). I rebuilt the website in 2021, based on the original by [Bastien Queste](http://byqueste.com/) I am open to collaborations in physical oceanography, especially projects involving ADCPs on autonomous platforms, shelf break processes and open source science initiatives.
 
-I am an amateur Pythonista, leader of [UEA python](https://ueapy.github.io/) and proponent of free software for science. Several of my projects are available on my [github](https://github.com/callumrollo).
+I am an amateur Pythonista, leader of [UEA python](https://ueapy.github.io/) and proponent of free software for science. Several of my projects are available on my [github](https://github.com/callumrollo). I have completed collaborative programming projects as part of [OceanHackWeek](https://callumrollo.github.io/hackweek.html) and [Google Summer of Code](https://summerofcode.withgoogle.com/).
 
 [Blog posts](https://callumrollo.github.io/)
 
