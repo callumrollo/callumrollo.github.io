@@ -39,17 +39,27 @@
     <!-- Microsoft EDGE -->
     <meta name="msapplication-TileColor" content="#333333">
 
-    <meta name="author" content="Callum Rollo" />
-    <meta name="description" content="Science should be open. Software should be free. Borders are kind of rubbish " />
+<meta name="author" content="Callum Rollo" />
+<meta name="description" content="The journey of an open source oceanography package" />
+<meta name="keywords" content="software, foss, oceanography">
+
+
 <meta property="og:site_name" content="Callum Rollo"/>
-<meta property="og:type" content="blog"/>
-<meta property="og:title" content="Callum Rollo"/>
-<meta property="og:description" content="Science should be open. Software should be free. Borders are kind of rubbish "/>
+<meta property="og:title" content="Gliderpy first release"/>
+<meta property="og:description" content="The journey of an open source oceanography package"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://callumrollo.github.io"/>
+<meta property="og:url" content="https://callumrollo.github.io/gliderpy.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2021-08-11 10:45:00+01:00"/>
+<meta property="article:modified_time" content="2021-08-11 10:45:00+01:00"/>
+<meta property="article:author" content="https://callumrollo.github.io/author/callum-rollo.html">
+<meta property="article:section" content="FOSS"/>
+<meta property="article:tag" content="software"/>
+<meta property="article:tag" content="foss"/>
+<meta property="article:tag" content="oceanography"/>
 <meta property="og:image" content="https://callumrollo.github.io/images/mug.jpg">
 
-  <title>Callum Rollo &ndash; Category FOSS</title>
+  <title>Callum Rollo &ndash; Gliderpy first release</title>
 
 </head>
 <body class="light-theme">
@@ -124,132 +134,40 @@
 
     </nav>
 
-
-
-<article>
+<article class="single">
   <header>
-    <h2><a href="https://callumrollo.github.io/gliderpy.html#gliderpy">Gliderpy first release</a></h2>
+      
+    <h1 id="gliderpy">Gliderpy first release</h1>
     <p>
       Posted on Wed 11 August 2021 in <a href="https://callumrollo.github.io/category/foss.html">FOSS</a>
 
-          &#8226; Tagged with
-              <a href="https://callumrollo.github.io/tag/software.html">software</a>,              <a href="https://callumrollo.github.io/tag/foss.html">foss</a>,              <a href="https://callumrollo.github.io/tag/oceanography.html">oceanography</a>
     </p>
   </header>
+
+
   <div>
-      <p>The journey of an open source oceanography package</p>
-        <br>
-        <a class="btn"
-           href="https://callumrollo.github.io/gliderpy.html#gliderpy">
-          Continue reading
-        </a>
+    <p>As part of the <a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a> I have been working with <a href="https://github.com/ocefpaf">Filipe Fernandes</a> to improve access to ocean glider data served through <a href="https://coastwatch.pfeg.noaa.gov/erddap/index.html">ERDDAP</a>.</p>
+<p>We were continuing work on the <a href="https://github.com/ioos/gliderpy">gliderpy</a> project that we created together with <a href="https://github.com/LindsayRAbrams">Lindsay Abrams</a> during the 2020 <a href="https://oceanhackweek.github.io/">OceanHackWeek</a>. This package aims to streamline the process of downloading and visualising glider data stored on ERDDAP servers and providing a simple way to directly import it into Python. We created gliderpy to do for glider data what <a href="https://github.com/euroargodev/argopy">argopy</a> does for argo data.</p>
+<p>During the two project days of OceanHackWeek, we created a working prototype of the package, with basic support for two ERDDAP servers and some plotting capability. This summer, with funding from GSoC, we were able to overhaul the codebase. We increased reliability with unit tests, added support for more data servers, a server-side metadata search function and standardisation of variable names. Most importantly, we packaged gliderpy and uploaded it to <a href="https://pypi.org/project/gliderpy/">PyPI</a> and <a href="https://anaconda.org/conda-forge/gliderpy">conda-forge</a>.</p>
+<p>Taking part in GSoC has been a great experience for me as I develop my skills a data scientist. The most valuable part of GSoC has been learning automated package management. Using tools like <a href="https://github.com/features/actions">GitHub Actions</a> and the <a href="https://github.com/conda-incubator/grayskull">grayskull</a> conda recipe creator greatly reduced the time needed to create and update the package, as well as removing several error-prone manual steps from the process. I also took part in live code review for the first time. This really improved the quality of the code I merged into gliderpy and made me think a lot more about how important structure and design patterns are in a software project. I would recommend GSoC to anyone in the ocean science community who wants to improve their software engineering skills and contribute to useful open source projects.</p>
+<hr>
+<h3>The future of gliderpy</h3>
+<p>We plan to continue development of gliderpy, building on its visualisation capabilities and supporting more ERDDAP servers. Progress will be slower now that GSoC is over and other projects take priority. However, with a package published we hope to engage glider data users in testing and improving gliderpy in the FOSS tradition.</p>
+<p>Next steps for gliderpy include more elegant plotting of oceanographic data, support for more servers and visualisation of data availability. Want to get involved? Head over to <a href="https://github.com/ioos/gliderpy">gliderpy</a> and submit an Issue or drop me an <a href="mailto:c.rollo@outlook.com">email</a>.</p>
   </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="https://callumrollo.github.io/gsoc.html#gsoc">Summer of Code</a></h2>
+  <div class="tag-cloud">
     <p>
-      Posted on Mon 17 May 2021 in <a href="https://callumrollo.github.io/category/foss.html">FOSS</a>
-
-          &#8226; Tagged with
-              <a href="https://callumrollo.github.io/tag/software.html">software</a>,              <a href="https://callumrollo.github.io/tag/foss.html">foss</a>,              <a href="https://callumrollo.github.io/tag/oceanography.html">oceanography</a>
+      <a href="https://callumrollo.github.io/tag/software.html">software</a>
+      <a href="https://callumrollo.github.io/tag/foss.html">foss</a>
+      <a href="https://callumrollo.github.io/tag/oceanography.html">oceanography</a>
     </p>
-  </header>
-  <div>
-      <p>How have I become a programmer?</p>
-        <br>
-        <a class="btn"
-           href="https://callumrollo.github.io/gsoc.html#gsoc">
-          Continue reading
-        </a>
   </div>
-  <hr />
+
+
+
+
+
 </article>
-<article>
-  <header>
-    <h2><a href="https://callumrollo.github.io/packaging.html#packaging">Packaging Python</a></h2>
-    <p>
-      Posted on Wed 17 February 2021 in <a href="https://callumrollo.github.io/category/foss.html">FOSS</a>
-
-          &#8226; Tagged with
-              <a href="https://callumrollo.github.io/tag/foss.html">FOSS</a>,              <a href="https://callumrollo.github.io/tag/python.html">Python</a>,              <a href="https://callumrollo.github.io/tag/tutorial.html">tutorial</a>
-    </p>
-  </header>
-  <div>
-      <p>How to package your Python code to PyPI and conda-forge</p>
-        <br>
-        <a class="btn"
-           href="https://callumrollo.github.io/packaging.html#packaging">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="https://callumrollo.github.io/bash.html#bash">Shell games</a></h2>
-    <p>
-      Posted on Fri 02 October 2020 in <a href="https://callumrollo.github.io/category/foss.html">FOSS</a>
-
-          &#8226; Tagged with
-              <a href="https://callumrollo.github.io/tag/linux.html">linux</a>,              <a href="https://callumrollo.github.io/tag/bash.html">bash</a>,              <a href="https://callumrollo.github.io/tag/software.html">software</a>,              <a href="https://callumrollo.github.io/tag/optimise.html">optimise</a>
-    </p>
-  </header>
-  <div>
-      <p>Excerpts from my .bashrc and shell scripts</p>
-        <br>
-        <a class="btn"
-           href="https://callumrollo.github.io/bash.html#bash">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="https://callumrollo.github.io/hackweek.html#hackweek">Why you (yes, you!) should take part in a hackathon</a></h2>
-    <p>
-      Posted on Tue 25 August 2020 in <a href="https://callumrollo.github.io/category/foss.html">FOSS</a>
-
-          &#8226; Tagged with
-              <a href="https://callumrollo.github.io/tag/academia.html">academia</a>,              <a href="https://callumrollo.github.io/tag/foss.html">FOSS</a>,              <a href="https://callumrollo.github.io/tag/hack.html">hack</a>,              <a href="https://callumrollo.github.io/tag/oceanography.html">oceanography</a>
-    </p>
-  </header>
-  <div>
-      <p>Recounting my experience at Oceanhackweek 2020</p>
-        <br>
-        <a class="btn"
-           href="https://callumrollo.github.io/hackweek.html#hackweek">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="https://callumrollo.github.io/howto.html#howto">Steal this website</a></h2>
-    <p>
-      Posted on Tue 16 June 2020 in <a href="https://callumrollo.github.io/category/foss.html">FOSS</a>
-
-          &#8226; Tagged with
-              <a href="https://callumrollo.github.io/tag/pelican.html">pelican</a>,              <a href="https://callumrollo.github.io/tag/publishing.html">publishing</a>,              <a href="https://callumrollo.github.io/tag/academia.html">academia</a>
-    </p>
-  </header>
-  <div>
-      <p>How to build this website</p>
-        <br>
-        <a class="btn"
-           href="https://callumrollo.github.io/howto.html#howto">
-          Continue reading
-        </a>
-  </div>
-</article>
-
-  <div class="pagination">
-  </div>
-
-
 
     <footer>
 <p>
