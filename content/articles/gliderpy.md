@@ -2,7 +2,7 @@ Title: Gliderpy first release
 Date: 2021-08-11 10:45
 Modified: 2021-08-11 10:45
 Category: FOSS
-Tags: software, foss, oceanography
+Tags: software, foss, oceanography, gsoc
 Slug: gliderpy
 Summary: The journey of an open source oceanography package
 

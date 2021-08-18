@@ -2,8 +2,8 @@ Title: Erddapy griddap support
 Date: 2021-08-18 17:00
 Modified: 2021-08-18 17:00
 Category: FOSS
-Tags: software, foss, oceanography
-Slug: gliderpy
+Tags: software, foss, oceanography, gsoc
+Slug: griddap
 Summary: Supporting gridded dataset access via erddapy
 
 As part of the [Google Summer of Code](https://summerofcode.withgoogle.com/) I have been working with [Filipe Fernandes](https://github.com/ocefpaf) to add [griddap](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html) support to the [erddapy](https://github.com/ioos/erddapy) package, along with other features and performance improvements.

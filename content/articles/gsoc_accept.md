@@ -2,7 +2,7 @@ Title: Summer of Code
 Date: 2021-05-17 22:00
 Modified: 2021-05-17 22:00
 Category: FOSS
-Tags:  software, foss, oceanography
+Tags:  software, foss, gsoc
 Slug: gsoc
 Summary: How have I become a programmer?
 
