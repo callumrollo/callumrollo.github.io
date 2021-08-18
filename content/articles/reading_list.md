@@ -1,6 +1,6 @@
 Title: Articles of interest
 Date: 2020-07-13 10:20
-Modified: 2020-10-10 11:25
+Modified: 2021-08-05 10:45
 Category: Reading
 Tags: articles, opinion, academia, nature
 Slug: reading
