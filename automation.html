@@ -40,13 +40,13 @@
     <meta name="msapplication-TileColor" content="#333333">
 
 <meta name="author" content="Callum Rollo" />
-<meta name="description" content="Writing hacky scripts for fun and profit at sea" />
+<meta name="description" content="Writing hacky scripts for oceanography" />
 <meta name="keywords" content="linux, bash, software, optimise, oceanography, cruise, bandwidth">
 
 
 <meta property="og:site_name" content="Callum Rollo"/>
 <meta property="og:title" content="Automation for oceanographers"/>
-<meta property="og:description" content="Writing hacky scripts for fun and profit at sea"/>
+<meta property="og:description" content="Writing hacky scripts for oceanography"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="https://callumrollo.github.io/automation.html"/>
 <meta property="og:type" content="article"/>
@@ -150,14 +150,168 @@
 
 
   <div>
-    <p>As a physical oceanographer, I occasionally spend chunks of time at sea. Typically this will be aboard a scientific research vessel with very limited shoreside connectivity. In order to keep oceaographic data flowing, I have developed several hacky scripts to perform routine analysis and transfer data in an efficient manner.</p>
-<h3>Subset glider data</h3>
+    <p>As a physical oceanographer, I occasionally spend chunks of time at sea. Typically this will be aboard a scientific research vessel with very limited shoreside connectivity. In order to keep oceanographic data flowing, I have developed several hacky scripts to perform routine analysis and transfer data in an efficient manner.</p>
+<h3>Read emails in Python</h3>
+<p>This script is used to periodically check a mailbox for emails and take an action if they match certain criteria. I developed this to read automated emails of glider locations and add them to a database</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">imaplib</span>
+<span class="kn">import</span> <span class="nn">email</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+
+<span class="k">def</span> <span class="nf">read_email_from_gmail</span><span class="p">():</span>
+    <span class="c1"># check what time email was last checked</span>
+    <span class="n">timefile</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;lastcheck.txt&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">timefile</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;lastcheck.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">variable_file</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">variable_file</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
+                <span class="n">last_check</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromisoformat</span><span class="p">((</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">last_check</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">1970</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+    <span class="c1"># Write the time of this run</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;lastcheck.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()))</span>
+    <span class="c1"># Check gmail account for emails</span>
+    <span class="n">mail</span> <span class="o">=</span> <span class="n">imaplib</span><span class="o">.</span><span class="n">IMAP4_SSL</span><span class="p">(</span><span class="s1">&#39;imap.gmail.com&#39;</span><span class="p">)</span>
+    <span class="n">mail</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="s2">&quot;youremail@gmail.com&quot;</span><span class="p">,</span> <span class="s2">&quot;password&quot;</span><span class="p">)</span>
+    <span class="n">mail</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;inbox&#39;</span><span class="p">)</span>
+
+    <span class="n">result</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">mail</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;ALL&#39;</span><span class="p">)</span>
+    <span class="n">mail_ids</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="n">id_list</span> <span class="o">=</span> <span class="n">mail_ids</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="n">first_email_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">id_list</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">latest_email_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">id_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="c1"># Cut to last 10 emails</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">id_list</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="n">first_email_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">id_list</span><span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">])</span>
+
+    <span class="c1"># Check which emails have arrived since the last run of this script</span>
+    <span class="n">unread_emails</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">first_email_id</span><span class="p">,</span><span class="n">latest_email_id</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">result</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">mail</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="s1">&#39;(RFC822)&#39;</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">response_part</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">response_part</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+                <span class="n">msg</span> <span class="o">=</span> <span class="n">email</span><span class="o">.</span><span class="n">message_from_bytes</span><span class="p">(</span><span class="n">response_part</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+                <span class="n">date_tuple</span> <span class="o">=</span> <span class="n">email</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">parsedate_tz</span><span class="p">(</span><span class="n">msg</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">])</span>
+                <span class="k">if</span> <span class="n">date_tuple</span><span class="p">:</span>
+                    <span class="n">local_date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span>
+                        <span class="n">email</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">mktime_tz</span><span class="p">(</span><span class="n">date_tuple</span><span class="p">))</span>
+                    <span class="k">if</span> <span class="n">local_date</span> <span class="o">&gt;</span> <span class="n">last_check</span><span class="p">:</span>
+                        <span class="n">unread_emails</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="c1"># Exit if no new emails</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">unread_emails</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;mqtt-log.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">())</span> <span class="o">+</span> <span class="s1">&#39; no new mail&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="c1"># Check new emails</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">unread_emails</span><span class="p">:</span>
+        <span class="n">result</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">mail</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="s1">&#39;(RFC822)&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">response_part</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">response_part</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+                <span class="n">msg</span> <span class="o">=</span> <span class="n">email</span><span class="o">.</span><span class="n">message_from_bytes</span><span class="p">(</span><span class="n">response_part</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+                <span class="n">email_subject</span> <span class="o">=</span> <span class="n">msg</span><span class="p">[</span><span class="s1">&#39;subject&#39;</span><span class="p">]</span>
+                <span class="n">email_from</span> <span class="o">=</span> <span class="n">msg</span><span class="p">[</span><span class="s1">&#39;from&#39;</span><span class="p">]</span>
+                <span class="c1">#print (&#39;From : &#39; + email_from + &#39;\n&#39;)</span>
+                <span class="c1">#print (&#39;Subject : &#39; + email_subject + &#39;\n&#39;)</span>
+                <span class="c1"># If email is from UEA domain and subject is GPS, pass to glider_loc script</span>
+                <span class="k">if</span> <span class="n">email_from</span><span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;uea.ac.uk&#39;</span> <span class="ow">and</span> <span class="n">email_subject</span> <span class="o">==</span> <span class="s1">&#39;GPS&#39;</span><span class="p">:</span>
+                    <span class="c1"># The function glider_loc takes the glider location and relays it over MQTT</span>
+                    <span class="n">glider_loc</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">email_from</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Note: to avoid getting locked out by Gmail, I recommend enabling 2FA and creating an <a href="https://support.google.com/accounts/answer/185833?hl=en">app password</a> for this script to use.</p>
 <h3>Automated emails for data transfer</h3>
-<h3>MQTT for platform locations</h3>
-<h3></h3>
+<p>The simplest method I have found for sending automated emails is to install <a href="https://wiki.debian.org/nullmailer#Installation_Examples_-_GMail">nullmailer</a> on a Linux box then run a short shell script.</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+mv /home/pilot/data-to-nbp/most-recent /home/pilot/data-to-nbp/dives-<span class="sb">`</span>date +<span class="s2">&quot;%Y-%m-%dT%H:%M&quot;</span><span class="sb">`</span>
+mv /home/pilot/data-to-nbp/dives-to-nbp.zip /home/pilot/data-to-nbp/dives-to-nbp.zip-<span class="sb">`</span>date +<span class="s2">&quot;%Y-%m-%dT%H:%M&quot;</span><span class="sb">`</span>
+mkdir /home/pilot/data-to-nbp/most-recent
+find /home/sg**/p*.mat -mtime -0.25 -exec cp <span class="o">{}</span> /home/pilot/data-to-nbp/most-recent  <span class="se">\;</span>
+zip -rj /home/pilot/data-to-nbp/dives-to-nbp.zip /home/pilot/data-to-nbp/most-recent
+<span class="nb">echo</span> <span class="s2">&quot;data last 6 hours&quot;</span> <span class="p">|</span> mail -s <span class="s2">&quot;data4u&quot;</span> email@provider -A  /home/pilot/data-to-nbp/dives-to-nbp.zip
+<span class="nb">printf</span> <span class="s1">&#39;\n%s&#39;</span> <span class="s2">&quot;</span><span class="k">$(</span>date <span class="s2">&quot;+%Y-%m-%dT%H:%M:%S&quot;</span><span class="k">)</span><span class="s2">&quot;</span> &gt;&gt; /home/pilot/data-to-nbp/transfer.log
+<span class="nb">printf</span> <span class="s2">&quot;, transferred data&quot;</span> &gt;&gt; /home/pilot/data-to-nbp/transfer.log
+</code></pre></div>
+
+<p>This script performs several useful tasks. Here's a line by line breakdown
+- Archives the folder <code>/home/pilot/data-to-nbp/most-recent</code> with a timestamp
+- archives the previously sent zip file
+- creates a directory
+- finds files matching a certain pattern created in the last 6 hours and copies them to that directory
+- zips the files
+- emails the zip file to a recipient
+- logs that the transfer was successful</p>
+<h3>Read locations from Argos tags</h3>
+<p>This Python script accesses the <a href="https://argos-system.cls.fr/argos-cwi2/login.html">Argos web portal</a> through a dedicated <a href="http://ws-argos.cls.fr/argosDws/services/DixService?wsdl">web API</a>. This enable automated access to Argos tag locations</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">zeep</span>
+<span class="kn">import</span> <span class="nn">xmltodict</span>
+
+<span class="n">wsdl</span> <span class="o">=</span> <span class="s2">&quot;http://ws-argos.cls.fr/argosDws/services/DixService?wsdl&quot;</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">zeep</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">wsdl</span><span class="o">=</span><span class="n">wsdl</span><span class="p">)</span>
+<span class="n">resp_xml</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">getXml</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s2">&quot;argos username&quot;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s2">&quot;argo password&quot;</span><span class="p">,</span> <span class="n">nbPassByPtt</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+                                 <span class="n">nbDaysFromNow</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+                                 <span class="n">displayLocation</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">,</span> <span class="n">displayRawData</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
+                                 <span class="n">mostRecentPassages</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">,</span> <span class="n">platformId</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">tag_number</span><span class="p">))</span>
+
+<span class="n">resp_dict</span> <span class="o">=</span> <span class="n">xmltodict</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">resp_xml</span><span class="p">)</span>
+<span class="n">bar</span> <span class="o">=</span> <span class="n">resp_dict</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span>
+<span class="c1"># Only some records have valid locations</span>
+<span class="k">if</span> <span class="s1">&#39;program&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">bar</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="k">return</span>
+<span class="n">baz</span> <span class="o">=</span> <span class="n">bar</span><span class="p">[</span><span class="s1">&#39;program&#39;</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">baz</span><span class="p">[</span><span class="s1">&#39;platform&#39;</span><span class="p">]</span>
+<span class="n">b0</span> <span class="o">=</span> <span class="n">b</span><span class="p">[</span><span class="s1">&#39;satellitePass&#39;</span><span class="p">]</span>
+
+
+<span class="k">for</span> <span class="n">b1</span> <span class="ow">in</span> <span class="n">b0</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s1">&#39;location&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">b1</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="k">continue</span>
+    <span class="n">argo_dict</span> <span class="o">=</span> <span class="n">b1</span><span class="p">[</span><span class="s1">&#39;location&#39;</span><span class="p">]</span>
+    <span class="n">location_ate</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">argo_dict</span><span class="p">[</span><span class="s1">&#39;locationDate&#39;</span><span class="p">],</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">T%H:%M:%S.</span><span class="si">%f</span><span class="s1">Z&#39;</span><span class="p">)</span>
+    <span class="n">location_tag_number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">tag_number</span><span class="p">)</span>
+    <span class="n">location_longitude</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">argo_dict</span><span class="p">[</span><span class="s1">&#39;longitude&#39;</span><span class="p">])</span>
+    <span class="n">location_latitude</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">argo_dict</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">])</span>
+    <span class="n">location_quality</span> <span class="o">=</span> <span class="n">argo_dict</span><span class="p">[</span><span class="s1">&#39;locationClass&#39;</span><span class="p">]</span>
+    <span class="n">location_altitude</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">argo_dict</span><span class="p">[</span><span class="s1">&#39;altitude&#39;</span><span class="p">])</span>
+</code></pre></div>
+
+<h3>GDAL for creating webtiles</h3>
+<p>Short bash script that will take any input geotiff and create webtiles for use with leaflet maps. This is how I generated the ice maps for the <a href="https://github.com/callumrollo/itgc-2022-map">nbp2202map</a> and <a href="https://nbp2202map.com/">website</a>. Credit to <a href="https://www.kth.se/profile/liling/">Li Ling</a> for figuring out how to warp the geotiffs to a usable projection.</p>
+<div class="highlight"><pre><span></span><code><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/home/callum/anaconda3/envs/geospatial/bin
+<span class="nv">infile</span><span class="o">=</span>input_filename.tif
+gdalwarp -t_srs EPSG:4326 -te -140 -76 -90 -66 <span class="nv">$infile</span> liproj.tif
+gdal_translate -of vrt -expand rgba liproj.tif li.vr
+gdal2tiles.py li.vrt AMSR  --zoom <span class="m">1</span>-9
+</code></pre></div>
+
+<p>Line by line:</p>
+<ul>
+<li>Add Anaconda environment to path which has cartopy installed. This is the easiest way to reliably install GDAL in my experience</li>
+<li>Specify input file</li>
+<li>Warp input file to EPSG:4236 (lazy, unprojected data)</li>
+<li>Colour the input file to RGBA</li>
+<li>Create webtiles at set zoom levels</li>
+</ul>
+<h3>Other handy scripts</h3>
+<ul>
+<li><a href="https://github.com/callumrollo/adcp-gnss-mash">ADCP GNSS mash</a> a Python script that combines two timestamped datasets from an autonomous platform to add location information to ADCP data. Includes parsing NMEA, manipulating files and using datetime</li>
+<li><a href="https://github.com/callumrollo/github-scraper">webscraping</a> a nice little example of scraping data from GitHub</li>
+<li><a href="https://github.com/callumrollo/geotiff-generato">geotiff-generator</a> A Python program to generate geotiffs from EMODnet, GEBCO or user supplied bathymetry. Includes taking user input from the command-line, stitching together EMODnet netCDFs and working with tri-band rasters</li>
+<li><a href="https://github.com/callumrollo/coding/blob/master/handy_scripts/mousemove">move your mouse every 30 seconds</a> you never know when you might <a href="https://xkcd.com/196/">need it</a></li>
+</ul>
 <hr>
-<h3>Other tools</h3>
 <h3>Tools used</h3>
+<p>These scripts use python and/or bash. The Python stuff probably works on Windows, but all were developed on Linux. For more tools check out out <a href="https://callumrollo.github.io/pages/toolbox">my toolbox</a></p>
 <h3>Further reading</h3>
   </div>
   <div class="tag-cloud">
