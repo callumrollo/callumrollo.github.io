@@ -9,7 +9,7 @@ In the interests of transparency, inspired by [George Monbiot](https://www.monbi
 
 In my role as data scientist at VOTO, I receive **55'000 SEK**/month. This is equivalent to around **£52'800** per annum at current exchange rates. This high salary is partly a consequence of my migration status. To work in Sweden I require a [blue card](https://ec.europa.eu/home-affairs/policies/migration-and-asylum/legal-migration-and-integration/work/eu-blue-card_en), a visa aimed at attracting high skill professionals to fill a labour market gap. The eligibility for this card includes a [high minimumn salary threshold](https://ec.europa.eu/immigration/blue-card/sweden_en).
 
-I pay around 35 % in taxes to the Swedish government, and an additional 5 % on my UK student loan repayments.
+I pay around 35 % in taxes to the Swedish government, and an additional 5 % on my UK student loan repayments. This leaves me with ~ **£ 31'700** in take home pay. 
 
 ### Previous positions
 
