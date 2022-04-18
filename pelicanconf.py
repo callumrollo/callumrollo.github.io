@@ -9,7 +9,7 @@ DOMAIN = SITEURL
 FEED_DOMAIN = SITEURL
 SITENAME = 'Callum Rollo'
 SITETITLE = 'Callum Rollo'
-SITESUBTITLE = 'Oceanographer in training'
+SITESUBTITLE = 'Throwing stuff in the ocean, but in a good way'
 SITEDESCRIPTION = "Science should be open. Software should be free. Borders are kind of rubbish "
 SITELOGO = SITEURL + '/images/mug.jpg'
 FAVICON = SITEURL + '/images/favicon.ico'
@@ -55,7 +55,7 @@ DEFAULT_PAGINATION = 10
 
 
 
-STATIC_PATHS = ['images', 'figures']
+STATIC_PATHS = ['images']
 
 
 

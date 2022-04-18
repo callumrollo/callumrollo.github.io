@@ -187,6 +187,5 @@ Line by line:
 ### Tools used
 These scripts use python and/or bash. The Python stuff probably works on Windows, but all were developed on Linux. For more tools check out out [my toolbox](https://callumrollo.github.io/pages/toolbox)
 
-### Further reading
 
 
