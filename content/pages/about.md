@@ -4,16 +4,16 @@ Category: Generic
 Slug: aboutme
 Summary: All about me
 
-I recently started work as the in-house data scientist at [VOTO](https://voiceoftheocean.org/en). I am responsible for processing, correcting, standardising and distributing scientific data from our fleet of autonomous platforms.
+I recently started work as the in-house data scientist at [VOTO](https://voiceoftheocean.org/en). I am responsible for processing, correcting, standardising and distributing scientific data from our fleet of autonomous platforms. In my day-to-day work, I build and monitor pipelines for processing near real time data, maintain servers and create websites for viewing/interrogating data. I also work with other data managers at organisations like [SMHI](https://www.smhi.se/en) and [EMODnet](https://emodnet.ec.europa.eu/en) to standardise and efficiently distribute data.
 
-I am a Pythonista and proponent of free software for science. Several of my projects are available on my [github](https://github.com/callumrollo). I have completed collaborative programming projects as part of [OceanHackWeek](https://callumrollo.github.io/hackweek.html) and [Google Summer of Code](https://summerofcode.withgoogle.com/). I lead the [UEA scientific python](https://ueapy.github.io/) group during my PhD.
+I am a Pythonista and proponent of free software for science. Several of my projects are available on my [github](https://github.com/callumrollo). I have completed collaborative programming projects as part of [OceanHackWeek](https://callumrollo.github.io/hackweek.html) and [Google Summer of Code](https://summerofcode.withgoogle.com/). During my PhD, I led the [UEA scientific python](https://ueapy.github.io/) group.
 
 [Blog posts](https://callumrollo.github.io/)
 
 
 ### PhD
 
-During 2017-2021 I completed a PhD at the University of East Anglia (UEA) in Norwich, UK. I work with marine gliders, specifically the integration on Acoustic Doppler Current Profilers (ADCPs) onto gliders to directly measure currents in the ocean. The specific glider I work with was SG637 "Omura" equipped with a 1MHz ADCP.
+During 2017-2021 I completed a PhD at the University of East Anglia (UEA) in Norwich, UK. I work with marine gliders, specifically the integration on Acoustic Doppler Current Profilers (ADCPs) onto gliders to directly measure currents in the ocean.
 
 Data and live location information from this glider, and others in the fleet, is available on the [UEA glider website](https://ueaglider.uea.ac.uk). I rebuilt the website in 2021, based on the original by [Bastien Queste](http://byqueste.com/).
 
@@ -102,7 +102,7 @@ With varying levels of competence but universal enthusiasm.
 - Perceptually uniform colourmaps
 - Learning languages (human and programming)
 - Climate breakdown
-- Heterodox economics 
+- Heterodox economics
 - Rewilding as a method of environmental and social regeneration
 - Traditional forest management
 - Infosec, cryptography, online security, and why you shouldn't blindly follow [links](https://www.youtube.com/watch?v=dQw4w9WgXcQ)

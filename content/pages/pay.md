@@ -7,16 +7,26 @@ Summary: Registry of interests
 
 In the interests of transparency, inspired by [George Monbiot](https://www.monbiot.com/registry-of-interests/), I publish and update my salary here. Studies indicate that pay transparency is [a key tool](https://www.payscale.com/data/pay-transparency) in [combatting unequal pay](https://www.aauw.org/resources/news/media/press-releases/salary-transparency-linked-to-smaller-gender-pay-gap/). Universities are [not exempt](https://hbr.org/2020/02/can-transparency-laws-fix-the-gender-wage-gap) from the gender pay gap.
 
-I receive the [minimum UKRI PhD stipend](https://www.ukri.org/skills/funding-for-research-training/) of **£15'285** per annum. This is [scholarly income](https://www.gov.uk/hmrc-internal-manuals/employment-income-manual/eim06205) so is not subject to tax.
+In my role as data scientist at VOTO, I receive **55'000 SEK**/month. This is equivalent to around **£52'800** per annum at current exchange rates. This high salary is partly a consequence of my migration status. To work in Sweden I require a [blue card](https://ec.europa.eu/home-affairs/policies/migration-and-asylum/legal-migration-and-integration/work/eu-blue-card_en), a visa aimed at attracting high skill professionals to fill a labour market gap. The eligibility for this card includes a [high minimumn salary threshold](https://ec.europa.eu/immigration/blue-card/sweden_en).
 
-This income is supplemented by the work I do teaching and assisting in class at UEA. This typically earns me around **£500 - £1'000** per annum.
+I pay around 35 % in taxes to the Swedish government, and an additional 5 % on my UK student loan repayments.
 
-During January and Febuary 2021, I took a two month break from my PhD. During these months I worked as a technician Grade 6 in the Seaglider facility at UEA. I was paid **£13.90 / hour**, equivalent to an annual salary of **~ £30'000**. I returned to the Seaglider facility during July and August of 2021.
+### Previous positions
 
-You can read a short article on the pros and cons of publishing salaries [here](https://time.com/5353848/salary-pay-transparency-work/). The practice is becoming more common, in some countries it is [mandatory](https://www.bbc.co.uk/news/magazine-40669239). Until that is the case in the UK, I will publish mine here.
+**2017-2021** I received the [minimum UKRI PhD stipend](https://www.ukri.org/skills/funding-for-research-training/) of **£15'285** per annum. This [scholarly income](https://www.gov.uk/hmrc-internal-manuals/employment-income-manual/eim06205) is not subject to tax.
+
+This income was supplemented by the work teaching and assisting in class at UEA. This typically earned me around **£500 - £1'000** per annum. The best paid work was designing and delivering introductory Python courses to other grad students and staff. These teaching materials are available on [GitHub](https://github.com/ueapy/ppd_python).
+
+During January and February 2021, I took a two month break from my PhD. During these months I worked as a technician Grade 6 in the Seaglider facility at UEA. I was paid **£13.90 / hour**, equivalent to an annual salary of **~ £30'000**. I returned to the Seaglider facility during July and August of 2021.
+
+### Rationale
+
+You can read a short article on the pros and cons of publishing salaries [here](https://time.com/5353848/salary-pay-transparency-work/). The practice is becoming more common, in some countries it is [mandatory](https://www.bbc.co.uk/news/magazine-40669239). ~~Until that is the case in the UK, I will publish mine here.~~This is the case in Sweden, you can get a copy of anyone's tax returns from the government and deduce their income from it. I'd rather make it as easy as possible.
+
+### Interests
 
 I own no property or commercial shares.
 
-I have invested **£6'000** in non-profit bearing  community shares in [The Locks Inn Community Pub Limited](http://www.savethelocks.com/). This is a succesful community takeover of a well loved local pub.
+I have invested **£6'000** in non-profit bearing  community shares in [The Locks Inn Community Pub Limited](http://www.savethelocks.com/). This is a successful community takeover of a well loved local pub.
 
-Last updated August 2021
+Last updated April 2022
