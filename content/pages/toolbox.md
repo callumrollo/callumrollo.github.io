@@ -15,7 +15,7 @@ Summary: The tools I use
 
 
 ### Writing
-- [Markdown](https://www.markdownguide.org/basic-syntax/) using [ReText](https://github.com/retext-project/retext)
+- [Markdown](https://www.markdownguide.org/basic-syntax/) using [Obsidian](https://obsidian.md/) or [ReText](https://github.com/retext-project/retext)
 - Latex using [Texmaker](https://www.xm1math.net/texmaker/)
 - [libreoffice](https://www.libreoffice.org/) For MS Office compatible documents
 - [Zotero](https://www.zotero.org/) to manage references
@@ -26,7 +26,7 @@ Summary: The tools I use
 - I write my code in vim, [PyCharm](https://www.jetbrains.com/pycharm/) and [Jupyter notebooks](https://jupyter.org/). I prefer the latter for teaching
 - [Gibbs Seawater Equations](https://teos-10.github.io/GSW-Python/) for oceanographic variable calculations
 - [QGIS](https://www.qgis.org/en/site/) for geospatial work
-- [Julia](https://julialang.org/) for numerically intensive work
+- [Julia](https://julialang.org/) for numerically intensive processing
 
 ### Data visualisation
 - Python libraries [matplotlib](https://matplotlib.org/), [cartopy](https://scitools.org.uk/cartopy/docs/latest/), [seaborn](http://seaborn.pydata.org/)
@@ -42,6 +42,7 @@ Summary: The tools I use
 - [cmcrameri](https://github.com/callumrollo/cmcrameri) I maintain Fabio Crameri's Scientific Colourmaps as a Python package on [PyPi](https://pypi.org/project/cmcrameri/) and [conda-forge](https://github.com/conda-forge/cmcrameri-feedstock)
 - [gliderpy](https://github.com/ioos/gliderpy) A Python tool to fetch glider data from ERDDAP servers. This is in the initial stages of development.
 - [GliderTools](https://github.com/GliderToolsCommunity/GliderTools) a collaborative toolbox for glider data processing.
+- [pyglider](https://github.com/c-proof/pyglider) A Python tool to convert/combine Slocum and SeaExplorer data files into standardised netCDFs.
 - [geotiff-generator](https://github.com/callumrollo/geotiff-generato) A Python program to generate geotiffs from EMODnet, GEBCO or user supplied bathymetry.
 
 ### Miscellaneous

@@ -4,13 +4,20 @@ Category: Generic
 Slug: aboutme
 Summary: All about me
 
-I am a final year PhD student at the University of East Anglia (UEA) in Norwich, UK. I work with marine gliders, specifically the integration on Acoustic Doppler Current Profilers (ADCPs) onto gliders to directly measure currents in the ocean. The specific glider I work with is SG637 "Omura" equipped with a 1MHz ADCP.
+I recently started work as the in-house data scientist at [VOTO](https://voiceoftheocean.org/en). I am responsible for processing, correcting, standardising and distributing scientific data from our fleet of autonomous platforms.
 
-Data and live location information from this glider, and others in the fleet, is available on the [UEA glider website](https://ueaglider.uea.ac.uk). I rebuilt the website in 2021, based on the original by [Bastien Queste](http://byqueste.com/) I am open to collaborations in physical oceanography, especially projects involving ADCPs on autonomous platforms, shelf break processes and open source science initiatives.
-
-I am an amateur Pythonista, leader of [UEA python](https://ueapy.github.io/) and proponent of free software for science. Several of my projects are available on my [github](https://github.com/callumrollo). I have completed collaborative programming projects as part of [OceanHackWeek](https://callumrollo.github.io/hackweek.html) and [Google Summer of Code](https://summerofcode.withgoogle.com/).
+I am a Pythonista and proponent of free software for science. Several of my projects are available on my [github](https://github.com/callumrollo). I have completed collaborative programming projects as part of [OceanHackWeek](https://callumrollo.github.io/hackweek.html) and [Google Summer of Code](https://summerofcode.withgoogle.com/). I lead the [UEA scientific python](https://ueapy.github.io/) group during my PhD.
 
 [Blog posts](https://callumrollo.github.io/)
+
+
+### PhD
+
+During 2017-2021 I completed a PhD at the University of East Anglia (UEA) in Norwich, UK. I work with marine gliders, specifically the integration on Acoustic Doppler Current Profilers (ADCPs) onto gliders to directly measure currents in the ocean. The specific glider I work with was SG637 "Omura" equipped with a 1MHz ADCP.
+
+Data and live location information from this glider, and others in the fleet, is available on the [UEA glider website](https://ueaglider.uea.ac.uk). I rebuilt the website in 2021, based on the original by [Bastien Queste](http://byqueste.com/).
+
+
 
 ### Curriculum Vitae
 
@@ -18,18 +25,24 @@ I am an amateur Pythonista, leader of [UEA python](https://ueapy.github.io/) and
 
 ### Publications
 
+2021 [Glider Observations of Thermohaline Staircases in the Tropical North Atlantic Using an Automated Classifier](https://gi.copernicus.org/preprints/gi-2021-27/) (under review).
+
 2020 [Glider Observations of the Northwestern Iberian Margin During an Exceptional Summer Upwelling Season](https://doi.org/10.1029/2019JC015804)
 
 To request a copy of any of my publications that have ended up behind a paywall, please email me. This is completely legal and scientists actively encourage it.
 
 ### Selected posters and talks
 
-2017 [Marine Autonomy and Techology Showcase](../images/poster_omura_17.pdf)
-
 2020 [COAS seminar](../images/Rollo_COAS_2020_low_res.pdf)
 
+2017 [Marine Autonomy and Techology Showcase](../images/poster_omura_17.pdf)
+
+
 ### Career
-**2017- present** Postgraduate Researcher University of East Anglia
+
+**2021-present** Data scientist/physical oceanographer Voice of the Ocean Foundation
+
+**2017- 2021** Postgraduate Researcher University of East Anglia
 
 **2013-2017 ** MSci Geophysics University of Southampton
 
