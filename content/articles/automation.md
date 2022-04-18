@@ -1,6 +1,6 @@
 Title: Automation for oceanographers
 Date: 2022-01-07 15:20
-Date: 2022-01-07 15:20
+Modified: 2022-04-18 14:15
 Category: FOSS
 Tags:  linux, bash, software, optimise, oceanography, cruise, bandwidth
 Slug: automation
