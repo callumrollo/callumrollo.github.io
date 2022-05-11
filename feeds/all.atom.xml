@@ -1,5 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Callum Rollo</title><link href="https://callumrollo.github.io/" rel="alternate"></link><link href="https://callumrollo.github.io/feeds/all.atom.xml" rel="self"></link><id>https://callumrollo.github.io/</id><updated>2022-04-18T14:15:00+01:00</updated><subtitle>Throwing stuff in the ocean, but in a good way</subtitle><entry><title>Automation for oceanographers</title><link href="https://callumrollo.github.io/automation.html" rel="alternate"></link><published>2022-01-07T15:20:00+00:00</published><updated>2022-04-18T14:15:00+01:00</updated><author><name>Callum Rollo</name></author><id>tag:callumrollo.github.io,2022-01-07:/automation.html</id><summary type="html">&lt;p&gt;Writing hacky scripts for oceanography&lt;/p&gt;</summary><content type="html">&lt;p&gt;As a physical oceanographer, I occasionally spend chunks of time at sea. Typically this will be aboard a scientific research vessel with very limited shoreside connectivity. In order to keep oceanographic data flowing, I have developed several hacky scripts to perform routine analysis and transfer data in an efficient manner.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Callum Rollo</title><link href="https://callumrollo.github.io/" rel="alternate"></link><link href="https://callumrollo.github.io/feeds/all.atom.xml" rel="self"></link><id>https://callumrollo.github.io/</id><updated>2022-04-25T17:00:00+01:00</updated><subtitle>Throwing stuff in the ocean, but in a good way</subtitle><entry><title>Leaflet maps with Python-flask</title><link href="https://callumrollo.github.io/flask_leaflet.html" rel="alternate"></link><published>2022-04-25T17:00:00+01:00</published><updated>2022-04-25T17:00:00+01:00</updated><author><name>Callum Rollo</name></author><id>tag:callumrollo.github.io,2022-04-25:/flask_leaflet.html</id><summary type="html">&lt;p&gt;Creating interactive maps using Python-flask and leaflet&lt;/p&gt;</summary><content type="html">&lt;p&gt;I have one website gimmick: interactive webmaps using leaflet and backed by Python-flask.&lt;/p&gt;
+&lt;p&gt;This may sound like a word salad, but it's a useful and simple (trust me) software stack for making visualisation and exploration of spatio-temporal data easy. &lt;/p&gt;
+&lt;p&gt;I call it a gimmick because I've used the same core method to create:
+- The UEA glider group &lt;a href="https://ueaglider.uea.ac.uk/"&gt;piloting website&lt;/a&gt; (&lt;a href="https://github.com/ueaglider/ueaglider-web"&gt;source&lt;/a&gt;)
+- The NBP 2202 cruise &lt;a href="https://nbp2202map.com/"&gt;data website&lt;/a&gt; (the main subject of this article) &lt;a href="https://github.com/callumrollo/itgc-2022-map"&gt;source&lt;/a&gt;
+- The VOTO public facing live data website (work in progress) (&lt;a href=""&gt;source&lt;/a&gt;)&lt;/p&gt;
+&lt;h3&gt;Why you might want a site like this&lt;/h3&gt;
+&lt;p&gt;If you want to display geospatial data:
+- at varying scale
+- with selectable layers
+- with different overlays/backgrounds
+- in an interactive manner
+- to non-technical users&lt;/p&gt;
+&lt;p&gt;This works best with data that can be plotted as lines and points, but polygons are possible too.&lt;/p&gt;
+&lt;h3&gt;Prerequisites&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Some data&lt;/li&gt;
+&lt;li&gt;A reasonable grasp of Python&lt;/li&gt;
+&lt;li&gt;Ability to setup a basic linux cloud server&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If any of these are missing, check out the links at the end of this article for some tutorials and datasets.&lt;/p&gt;
+&lt;h3&gt;Tech stack&lt;/h3&gt;
+&lt;p&gt;The core library here is &lt;a href="https://flask.palletsprojects.com"&gt;flask&lt;/a&gt;, a Python micro-framework. It is a very minimal framework that allows us to make a slim website with no real database to complicate things. We will also use:
+- leaflet maps
+- jinja2 templates
+- json&lt;/p&gt;
+&lt;h1&gt;First, imitate&lt;/h1&gt;
+&lt;p&gt;I personally find it a lot easier to start by downloading, building and deploying a functional app than to start from scratch. This gives you a realistic view of the amount of work required to share your app and helps separate errors of code from errors of implementation.&lt;/p&gt;
+&lt;p&gt;With that said, let's begin!&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;download the &lt;a href="https://github.com/callumrollo/itgc-2022-map"&gt;nbp2202 website source code&lt;/a&gt; from GitHub
+&lt;a href="https://github.com/callumrollo/itgc-2022-map/archive/refs/heads/main.zip"&gt;click here&lt;/a&gt; to get the zip file&lt;/li&gt;
+&lt;li&gt;Create a Python environment using pip and the requirements.txt file or conda and the environment.yml file. Each works as well as the other&lt;/li&gt;
+&lt;li&gt;navigate to the directory where the environment files are and run the command &lt;code&gt;python itgc/app.py&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Open a browser window and go to http://127.0.0.1:5000/&lt;/li&gt;
+&lt;li&gt;That's it! You're running the app on your very own PC. You should see a website that looks and functions just like the one at &lt;a href="https://nbp2202map.com"&gt;nbp2202map.com&lt;/a&gt; but it is running solely on your PC&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;Next, remix&lt;/h1&gt;
+&lt;p&gt;I recommend using &lt;a href="https://git-scm.com/docs/gittutorial"&gt;git&lt;/a&gt; to keep track of changes to the codebase of this project. If you're particularly keen, maybe you already forked the repo in step 1 to start editing your own version.&lt;/p&gt;
+&lt;p&gt;The first place to make changes is in &lt;code&gt;index.html&lt;/code&gt; this is the code for the webpage that the user interacts with
+Here are some suggestions of things you might change:
+- The default starting location and zoom with &lt;code&gt;map.setView&lt;/code&gt;
+- The base layer and optional overlays of the map in  &lt;code&gt;maplayers&lt;/code&gt;
+- The text on the page in the &lt;code&gt;container instructions&lt;/code&gt;  section.&lt;/p&gt;
+&lt;p&gt;If you want to change the data itself, like adding more points and lines, you'll need to make a couple of changes.&lt;/p&gt;
+&lt;p&gt;First, each dataset is made into its own layer, which is then added to the map. See, for example, how we add the kasten and megacore sites. This is done in three steps on the map:&lt;/p&gt;
+&lt;p&gt;First we define an icon, with a size and an anchor point (which part of the image is placed at the location of the core site).&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;let thorIcon = L.icon({
+    iconUrl: &amp;#39;/static/img/icons/thor.png&amp;#39;,
+    iconSize:     [30, 35], // size of the icon
+    iconAnchor:   [20, 15], // point of the icon which will correspond to marker&amp;#39;s location
+    popupAnchor:  [0, -15] // point from which the popup should open relative to the iconAnchor
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Next,  we create a layer for the map. For this we read in a geoJSON dictionary and make a layer from points, calling an extra function &lt;code&gt;popupText&lt;/code&gt; to make the little popup boxes that contain metadata on the core site&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;let thorLayer =  L.geoJSON(thorDict, {
+        pointToLayer: function (feature, latlng) {
+            return L.marker(latlng, {icon: thorIcon});
+        },
+        onEachFeature: popupText
+})
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Finally, we add the layer to the map as an optional layer that the user can select&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;quot;mega/kasten core ⛏&amp;quot;: thorLayer,
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;These are the steps to display the data, but first we need to coerce our dataset itself into geoJSON. geoJSON is a well defined format. I have written a few scripts to write geoJSON from a pandas dataframe of lon, lat, datetime and metadata of some kind. You can download it &lt;a href="../images/df_to_json.py"&gt;here&lt;/a&gt;. You should be able to adapt it to your needs.&lt;/p&gt;
+&lt;p&gt;Once you have a way of converting your data to geoJSON, you import it into the app in the file &lt;code&gt;viewmodels/mission/mission_viewmodel.py&lt;/code&gt;. The process of importing json files happens at the top of the &lt;code&gt;add_events&lt;/code&gt; function. Just add your dataset to the list and copy the json file to the &lt;code&gt;static/json/nbp_data&lt;/code&gt; directory. The advantage of adding the data through Python rather than just reading geoJSON straight into the leaflet map, is that it enables the temporal subsetting feature that allows a user to display only data within a certain time window.&lt;/p&gt;
+&lt;p&gt;Exploring this file, you will see similar functions for adding isobaths and may optional layers of satellite data. &lt;/p&gt;
+&lt;h1&gt;On to the web&lt;/h1&gt;
+&lt;p&gt;You've done it! A website of your own. Assuming you wish to share it with others (why else would you make a website?) you now need to host this on a server somewhere. This can seem daunting at first, but it's just a few easy steps:&lt;/p&gt;
+&lt;h1&gt;Going further&lt;/h1&gt;
+&lt;p&gt;If this has given you an appetite for web development, you can build on this simple web app.&lt;/p&gt;
+&lt;p&gt;This app only has one webpage, but you can easily add more. You could also try adding a database. This makes your application more performant and really increases the scope of actions you can support. I recommend TalkPython fm's Flask course for a thorough explanation of these, link in the section below. You can also check out the source code for the other two projects linked above for examples with SQL and MongoDB.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;Resources and links&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;I learned flask from &lt;a href="https://training.talkpython.fm/courses/explore_flask/building-data-driven-web-applications-in- python-with-flask-sqlalchemy-and-bootstrap"&gt;TalkPython Training's Flask course&lt;/a&gt; it goes into a lot more detail and enables you to make a really powerful, flexible website. It also covers deployment to the web in good detail&lt;/li&gt;
+&lt;li&gt;You can learn enough html and CSS to get by just by googling things when they break. &lt;a href="www.w3schools.com"&gt;w3schools&lt;/a&gt; have some good resources though, and the &lt;a href="https://getbootstrap.com/docs/3.4/css/"&gt;bootstap docs&lt;/a&gt; are pretty good.&lt;/li&gt;
+&lt;li&gt;&lt;a href="leafletjs.com"&gt;leaflet maps&lt;/a&gt; have some great tutorials. You could get most of the functionality of this app just using leaflet and json.&lt;/li&gt;
+&lt;li&gt;You can set yourself up with a cloud server for less than $/£/€ 10 a month from a cloud host like &lt;a href="https://www.linode.com/docs/guides/set-up-and-secure/"&gt;Linode&lt;/a&gt; or &lt;a href="https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04"&gt;DigitalOcean&lt;/a&gt;. Personally I'd avoid AWS at first as the learning curve is steeper, and it's a lot easier to end up accidentally running up a large bill.&lt;/li&gt;
+&lt;/ul&gt;</content><category term="FOSS"></category><category term="python"></category><category term="maps"></category><category term="flask"></category><category term="automation"></category><category term="front-end"></category></entry><entry><title>Automation for oceanographers</title><link href="https://callumrollo.github.io/automation.html" rel="alternate"></link><published>2022-01-07T15:20:00+00:00</published><updated>2022-04-18T14:15:00+01:00</updated><author><name>Callum Rollo</name></author><id>tag:callumrollo.github.io,2022-01-07:/automation.html</id><summary type="html">&lt;p&gt;Writing hacky scripts for oceanography&lt;/p&gt;</summary><content type="html">&lt;p&gt;As a physical oceanographer, I occasionally spend chunks of time at sea. Typically this will be aboard a scientific research vessel with very limited shoreside connectivity. In order to keep oceanographic data flowing, I have developed several hacky scripts to perform routine analysis and transfer data in an efficient manner.&lt;/p&gt;
 &lt;h3&gt;Read emails in Python&lt;/h3&gt;
 &lt;p&gt;This script is used to periodically check a mailbox for emails and take an action if they match certain criteria. I developed this to read automated emails of glider locations and add them to a database&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;json&lt;/span&gt;
@@ -231,9 +314,9 @@ gdal2tiles.py li.vrt AMSR  --zoom &lt;span class="m"&gt;1&lt;/span&gt;-9
 &lt;p&gt;README.md&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;# Doubler&lt;/span&gt;
 
-&lt;span class="n"&gt;This&lt;/span&gt; &lt;span class="n"&gt;package&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;function&lt;/span&gt; &lt;span class="n"&gt;that&lt;/span&gt; &lt;span class="n"&gt;doubles&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;numbers&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;making&lt;/span&gt; &lt;span class="n"&gt;them&lt;/span&gt; &lt;span class="n"&gt;twice&lt;/span&gt; &lt;span class="n"&gt;as&lt;/span&gt; &lt;span class="n"&gt;good&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;This&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;package&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;is&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;function&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;that&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;doubles&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;numbers&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;making&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;them&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;twice&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;as&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;good&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="n"&gt;here&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="n"&gt;www&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;doubler&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;documentation&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;website&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;here&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="n"&gt;www&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;doubler&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;documentation&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;a href="https://www.markdownguide.org/cheat-sheet/"&gt;&lt;em&gt;Hold up, what's markdown?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
@@ -258,7 +341,7 @@ gdal2tiles.py li.vrt AMSR  --zoom &lt;span class="m"&gt;1&lt;/span&gt;-9
 │   └── bignumber.py &lt;span class="o"&gt;(&lt;/span&gt;the actual code&lt;span class="o"&gt;)&lt;/span&gt;
 ├── LICENSE
 ├── README.md
-└── setup.py &lt;span class="o"&gt;(&lt;/span&gt;explained in the next section&lt;span class="o"&gt;)&lt;/span&gt;
+└── setup.py &lt;span class="o"&gt;(&lt;/span&gt;explained &lt;span class="k"&gt;in&lt;/span&gt; the next section&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3&gt;Put your project on github&lt;/h3&gt;
@@ -407,33 +490,21 @@ index-servers&lt;span class="o"&gt;=&lt;/span&gt;
 &lt;h3&gt;Ugly but useful shell scripts&lt;/h3&gt;
 &lt;p&gt;These have saved me many hours of tedious manual tasks. Though I think some took more time to write than they have yet saved me...&lt;/p&gt;
 &lt;p&gt;Use &lt;a href="https://ffmpeg.org/"&gt;ffmpeg&lt;/a&gt; to apply fade in and out to a bunch of mp3 files&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
-2
-3
-4&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
-&lt;span class="k"&gt;for&lt;/span&gt; i in *.mp3&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; i &lt;span class="k"&gt;in&lt;/span&gt; *.mp3&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
     ffmpeg -i &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$i&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; -filter_complex &lt;span class="s2"&gt;&amp;quot;afade=d=0.5, areverse, afade=d=0.5, areverse&amp;quot;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;`basename &amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$i&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot; .mp3`f.mp3&amp;quot;&lt;/span&gt;
 &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
 &lt;p&gt;For clipping a dataset of interest from a larger geographical dataset of shapefiles before plotting. Requires &lt;a href="https://gdal.org/"&gt;gdal&lt;/a&gt; library.&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
-2
-3
-4&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
 &lt;span class="c1"&gt;# &lt;/span&gt;
 ogr2ogr -f &lt;span class="s2"&gt;&amp;quot;ESRI Shapefile&amp;quot;&lt;/span&gt; hidf_land.shp /media/callum/storage/Documents/global_datasets/osm_land/land_polygons.shp -clipsrc &lt;span class="nv"&gt;$1&lt;/span&gt; &lt;span class="nv"&gt;$2&lt;/span&gt; &lt;span class="nv"&gt;$3&lt;/span&gt; &lt;span class="nv"&gt;$4&lt;/span&gt;
 &lt;span class="c1"&gt;# four numbers at end are western bound southern bound eastern bound and northern bound in degrees. Longitude is from -180 to 180&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
 &lt;p&gt;Move your mouse every 30 seconds to prevent sleep mode. Inspired by &lt;a href="https://xkcd.com/196/"&gt;xkcd&lt;/a&gt;&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
-2
-3
-4
-5
-6
-7&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
 &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
   xdotool mousemove &lt;span class="m"&gt;300&lt;/span&gt; &lt;span class="m"&gt;250&lt;/span&gt;
   sleep &lt;span class="m"&gt;30&lt;/span&gt;
@@ -441,24 +512,11 @@ ogr2ogr -f &lt;span class="s2"&gt;&amp;quot;ESRI Shapefile&amp;quot;&lt;/span&gt
   sleep &lt;span class="m"&gt;30&lt;/span&gt;
 &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;p&gt;Use &lt;a href="https://imagemagick.org/index.php"&gt;imagemagick&lt;/a&gt; to crop and animate a bunch of figures into a gif. Written the night before a conference, don't judge me.&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
 
-&lt;span class="k"&gt;for&lt;/span&gt; i in bar*.png
+&lt;p&gt;Use &lt;a href="https://imagemagick.org/index.php"&gt;imagemagick&lt;/a&gt; to crop and animate a bunch of figures into a gif. Written the night before a conference, don't judge me.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; i &lt;span class="k"&gt;in&lt;/span&gt; bar*.png
 &lt;span class="k"&gt;do&lt;/span&gt;
 &lt;span class="nv"&gt;num&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;i&lt;/span&gt;&lt;span class="p"&gt;: 3:&lt;/span&gt;&lt;span class="nv"&gt;3&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;
 
@@ -471,48 +529,22 @@ convert -delay &lt;span class="m"&gt;20&lt;/span&gt; -loop &lt;span class="m"&gt
 &lt;span class="nb"&gt;echo&lt;/span&gt; foo
 convert animation.gif  -trim +repage ani.gif
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
 &lt;p&gt;More imagemagick to make tight figures (remove all whitespace from edges)&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
 
 rsync --recursive --filter&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;-! */&amp;quot;&lt;/span&gt; figures figures_crop
 
 &lt;span class="nb"&gt;shopt&lt;/span&gt; -s extglob nullglob globstar
-&lt;span class="k"&gt;for&lt;/span&gt; file in figures/**/*.png
+&lt;span class="k"&gt;for&lt;/span&gt; file &lt;span class="k"&gt;in&lt;/span&gt; figures/**/*.png
 &lt;span class="k"&gt;do&lt;/span&gt;
     &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$file&lt;/span&gt;
     convert &lt;span class="nv"&gt;$file&lt;/span&gt; -trim +repage &lt;span class="s2"&gt;&amp;quot;figures_crop/&lt;/span&gt;&lt;span class="nv"&gt;$file&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
 &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
 &lt;p&gt;Get altimeter data from Seaglider log files&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
 &lt;span class="c1"&gt;# if directory not passed, use working directory&lt;/span&gt;
 &lt;span class="nv"&gt;_dir&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;1&lt;/span&gt;&lt;span class="k"&gt;:-&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;PWD&lt;/span&gt;&lt;span class="si"&gt;}}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
 
@@ -524,40 +556,16 @@ rsync --recursive --filter&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2
 
 &lt;span class="nb"&gt;printf&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;dive_no,altim_ping_depth,altim_bottom_ping,bottom_dist&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; alti.txt
 
-&lt;span class="k"&gt;for&lt;/span&gt; i in &lt;span class="nv"&gt;$1&lt;/span&gt;/*.log&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; i &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;$1&lt;/span&gt;/*.log&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
     &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt;
     awk -F, &lt;span class="s1"&gt;&amp;#39;$1 == &amp;quot;$DIVE&amp;quot; {printf &amp;quot;\n&amp;quot; ; printf $2}&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt; &amp;gt;&amp;gt; alti.txt
     awk -F, &lt;span class="s1"&gt;&amp;#39;$1 == &amp;quot;$ALTIM_PING_DEPTH&amp;quot; {$2=&amp;quot;,&amp;quot;$2; printf $2}&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt; &amp;gt;&amp;gt; alti.txt
     awk -F, &lt;span class="s1"&gt;&amp;#39;$1 == &amp;quot;$ALTIM_BOTTOM_PING&amp;quot; {$2=&amp;quot;,&amp;quot;$2&amp;quot;,&amp;quot;; printf $2 $3}&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt; &amp;gt;&amp;gt; alti.txt
 &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
 &lt;p&gt;Get voltage minima from Seaglider logs&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
 &lt;span class="c1"&gt;# if directory not passed, use working directory&lt;/span&gt;
 &lt;span class="nv"&gt;_dir&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;1&lt;/span&gt;&lt;span class="k"&gt;:-&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;PWD&lt;/span&gt;&lt;span class="si"&gt;}}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
 
@@ -571,7 +579,7 @@ rsync --recursive --filter&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2
 &lt;span class="nb"&gt;printf&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;dive_no,min_10V,min_24V&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; min_v.txt
 
 &lt;span class="c1"&gt;# Search the log files for minimum voltages of both batteries&lt;/span&gt;
-&lt;span class="k"&gt;for&lt;/span&gt; i in &lt;span class="nv"&gt;$_dir&lt;/span&gt;/p*.log&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; i &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;$_dir&lt;/span&gt;/p*.log&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
 
     &lt;span class="nv"&gt;num&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;i&lt;/span&gt;&lt;span class="p"&gt;: -8:&lt;/span&gt;&lt;span class="nv"&gt;4&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;
     &lt;span class="nb"&gt;printf&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;\n&lt;/span&gt;&lt;span class="nv"&gt;$num&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; min_v.txt
@@ -583,7 +591,7 @@ rsync --recursive --filter&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2
 &lt;span class="c1"&gt;# Remove rows with less than three values (typically dive 0000)&lt;/span&gt;
 awk -F , &lt;span class="s1"&gt;&amp;#39;NF&amp;gt;=3&amp;#39;&lt;/span&gt; min_v.txt &amp;gt;&amp;gt; min_volts.txt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
 &lt;h3&gt;Scripts shamelessly copied from other, wiser people&lt;/h3&gt;
 &lt;p&gt;&lt;a href="http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/"&gt;3 shell scripts to improve your writing, or "My Ph.D. advisor rewrote himself in bash."&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I think these are great, so I've archived a version &lt;a href="../images/might-scripts.zip"&gt;here&lt;/a&gt;.&lt;/p&gt;

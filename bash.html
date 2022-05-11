@@ -205,33 +205,21 @@
 <h3>Ugly but useful shell scripts</h3>
 <p>These have saved me many hours of tedious manual tasks. Though I think some took more time to write than they have yet saved me...</p>
 <p>Use <a href="https://ffmpeg.org/">ffmpeg</a> to apply fade in and out to a bunch of mp3 files</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
-<span class="k">for</span> i in *.mp3<span class="p">;</span> <span class="k">do</span>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="k">for</span> i <span class="k">in</span> *.mp3<span class="p">;</span> <span class="k">do</span>
     ffmpeg -i <span class="s2">&quot;</span><span class="nv">$i</span><span class="s2">&quot;</span> -filter_complex <span class="s2">&quot;afade=d=0.5, areverse, afade=d=0.5, areverse&quot;</span> <span class="s2">&quot;`basename &quot;</span><span class="nv">$i</span><span class="s2">&quot; .mp3`f.mp3&quot;</span>
 <span class="k">done</span>
 </code></pre></div>
-</td></tr></table>
+
 <p>For clipping a dataset of interest from a larger geographical dataset of shapefiles before plotting. Requires <a href="https://gdal.org/">gdal</a> library.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 <span class="c1"># </span>
 ogr2ogr -f <span class="s2">&quot;ESRI Shapefile&quot;</span> hidf_land.shp /media/callum/storage/Documents/global_datasets/osm_land/land_polygons.shp -clipsrc <span class="nv">$1</span> <span class="nv">$2</span> <span class="nv">$3</span> <span class="nv">$4</span>
 <span class="c1"># four numbers at end are western bound southern bound eastern bound and northern bound in degrees. Longitude is from -180 to 180</span>
 </code></pre></div>
-</td></tr></table>
+
 <p>Move your mouse every 30 seconds to prevent sleep mode. Inspired by <a href="https://xkcd.com/196/">xkcd</a></p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 <span class="k">while</span> <span class="o">[</span> <span class="m">1</span> <span class="o">]</span><span class="p">;</span> <span class="k">do</span>
   xdotool mousemove <span class="m">300</span> <span class="m">250</span>
   sleep <span class="m">30</span>
@@ -239,24 +227,11 @@ ogr2ogr -f <span class="s2">&quot;ESRI Shapefile&quot;</span> hidf_land.shp /med
   sleep <span class="m">30</span>
 <span class="k">done</span>
 </code></pre></div>
-</td></tr></table>
-<p>Use <a href="https://imagemagick.org/index.php">imagemagick</a> to crop and animate a bunch of figures into a gif. Written the night before a conference, don't judge me.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
-<span class="k">for</span> i in bar*.png
+<p>Use <a href="https://imagemagick.org/index.php">imagemagick</a> to crop and animate a bunch of figures into a gif. Written the night before a conference, don't judge me.</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="k">for</span> i <span class="k">in</span> bar*.png
 <span class="k">do</span>
 <span class="nv">num</span><span class="o">=</span><span class="si">${</span><span class="nv">i</span><span class="p">: 3:</span><span class="nv">3</span><span class="si">}</span>
 
@@ -269,48 +244,22 @@ convert -delay <span class="m">20</span> -loop <span class="m">1</span> crop*.pn
 <span class="nb">echo</span> foo
 convert animation.gif  -trim +repage ani.gif
 </code></pre></div>
-</td></tr></table>
+
 <p>More imagemagick to make tight figures (remove all whitespace from edges)</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
 rsync --recursive --filter<span class="o">=</span><span class="s2">&quot;-! */&quot;</span> figures figures_crop
 
 <span class="nb">shopt</span> -s extglob nullglob globstar
-<span class="k">for</span> file in figures/**/*.png
+<span class="k">for</span> file <span class="k">in</span> figures/**/*.png
 <span class="k">do</span>
     <span class="nb">echo</span> <span class="nv">$file</span>
     convert <span class="nv">$file</span> -trim +repage <span class="s2">&quot;figures_crop/</span><span class="nv">$file</span><span class="s2">&quot;</span>
 <span class="k">done</span>
 </code></pre></div>
-</td></tr></table>
+
 <p>Get altimeter data from Seaglider log files</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 <span class="c1"># if directory not passed, use working directory</span>
 <span class="nv">_dir</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">1</span><span class="k">:-</span><span class="si">${</span><span class="nv">PWD</span><span class="si">}}</span><span class="s2">&quot;</span>
 
@@ -322,40 +271,16 @@ rsync --recursive --filter<span class="o">=</span><span class="s2">&quot;-! */&q
 
 <span class="nb">printf</span> <span class="s2">&quot;dive_no,altim_ping_depth,altim_bottom_ping,bottom_dist&quot;</span> &gt;&gt; alti.txt
 
-<span class="k">for</span> i in <span class="nv">$1</span>/*.log<span class="p">;</span> <span class="k">do</span>
+<span class="k">for</span> i <span class="k">in</span> <span class="nv">$1</span>/*.log<span class="p">;</span> <span class="k">do</span>
     <span class="nb">echo</span> <span class="nv">$i</span>
     awk -F, <span class="s1">&#39;$1 == &quot;$DIVE&quot; {printf &quot;\n&quot; ; printf $2}&#39;</span> <span class="nv">$i</span> &gt;&gt; alti.txt
     awk -F, <span class="s1">&#39;$1 == &quot;$ALTIM_PING_DEPTH&quot; {$2=&quot;,&quot;$2; printf $2}&#39;</span> <span class="nv">$i</span> &gt;&gt; alti.txt
     awk -F, <span class="s1">&#39;$1 == &quot;$ALTIM_BOTTOM_PING&quot; {$2=&quot;,&quot;$2&quot;,&quot;; printf $2 $3}&#39;</span> <span class="nv">$i</span> &gt;&gt; alti.txt
 <span class="k">done</span>
 </code></pre></div>
-</td></tr></table>
+
 <p>Get voltage minima from Seaglider logs</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 <span class="c1"># if directory not passed, use working directory</span>
 <span class="nv">_dir</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">1</span><span class="k">:-</span><span class="si">${</span><span class="nv">PWD</span><span class="si">}}</span><span class="s2">&quot;</span>
 
@@ -369,7 +294,7 @@ rsync --recursive --filter<span class="o">=</span><span class="s2">&quot;-! */&q
 <span class="nb">printf</span> <span class="s2">&quot;dive_no,min_10V,min_24V&quot;</span> &gt;&gt; min_v.txt
 
 <span class="c1"># Search the log files for minimum voltages of both batteries</span>
-<span class="k">for</span> i in <span class="nv">$_dir</span>/p*.log<span class="p">;</span> <span class="k">do</span>
+<span class="k">for</span> i <span class="k">in</span> <span class="nv">$_dir</span>/p*.log<span class="p">;</span> <span class="k">do</span>
 
     <span class="nv">num</span><span class="o">=</span><span class="si">${</span><span class="nv">i</span><span class="p">: -8:</span><span class="nv">4</span><span class="si">}</span>
     <span class="nb">printf</span> <span class="s2">&quot;\n</span><span class="nv">$num</span><span class="s2">&quot;</span> &gt;&gt; min_v.txt
@@ -381,7 +306,7 @@ rsync --recursive --filter<span class="o">=</span><span class="s2">&quot;-! */&q
 <span class="c1"># Remove rows with less than three values (typically dive 0000)</span>
 awk -F , <span class="s1">&#39;NF&gt;=3&#39;</span> min_v.txt &gt;&gt; min_volts.txt
 </code></pre></div>
-</td></tr></table>
+
 <h3>Scripts shamelessly copied from other, wiser people</h3>
 <p><a href="http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/">3 shell scripts to improve your writing, or "My Ph.D. advisor rewrote himself in bash."</a></p>
 <p>I think these are great, so I've archived a version <a href="../images/might-scripts.zip">here</a>.</p>
