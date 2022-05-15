@@ -220,7 +220,78 @@ Here are some suggestions of things you might change:
 <p>Once you have a way of converting your data to geoJSON, you import it into the app in the file <code>viewmodels/mission/mission_viewmodel.py</code>. The process of importing json files happens at the top of the <code>add_events</code> function. Just add your dataset to the list and copy the json file to the <code>static/json/nbp_data</code> directory. The advantage of adding the data through Python rather than just reading geoJSON straight into the leaflet map, is that it enables the temporal subsetting feature that allows a user to display only data within a certain time window.</p>
 <p>Exploring this file, you will see similar functions for adding isobaths and may optional layers of satellite data. </p>
 <h1>On to the web</h1>
-<p>You've done it! A website of your own. Assuming you wish to share it with others (why else would you make a website?) you now need to host this on a server somewhere. This can seem daunting at first, but it's just a few easy steps:</p>
+<p>You've done it! A website of your own. Assuming you wish to share it with others (why else would you make a website?) you now need to host this on a server somewhere. This can seem daunting at first, but it's just a few easy steps. I have included the exact commands necessary in code blocks</p>
+<ul>
+<li>Get a cloud server running Ubuntu. Check out links at the bottom of this page for some suggestions. I have used a Shared CPU Nanode (1 GB) from <a href="linode.com">linode</a> running Ubuntu 20.04 LTS.</li>
+<li>Login with SSH and update your server</li>
+</ul>
+<div class="highlight"><pre><span></span><code>apt update &amp;&amp; apt upgrade -y
+reboot
+</code></pre></div>
+
+<ul>
+<li><em>Recommended</em> follow <a href="https://www.linode.com/docs/guides/set-up-and-secure/">this guide</a> to securing your server</li>
+<li>Install key packages and libraries for the app</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">-</span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="n">q</span><span class="w"> </span><span class="n">build</span><span class="o">-</span><span class="n">essential</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">unzip</span><span class="w"> </span><span class="n">zip</span><span class="w"> </span><span class="n">nload</span><span class="w"> </span><span class="n">tree</span><span class="w"></span>
+<span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">-</span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="n">q</span><span class="w"> </span><span class="n">python3</span><span class="o">-</span><span class="n">pip</span><span class="w"> </span><span class="n">python3</span><span class="o">-</span><span class="n">dev</span><span class="w"> </span><span class="n">python3</span><span class="o">-</span><span class="n">venv</span><span class="w"></span>
+<span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">-</span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="n">q</span><span class="w"> </span><span class="n">nginx</span><span class="w"></span>
+<span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">install</span><span class="o">-</span><span class="n">recommends</span><span class="w"> </span><span class="o">-</span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="n">q</span><span class="w"> </span><span class="n">libpcre3</span><span class="o">-</span><span class="n">dev</span><span class="w"> </span><span class="n">libz</span><span class="o">-</span><span class="n">dev</span><span class="w"></span>
+</code></pre></div>
+
+<ul>
+<li>Open ports 22 (ssh), 80 (http) and 443 (https) then activate the firewall</li>
+</ul>
+<div class="highlight"><pre><span></span><code>ufw allow 22
+ufw allow 80
+ufw allow 443
+ufw enable
+</code></pre></div>
+
+<ul>
+<li>Make a new directory <code>/app</code> and copy your app to it</li>
+</ul>
+<div class="highlight"><pre><span></span><code>mkdir /apps
+cd /apps
+git clone https://github.com/callumrollo/itgc-2022-map.git
+chmod 777 /apps/itgc-2022-map/
+</code></pre></div>
+
+<ul>
+<li>Create and activate the app environment</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">cd</span><span class="w"> </span><span class="o">/</span><span class="n">apps</span><span class="o">/</span><span class="n">itgc</span><span class="o">-</span><span class="mi">2022</span><span class="o">-</span><span class="n">map</span><span class="w"></span>
+<span class="n">python3</span><span class="w"> </span><span class="o">-</span><span class="n">m</span><span class="w"> </span><span class="n">venv</span><span class="w"> </span><span class="n">venv</span><span class="w"></span>
+<span class="n">source</span><span class="w"> </span><span class="n">venv</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">activate</span><span class="w"></span>
+<span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">--</span><span class="n">upgrade</span><span class="w"> </span><span class="n">pip</span><span class="w"> </span><span class="n">setuptools</span><span class="w"></span>
+<span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">--</span><span class="n">upgrade</span><span class="w"> </span><span class="n">httpie</span><span class="w"> </span><span class="n">glances</span><span class="w"></span>
+<span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">--</span><span class="n">upgrade</span><span class="w"> </span><span class="n">uwsgi</span><span class="w"></span>
+<span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">-</span><span class="n">r</span><span class="w"> </span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span><span class="w"></span>
+</code></pre></div>
+
+<ul>
+<li>Set up the app to run as a service under <code>uwsgi</code> this will manage instances of the app for every user that view the page. Enable the service so that it starts automatically when the server is rebooted</li>
+</ul>
+<div class="highlight"><pre><span></span><code>cp /apps/itgc-2022-map/server/nbpmap.service /etc/systemd/system/nbpmap.service
+systemctl enable nbpmap
+</code></pre></div>
+
+<p>Check that the service is running successfully with <code>systemctl status nbpmap</code>. If there are errors, check that the paths in <code>nbpmap.service</code> match the paths on your server
+- Setup <code>nginx</code> to handle requests to the app from the internet</p>
+<div class="highlight"><pre><span></span><code>rm /etc/nginx/sites-enabled/default
+cp /apps/itgc-2022-map/server/nbpmap.nginx  /etc/nginx/sites-enabled/nbpmap.nginx
+update-rc.d nginx enable
+service nginx restart
+</code></pre></div>
+
+<p>You should now see your site if you navigate to the server's IP address in a browsers
+- Optionally, you can purchase a domain, set up an A record pointing to the IP address of this server and get free SSL certificates from Lets Encrypt</p>
+<div class="highlight"><pre><span></span><code>sudo snap install core; sudo snap refresh core
+sudo snap install --classic certbot
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+sudo certbot --nginx
+</code></pre></div>
+
 <h1>Going further</h1>
 <p>If this has given you an appetite for web development, you can build on this simple web app.</p>
 <p>This app only has one webpage, but you can easily add more. You could also try adding a database. This makes your application more performant and really increases the scope of actions you can support. I recommend TalkPython fm's Flask course for a thorough explanation of these, link in the section below. You can also check out the source code for the other two projects linked above for examples with SQL and MongoDB.</p>
@@ -230,7 +301,7 @@ Here are some suggestions of things you might change:
 <li>I learned flask from <a href="https://training.talkpython.fm/courses/explore_flask/building-data-driven-web-applications-in- python-with-flask-sqlalchemy-and-bootstrap">TalkPython Training's Flask course</a> it goes into a lot more detail and enables you to make a really powerful, flexible website. It also covers deployment to the web in good detail</li>
 <li>You can learn enough html and CSS to get by just by googling things when they break. <a href="www.w3schools.com">w3schools</a> have some good resources though, and the <a href="https://getbootstrap.com/docs/3.4/css/">bootstap docs</a> are pretty good.</li>
 <li><a href="leafletjs.com">leaflet maps</a> have some great tutorials. You could get most of the functionality of this app just using leaflet and json.</li>
-<li>You can set yourself up with a cloud server for less than $/£/€ 10 a month from a cloud host like <a href="https://www.linode.com/docs/guides/set-up-and-secure/">Linode</a> or <a href="https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04">DigitalOcean</a>. Personally I'd avoid AWS at first as the learning curve is steeper, and it's a lot easier to end up accidentally running up a large bill.</li>
+<li>You can set yourself up with a cloud server for less than $/£/€ 10 a month from a cloud host like <a href="https://www.linode.com/docs/guides/set-up-and-secure/">Linode</a> or <a href="https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04">DigitalOcean</a>. Personally I'd avoid AWS at first as the learning curve is steeper, and it's a lot easier to end up accidentally running up a large bill. You can also search for credit codes/sign up links. You can typically get several months free this way.</li>
 </ul>
   </div>
   <div class="tag-cloud">
