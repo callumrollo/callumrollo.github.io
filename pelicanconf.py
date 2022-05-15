@@ -9,8 +9,8 @@ DOMAIN = SITEURL
 FEED_DOMAIN = SITEURL
 SITENAME = 'Callum Rollo'
 SITETITLE = 'Callum Rollo'
-SITESUBTITLE = 'Throwing stuff in the ocean, but in a good way'
-SITEDESCRIPTION = "Science should be open. Software should be free. Borders are kind of rubbish "
+SITESUBTITLE = 'Throwing stuff in the ocean, responsibly'
+SITEDESCRIPTION = "Science should be open. Software should be free. Borders are rubbish "
 SITELOGO = SITEURL + '/images/mug.jpg'
 FAVICON = SITEURL + '/images/favicon.ico'
 BROWSER_COLOR = '#333333'
@@ -51,7 +51,7 @@ CC_LICENSE = {
 }
 
 COPYRIGHT_YEAR = datetime.now().year
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = 50
 
 
 
