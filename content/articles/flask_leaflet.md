@@ -97,8 +97,68 @@ Once you have a way of converting your data to geoJSON, you import it into the a
 Exploring this file, you will see similar functions for adding isobaths and may optional layers of satellite data. 
 # On to the web
 
-You've done it! A website of your own. Assuming you wish to share it with others (why else would you make a website?) you now need to host this on a server somewhere. This can seem daunting at first, but it's just a few easy steps:
+You've done it! A website of your own. Assuming you wish to share it with others (why else would you make a website?) you now need to host this on a server somewhere. This can seem daunting at first, but it's just a few easy steps. I have included the exact commands necessary in code blocks
 
+- Get a cloud server running Ubuntu. Check out links at the bottom of this page for some suggestions. I have used a Shared CPU Nanode (1 GB) from [linode](linode.com) running Ubuntu 20.04 LTS.
+- Login with SSH and update your server
+```
+apt update && apt upgrade -y
+reboot
+```
+- *Recommended* follow [this guide](https://www.linode.com/docs/guides/set-up-and-secure/) to securing your server
+- Install key packages and libraries for the app
+```
+apt install -y -q build-essential git unzip zip nload tree
+apt install -y -q python3-pip python3-dev python3-venv
+apt install -y -q nginx
+apt install --no-install-recommends -y -q libpcre3-dev libz-dev
+```
+- Open ports 22 (ssh), 80 (http) and 443 (https) then activate the firewall
+```
+ufw allow 22
+ufw allow 80
+ufw allow 443
+ufw enable
+```
+- Make a new directory `/app` and copy your app to it
+```
+mkdir /apps
+cd /apps
+git clone https://github.com/callumrollo/itgc-2022-map.git
+chmod 777 /apps/itgc-2022-map/
+
+```
+- Create and activate the app environment
+```
+cd /apps/itgc-2022-map
+python3 -m venv venv
+source venv/bin/activate
+pip install --upgrade pip setuptools
+pip install --upgrade httpie glances
+pip install --upgrade uwsgi
+pip install -r requirements.txt
+```
+- Set up the app to run as a service under `uwsgi` this will manage instances of the app for every user that view the page. Enable the service so that it starts automatically when the server is rebooted
+```
+cp /apps/itgc-2022-map/server/nbpmap.service /etc/systemd/system/nbpmap.service
+systemctl enable nbpmap
+```
+Check that the service is running successfully with `systemctl status nbpmap`. If there are errors, check that the paths in `nbpmap.service` match the paths on your server
+- Setup `nginx` to handle requests to the app from the internet
+```
+rm /etc/nginx/sites-enabled/default
+cp /apps/itgc-2022-map/server/nbpmap.nginx  /etc/nginx/sites-enabled/nbpmap.nginx
+update-rc.d nginx enable
+service nginx restart
+```
+You should now see your site if you navigate to the server's IP address in a browsers
+- Optionally, you can purchase a domain, set up an A record pointing to the IP address of this server and get free SSL certificates from Lets Encrypt
+```
+sudo snap install core; sudo snap refresh core
+sudo snap install --classic certbot
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+sudo certbot --nginx
+```
 # Going further
 
 If this has given you an appetite for web development, you can build on this simple web app.
@@ -111,4 +171,4 @@ This app only has one webpage, but you can easily add more. You could also try a
 - I learned flask from [TalkPython Training's Flask course](https://training.talkpython.fm/courses/explore_flask/building-data-driven-web-applications-in- python-with-flask-sqlalchemy-and-bootstrap) it goes into a lot more detail and enables you to make a really powerful, flexible website. It also covers deployment to the web in good detail
 - You can learn enough html and CSS to get by just by googling things when they break. [w3schools](www.w3schools.com) have some good resources though, and the [bootstap docs](https://getbootstrap.com/docs/3.4/css/) are pretty good.
 - [leaflet maps](leafletjs.com) have some great tutorials. You could get most of the functionality of this app just using leaflet and json.
-- You can set yourself up with a cloud server for less than $/£/€ 10 a month from a cloud host like [Linode](https://www.linode.com/docs/guides/set-up-and-secure/) or [DigitalOcean](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04). Personally I'd avoid AWS at first as the learning curve is steeper, and it's a lot easier to end up accidentally running up a large bill.
+- You can set yourself up with a cloud server for less than $/£/€ 10 a month from a cloud host like [Linode](https://www.linode.com/docs/guides/set-up-and-secure/) or [DigitalOcean](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04). Personally I'd avoid AWS at first as the learning curve is steeper, and it's a lot easier to end up accidentally running up a large bill. You can also search for credit codes/sign up links. You can typically get several months free this way.
