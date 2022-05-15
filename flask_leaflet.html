@@ -153,17 +153,21 @@
   <div>
     <p>I have one website gimmick: interactive webmaps using leaflet and backed by Python-flask.</p>
 <p>This may sound like a word salad, but it's a useful and simple (trust me) software stack for making visualisation and exploration of spatio-temporal data easy. </p>
-<p>I call it a gimmick because I've used the same core method to create:
-- The UEA glider group <a href="https://ueaglider.uea.ac.uk/">piloting website</a> (<a href="https://github.com/ueaglider/ueaglider-web">source</a>)
-- The NBP 2202 cruise <a href="https://nbp2202map.com/">data website</a> (the main subject of this article) <a href="https://github.com/callumrollo/itgc-2022-map">source</a>
-- The VOTO public facing live data website (work in progress) (<a href="">source</a>)</p>
+<p>I call it a gimmick because I've used the same core method to create:</p>
+<ul>
+<li>The UEA glider group <a href="https://ueaglider.uea.ac.uk/">piloting website</a> (<a href="https://github.com/ueaglider/ueaglider-web">source</a>)</li>
+<li>The NBP 2202 cruise <a href="https://nbp2202map.com/">data website</a> (the main subject of this article) <a href="https://github.com/callumrollo/itgc-2022-map">source</a></li>
+<li>The VOTO public facing live data website (work in progress) (<a href="">source</a>)</li>
+</ul>
 <h3>Why you might want a site like this</h3>
-<p>If you want to display geospatial data:
-- at varying scale
-- with selectable layers
-- with different overlays/backgrounds
-- in an interactive manner
-- to non-technical users</p>
+<p>If you want to display geospatial data:</p>
+<ul>
+<li>at varying scale</li>
+<li>with selectable layers</li>
+<li>with different overlays/backgrounds</li>
+<li>in an interactive manner</li>
+<li>to non-technical users</li>
+</ul>
 <p>This works best with data that can be plotted as lines and points, but polygons are possible too.</p>
 <h3>Prerequisites</h3>
 <ul>
@@ -173,30 +177,34 @@
 </ul>
 <p>If any of these are missing, check out the links at the end of this article for some tutorials and datasets.</p>
 <h3>Tech stack</h3>
-<p>The core library here is <a href="https://flask.palletsprojects.com">flask</a>, a Python micro-framework. It is a very minimal framework that allows us to make a slim website with no real database to complicate things. We will also use:
-- leaflet maps
-- jinja2 templates
-- json</p>
+<p>The core library here is <a href="https://flask.palletsprojects.com">flask</a>, a Python micro-framework. It is a very minimal framework that allows us to make a slim website with no real database to complicate things. We will also use:</p>
+<ul>
+<li>leaflet maps</li>
+<li>jinja2 templates</li>
+<li>json</li>
+</ul>
 <h1>First, imitate</h1>
 <p>I personally find it a lot easier to start by downloading, building and deploying a functional app than to start from scratch. This gives you a realistic view of the amount of work required to share your app and helps separate errors of code from errors of implementation.</p>
 <p>With that said, let's begin!</p>
 <ol>
-<li>download the <a href="https://github.com/callumrollo/itgc-2022-map">nbp2202 website source code</a> from GitHub
+<li>Download the <a href="https://github.com/callumrollo/itgc-2022-map">nbp2202 website source code</a> from GitHub
 <a href="https://github.com/callumrollo/itgc-2022-map/archive/refs/heads/main.zip">click here</a> to get the zip file</li>
 <li>Create a Python environment using pip and the requirements.txt file or conda and the environment.yml file. Each works as well as the other</li>
 <li>navigate to the directory where the environment files are and run the command <code>python itgc/app.py</code></li>
-<li>Open a browser window and go to http://127.0.0.1:5000/</li>
+<li>Open a browser window and go to <a href="http://127.0.0.1:5000/">127.0.0.1:5000</a></li>
 <li>That's it! You're running the app on your very own PC. You should see a website that looks and functions just like the one at <a href="https://nbp2202map.com">nbp2202map.com</a> but it is running solely on your PC</li>
 </ol>
 <h1>Next, remix</h1>
 <p>I recommend using <a href="https://git-scm.com/docs/gittutorial">git</a> to keep track of changes to the codebase of this project. If you're particularly keen, maybe you already forked the repo in step 1 to start editing your own version.</p>
 <p>The first place to make changes is in <code>index.html</code> this is the code for the webpage that the user interacts with
-Here are some suggestions of things you might change:
-- The default starting location and zoom with <code>map.setView</code>
-- The base layer and optional overlays of the map in  <code>maplayers</code>
-- The text on the page in the <code>container instructions</code>  section.</p>
-<p>If you want to change the data itself, like adding more points and lines, you'll need to make a couple of changes.</p>
-<p>First, each dataset is made into its own layer, which is then added to the map. See, for example, how we add the kasten and megacore sites. This is done in three steps on the map:</p>
+Here are some suggestions of things you might change:</p>
+<ul>
+<li>The default starting location and zoom with <code>map.setView</code></li>
+<li>The base layer and optional overlays of the map in  <code>maplayers</code></li>
+<li>The text on the page in the <code>container instructions</code>  section.</li>
+</ul>
+<p>If you want to change the data itself, like adding more points and lines, you'll need to make a few of changes.</p>
+<p>Each dataset is made into its own layer, which is then added to the map. See, for example, how we add the kasten and megacore sites. This is done in three steps on the map:</p>
 <p>First we define an icon, with a size and an anchor point (which part of the image is placed at the location of the core site).</p>
 <div class="highlight"><pre><span></span><code>let thorIcon = L.icon({
     iconUrl: &#39;/static/img/icons/thor.png&#39;,
@@ -224,45 +232,38 @@ Here are some suggestions of things you might change:
 <p>Exploring this file, you will see similar functions for adding isobaths and may optional layers of satellite data. </p>
 <h1>On to the web</h1>
 <p>You've done it! A website of your own. Assuming you wish to share it with others (why else would you make a website?) you now need to host this on a server somewhere. This can seem daunting at first, but it's just a few easy steps. I have included the exact commands necessary in code blocks</p>
-<ul>
-<li>Get a cloud server running Ubuntu. Check out links at the bottom of this page for some suggestions. I have used a Shared CPU Nanode (1 GB) from <a href="linode.com">linode</a> running Ubuntu 20.04 LTS.</li>
-<li>Login with SSH and update your server</li>
-</ul>
+<h4>Get a cloud server running Ubuntu</h4>
+<p>Check out links at the bottom of this page for some suggestions. I have used a Shared CPU Nanode (1 GB) from <a href="linode.com">linode</a> running Ubuntu 20.04 LTS.</p>
+<h4>Login with SSH and update your server</h4>
 <div class="highlight"><pre><span></span><code>apt update &amp;&amp; apt upgrade -y
 reboot
 </code></pre></div>
 
-<ul>
-<li><em>Recommended</em> follow <a href="https://www.linode.com/docs/guides/set-up-and-secure/">this guide</a> to securing your server</li>
-<li>Install key packages and libraries for the app</li>
-</ul>
+<p><em>Recommended</em> follow <a href="https://www.linode.com/docs/guides/set-up-and-secure/">this guide</a> to securing your server</p>
+<h4>Install key packages and libraries for the app</h4>
 <div class="highlight"><pre><span></span><code><span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">-</span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="n">q</span><span class="w"> </span><span class="n">build</span><span class="o">-</span><span class="n">essential</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">unzip</span><span class="w"> </span><span class="n">zip</span><span class="w"> </span><span class="n">nload</span><span class="w"> </span><span class="n">tree</span><span class="w"></span>
 <span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">-</span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="n">q</span><span class="w"> </span><span class="n">python3</span><span class="o">-</span><span class="n">pip</span><span class="w"> </span><span class="n">python3</span><span class="o">-</span><span class="n">dev</span><span class="w"> </span><span class="n">python3</span><span class="o">-</span><span class="n">venv</span><span class="w"></span>
 <span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">-</span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="n">q</span><span class="w"> </span><span class="n">nginx</span><span class="w"></span>
 <span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">install</span><span class="o">-</span><span class="n">recommends</span><span class="w"> </span><span class="o">-</span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="n">q</span><span class="w"> </span><span class="n">libpcre3</span><span class="o">-</span><span class="n">dev</span><span class="w"> </span><span class="n">libz</span><span class="o">-</span><span class="n">dev</span><span class="w"></span>
 </code></pre></div>
 
-<ul>
-<li>Open ports 22 (ssh), 80 (http) and 443 (https) then activate the firewall</li>
-</ul>
+<h4>Open ports and enable firewall</h4>
+<p>We'll want 22 (ssh), 80 (http) and 443 (https). <strong>Make sure you opened 22 before enabling the firewall</strong> or you could lock yourself out of the machine</p>
 <div class="highlight"><pre><span></span><code>ufw allow 22
 ufw allow 80
 ufw allow 443
 ufw enable
 </code></pre></div>
 
-<ul>
-<li>Make a new directory <code>/app</code> and copy your app to it</li>
-</ul>
+<h4>Copy the app to the server</h4>
+<p>Make a new directory <code>/apps</code> and copy your app to it. Use your own github repo here if you've already made some changes</p>
 <div class="highlight"><pre><span></span><code>mkdir /apps
 cd /apps
 git clone https://github.com/callumrollo/itgc-2022-map.git
 chmod 777 /apps/itgc-2022-map/
 </code></pre></div>
 
-<ul>
-<li>Create and activate the app environment</li>
-</ul>
+<h4>Create and activate the app environment</h4>
 <div class="highlight"><pre><span></span><code><span class="n">cd</span><span class="w"> </span><span class="o">/</span><span class="n">apps</span><span class="o">/</span><span class="n">itgc</span><span class="o">-</span><span class="mi">2022</span><span class="o">-</span><span class="n">map</span><span class="w"></span>
 <span class="n">python3</span><span class="w"> </span><span class="o">-</span><span class="n">m</span><span class="w"> </span><span class="n">venv</span><span class="w"> </span><span class="n">venv</span><span class="w"></span>
 <span class="n">source</span><span class="w"> </span><span class="n">venv</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">activate</span><span class="w"></span>
@@ -272,29 +273,32 @@ chmod 777 /apps/itgc-2022-map/
 <span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">-</span><span class="n">r</span><span class="w"> </span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span><span class="w"></span>
 </code></pre></div>
 
-<ul>
-<li>Set up the app to run as a service under <code>uwsgi</code> this will manage instances of the app for every user that view the page. Enable the service so that it starts automatically when the server is rebooted</li>
-</ul>
+<p>In this example I'm using pip. All of these packages are available on conda-forge too though if you prefer conda.</p>
+<h4>Set up the app</h4>
+<p>We create a service under <code>uwsgi</code>. This will manage instances of the app for every user that view the page. Enable the service so that it starts automatically when the server is rebooted</p>
 <div class="highlight"><pre><span></span><code>cp /apps/itgc-2022-map/server/nbpmap.service /etc/systemd/system/nbpmap.service
 systemctl enable nbpmap
 </code></pre></div>
 
-<p>Check that the service is running successfully with <code>systemctl status nbpmap</code>. If there are errors, check that the paths in <code>nbpmap.service</code> match the paths on your server
-- Setup <code>nginx</code> to handle requests to the app from the internet</p>
+<p>Check that the service is running successfully with <code>systemctl status nbpmap</code>. If there are errors, check that the paths in <code>nbpmap.service</code> match the paths on your server</p>
+<h4>Setup <code>nginx</code></h4>
+<p>nginx is the web server that will to handle requests to the app from the internet</p>
 <div class="highlight"><pre><span></span><code>rm /etc/nginx/sites-enabled/default
 cp /apps/itgc-2022-map/server/nbpmap.nginx  /etc/nginx/sites-enabled/nbpmap.nginx
 update-rc.d nginx enable
 service nginx restart
 </code></pre></div>
 
-<p>You should now see your site if you navigate to the server's IP address in a browsers
-- Optionally, you can purchase a domain, set up an A record pointing to the IP address of this server and get free SSL certificates from Lets Encrypt</p>
+<p>You should now see your site if you navigate to the server's IP address in a browsers</p>
+<h4>Optional: get a domain</h4>
+<p>You can purchase a domain like <em>mycoolapp.com</em>, set up an A record pointing to the IP address of this server and get free SSL certificates from Lets Encrypt:</p>
 <div class="highlight"><pre><span></span><code>sudo snap install core; sudo snap refresh core
 sudo snap install --classic certbot
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
 sudo certbot --nginx
 </code></pre></div>
 
+<p>Now your users can securely visit the app with https rather than just plain http. This is essential if you decide to add users and authentication later and is generally good practice. Also you get a cool domain name, not just a dotted quad of numbers to visit.</p>
 <h1>Going further</h1>
 <p>If this has given you an appetite for web development, you can build on this simple web app.</p>
 <p>This app only has one webpage, but you can easily add more. You could also try adding a database. This makes your application more performant and really increases the scope of actions you can support. I recommend TalkPython fm's Flask course for a thorough explanation of these, link in the section below. You can also check out the source code for the other two projects linked above for examples with SQL and MongoDB.</p>

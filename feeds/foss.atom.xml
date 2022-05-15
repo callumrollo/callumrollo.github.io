@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Callum Rollo - FOSS</title><link href="https://callumrollo.github.io/" rel="alternate"></link><link href="https://callumrollo.github.io/feeds/foss.atom.xml" rel="self"></link><id>https://callumrollo.github.io/</id><updated>2022-04-25T17:00:00+01:00</updated><subtitle>Throwing stuff in the ocean, but in a good way</subtitle><entry><title>Leaflet maps with Python-flask</title><link href="https://callumrollo.github.io/flask_leaflet.html" rel="alternate"></link><published>2022-04-25T17:00:00+01:00</published><updated>2022-04-25T17:00:00+01:00</updated><author><name>Callum Rollo</name></author><id>tag:callumrollo.github.io,2022-04-25:/flask_leaflet.html</id><summary type="html">&lt;p&gt;Creating interactive maps using Python-flask and leaflet&lt;/p&gt;</summary><content type="html">&lt;p&gt;I have one website gimmick: interactive webmaps using leaflet and backed by Python-flask.&lt;/p&gt;
 &lt;p&gt;This may sound like a word salad, but it's a useful and simple (trust me) software stack for making visualisation and exploration of spatio-temporal data easy. &lt;/p&gt;
-&lt;p&gt;I call it a gimmick because I've used the same core method to create:
-- The UEA glider group &lt;a href="https://ueaglider.uea.ac.uk/"&gt;piloting website&lt;/a&gt; (&lt;a href="https://github.com/ueaglider/ueaglider-web"&gt;source&lt;/a&gt;)
-- The NBP 2202 cruise &lt;a href="https://nbp2202map.com/"&gt;data website&lt;/a&gt; (the main subject of this article) &lt;a href="https://github.com/callumrollo/itgc-2022-map"&gt;source&lt;/a&gt;
-- The VOTO public facing live data website (work in progress) (&lt;a href=""&gt;source&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;I call it a gimmick because I've used the same core method to create:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The UEA glider group &lt;a href="https://ueaglider.uea.ac.uk/"&gt;piloting website&lt;/a&gt; (&lt;a href="https://github.com/ueaglider/ueaglider-web"&gt;source&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;The NBP 2202 cruise &lt;a href="https://nbp2202map.com/"&gt;data website&lt;/a&gt; (the main subject of this article) &lt;a href="https://github.com/callumrollo/itgc-2022-map"&gt;source&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The VOTO public facing live data website (work in progress) (&lt;a href=""&gt;source&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3&gt;Why you might want a site like this&lt;/h3&gt;
-&lt;p&gt;If you want to display geospatial data:
-- at varying scale
-- with selectable layers
-- with different overlays/backgrounds
-- in an interactive manner
-- to non-technical users&lt;/p&gt;
+&lt;p&gt;If you want to display geospatial data:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;at varying scale&lt;/li&gt;
+&lt;li&gt;with selectable layers&lt;/li&gt;
+&lt;li&gt;with different overlays/backgrounds&lt;/li&gt;
+&lt;li&gt;in an interactive manner&lt;/li&gt;
+&lt;li&gt;to non-technical users&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;This works best with data that can be plotted as lines and points, but polygons are possible too.&lt;/p&gt;
 &lt;h3&gt;Prerequisites&lt;/h3&gt;
 &lt;ul&gt;
@@ -21,30 +25,34 @@
 &lt;/ul&gt;
 &lt;p&gt;If any of these are missing, check out the links at the end of this article for some tutorials and datasets.&lt;/p&gt;
 &lt;h3&gt;Tech stack&lt;/h3&gt;
-&lt;p&gt;The core library here is &lt;a href="https://flask.palletsprojects.com"&gt;flask&lt;/a&gt;, a Python micro-framework. It is a very minimal framework that allows us to make a slim website with no real database to complicate things. We will also use:
-- leaflet maps
-- jinja2 templates
-- json&lt;/p&gt;
+&lt;p&gt;The core library here is &lt;a href="https://flask.palletsprojects.com"&gt;flask&lt;/a&gt;, a Python micro-framework. It is a very minimal framework that allows us to make a slim website with no real database to complicate things. We will also use:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;leaflet maps&lt;/li&gt;
+&lt;li&gt;jinja2 templates&lt;/li&gt;
+&lt;li&gt;json&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1&gt;First, imitate&lt;/h1&gt;
 &lt;p&gt;I personally find it a lot easier to start by downloading, building and deploying a functional app than to start from scratch. This gives you a realistic view of the amount of work required to share your app and helps separate errors of code from errors of implementation.&lt;/p&gt;
 &lt;p&gt;With that said, let's begin!&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;download the &lt;a href="https://github.com/callumrollo/itgc-2022-map"&gt;nbp2202 website source code&lt;/a&gt; from GitHub
+&lt;li&gt;Download the &lt;a href="https://github.com/callumrollo/itgc-2022-map"&gt;nbp2202 website source code&lt;/a&gt; from GitHub
 &lt;a href="https://github.com/callumrollo/itgc-2022-map/archive/refs/heads/main.zip"&gt;click here&lt;/a&gt; to get the zip file&lt;/li&gt;
 &lt;li&gt;Create a Python environment using pip and the requirements.txt file or conda and the environment.yml file. Each works as well as the other&lt;/li&gt;
 &lt;li&gt;navigate to the directory where the environment files are and run the command &lt;code&gt;python itgc/app.py&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Open a browser window and go to http://127.0.0.1:5000/&lt;/li&gt;
+&lt;li&gt;Open a browser window and go to &lt;a href="http://127.0.0.1:5000/"&gt;127.0.0.1:5000&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;That's it! You're running the app on your very own PC. You should see a website that looks and functions just like the one at &lt;a href="https://nbp2202map.com"&gt;nbp2202map.com&lt;/a&gt; but it is running solely on your PC&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1&gt;Next, remix&lt;/h1&gt;
 &lt;p&gt;I recommend using &lt;a href="https://git-scm.com/docs/gittutorial"&gt;git&lt;/a&gt; to keep track of changes to the codebase of this project. If you're particularly keen, maybe you already forked the repo in step 1 to start editing your own version.&lt;/p&gt;
 &lt;p&gt;The first place to make changes is in &lt;code&gt;index.html&lt;/code&gt; this is the code for the webpage that the user interacts with
-Here are some suggestions of things you might change:
-- The default starting location and zoom with &lt;code&gt;map.setView&lt;/code&gt;
-- The base layer and optional overlays of the map in  &lt;code&gt;maplayers&lt;/code&gt;
-- The text on the page in the &lt;code&gt;container instructions&lt;/code&gt;  section.&lt;/p&gt;
-&lt;p&gt;If you want to change the data itself, like adding more points and lines, you'll need to make a couple of changes.&lt;/p&gt;
-&lt;p&gt;First, each dataset is made into its own layer, which is then added to the map. See, for example, how we add the kasten and megacore sites. This is done in three steps on the map:&lt;/p&gt;
+Here are some suggestions of things you might change:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The default starting location and zoom with &lt;code&gt;map.setView&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;The base layer and optional overlays of the map in  &lt;code&gt;maplayers&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;The text on the page in the &lt;code&gt;container instructions&lt;/code&gt;  section.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you want to change the data itself, like adding more points and lines, you'll need to make a few of changes.&lt;/p&gt;
+&lt;p&gt;Each dataset is made into its own layer, which is then added to the map. See, for example, how we add the kasten and megacore sites. This is done in three steps on the map:&lt;/p&gt;
 &lt;p&gt;First we define an icon, with a size and an anchor point (which part of the image is placed at the location of the core site).&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;let thorIcon = L.icon({
     iconUrl: &amp;#39;/static/img/icons/thor.png&amp;#39;,
@@ -72,45 +80,38 @@ Here are some suggestions of things you might change:
 &lt;p&gt;Exploring this file, you will see similar functions for adding isobaths and may optional layers of satellite data. &lt;/p&gt;
 &lt;h1&gt;On to the web&lt;/h1&gt;
 &lt;p&gt;You've done it! A website of your own. Assuming you wish to share it with others (why else would you make a website?) you now need to host this on a server somewhere. This can seem daunting at first, but it's just a few easy steps. I have included the exact commands necessary in code blocks&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Get a cloud server running Ubuntu. Check out links at the bottom of this page for some suggestions. I have used a Shared CPU Nanode (1 GB) from &lt;a href="linode.com"&gt;linode&lt;/a&gt; running Ubuntu 20.04 LTS.&lt;/li&gt;
-&lt;li&gt;Login with SSH and update your server&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h4&gt;Get a cloud server running Ubuntu&lt;/h4&gt;
+&lt;p&gt;Check out links at the bottom of this page for some suggestions. I have used a Shared CPU Nanode (1 GB) from &lt;a href="linode.com"&gt;linode&lt;/a&gt; running Ubuntu 20.04 LTS.&lt;/p&gt;
+&lt;h4&gt;Login with SSH and update your server&lt;/h4&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;apt update &amp;amp;&amp;amp; apt upgrade -y
 reboot
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Recommended&lt;/em&gt; follow &lt;a href="https://www.linode.com/docs/guides/set-up-and-secure/"&gt;this guide&lt;/a&gt; to securing your server&lt;/li&gt;
-&lt;li&gt;Install key packages and libraries for the app&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Recommended&lt;/em&gt; follow &lt;a href="https://www.linode.com/docs/guides/set-up-and-secure/"&gt;this guide&lt;/a&gt; to securing your server&lt;/p&gt;
+&lt;h4&gt;Install key packages and libraries for the app&lt;/h4&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;build&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;essential&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;unzip&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;zip&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;nload&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;tree&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pip&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;nginx&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;no&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;recommends&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;libpcre3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;libz&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Open ports 22 (ssh), 80 (http) and 443 (https) then activate the firewall&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h4&gt;Open ports and enable firewall&lt;/h4&gt;
+&lt;p&gt;We'll want 22 (ssh), 80 (http) and 443 (https). &lt;strong&gt;Make sure you opened 22 before enabling the firewall&lt;/strong&gt; or you could lock yourself out of the machine&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ufw allow 22
 ufw allow 80
 ufw allow 443
 ufw enable
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Make a new directory &lt;code&gt;/app&lt;/code&gt; and copy your app to it&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h4&gt;Copy the app to the server&lt;/h4&gt;
+&lt;p&gt;Make a new directory &lt;code&gt;/apps&lt;/code&gt; and copy your app to it. Use your own github repo here if you've already made some changes&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;mkdir /apps
 cd /apps
 git clone https://github.com/callumrollo/itgc-2022-map.git
 chmod 777 /apps/itgc-2022-map/
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Create and activate the app environment&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h4&gt;Create and activate the app environment&lt;/h4&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apps&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;itgc&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2022&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;span class="n"&gt;python3&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
@@ -120,29 +121,32 @@ chmod 777 /apps/itgc-2022-map/
 &lt;span class="n"&gt;pip&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;requirements&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Set up the app to run as a service under &lt;code&gt;uwsgi&lt;/code&gt; this will manage instances of the app for every user that view the page. Enable the service so that it starts automatically when the server is rebooted&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;In this example I'm using pip. All of these packages are available on conda-forge too though if you prefer conda.&lt;/p&gt;
+&lt;h4&gt;Set up the app&lt;/h4&gt;
+&lt;p&gt;We create a service under &lt;code&gt;uwsgi&lt;/code&gt;. This will manage instances of the app for every user that view the page. Enable the service so that it starts automatically when the server is rebooted&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;cp /apps/itgc-2022-map/server/nbpmap.service /etc/systemd/system/nbpmap.service
 systemctl enable nbpmap
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Check that the service is running successfully with &lt;code&gt;systemctl status nbpmap&lt;/code&gt;. If there are errors, check that the paths in &lt;code&gt;nbpmap.service&lt;/code&gt; match the paths on your server
-- Setup &lt;code&gt;nginx&lt;/code&gt; to handle requests to the app from the internet&lt;/p&gt;
+&lt;p&gt;Check that the service is running successfully with &lt;code&gt;systemctl status nbpmap&lt;/code&gt;. If there are errors, check that the paths in &lt;code&gt;nbpmap.service&lt;/code&gt; match the paths on your server&lt;/p&gt;
+&lt;h4&gt;Setup &lt;code&gt;nginx&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;nginx is the web server that will to handle requests to the app from the internet&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;rm /etc/nginx/sites-enabled/default
 cp /apps/itgc-2022-map/server/nbpmap.nginx  /etc/nginx/sites-enabled/nbpmap.nginx
 update-rc.d nginx enable
 service nginx restart
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;You should now see your site if you navigate to the server's IP address in a browsers
-- Optionally, you can purchase a domain, set up an A record pointing to the IP address of this server and get free SSL certificates from Lets Encrypt&lt;/p&gt;
+&lt;p&gt;You should now see your site if you navigate to the server's IP address in a browsers&lt;/p&gt;
+&lt;h4&gt;Optional: get a domain&lt;/h4&gt;
+&lt;p&gt;You can purchase a domain like &lt;em&gt;mycoolapp.com&lt;/em&gt;, set up an A record pointing to the IP address of this server and get free SSL certificates from Lets Encrypt:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo snap install core; sudo snap refresh core
 sudo snap install --classic certbot
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
 sudo certbot --nginx
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;p&gt;Now your users can securely visit the app with https rather than just plain http. This is essential if you decide to add users and authentication later and is generally good practice. Also you get a cool domain name, not just a dotted quad of numbers to visit.&lt;/p&gt;
 &lt;h1&gt;Going further&lt;/h1&gt;
 &lt;p&gt;If this has given you an appetite for web development, you can build on this simple web app.&lt;/p&gt;
 &lt;p&gt;This app only has one webpage, but you can easily add more. You could also try adding a database. This makes your application more performant and really increases the scope of actions you can support. I recommend TalkPython fm's Flask course for a thorough explanation of these, link in the section below. You can also check out the source code for the other two projects linked above for examples with SQL and MongoDB.&lt;/p&gt;
