@@ -46,7 +46,7 @@ To request a copy of any of my publications that have ended up behind a paywall,
 
 **2013-2017 ** MSci Geophysics University of Southampton
 
-### Supervisory Team
+### PhD Supervisory Team
 
 [Prof. Karen Heywood](https://people.uea.ac.uk/k_heywood)
 
@@ -65,26 +65,16 @@ Supervisor: Dr Nicholas Harmon
 
 ### Contact me
 
-Public key
-
-`D089 31A4 EDAF 1F2F E4DB  0687 2B49 3F69 048F 1A24`
-	
-expires: 2022-06-19
-
-[download key](../images/mykey.asc)
-
- *What's that?*
- 
-A secure way to contact me, assuming you trust that I have control of this website. You can use [Public key cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography) to securely exchange information with me over any text communication channel; be that email, SMS or, notes pushed under a door. I use [GNU Privacy Guard](https://en.wikipedia.org/wiki/GNU_Privacy_Guard). To get setup and encypting, check out [this guide](https://www.devdungeon.com/content/gpg-tutorial).
+[c.rollo@outlook.com](mailto:c.rollo@outlook.com)
 
 If you have my phone number, please contact me using [Signal](https://www.signal.org/).
 
 ### Various internet presences:
 
-- [university web page](https://people.uea.ac.uk/c_rollo)
 - [github](https://github.com/callumrollo)
 - [twitter](https://twitter.com/callum_rollo)
-- [stack overflow](https://stackoverflow.com/users/13208790/bystander)
+- [stack overflow](https://stackoverflow.com/users/13208790/marcos)
+- [Voice of the Ocean team page](https://voiceoftheocean.org/meet-the-crew/)
 - [ORCID](https://orcid.org/0000-0002-5134-7886)
 - [UEA Python presentations](https://ueapy.github.io/author/callum-rollo.html) 
 
@@ -92,9 +82,10 @@ If you have my phone number, please contact me using [Signal](https://www.signal
 
 With varying levels of competence but universal enthusiasm.
 
-- Slope currents
-- Cross shelf exchange
 - Glider data processing
+- Server maintenance
+- Task automation
+- Python
 - Standardisation of data processing
 - FOSS in the geosciences
 - The pros/cons of preprints and open peer review
@@ -106,7 +97,6 @@ With varying levels of competence but universal enthusiasm.
 - Rewilding as a method of environmental and social regeneration
 - Traditional forest management
 - Infosec, cryptography, online security, and why you shouldn't blindly follow [links](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
-- Math rock, Irish/Scottish folk, UK hip-hop, music in general
 - Trail cameras for wildlife observation
 
 See also [reading list](https://callumrollo.github.io/reading.html#reading)
