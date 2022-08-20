@@ -11,7 +11,7 @@ In my role as data scientist at VOTO, I receive **55'000 SEK**/month. This is eq
 
 I pay around 35 % in taxes to the Swedish government, and an additional 5 % on my UK student loan repayments. This leaves me with ~ **£ 31'700** in take home pay. 
 
-I am a member of [Naturvetarna union](https://www.naturvetarna.se/), the union for science graduates in Sweden. This provides many benefits (unemployment cover, health ensurance, access to employment statistics) as well as supporting other workers in my sector. There is evidence that [unions reduce gender and racial pay gaps](https://www.afscme.org/blog/studies-find-unions-close-gender-and-racial-pay-gaps) ([[1](https://nwlc.org/wp-content/uploads/2021/07/Union-Factsheet-9.8.21.pdf)] [[2](https://cdn.americanprogress.org/content/uploads/2021/08/03103606/UnionsWealth-brief-2.pdf)]).
+I am a member of [Naturvetarna union](https://www.naturvetarna.se/), the union for science graduates in Sweden. This provides many benefits (unemployment cover, health insurance, access to employment statistics) as well as supporting other workers in my sector. There is evidence that [unions reduce gender and racial pay gaps](https://www.afscme.org/blog/studies-find-unions-close-gender-and-racial-pay-gaps) ([[1](https://nwlc.org/wp-content/uploads/2021/07/Union-Factsheet-9.8.21.pdf)] [[2](https://cdn.americanprogress.org/content/uploads/2021/08/03103606/UnionsWealth-brief-2.pdf)]).
 
 ### Previous positions
 
@@ -25,7 +25,7 @@ During my PhD I was a member of the [University and Colleges Union](https://www.
 
 ### Rationale
 
-You can read a short article on the pros and cons of publishing salaries [here](https://time.com/5353848/salary-pay-transparency-work/). The practice is becoming more common, in some countries it is [mandatory](https://www.bbc.co.uk/news/magazine-40669239). ~~Until that is the case in the UK, I will publish mine here.~~This is the case in Sweden, you can get a copy of anyone's tax returns from the government and deduce their income from it. I'd rather make it as easy as possible.
+You can read a short article on the pros and cons of publishing salaries [here](https://time.com/5353848/salary-pay-transparency-work/). The practice is becoming more common, in some countries it is [mandatory](https://www.bbc.co.uk/news/magazine-40669239). This is the case in Sweden, you can get a copy of anyone's tax returns from the government and deduce their income from it. I'd rather make it as easy as possible.
 
 ### Interests
 
