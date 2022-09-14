@@ -33,6 +33,8 @@ To request a copy of any of my publications that have ended up behind a paywall,
 
 ### Selected posters and talks
 
+2022 [UG2 Seattle](../images/ug2_2022.pdf)
+
 2020 [COAS seminar](../images/Rollo_COAS_2020_low_res.pdf)
 
 2017 [Marine Autonomy and Techology Showcase](../images/poster_omura_17.pdf)
