@@ -25,6 +25,8 @@ Data and live location information from this glider, and others in the fleet, is
 
 ### Publications
 
+2022 [Doctoral Thesis. Shelf, shear and staircases: glider observations in the North Atlantic](https://ueaeprints.uea.ac.uk/id/eprint/87555/)
+
 2021 [Glider Observations of Thermohaline Staircases in the Tropical North Atlantic Using an Automated Classifier](https://gi.copernicus.org/preprints/gi-2021-27/) (under review).
 
 2020 [Glider Observations of the Northwestern Iberian Margin During an Exceptional Summer Upwelling Season](https://doi.org/10.1029/2019JC015804)
@@ -95,6 +97,7 @@ With varying levels of competence but universal enthusiasm.
 - Perceptually uniform colourmaps
 - Learning languages (human and programming)
 - Climate breakdown
+- Unions and why you should join one
 - Heterodox economics
 - Rewilding as a method of environmental and social regeneration
 - Traditional forest management
