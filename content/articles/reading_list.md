@@ -40,6 +40,8 @@ Ryan Abernathy - [Organising projects for reproducibility](https://rabernat.gith
 
 Philip Grylls - [The complicated relationship between early career researchers and reproducible research](https://www.software.ac.uk/blog/2021-06-07-complicated-relationship-between-early-career-researchers-and-reproducible-research?mc_cid=b626a8dd63&mc_eid=95a7d9b4e9)
 
+Erini Zormpa - [How to publish FAIR research outputs](https://eirini-zormpa.github.io/2023-ResearchSoftwareCamp/FAIR-publishing.html#/title-slide)
+
 ### Academic Publishing
 
 George Monbiot - [Academic publishers are wealth extracting monopolists](https://www.monbiot.com/2011/08/29/the-lairds-of-learning/)
