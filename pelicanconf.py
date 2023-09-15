@@ -2,9 +2,16 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 from datetime import datetime
+import json
+from pathlib import Path
+if Path("secrets.json").exists():
+    with open("secrets.json") as json_file:
+        secrets = json.load(json_file)
+    SITEURL = secrets['url']
+else:
+    SITEURL = "https://callumrollo.github.io"
 
 AUTHOR = 'Callum Rollo'
-SITEURL = 'https://callumrollo.github.io'
 DOMAIN = SITEURL
 FEED_DOMAIN = SITEURL
 SITENAME = 'Callum Rollo'
