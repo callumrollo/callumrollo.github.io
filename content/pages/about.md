@@ -90,16 +90,15 @@ With varying levels of competence
 - The pros/cons of preprints and open peer review
 - Making maps and the relative benefits of various [projections](https://xkcd.com/977/)
 - Perceptually uniform colourmaps
-- Learning languages (human and programming)
+- Learning languages
 - Climate breakdown
 - Unions and why you should join one
 - Heterodox economics
 - Rewilding as a method of environmental and social regeneration
-- Traditional forest management
-- Infosec, cryptography, online security, and why you shouldn't blindly follow [links](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+- Infosec, cryptography, [online security](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 - Trail cameras for wildlife observation
 
-See also [reading list](https://callumrollo.github.io/reading.html#reading)
+See also [reading list](/reading)
 
 -------------------
 
