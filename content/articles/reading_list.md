@@ -63,7 +63,6 @@ Tim Barry - [Just Too Efficient](https://www.tbray.org/ongoing/When/202x/2020/07
 
 David Graber - [Bullshit Jobs](https://www.strike.coop/bullshit-jobs/)
 
-
 ### Rewilding and land rights
 George Monbiot - [Rewilding Manifesto](https://www.monbiot.com/2013/05/27/a-manifesto-for-rewilding-the-world/)
 
@@ -97,6 +96,8 @@ Nick Hayes - [The Book of Trespass](https://www.theguardian.com/books/2020/aug/1
 
 David Graeber - [Debt: The First 5000 Years](https://www.goodreads.com/book/show/6617037-debt)
 
+Josh Ryan-Collins - [Why You Can't Afford a Home](https://www.ucl.ac.uk/bartlett/public-purpose/why-cant-you-afford-home)
+
 ### Privacy/Surveillance
 
 Edward Snowden - [Permanent Record](https://www.goodreads.com/book/show/46223297-permanent-record)
@@ -107,22 +108,24 @@ Kevin Mitnic - [The Art of Invisibility](https://www.mitnicksecurity.com/the-art
 
 ### Some great authors
 
-Neal Stephenson, Iain (M) Banks, Cory Doctorow, Charlie Stross
+Neal Stephenson, Iain (M) Banks, Cory Doctorow, Becky Chambers
 
 
 ### Academics' websites I enjoy
 
 In my experience, the more poorly formatted the website, the better the quality of ideas.
 
-http://matt.might.net
+[matt.might.net](matt.might.net)
 
-https://betterfigures.org/
+[betterfigures.org/](betterfigures.org/)
+
+[datacolada](http://datacolada.org/)
+
+[Molly White](https://www.mollywhite.net/)
 ## Sites I visit when I Should Be Writing
 
 [Existential comics](https://existentialcomics.com/) an entertainingly good intro to various schools of philosophy
 
 [Bruce Schneier facts](https://www.schneierfacts.com) crypto jokes
-
-[xkcd](xkcd.com) (duh)
 
 [what the commit](http://whatthecommit.com/) spice up your git commits by pulling a random message from here
