@@ -2,20 +2,21 @@ Title: About
 Date: 2020-06-05
 Category: Generic
 Slug: aboutme
-Summary: All about me
+Summary: About the author
 
-I recently started work as the in-house data scientist at [VOTO](https://voiceoftheocean.org/en). I am responsible for processing, correcting, standardising and distributing scientific data from our fleet of autonomous platforms. In my day-to-day work, I build and monitor pipelines for processing near real time data, maintain servers and create websites for viewing/interrogating data. I also work with other data managers at organisations like [SMHI](https://www.smhi.se/en) and [EMODnet](https://emodnet.ec.europa.eu/en) to standardise and efficiently distribute data.
+I currently work as data scientist at [Voice of the Ocean foundation (VOTO)](https://voiceoftheocean.org/en). I am responsible for processing, correcting, standardising and distributing scientific data from our fleet of autonomous platforms. In my day-to-day work, I build and monitor pipelines for processing near real time data, maintain servers and create websites for viewing/interrogating data. I also work with other data managers at organisations like [SMHI](https://www.smhi.se/en),  [EMODnet](https://emodnet.ec.europa.eu/en) and [IOOS/NOAA](https://ioos.noaa.gov/)to standardise and efficiently distribute data.
 
 I am a Pythonista and proponent of free software for science. Several of my projects are available on my [github](https://github.com/callumrollo). I have completed collaborative programming projects as part of [OceanHackWeek](https://callumrollo.github.io/hackweek.html) and [Google Summer of Code](https://summerofcode.withgoogle.com/). During my PhD, I led the [UEA scientific python](https://ueapy.github.io/) group.
 
 [Blog posts](https://callumrollo.github.io/)
 
+### Career
 
-### PhD
+**2021-present** Data scientist/physical oceanographer Voice of the Ocean Foundation
 
-During 2017-2021 I completed a PhD at the University of East Anglia (UEA) in Norwich, UK. I work with marine gliders, specifically the integration on Acoustic Doppler Current Profilers (ADCPs) onto gliders to directly measure currents in the ocean.
+**2017- 2021** Postgraduate Researcher University of East Anglia
 
-Data and live location information from this glider, and others in the fleet, is available on the [UEA glider website](https://ueaglider.uea.ac.uk). I rebuilt the website in 2021, based on the original by [Bastien Queste](http://byqueste.com/).
+**2013-2017** MSci Geophysics University of Southampton
 
 
 
@@ -41,22 +42,15 @@ To request a copy of any of my publications that have ended up behind a paywall,
 
 2017 [Marine Autonomy and Techology Showcase](../images/poster_omura_17.pdf)
 
+### PhD
 
-### Career
+During 2017-2021 I completed a PhD at the University of East Anglia (UEA) in Norwich, UK. I work with marine gliders, specifically the integration on Acoustic Doppler Current Profilers (ADCPs) onto gliders to directly measure currents in the ocean.
 
-**2021-present** Data scientist/physical oceanographer Voice of the Ocean Foundation
+Data and live location information from this glider, and others in the fleet, is available on the [UEA glider website](https://ueaglider.uea.ac.uk). I rebuilt the website in 2021, based on the original by [Bastien Queste](http://byqueste.com/).
 
-**2017- 2021** Postgraduate Researcher University of East Anglia
+##### PhD Supervisory Team
 
-**2013-2017 ** MSci Geophysics University of Southampton
-
-### PhD Supervisory Team
-
-[Prof. Karen Heywood](https://people.uea.ac.uk/k_heywood)
-
-[Dr. Rob Hall](https://people.uea.ac.uk/robert_hall)
-
-[Dr. Alex Phillips](https://www.noc.ac.uk/people/abp)
+[Prof. Karen Heywood](https://people.uea.ac.uk/k_heywood), [Dr. Rob Hall](https://people.uea.ac.uk/robert_hall), [Dr. Alex Phillips](https://www.noc.ac.uk/people/abp)
 
 ### Academic background
 
@@ -76,7 +70,7 @@ If you have my phone number, please contact me using [Signal](https://www.signal
 ### Various internet presences:
 
 - [github](https://github.com/callumrollo)
-- [twitter](https://twitter.com/callum_rollo)
+- [twitter](https://twitter.com/callum_rollo) (no longer used, thanks Elon)
 - [stack overflow](https://stackoverflow.com/users/13208790/marcos)
 - [Voice of the Ocean team page](https://voiceoftheocean.org/meet-the-crew/)
 - [ORCID](https://orcid.org/0000-0002-5134-7886)
@@ -84,10 +78,11 @@ If you have my phone number, please contact me using [Signal](https://www.signal
 
 ### Things I enjoy talking about
 
-With varying levels of competence but universal enthusiasm.
+With varying levels of competence
 
 - Glider data processing
 - Server maintenance
+- ERDDAP
 - Task automation
 - Python
 - Standardisation of data processing
