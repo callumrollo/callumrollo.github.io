@@ -4,7 +4,9 @@ Category: Generic
 Slug: aboutme
 Summary: About the author
 
-I currently work as data scientist at [Voice of the Ocean foundation (VOTO)](https://voiceoftheocean.org/en). I am responsible for processing, correcting, standardising and distributing scientific data from our fleet of autonomous platforms. In my day-to-day work, I build and monitor pipelines for processing near real time data, maintain servers and create websites for viewing/interrogating data. I also work with other data managers at organisations like [SMHI](https://www.smhi.se/en),  [EMODnet](https://emodnet.ec.europa.eu/en) and [IOOS/NOAA](https://ioos.noaa.gov/)to standardise and efficiently distribute data.
+Since late 2021, I work as a data scientist at [Voice of the Ocean foundation (VOTO)](https://voiceoftheocean.org/en). I am responsible for processing, correcting, standardising and distributing scientific data from our fleet of autonomous platforms. In my day-to-day work, I build and monitor pipelines for processing near real time data, maintain servers and create websites for viewing/interrogating data. I also work with other data managers at organisations like [SMHI](https://www.smhi.se/en),  [EMODnet](https://emodnet.ec.europa.eu/en) and [IOOS/NOAA](https://ioos.noaa.gov/)to standardise and efficiently distribute data.
+
+I work a lot with [ERDDAP](https://github.com/ERDDAP/erddap), a data broker server that makes it much easier to share well standardised oceanographic data. I manage the [VOTO ERDDAP](https://erddap.observations.voiceoftheocean.org/erddap/index.html) where all our data are hosted. I have co-organised and presented several in person and online webinars teaching data users and admins how to best use ERDDAP for distributing oceanographic data.
 
 I am a Pythonista and proponent of free software for science. Several of my projects are available on my [github](https://github.com/callumrollo). I have completed collaborative programming projects as part of [OceanHackWeek](https://callumrollo.github.io/hackweek.html) and [Google Summer of Code](https://summerofcode.withgoogle.com/). During my PhD, I led the [UEA scientific python](https://ueapy.github.io/) group.
 
@@ -18,11 +20,9 @@ I am a Pythonista and proponent of free software for science. Several of my proj
 
 **2013-2017** MSci Geophysics University of Southampton
 
+### CV
 
-
-### Curriculum Vitae
-
-[Download pdf](../images/callum-rollo-cv-2020.pdf)
+[Download pdf](../images/callum-rollo-cv.pdf)
 
 ### Publications
 
