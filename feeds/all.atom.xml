@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Callum Rollo</title><link href="https://callumrollo.github.io/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>https://callumrollo.github.io/</id><updated>2022-04-25T17:00:00+01:00</updated><subtitle>Throwing stuff in the ocean, responsibly</subtitle><entry><title>Leaflet maps with Python-flask</title><link href="https://callumrollo.github.io/flask_leaflet.html" rel="alternate"></link><published>2022-04-25T17:00:00+01:00</published><updated>2022-04-25T17:00:00+01:00</updated><author><name>Callum Rollo</name></author><id>tag:callumrollo.github.io,2022-04-25:/flask_leaflet.html</id><summary type="html">&lt;p&gt;Creating interactive maps using Python-flask and leaflet&lt;/p&gt;</summary><content type="html">&lt;p&gt;I have one website gimmick: interactive webmaps using leaflet and backed by Python-flask.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Callum Rollo</title><link href="https://callumrollo.github.io/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>https://callumrollo.github.io/</id><updated>2022-04-25T17:00:00+01:00</updated><subtitle>Recovering oceanographer</subtitle><entry><title>Leaflet maps with Python-flask</title><link href="https://callumrollo.github.io/flask_leaflet.html" rel="alternate"></link><published>2022-04-25T17:00:00+01:00</published><updated>2022-04-25T17:00:00+01:00</updated><author><name>Callum Rollo</name></author><id>tag:callumrollo.github.io,2022-04-25:/flask_leaflet.html</id><summary type="html">&lt;p&gt;Creating interactive maps using Python-flask and leaflet&lt;/p&gt;</summary><content type="html">&lt;p&gt;I have one website gimmick: interactive webmaps using leaflet and backed by Python-flask.&lt;/p&gt;
 &lt;p&gt;This may sound like a word salad, but it's a useful and simple (trust me) software stack for making visualisation and exploration of spatio-temporal data easy. &lt;/p&gt;
 &lt;p&gt;I call it a gimmick because I've used the same core method to create:&lt;/p&gt;
 &lt;ul&gt;
@@ -758,20 +758,22 @@ awk&lt;span class="w"&gt; &lt;/span&gt;-F&lt;span class="w"&gt; &lt;/span&gt;,&l
 &lt;p&gt;Nick Hayes - &lt;a href="https://www.theguardian.com/books/2020/aug/10/the-book-of-trespass-by-nick-hayes-review-a-trespassers-radical-manifesto"&gt;The Book of Trespass&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;Economics/Society&lt;/h3&gt;
 &lt;p&gt;David Graeber - &lt;a href="https://www.goodreads.com/book/show/6617037-debt"&gt;Debt: The First 5000 Years&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Josh Ryan-Collins - &lt;a href="https://www.ucl.ac.uk/bartlett/public-purpose/why-cant-you-afford-home"&gt;Why You Can't Afford a Home&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;Privacy/Surveillance&lt;/h3&gt;
 &lt;p&gt;Edward Snowden - &lt;a href="https://www.goodreads.com/book/show/46223297-permanent-record"&gt;Permanent Record&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Cory Doctorow - &lt;a href="https://craphound.com/littlebrother/download/"&gt;Little Brother&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Kevin Mitnic - &lt;a href="https://www.mitnicksecurity.com/the-art-of-invisibility-mitnick-security"&gt;The Art of Invisibility&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;Some great authors&lt;/h3&gt;
-&lt;p&gt;Neal Stephenson, Iain (M) Banks, Cory Doctorow, Charlie Stross&lt;/p&gt;
+&lt;p&gt;Neal Stephenson, Iain (M) Banks, Cory Doctorow, Becky Chambers&lt;/p&gt;
 &lt;h3&gt;Academics' websites I enjoy&lt;/h3&gt;
 &lt;p&gt;In my experience, the more poorly formatted the website, the better the quality of ideas.&lt;/p&gt;
-&lt;p&gt;http://matt.might.net&lt;/p&gt;
-&lt;p&gt;https://betterfigures.org/&lt;/p&gt;
+&lt;p&gt;&lt;a href="matt.might.net"&gt;matt.might.net&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="betterfigures.org/"&gt;betterfigures.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://datacolada.org/"&gt;datacolada&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.mollywhite.net/"&gt;Molly White&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Sites I visit when I Should Be Writing&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://existentialcomics.com/"&gt;Existential comics&lt;/a&gt; an entertainingly good intro to various schools of philosophy&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.schneierfacts.com"&gt;Bruce Schneier facts&lt;/a&gt; crypto jokes&lt;/p&gt;
-&lt;p&gt;&lt;a href="xkcd.com"&gt;xkcd&lt;/a&gt; (duh)&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://whatthecommit.com/"&gt;what the commit&lt;/a&gt; spice up your git commits by pulling a random message from here&lt;/p&gt;</content><category term="Reading"></category><category term="articles"></category><category term="opinion"></category><category term="academia"></category><category term="nature"></category></entry><entry><title>Steal this website</title><link href="https://callumrollo.github.io/howto.html" rel="alternate"></link><published>2020-06-16T10:20:00+01:00</published><updated>2020-06-16T10:20:00+01:00</updated><author><name>Callum Rollo</name></author><id>tag:callumrollo.github.io,2020-06-16:/howto.html</id><summary type="html">&lt;p&gt;How to build this website&lt;/p&gt;</summary><content type="html">&lt;p&gt;You may look at this content-poor, lazily formatted website and think "wow, I want one of those!". If so, I have good news for you. The steps to build this website are laid out in the &lt;a href="https://github.com/callumrollo/callumrollo.github.io"&gt;github repo&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Very little programming expertise is required. As long as you are comfortable creating a &lt;a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html"&gt;conda environment&lt;/a&gt; and a &lt;a href="https://help.github.com/en/enterprise/2.14/user/articles/create-a-repo"&gt;GitHub repository&lt;/a&gt;, the rest is ludicrously simple. &lt;/p&gt;
 &lt;p&gt;I spent an excessive amount of time looking for academic sites to emulate/shamelessly copy before making this one. There are some great sites out there that provide all their source code online. I highly recommend finding one you like; imitation is, after all, the highest form of flattery. Here are some samples:&lt;/p&gt;
