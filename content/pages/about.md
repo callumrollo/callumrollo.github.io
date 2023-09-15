@@ -10,7 +10,7 @@ I work a lot with [ERDDAP](https://github.com/ERDDAP/erddap), a data broker serv
 
 I am a Pythonista and proponent of free software for science. Several of my projects are available on my [github](https://github.com/callumrollo). I have completed collaborative programming projects as part of [OceanHackWeek](https://callumrollo.github.io/hackweek.html) and [Google Summer of Code](https://summerofcode.withgoogle.com/). During my PhD, I led the [UEA scientific python](https://ueapy.github.io/) group.
 
-[Blog posts](https://callumrollo.github.io/)
+[Blog posts](/)
 
 ### Career
 
@@ -98,7 +98,7 @@ With varying levels of competence
 - Infosec, cryptography, [online security](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 - Trail cameras for wildlife observation
 
-See also [reading list](/reading)
+See also [reading list](/reading.html)
 
 -------------------
 
