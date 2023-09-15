@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Callum Rollo - FOSS</title><link href="https://callumrollo.github.io/" rel="alternate"></link><link href="https://callumrollo.github.io/feeds/foss.atom.xml" rel="self"></link><id>https://callumrollo.github.io/</id><updated>2022-04-25T17:00:00+01:00</updated><subtitle>Throwing stuff in the ocean, responsibly</subtitle><entry><title>Leaflet maps with Python-flask</title><link href="https://callumrollo.github.io/flask_leaflet.html" rel="alternate"></link><published>2022-04-25T17:00:00+01:00</published><updated>2022-04-25T17:00:00+01:00</updated><author><name>Callum Rollo</name></author><id>tag:callumrollo.github.io,2022-04-25:/flask_leaflet.html</id><summary type="html">&lt;p&gt;Creating interactive maps using Python-flask and leaflet&lt;/p&gt;</summary><content type="html">&lt;p&gt;I have one website gimmick: interactive webmaps using leaflet and backed by Python-flask.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Callum Rollo - FOSS</title><link href="https://callumrollo.github.io/" rel="alternate"></link><link href="/feeds/foss.atom.xml" rel="self"></link><id>https://callumrollo.github.io/</id><updated>2022-04-25T17:00:00+01:00</updated><subtitle>Throwing stuff in the ocean, responsibly</subtitle><entry><title>Leaflet maps with Python-flask</title><link href="https://callumrollo.github.io/flask_leaflet.html" rel="alternate"></link><published>2022-04-25T17:00:00+01:00</published><updated>2022-04-25T17:00:00+01:00</updated><author><name>Callum Rollo</name></author><id>tag:callumrollo.github.io,2022-04-25:/flask_leaflet.html</id><summary type="html">&lt;p&gt;Creating interactive maps using Python-flask and leaflet&lt;/p&gt;</summary><content type="html">&lt;p&gt;I have one website gimmick: interactive webmaps using leaflet and backed by Python-flask.&lt;/p&gt;
 &lt;p&gt;This may sound like a word salad, but it's a useful and simple (trust me) software stack for making visualisation and exploration of spatio-temporal data easy. &lt;/p&gt;
 &lt;p&gt;I call it a gimmick because I've used the same core method to create:&lt;/p&gt;
 &lt;ul&gt;
@@ -89,10 +89,10 @@ reboot
 
 &lt;p&gt;&lt;em&gt;Recommended&lt;/em&gt; follow &lt;a href="https://www.linode.com/docs/guides/set-up-and-secure/"&gt;this guide&lt;/a&gt; to securing your server&lt;/p&gt;
 &lt;h4&gt;Install key packages and libraries for the app&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;build&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;essential&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;unzip&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;zip&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;nload&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;tree&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pip&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;nginx&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;no&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;recommends&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;libpcre3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;libz&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;build&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;essential&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;unzip&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;zip&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;nload&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;tree&lt;/span&gt;
+&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pip&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;venv&lt;/span&gt;
+&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;nginx&lt;/span&gt;
+&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;no&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;recommends&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;libpcre3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;libz&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4&gt;Open ports and enable firewall&lt;/h4&gt;
@@ -112,13 +112,13 @@ chmod 777 /apps/itgc-2022-map/
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4&gt;Create and activate the app environment&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apps&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;itgc&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2022&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;python3&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;pip&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;upgrade&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;pip&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;setuptools&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;pip&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;upgrade&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;httpie&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;glances&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;pip&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;upgrade&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;uwsgi&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;pip&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;requirements&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apps&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;itgc&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2022&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;
+&lt;span class="n"&gt;python3&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;venv&lt;/span&gt;
+&lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;
+&lt;span class="n"&gt;pip&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;upgrade&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;pip&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;setuptools&lt;/span&gt;
+&lt;span class="n"&gt;pip&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;upgrade&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;httpie&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;glances&lt;/span&gt;
+&lt;span class="n"&gt;pip&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;upgrade&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;uwsgi&lt;/span&gt;
+&lt;span class="n"&gt;pip&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;requirements&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;In this example I'm using pip. All of these packages are available on conda-forge too though if you prefer conda.&lt;/p&gt;
@@ -236,14 +236,14 @@ sudo certbot --nginx
 &lt;h3&gt;Automated emails for data transfer&lt;/h3&gt;
 &lt;p&gt;The simplest method I have found for sending automated emails is to install &lt;a href="https://wiki.debian.org/nullmailer#Installation_Examples_-_GMail"&gt;nullmailer&lt;/a&gt; on a Linux box then run a short shell script.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
-mv /home/pilot/data-to-nbp/most-recent /home/pilot/data-to-nbp/dives-&lt;span class="sb"&gt;`&lt;/span&gt;date +&lt;span class="s2"&gt;&amp;quot;%Y-%m-%dT%H:%M&amp;quot;&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;
-mv /home/pilot/data-to-nbp/dives-to-nbp.zip /home/pilot/data-to-nbp/dives-to-nbp.zip-&lt;span class="sb"&gt;`&lt;/span&gt;date +&lt;span class="s2"&gt;&amp;quot;%Y-%m-%dT%H:%M&amp;quot;&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;
-mkdir /home/pilot/data-to-nbp/most-recent
-find /home/sg**/p*.mat -mtime -0.25 -exec cp &lt;span class="o"&gt;{}&lt;/span&gt; /home/pilot/data-to-nbp/most-recent  &lt;span class="se"&gt;\;&lt;/span&gt;
-zip -rj /home/pilot/data-to-nbp/dives-to-nbp.zip /home/pilot/data-to-nbp/most-recent
-&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;data last 6 hours&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; mail -s &lt;span class="s2"&gt;&amp;quot;data4u&amp;quot;&lt;/span&gt; email@provider -A  /home/pilot/data-to-nbp/dives-to-nbp.zip
-&lt;span class="nb"&gt;printf&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;\n%s&amp;#39;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;date &lt;span class="s2"&gt;&amp;quot;+%Y-%m-%dT%H:%M:%S&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; /home/pilot/data-to-nbp/transfer.log
-&lt;span class="nb"&gt;printf&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;, transferred data&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; /home/pilot/data-to-nbp/transfer.log
+mv&lt;span class="w"&gt; &lt;/span&gt;/home/pilot/data-to-nbp/most-recent&lt;span class="w"&gt; &lt;/span&gt;/home/pilot/data-to-nbp/dives-&lt;span class="sb"&gt;`&lt;/span&gt;date&lt;span class="w"&gt; &lt;/span&gt;+&lt;span class="s2"&gt;&amp;quot;%Y-%m-%dT%H:%M&amp;quot;&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;
+mv&lt;span class="w"&gt; &lt;/span&gt;/home/pilot/data-to-nbp/dives-to-nbp.zip&lt;span class="w"&gt; &lt;/span&gt;/home/pilot/data-to-nbp/dives-to-nbp.zip-&lt;span class="sb"&gt;`&lt;/span&gt;date&lt;span class="w"&gt; &lt;/span&gt;+&lt;span class="s2"&gt;&amp;quot;%Y-%m-%dT%H:%M&amp;quot;&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;
+mkdir&lt;span class="w"&gt; &lt;/span&gt;/home/pilot/data-to-nbp/most-recent
+find&lt;span class="w"&gt; &lt;/span&gt;/home/sg**/p*.mat&lt;span class="w"&gt; &lt;/span&gt;-mtime&lt;span class="w"&gt; &lt;/span&gt;-0.25&lt;span class="w"&gt; &lt;/span&gt;-exec&lt;span class="w"&gt; &lt;/span&gt;cp&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;{}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;/home/pilot/data-to-nbp/most-recent&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="se"&gt;\;&lt;/span&gt;
+zip&lt;span class="w"&gt; &lt;/span&gt;-rj&lt;span class="w"&gt; &lt;/span&gt;/home/pilot/data-to-nbp/dives-to-nbp.zip&lt;span class="w"&gt; &lt;/span&gt;/home/pilot/data-to-nbp/most-recent
+&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;data last 6 hours&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;mail&lt;span class="w"&gt; &lt;/span&gt;-s&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;data4u&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;email@provider&lt;span class="w"&gt; &lt;/span&gt;-A&lt;span class="w"&gt;  &lt;/span&gt;/home/pilot/data-to-nbp/dives-to-nbp.zip
+&lt;span class="nb"&gt;printf&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;\n%s&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;date&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;+%Y-%m-%dT%H:%M:%S&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&amp;gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;/home/pilot/data-to-nbp/transfer.log
+&lt;span class="nb"&gt;printf&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;, transferred data&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&amp;gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;/home/pilot/data-to-nbp/transfer.log
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;This script performs several useful tasks. Here's a line by line breakdown
@@ -296,9 +296,9 @@ zip -rj /home/pilot/data-to-nbp/dives-to-nbp.zip /home/pilot/data-to-nbp/most-re
 &lt;p&gt;Short bash script that will take any input geotiff and create webtiles for use with leaflet maps. This is how I generated the ice maps for the &lt;a href="https://github.com/callumrollo/itgc-2022-map"&gt;nbp2202map&lt;/a&gt; and &lt;a href="https://nbp2202map.com/"&gt;website&lt;/a&gt;. Credit to &lt;a href="https://www.kth.se/profile/liling/"&gt;Li Ling&lt;/a&gt; for figuring out how to warp the geotiffs to a usable projection.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nv"&gt;PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$PATH&lt;/span&gt;:/home/callum/anaconda3/envs/geospatial/bin
 &lt;span class="nv"&gt;infile&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;input_filename.tif
-gdalwarp -t_srs EPSG:4326 -te -140 -76 -90 -66 &lt;span class="nv"&gt;$infile&lt;/span&gt; liproj.tif
-gdal_translate -of vrt -expand rgba liproj.tif li.vr
-gdal2tiles.py li.vrt AMSR  --zoom &lt;span class="m"&gt;1&lt;/span&gt;-9
+gdalwarp&lt;span class="w"&gt; &lt;/span&gt;-t_srs&lt;span class="w"&gt; &lt;/span&gt;EPSG:4326&lt;span class="w"&gt; &lt;/span&gt;-te&lt;span class="w"&gt; &lt;/span&gt;-140&lt;span class="w"&gt; &lt;/span&gt;-76&lt;span class="w"&gt; &lt;/span&gt;-90&lt;span class="w"&gt; &lt;/span&gt;-66&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$infile&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;liproj.tif
+gdal_translate&lt;span class="w"&gt; &lt;/span&gt;-of&lt;span class="w"&gt; &lt;/span&gt;vrt&lt;span class="w"&gt; &lt;/span&gt;-expand&lt;span class="w"&gt; &lt;/span&gt;rgba&lt;span class="w"&gt; &lt;/span&gt;liproj.tif&lt;span class="w"&gt; &lt;/span&gt;li.vr
+gdal2tiles.py&lt;span class="w"&gt; &lt;/span&gt;li.vrt&lt;span class="w"&gt; &lt;/span&gt;AMSR&lt;span class="w"&gt;  &lt;/span&gt;--zoom&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;-9
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Line by line:&lt;/p&gt;
@@ -389,9 +389,9 @@ gdal2tiles.py li.vrt AMSR  --zoom &lt;span class="m"&gt;1&lt;/span&gt;-9
 &lt;p&gt;README.md&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;# Doubler&lt;/span&gt;
 
-&lt;span class="n"&gt;This&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;package&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;is&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;function&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;that&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;doubles&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;numbers&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;making&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;them&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;twice&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;as&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;good&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;This&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;package&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;is&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;function&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;that&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;doubles&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;numbers&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;making&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;them&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;twice&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;as&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;good&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
 
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;website&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;here&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="n"&gt;www&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;doubler&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;documentation&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;website&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;here&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="n"&gt;www&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;doubler&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;documentation&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;a href="https://www.markdownguide.org/cheat-sheet/"&gt;&lt;em&gt;Hold up, what's markdown?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
@@ -410,13 +410,13 @@ gdal2tiles.py li.vrt AMSR  --zoom &lt;span class="m"&gt;1&lt;/span&gt;-9
 
 &lt;p&gt;We'll want a licence too, go and grab one from &lt;a href="https://opensource.org/licenses"&gt;opensource.org&lt;/a&gt;. In this case I've gone with the simple and permissive MIT license. Just dump the text into a file called LICENSE in the base directory, adding your name and the current year at the top. The license is what makes this a rad open source project that other people are free to remix. Code posted without a license will default to being your private intellectual property, which isn't rad at all.&lt;/p&gt;
 &lt;p&gt;After all this we have the following structure:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;packaging-dir  &lt;span class="o"&gt;(&lt;/span&gt;this directory name doesn&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;t matter&lt;span class="o"&gt;)&lt;/span&gt;
-├── doubler &lt;span class="o"&gt;(&lt;/span&gt;your package name&lt;span class="o"&gt;)&lt;/span&gt;
-│   ├── __init__.py
-│   └── bignumber.py &lt;span class="o"&gt;(&lt;/span&gt;the actual code&lt;span class="o"&gt;)&lt;/span&gt;
-├── LICENSE
-├── README.md
-└── setup.py &lt;span class="o"&gt;(&lt;/span&gt;explained &lt;span class="k"&gt;in&lt;/span&gt; the next section&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;packaging-dir&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;this&lt;span class="w"&gt; &lt;/span&gt;directory&lt;span class="w"&gt; &lt;/span&gt;name&lt;span class="w"&gt; &lt;/span&gt;doesn&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;t&lt;span class="w"&gt; &lt;/span&gt;matter&lt;span class="o"&gt;)&lt;/span&gt;
+├──&lt;span class="w"&gt; &lt;/span&gt;doubler&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;your&lt;span class="w"&gt; &lt;/span&gt;package&lt;span class="w"&gt; &lt;/span&gt;name&lt;span class="o"&gt;)&lt;/span&gt;
+│&lt;span class="w"&gt;   &lt;/span&gt;├──&lt;span class="w"&gt; &lt;/span&gt;__init__.py
+│&lt;span class="w"&gt;   &lt;/span&gt;└──&lt;span class="w"&gt; &lt;/span&gt;bignumber.py&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;the&lt;span class="w"&gt; &lt;/span&gt;actual&lt;span class="w"&gt; &lt;/span&gt;code&lt;span class="o"&gt;)&lt;/span&gt;
+├──&lt;span class="w"&gt; &lt;/span&gt;LICENSE
+├──&lt;span class="w"&gt; &lt;/span&gt;README.md
+└──&lt;span class="w"&gt; &lt;/span&gt;setup.py&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;explained&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;the&lt;span class="w"&gt; &lt;/span&gt;next&lt;span class="w"&gt; &lt;/span&gt;section&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3&gt;Put your project on github&lt;/h3&gt;
@@ -464,18 +464,18 @@ gdal2tiles.py li.vrt AMSR  --zoom &lt;span class="m"&gt;1&lt;/span&gt;-9
 &lt;p&gt;For (test)PyPI to accept your package, you'll need the correct credentials. You can type these in the command line each time you upload your package, or add them to a  file called &lt;strong&gt;.pypirc&lt;/strong&gt; in your home folder:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;[&lt;/span&gt;distutils&lt;span class="o"&gt;]&lt;/span&gt;
 index-servers&lt;span class="o"&gt;=&lt;/span&gt;
-    testpypi
-    pypi
+&lt;span class="w"&gt;    &lt;/span&gt;testpypi
+&lt;span class="w"&gt;    &lt;/span&gt;pypi
 
 &lt;span class="o"&gt;[&lt;/span&gt;testpypi&lt;span class="o"&gt;]&lt;/span&gt;
-&lt;span class="nv"&gt;repository&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; https://testpypi.python.org/pypi
-&lt;span class="nv"&gt;username&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &amp;lt;account_name&amp;gt;
-&lt;span class="nv"&gt;password&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &amp;lt;account_password&amp;gt;
+&lt;span class="nv"&gt;repository&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;https://testpypi.python.org/pypi
+&lt;span class="nv"&gt;username&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&amp;lt;account_name&amp;gt;
+&lt;span class="nv"&gt;password&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&amp;lt;account_password&amp;gt;
 
 &lt;span class="o"&gt;[&lt;/span&gt;pypi&lt;span class="o"&gt;]&lt;/span&gt;
-&lt;span class="nv"&gt;repository&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; https://test.pypi.org/legacy/
-&lt;span class="nv"&gt;username&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &amp;lt;account_name&amp;gt;
-&lt;span class="nv"&gt;password&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &amp;lt;account_password&amp;gt;
+&lt;span class="nv"&gt;repository&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;https://test.pypi.org/legacy/
+&lt;span class="nv"&gt;username&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&amp;lt;account_name&amp;gt;
+&lt;span class="nv"&gt;password&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&amp;lt;account_password&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Just change the stuff in the angle brackets. You probably shouldn't &lt;a href="https://xkcd.com/792/"&gt;reuse your password&lt;/a&gt;.&lt;/p&gt;
@@ -541,17 +541,17 @@ index-servers&lt;span class="o"&gt;=&lt;/span&gt;
 &lt;p&gt;Note the quote marks and lack of spaces round the &lt;code&gt;=&lt;/code&gt;, these are not  optional.&lt;/p&gt;
 &lt;p&gt;Aliases created in such a way will only last through your terminal session. To persist aliases, they must be copied into your shell's &lt;code&gt;rc&lt;/code&gt; file. This will be located in your home directory and typically hidden. For me it is &lt;code&gt;/home/callum/.zshrc&lt;/code&gt;. Simply copy the aliases to the end of your &lt;code&gt;rc&lt;/code&gt; file.&lt;/p&gt;
 &lt;p&gt;You can also set up slightly more complicated commands in the &lt;code&gt;rc&lt;/code&gt; file like so&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;mcd &lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-    mkdir -p &lt;span class="nv"&gt;$1&lt;/span&gt;
-    &lt;span class="nb"&gt;cd&lt;/span&gt; &lt;span class="nv"&gt;$1&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;mcd&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;mkdir&lt;span class="w"&gt; &lt;/span&gt;-p&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;This command makes a directory then moves you into it. Try out &lt;code&gt;mcd test&lt;/code&gt; then &lt;code&gt;pwd&lt;/code&gt; to check where you are.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;com &lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-    git add -A
-    git commit -m &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
-    git push
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;com&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;-A
+&lt;span class="w"&gt;    &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;commit&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;push
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -566,55 +566,55 @@ index-servers&lt;span class="o"&gt;=&lt;/span&gt;
 &lt;p&gt;These have saved me many hours of tedious manual tasks. Though I think some took more time to write than they have yet saved me...&lt;/p&gt;
 &lt;p&gt;Use &lt;a href="https://ffmpeg.org/"&gt;ffmpeg&lt;/a&gt; to apply fade in and out to a bunch of mp3 files&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
-&lt;span class="k"&gt;for&lt;/span&gt; i &lt;span class="k"&gt;in&lt;/span&gt; *.mp3&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
-    ffmpeg -i &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$i&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; -filter_complex &lt;span class="s2"&gt;&amp;quot;afade=d=0.5, areverse, afade=d=0.5, areverse&amp;quot;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;`basename &amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$i&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot; .mp3`f.mp3&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;i&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;*.mp3&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;do&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;ffmpeg&lt;span class="w"&gt; &lt;/span&gt;-i&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$i&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-filter_complex&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;afade=d=0.5, areverse, afade=d=0.5, areverse&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;`basename &amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$i&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot; .mp3`f.mp3&amp;quot;&lt;/span&gt;
 &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;For clipping a dataset of interest from a larger geographical dataset of shapefiles before plotting. Requires &lt;a href="https://gdal.org/"&gt;gdal&lt;/a&gt; library.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
 &lt;span class="c1"&gt;# &lt;/span&gt;
-ogr2ogr -f &lt;span class="s2"&gt;&amp;quot;ESRI Shapefile&amp;quot;&lt;/span&gt; hidf_land.shp /media/callum/storage/Documents/global_datasets/osm_land/land_polygons.shp -clipsrc &lt;span class="nv"&gt;$1&lt;/span&gt; &lt;span class="nv"&gt;$2&lt;/span&gt; &lt;span class="nv"&gt;$3&lt;/span&gt; &lt;span class="nv"&gt;$4&lt;/span&gt;
+ogr2ogr&lt;span class="w"&gt; &lt;/span&gt;-f&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ESRI Shapefile&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;hidf_land.shp&lt;span class="w"&gt; &lt;/span&gt;/media/callum/storage/Documents/global_datasets/osm_land/land_polygons.shp&lt;span class="w"&gt; &lt;/span&gt;-clipsrc&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$3&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$4&lt;/span&gt;
 &lt;span class="c1"&gt;# four numbers at end are western bound southern bound eastern bound and northern bound in degrees. Longitude is from -180 to 180&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Move your mouse every 30 seconds to prevent sleep mode. Inspired by &lt;a href="https://xkcd.com/196/"&gt;xkcd&lt;/a&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
-&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
-  xdotool mousemove &lt;span class="m"&gt;300&lt;/span&gt; &lt;span class="m"&gt;250&lt;/span&gt;
-  sleep &lt;span class="m"&gt;30&lt;/span&gt;
-  xdotool mousemove &lt;span class="m"&gt;300&lt;/span&gt; &lt;span class="m"&gt;850&lt;/span&gt;
-  sleep &lt;span class="m"&gt;30&lt;/span&gt;
+&lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;do&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;xdotool&lt;span class="w"&gt; &lt;/span&gt;mousemove&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;300&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;250&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;sleep&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;30&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;xdotool&lt;span class="w"&gt; &lt;/span&gt;mousemove&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;300&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;850&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;sleep&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;30&lt;/span&gt;
 &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Use &lt;a href="https://imagemagick.org/index.php"&gt;imagemagick&lt;/a&gt; to crop and animate a bunch of figures into a gif. Written the night before a conference, don't judge me.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
 
-&lt;span class="k"&gt;for&lt;/span&gt; i &lt;span class="k"&gt;in&lt;/span&gt; bar*.png
+&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;i&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;bar*.png
 &lt;span class="k"&gt;do&lt;/span&gt;
 &lt;span class="nv"&gt;num&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;i&lt;/span&gt;&lt;span class="p"&gt;: 3:&lt;/span&gt;&lt;span class="nv"&gt;3&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;
 
 &lt;span class="nv"&gt;filen&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;clip&lt;/span&gt;&lt;span class="nv"&gt;$num&lt;/span&gt;&lt;span class="s2"&gt;.png&amp;quot;&lt;/span&gt;
 &lt;span class="nv"&gt;filen2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;crop&lt;/span&gt;&lt;span class="nv"&gt;$num&lt;/span&gt;&lt;span class="s2"&gt;.png&amp;quot;&lt;/span&gt;
-convert &lt;span class="nv"&gt;$i&lt;/span&gt; -trim +repage &lt;span class="nv"&gt;$filen&lt;/span&gt;
-convert -crop -800-300 &lt;span class="nv"&gt;$filen&lt;/span&gt; &lt;span class="nv"&gt;$filen2&lt;/span&gt;
+convert&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$i&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-trim&lt;span class="w"&gt; &lt;/span&gt;+repage&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$filen&lt;/span&gt;
+convert&lt;span class="w"&gt; &lt;/span&gt;-crop&lt;span class="w"&gt; &lt;/span&gt;-800-300&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$filen&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$filen2&lt;/span&gt;
 &lt;span class="k"&gt;done&lt;/span&gt;
-convert -delay &lt;span class="m"&gt;20&lt;/span&gt; -loop &lt;span class="m"&gt;1&lt;/span&gt; crop*.png animation.gif
-&lt;span class="nb"&gt;echo&lt;/span&gt; foo
-convert animation.gif  -trim +repage ani.gif
+convert&lt;span class="w"&gt; &lt;/span&gt;-delay&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;20&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-loop&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;crop*.png&lt;span class="w"&gt; &lt;/span&gt;animation.gif
+&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;foo
+convert&lt;span class="w"&gt; &lt;/span&gt;animation.gif&lt;span class="w"&gt;  &lt;/span&gt;-trim&lt;span class="w"&gt; &lt;/span&gt;+repage&lt;span class="w"&gt; &lt;/span&gt;ani.gif
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;More imagemagick to make tight figures (remove all whitespace from edges)&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
 
-rsync --recursive --filter&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;-! */&amp;quot;&lt;/span&gt; figures figures_crop
+rsync&lt;span class="w"&gt; &lt;/span&gt;--recursive&lt;span class="w"&gt; &lt;/span&gt;--filter&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;-! */&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;figures&lt;span class="w"&gt; &lt;/span&gt;figures_crop
 
-&lt;span class="nb"&gt;shopt&lt;/span&gt; -s extglob nullglob globstar
-&lt;span class="k"&gt;for&lt;/span&gt; file &lt;span class="k"&gt;in&lt;/span&gt; figures/**/*.png
+&lt;span class="nb"&gt;shopt&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-s&lt;span class="w"&gt; &lt;/span&gt;extglob&lt;span class="w"&gt; &lt;/span&gt;nullglob&lt;span class="w"&gt; &lt;/span&gt;globstar
+&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;file&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;figures/**/*.png
 &lt;span class="k"&gt;do&lt;/span&gt;
-    &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$file&lt;/span&gt;
-    convert &lt;span class="nv"&gt;$file&lt;/span&gt; -trim +repage &lt;span class="s2"&gt;&amp;quot;figures_crop/&lt;/span&gt;&lt;span class="nv"&gt;$file&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$file&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;convert&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$file&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-trim&lt;span class="w"&gt; &lt;/span&gt;+repage&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;figures_crop/&lt;/span&gt;&lt;span class="nv"&gt;$file&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
 &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -624,18 +624,18 @@ rsync --recursive --filter&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2
 &lt;span class="nv"&gt;_dir&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;1&lt;/span&gt;&lt;span class="k"&gt;:-&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;PWD&lt;/span&gt;&lt;span class="si"&gt;}}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
 
 &lt;span class="c1"&gt;# Die if given a bad directory path&lt;/span&gt;
-&lt;span class="o"&gt;[&lt;/span&gt; ! -d &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$_dir&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Error: Directory &lt;/span&gt;&lt;span class="nv"&gt;$_dir&lt;/span&gt;&lt;span class="s2"&gt; not found.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nb"&gt;exit&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;!&lt;span class="w"&gt; &lt;/span&gt;-d&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$_dir&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Error: Directory &lt;/span&gt;&lt;span class="nv"&gt;$_dir&lt;/span&gt;&lt;span class="s2"&gt; not found.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;exit&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;}&lt;/span&gt;
 
-&amp;gt; alti.txt
+&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;alti.txt
 
 
-&lt;span class="nb"&gt;printf&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;dive_no,altim_ping_depth,altim_bottom_ping,bottom_dist&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; alti.txt
+&lt;span class="nb"&gt;printf&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;dive_no,altim_ping_depth,altim_bottom_ping,bottom_dist&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&amp;gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;alti.txt
 
-&lt;span class="k"&gt;for&lt;/span&gt; i &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;$1&lt;/span&gt;/*.log&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
-    &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt;
-    awk -F, &lt;span class="s1"&gt;&amp;#39;$1 == &amp;quot;$DIVE&amp;quot; {printf &amp;quot;\n&amp;quot; ; printf $2}&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt; &amp;gt;&amp;gt; alti.txt
-    awk -F, &lt;span class="s1"&gt;&amp;#39;$1 == &amp;quot;$ALTIM_PING_DEPTH&amp;quot; {$2=&amp;quot;,&amp;quot;$2; printf $2}&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt; &amp;gt;&amp;gt; alti.txt
-    awk -F, &lt;span class="s1"&gt;&amp;#39;$1 == &amp;quot;$ALTIM_BOTTOM_PING&amp;quot; {$2=&amp;quot;,&amp;quot;$2&amp;quot;,&amp;quot;; printf $2 $3}&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt; &amp;gt;&amp;gt; alti.txt
+&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;i&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;/*.log&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;do&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$i&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;awk&lt;span class="w"&gt; &lt;/span&gt;-F,&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$1 == &amp;quot;$DIVE&amp;quot; {printf &amp;quot;\n&amp;quot; ; printf $2}&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$i&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&amp;gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;alti.txt
+&lt;span class="w"&gt;    &lt;/span&gt;awk&lt;span class="w"&gt; &lt;/span&gt;-F,&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$1 == &amp;quot;$ALTIM_PING_DEPTH&amp;quot; {$2=&amp;quot;,&amp;quot;$2; printf $2}&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$i&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&amp;gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;alti.txt
+&lt;span class="w"&gt;    &lt;/span&gt;awk&lt;span class="w"&gt; &lt;/span&gt;-F,&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$1 == &amp;quot;$ALTIM_BOTTOM_PING&amp;quot; {$2=&amp;quot;,&amp;quot;$2&amp;quot;,&amp;quot;; printf $2 $3}&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$i&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&amp;gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;alti.txt
 &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -645,26 +645,26 @@ rsync --recursive --filter&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2
 &lt;span class="nv"&gt;_dir&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;1&lt;/span&gt;&lt;span class="k"&gt;:-&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;PWD&lt;/span&gt;&lt;span class="si"&gt;}}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
 
 &lt;span class="c1"&gt;# Die if given a bad directory path&lt;/span&gt;
-&lt;span class="o"&gt;[&lt;/span&gt; ! -d &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$_dir&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Error: Directory &lt;/span&gt;&lt;span class="nv"&gt;$_dir&lt;/span&gt;&lt;span class="s2"&gt; not found.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nb"&gt;exit&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;!&lt;span class="w"&gt; &lt;/span&gt;-d&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$_dir&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Error: Directory &lt;/span&gt;&lt;span class="nv"&gt;$_dir&lt;/span&gt;&lt;span class="s2"&gt; not found.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;exit&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;}&lt;/span&gt;
 
 &lt;span class="c1"&gt;# Make a blank text file&lt;/span&gt;
-&amp;gt; min_v.txt
+&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;min_v.txt
 
 &lt;span class="c1"&gt;# Print row names&lt;/span&gt;
-&lt;span class="nb"&gt;printf&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;dive_no,min_10V,min_24V&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; min_v.txt
+&lt;span class="nb"&gt;printf&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;dive_no,min_10V,min_24V&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&amp;gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;min_v.txt
 
 &lt;span class="c1"&gt;# Search the log files for minimum voltages of both batteries&lt;/span&gt;
-&lt;span class="k"&gt;for&lt;/span&gt; i &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;$_dir&lt;/span&gt;/p*.log&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;i&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$_dir&lt;/span&gt;/p*.log&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;do&lt;/span&gt;
 
-    &lt;span class="nv"&gt;num&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;i&lt;/span&gt;&lt;span class="p"&gt;: -8:&lt;/span&gt;&lt;span class="nv"&gt;4&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;
-    &lt;span class="nb"&gt;printf&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;\n&lt;/span&gt;&lt;span class="nv"&gt;$num&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; min_v.txt
-    &lt;span class="c1"&gt;#awk -F, &amp;#39;$1 == &amp;quot;$10V_AH&amp;quot; {printf &amp;quot;\n&amp;quot; ; printf $2}&amp;#39; $i &amp;gt;&amp;gt; min_v.txt&lt;/span&gt;
-    awk -F, &lt;span class="s1"&gt;&amp;#39;$1 == &amp;quot;$10V_AH&amp;quot; {$2=&amp;quot;,&amp;quot;$2; printf $2}&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt; &amp;gt;&amp;gt; min_v.txt
-    awk -F, &lt;span class="s1"&gt;&amp;#39;$1 == &amp;quot;$24V_AH&amp;quot; {$2=&amp;quot;,&amp;quot;$2; printf $2}&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt; &amp;gt;&amp;gt; min_v.txt
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;num&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;i&lt;/span&gt;&lt;span class="p"&gt;: -8:&lt;/span&gt;&lt;span class="nv"&gt;4&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nb"&gt;printf&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;\n&lt;/span&gt;&lt;span class="nv"&gt;$num&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&amp;gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;min_v.txt
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="c1"&gt;#awk -F, &amp;#39;$1 == &amp;quot;$10V_AH&amp;quot; {printf &amp;quot;\n&amp;quot; ; printf $2}&amp;#39; $i &amp;gt;&amp;gt; min_v.txt&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;awk&lt;span class="w"&gt; &lt;/span&gt;-F,&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$1 == &amp;quot;$10V_AH&amp;quot; {$2=&amp;quot;,&amp;quot;$2; printf $2}&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$i&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&amp;gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;min_v.txt
+&lt;span class="w"&gt;    &lt;/span&gt;awk&lt;span class="w"&gt; &lt;/span&gt;-F,&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$1 == &amp;quot;$24V_AH&amp;quot; {$2=&amp;quot;,&amp;quot;$2; printf $2}&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$i&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&amp;gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;min_v.txt
 &lt;span class="k"&gt;done&lt;/span&gt;
 
 &lt;span class="c1"&gt;# Remove rows with less than three values (typically dive 0000)&lt;/span&gt;
-awk -F , &lt;span class="s1"&gt;&amp;#39;NF&amp;gt;=3&amp;#39;&lt;/span&gt; min_v.txt &amp;gt;&amp;gt; min_volts.txt
+awk&lt;span class="w"&gt; &lt;/span&gt;-F&lt;span class="w"&gt; &lt;/span&gt;,&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;NF&amp;gt;=3&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;min_v.txt&lt;span class="w"&gt; &lt;/span&gt;&amp;gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;min_volts.txt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3&gt;Scripts shamelessly copied from other, wiser people&lt;/h3&gt;

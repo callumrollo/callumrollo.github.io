@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="https://callumrollo.github.io/theme/stylesheet/style.min.css">
 
@@ -22,13 +22,12 @@
   <link rel="stylesheet" type="text/css" href="https://callumrollo.github.io/theme/font-awesome/css/solid.css">
 
 
-    <link href="https://callumrollo.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Callum Rollo Atom">
+    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Callum Rollo Atom">
 
 
-    <link rel="shortcut icon" href="https://callumrollo.github.io/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="https://callumrollo.github.io/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 
-  
 
     <!-- Chrome, Firefox OS and Opera -->
     <meta name="theme-color" content="#333333">
@@ -40,28 +39,26 @@
     <!-- Microsoft EDGE -->
     <meta name="msapplication-TileColor" content="#333333">
 
- 
-
 <meta name="author" content="Callum Rollo" />
 <meta name="description" content="Excerpts from my .bashrc and shell scripts" />
 <meta name="keywords" content="linux, bash, software, optimise">
 
 
-  <meta property="og:site_name" content="Callum Rollo"/>
-  <meta property="og:title" content="Shell games"/>
-  <meta property="og:description" content="Excerpts from my .bashrc and shell scripts"/>
-  <meta property="og:locale" content="en_US"/>
-  <meta property="og:url" content="https://callumrollo.github.io/bash.html"/>
-  <meta property="og:type" content="article"/>
-  <meta property="article:published_time" content="2020-10-02 18:20:00+01:00"/>
-  <meta property="article:modified_time" content="2020-10-26 10:50:00+00:00"/>
-  <meta property="article:author" content="https://callumrollo.github.io/author/callum-rollo.html">
-  <meta property="article:section" content="FOSS"/>
-  <meta property="article:tag" content="linux"/>
-  <meta property="article:tag" content="bash"/>
-  <meta property="article:tag" content="software"/>
-  <meta property="article:tag" content="optimise"/>
-  <meta property="og:image" content="https://callumrollo.github.io/images/mug.jpg">
+<meta property="og:site_name" content="Callum Rollo"/>
+<meta property="og:title" content="Shell games"/>
+<meta property="og:description" content="Excerpts from my .bashrc and shell scripts"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://callumrollo.github.io/bash.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2020-10-02 18:20:00+01:00"/>
+<meta property="article:modified_time" content="2020-10-26 10:50:00+00:00"/>
+<meta property="article:author" content="https://callumrollo.github.io/author/callum-rollo.html">
+<meta property="article:section" content="FOSS"/>
+<meta property="article:tag" content="linux"/>
+<meta property="article:tag" content="bash"/>
+<meta property="article:tag" content="software"/>
+<meta property="article:tag" content="optimise"/>
+<meta property="og:image" content="/images/mug.jpg">
 
   <title>Callum Rollo &ndash; Shell games</title>
 
@@ -69,12 +66,12 @@
 <body class="light-theme">
   <aside>
     <div>
-      <a href="https://callumrollo.github.io/">
-        <img src="https://callumrollo.github.io/images/mug.jpg" alt="Callum Rollo" title="Callum Rollo">
+      <a href="https://callumrollo.github.io">
+        <img src="/images/mug.jpg" alt="Callum Rollo" title="Callum Rollo">
       </a>
 
       <h1>
-        <a href="https://callumrollo.github.io/">Callum Rollo</a>
+        <a href="https://callumrollo.github.io">Callum Rollo</a>
       </h1>
 
 <p>Throwing stuff in the ocean, responsibly</p>
@@ -129,12 +126,12 @@
   <main>
 
     <nav>
-      <a href="https://callumrollo.github.io/">Home</a>
+      <a href="https://callumrollo.github.io">Home</a>
 
       <a href="/categories.html">Categories</a>
       <a href="/tags.html">Tags</a>
 
-      <a href="https://callumrollo.github.io/feeds/all.atom.xml">Atom</a>
+      <a href="/feeds/all.atom.xml">Atom</a>
 
     </nav>
 
@@ -184,17 +181,17 @@
 <p>Note the quote marks and lack of spaces round the <code>=</code>, these are not  optional.</p>
 <p>Aliases created in such a way will only last through your terminal session. To persist aliases, they must be copied into your shell's <code>rc</code> file. This will be located in your home directory and typically hidden. For me it is <code>/home/callum/.zshrc</code>. Simply copy the aliases to the end of your <code>rc</code> file.</p>
 <p>You can also set up slightly more complicated commands in the <code>rc</code> file like so</p>
-<div class="highlight"><pre><span></span><code>mcd <span class="o">()</span> <span class="o">{</span>
-    mkdir -p <span class="nv">$1</span>
-    <span class="nb">cd</span> <span class="nv">$1</span>
+<div class="highlight"><pre><span></span><code>mcd<span class="w"> </span><span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$1</span>
+<span class="w">    </span><span class="nb">cd</span><span class="w"> </span><span class="nv">$1</span>
 <span class="o">}</span>
 </code></pre></div>
 
 <p>This command makes a directory then moves you into it. Try out <code>mcd test</code> then <code>pwd</code> to check where you are.</p>
-<div class="highlight"><pre><span></span><code>com <span class="o">()</span> <span class="o">{</span>
-    git add -A
-    git commit -m <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
-    git push
+<div class="highlight"><pre><span></span><code>com<span class="w"> </span><span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>git<span class="w"> </span>add<span class="w"> </span>-A
+<span class="w">    </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
+<span class="w">    </span>git<span class="w"> </span>push
 <span class="o">}</span>
 </code></pre></div>
 
@@ -209,55 +206,55 @@
 <p>These have saved me many hours of tedious manual tasks. Though I think some took more time to write than they have yet saved me...</p>
 <p>Use <a href="https://ffmpeg.org/">ffmpeg</a> to apply fade in and out to a bunch of mp3 files</p>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
-<span class="k">for</span> i <span class="k">in</span> *.mp3<span class="p">;</span> <span class="k">do</span>
-    ffmpeg -i <span class="s2">&quot;</span><span class="nv">$i</span><span class="s2">&quot;</span> -filter_complex <span class="s2">&quot;afade=d=0.5, areverse, afade=d=0.5, areverse&quot;</span> <span class="s2">&quot;`basename &quot;</span><span class="nv">$i</span><span class="s2">&quot; .mp3`f.mp3&quot;</span>
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span>*.mp3<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span>ffmpeg<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$i</span><span class="s2">&quot;</span><span class="w"> </span>-filter_complex<span class="w"> </span><span class="s2">&quot;afade=d=0.5, areverse, afade=d=0.5, areverse&quot;</span><span class="w"> </span><span class="s2">&quot;`basename &quot;</span><span class="nv">$i</span><span class="s2">&quot; .mp3`f.mp3&quot;</span>
 <span class="k">done</span>
 </code></pre></div>
 
 <p>For clipping a dataset of interest from a larger geographical dataset of shapefiles before plotting. Requires <a href="https://gdal.org/">gdal</a> library.</p>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 <span class="c1"># </span>
-ogr2ogr -f <span class="s2">&quot;ESRI Shapefile&quot;</span> hidf_land.shp /media/callum/storage/Documents/global_datasets/osm_land/land_polygons.shp -clipsrc <span class="nv">$1</span> <span class="nv">$2</span> <span class="nv">$3</span> <span class="nv">$4</span>
+ogr2ogr<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;ESRI Shapefile&quot;</span><span class="w"> </span>hidf_land.shp<span class="w"> </span>/media/callum/storage/Documents/global_datasets/osm_land/land_polygons.shp<span class="w"> </span>-clipsrc<span class="w"> </span><span class="nv">$1</span><span class="w"> </span><span class="nv">$2</span><span class="w"> </span><span class="nv">$3</span><span class="w"> </span><span class="nv">$4</span>
 <span class="c1"># four numbers at end are western bound southern bound eastern bound and northern bound in degrees. Longitude is from -180 to 180</span>
 </code></pre></div>
 
 <p>Move your mouse every 30 seconds to prevent sleep mode. Inspired by <a href="https://xkcd.com/196/">xkcd</a></p>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
-<span class="k">while</span> <span class="o">[</span> <span class="m">1</span> <span class="o">]</span><span class="p">;</span> <span class="k">do</span>
-  xdotool mousemove <span class="m">300</span> <span class="m">250</span>
-  sleep <span class="m">30</span>
-  xdotool mousemove <span class="m">300</span> <span class="m">850</span>
-  sleep <span class="m">30</span>
+<span class="k">while</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span>xdotool<span class="w"> </span>mousemove<span class="w"> </span><span class="m">300</span><span class="w"> </span><span class="m">250</span>
+<span class="w">  </span>sleep<span class="w"> </span><span class="m">30</span>
+<span class="w">  </span>xdotool<span class="w"> </span>mousemove<span class="w"> </span><span class="m">300</span><span class="w"> </span><span class="m">850</span>
+<span class="w">  </span>sleep<span class="w"> </span><span class="m">30</span>
 <span class="k">done</span>
 </code></pre></div>
 
 <p>Use <a href="https://imagemagick.org/index.php">imagemagick</a> to crop and animate a bunch of figures into a gif. Written the night before a conference, don't judge me.</p>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
-<span class="k">for</span> i <span class="k">in</span> bar*.png
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span>bar*.png
 <span class="k">do</span>
 <span class="nv">num</span><span class="o">=</span><span class="si">${</span><span class="nv">i</span><span class="p">: 3:</span><span class="nv">3</span><span class="si">}</span>
 
 <span class="nv">filen</span><span class="o">=</span><span class="s2">&quot;clip</span><span class="nv">$num</span><span class="s2">.png&quot;</span>
 <span class="nv">filen2</span><span class="o">=</span><span class="s2">&quot;crop</span><span class="nv">$num</span><span class="s2">.png&quot;</span>
-convert <span class="nv">$i</span> -trim +repage <span class="nv">$filen</span>
-convert -crop -800-300 <span class="nv">$filen</span> <span class="nv">$filen2</span>
+convert<span class="w"> </span><span class="nv">$i</span><span class="w"> </span>-trim<span class="w"> </span>+repage<span class="w"> </span><span class="nv">$filen</span>
+convert<span class="w"> </span>-crop<span class="w"> </span>-800-300<span class="w"> </span><span class="nv">$filen</span><span class="w"> </span><span class="nv">$filen2</span>
 <span class="k">done</span>
-convert -delay <span class="m">20</span> -loop <span class="m">1</span> crop*.png animation.gif
-<span class="nb">echo</span> foo
-convert animation.gif  -trim +repage ani.gif
+convert<span class="w"> </span>-delay<span class="w"> </span><span class="m">20</span><span class="w"> </span>-loop<span class="w"> </span><span class="m">1</span><span class="w"> </span>crop*.png<span class="w"> </span>animation.gif
+<span class="nb">echo</span><span class="w"> </span>foo
+convert<span class="w"> </span>animation.gif<span class="w">  </span>-trim<span class="w"> </span>+repage<span class="w"> </span>ani.gif
 </code></pre></div>
 
 <p>More imagemagick to make tight figures (remove all whitespace from edges)</p>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
-rsync --recursive --filter<span class="o">=</span><span class="s2">&quot;-! */&quot;</span> figures figures_crop
+rsync<span class="w"> </span>--recursive<span class="w"> </span>--filter<span class="o">=</span><span class="s2">&quot;-! */&quot;</span><span class="w"> </span>figures<span class="w"> </span>figures_crop
 
-<span class="nb">shopt</span> -s extglob nullglob globstar
-<span class="k">for</span> file <span class="k">in</span> figures/**/*.png
+<span class="nb">shopt</span><span class="w"> </span>-s<span class="w"> </span>extglob<span class="w"> </span>nullglob<span class="w"> </span>globstar
+<span class="k">for</span><span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span>figures/**/*.png
 <span class="k">do</span>
-    <span class="nb">echo</span> <span class="nv">$file</span>
-    convert <span class="nv">$file</span> -trim +repage <span class="s2">&quot;figures_crop/</span><span class="nv">$file</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$file</span>
+<span class="w">    </span>convert<span class="w"> </span><span class="nv">$file</span><span class="w"> </span>-trim<span class="w"> </span>+repage<span class="w"> </span><span class="s2">&quot;figures_crop/</span><span class="nv">$file</span><span class="s2">&quot;</span>
 <span class="k">done</span>
 </code></pre></div>
 
@@ -267,18 +264,18 @@ rsync --recursive --filter<span class="o">=</span><span class="s2">&quot;-! */&q
 <span class="nv">_dir</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">1</span><span class="k">:-</span><span class="si">${</span><span class="nv">PWD</span><span class="si">}}</span><span class="s2">&quot;</span>
 
 <span class="c1"># Die if given a bad directory path</span>
-<span class="o">[</span> ! -d <span class="s2">&quot;</span><span class="nv">$_dir</span><span class="s2">&quot;</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="o">{</span> <span class="nb">echo</span> <span class="s2">&quot;Error: Directory </span><span class="nv">$_dir</span><span class="s2"> not found.&quot;</span><span class="p">;</span> <span class="nb">exit</span> <span class="m">2</span><span class="p">;</span> <span class="o">}</span>
+<span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$_dir</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Error: Directory </span><span class="nv">$_dir</span><span class="s2"> not found.&quot;</span><span class="p">;</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">2</span><span class="p">;</span><span class="w"> </span><span class="o">}</span>
 
-&gt; alti.txt
+&gt;<span class="w"> </span>alti.txt
 
 
-<span class="nb">printf</span> <span class="s2">&quot;dive_no,altim_ping_depth,altim_bottom_ping,bottom_dist&quot;</span> &gt;&gt; alti.txt
+<span class="nb">printf</span><span class="w"> </span><span class="s2">&quot;dive_no,altim_ping_depth,altim_bottom_ping,bottom_dist&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>alti.txt
 
-<span class="k">for</span> i <span class="k">in</span> <span class="nv">$1</span>/*.log<span class="p">;</span> <span class="k">do</span>
-    <span class="nb">echo</span> <span class="nv">$i</span>
-    awk -F, <span class="s1">&#39;$1 == &quot;$DIVE&quot; {printf &quot;\n&quot; ; printf $2}&#39;</span> <span class="nv">$i</span> &gt;&gt; alti.txt
-    awk -F, <span class="s1">&#39;$1 == &quot;$ALTIM_PING_DEPTH&quot; {$2=&quot;,&quot;$2; printf $2}&#39;</span> <span class="nv">$i</span> &gt;&gt; alti.txt
-    awk -F, <span class="s1">&#39;$1 == &quot;$ALTIM_BOTTOM_PING&quot; {$2=&quot;,&quot;$2&quot;,&quot;; printf $2 $3}&#39;</span> <span class="nv">$i</span> &gt;&gt; alti.txt
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nv">$1</span>/*.log<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$i</span>
+<span class="w">    </span>awk<span class="w"> </span>-F,<span class="w"> </span><span class="s1">&#39;$1 == &quot;$DIVE&quot; {printf &quot;\n&quot; ; printf $2}&#39;</span><span class="w"> </span><span class="nv">$i</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>alti.txt
+<span class="w">    </span>awk<span class="w"> </span>-F,<span class="w"> </span><span class="s1">&#39;$1 == &quot;$ALTIM_PING_DEPTH&quot; {$2=&quot;,&quot;$2; printf $2}&#39;</span><span class="w"> </span><span class="nv">$i</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>alti.txt
+<span class="w">    </span>awk<span class="w"> </span>-F,<span class="w"> </span><span class="s1">&#39;$1 == &quot;$ALTIM_BOTTOM_PING&quot; {$2=&quot;,&quot;$2&quot;,&quot;; printf $2 $3}&#39;</span><span class="w"> </span><span class="nv">$i</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>alti.txt
 <span class="k">done</span>
 </code></pre></div>
 
@@ -288,26 +285,26 @@ rsync --recursive --filter<span class="o">=</span><span class="s2">&quot;-! */&q
 <span class="nv">_dir</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">1</span><span class="k">:-</span><span class="si">${</span><span class="nv">PWD</span><span class="si">}}</span><span class="s2">&quot;</span>
 
 <span class="c1"># Die if given a bad directory path</span>
-<span class="o">[</span> ! -d <span class="s2">&quot;</span><span class="nv">$_dir</span><span class="s2">&quot;</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="o">{</span> <span class="nb">echo</span> <span class="s2">&quot;Error: Directory </span><span class="nv">$_dir</span><span class="s2"> not found.&quot;</span><span class="p">;</span> <span class="nb">exit</span> <span class="m">2</span><span class="p">;</span> <span class="o">}</span>
+<span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$_dir</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Error: Directory </span><span class="nv">$_dir</span><span class="s2"> not found.&quot;</span><span class="p">;</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">2</span><span class="p">;</span><span class="w"> </span><span class="o">}</span>
 
 <span class="c1"># Make a blank text file</span>
-&gt; min_v.txt
+&gt;<span class="w"> </span>min_v.txt
 
 <span class="c1"># Print row names</span>
-<span class="nb">printf</span> <span class="s2">&quot;dive_no,min_10V,min_24V&quot;</span> &gt;&gt; min_v.txt
+<span class="nb">printf</span><span class="w"> </span><span class="s2">&quot;dive_no,min_10V,min_24V&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>min_v.txt
 
 <span class="c1"># Search the log files for minimum voltages of both batteries</span>
-<span class="k">for</span> i <span class="k">in</span> <span class="nv">$_dir</span>/p*.log<span class="p">;</span> <span class="k">do</span>
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nv">$_dir</span>/p*.log<span class="p">;</span><span class="w"> </span><span class="k">do</span>
 
-    <span class="nv">num</span><span class="o">=</span><span class="si">${</span><span class="nv">i</span><span class="p">: -8:</span><span class="nv">4</span><span class="si">}</span>
-    <span class="nb">printf</span> <span class="s2">&quot;\n</span><span class="nv">$num</span><span class="s2">&quot;</span> &gt;&gt; min_v.txt
-    <span class="c1">#awk -F, &#39;$1 == &quot;$10V_AH&quot; {printf &quot;\n&quot; ; printf $2}&#39; $i &gt;&gt; min_v.txt</span>
-    awk -F, <span class="s1">&#39;$1 == &quot;$10V_AH&quot; {$2=&quot;,&quot;$2; printf $2}&#39;</span> <span class="nv">$i</span> &gt;&gt; min_v.txt
-    awk -F, <span class="s1">&#39;$1 == &quot;$24V_AH&quot; {$2=&quot;,&quot;$2; printf $2}&#39;</span> <span class="nv">$i</span> &gt;&gt; min_v.txt
+<span class="w">    </span><span class="nv">num</span><span class="o">=</span><span class="si">${</span><span class="nv">i</span><span class="p">: -8:</span><span class="nv">4</span><span class="si">}</span>
+<span class="w">    </span><span class="nb">printf</span><span class="w"> </span><span class="s2">&quot;\n</span><span class="nv">$num</span><span class="s2">&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>min_v.txt
+<span class="w">    </span><span class="c1">#awk -F, &#39;$1 == &quot;$10V_AH&quot; {printf &quot;\n&quot; ; printf $2}&#39; $i &gt;&gt; min_v.txt</span>
+<span class="w">    </span>awk<span class="w"> </span>-F,<span class="w"> </span><span class="s1">&#39;$1 == &quot;$10V_AH&quot; {$2=&quot;,&quot;$2; printf $2}&#39;</span><span class="w"> </span><span class="nv">$i</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>min_v.txt
+<span class="w">    </span>awk<span class="w"> </span>-F,<span class="w"> </span><span class="s1">&#39;$1 == &quot;$24V_AH&quot; {$2=&quot;,&quot;$2; printf $2}&#39;</span><span class="w"> </span><span class="nv">$i</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>min_v.txt
 <span class="k">done</span>
 
 <span class="c1"># Remove rows with less than three values (typically dive 0000)</span>
-awk -F , <span class="s1">&#39;NF&gt;=3&#39;</span> min_v.txt &gt;&gt; min_volts.txt
+awk<span class="w"> </span>-F<span class="w"> </span>,<span class="w"> </span><span class="s1">&#39;NF&gt;=3&#39;</span><span class="w"> </span>min_v.txt<span class="w"> </span>&gt;&gt;<span class="w"> </span>min_volts.txt
 </code></pre></div>
 
 <h3>Scripts shamelessly copied from other, wiser people</h3>
@@ -334,7 +331,7 @@ awk -F , <span class="s1">&#39;NF&gt;=3&#39;</span> min_v.txt &gt;&gt; min_volts
 
     <footer>
 <p>
-  &copy; 2022  - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.en_US" target="_blank">Creative Commons Attribution-ShareAlike</a>
+  &copy;  2023 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
 </p>
 <p>
 Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
@@ -361,10 +358,11 @@ Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a 
   "@type" : "Blog",
   "name": " Callum Rollo ",
   "url" : "https://callumrollo.github.io",
-  "image": "https://callumrollo.github.io/images/mug.jpg",
+  "image": "/images/mug.jpg",
   "description": "Science should be open. Software should be free. Borders are rubbish "
 }
 </script>
+
 
 </body>
 </html>

@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="https://callumrollo.github.io/theme/stylesheet/style.min.css">
 
@@ -22,13 +22,12 @@
   <link rel="stylesheet" type="text/css" href="https://callumrollo.github.io/theme/font-awesome/css/solid.css">
 
 
-    <link href="https://callumrollo.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Callum Rollo Atom">
+    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Callum Rollo Atom">
 
 
-    <link rel="shortcut icon" href="https://callumrollo.github.io/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="https://callumrollo.github.io/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 
-  
 
     <!-- Chrome, Firefox OS and Opera -->
     <meta name="theme-color" content="#333333">
@@ -40,31 +39,29 @@
     <!-- Microsoft EDGE -->
     <meta name="msapplication-TileColor" content="#333333">
 
- 
-
 <meta name="author" content="Callum Rollo" />
 <meta name="description" content="Writing hacky scripts for oceanography" />
 <meta name="keywords" content="linux, bash, software, optimise, oceanography, cruise, bandwidth">
 
 
-  <meta property="og:site_name" content="Callum Rollo"/>
-  <meta property="og:title" content="Automation for oceanographers"/>
-  <meta property="og:description" content="Writing hacky scripts for oceanography"/>
-  <meta property="og:locale" content="en_US"/>
-  <meta property="og:url" content="https://callumrollo.github.io/automation.html"/>
-  <meta property="og:type" content="article"/>
-  <meta property="article:published_time" content="2022-01-07 15:20:00+00:00"/>
-  <meta property="article:modified_time" content="2022-04-18 14:15:00+01:00"/>
-  <meta property="article:author" content="https://callumrollo.github.io/author/callum-rollo.html">
-  <meta property="article:section" content="FOSS"/>
-  <meta property="article:tag" content="linux"/>
-  <meta property="article:tag" content="bash"/>
-  <meta property="article:tag" content="software"/>
-  <meta property="article:tag" content="optimise"/>
-  <meta property="article:tag" content="oceanography"/>
-  <meta property="article:tag" content="cruise"/>
-  <meta property="article:tag" content="bandwidth"/>
-  <meta property="og:image" content="https://callumrollo.github.io/images/mug.jpg">
+<meta property="og:site_name" content="Callum Rollo"/>
+<meta property="og:title" content="Automation for oceanographers"/>
+<meta property="og:description" content="Writing hacky scripts for oceanography"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://callumrollo.github.io/automation.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2022-01-07 15:20:00+00:00"/>
+<meta property="article:modified_time" content="2022-04-18 14:15:00+01:00"/>
+<meta property="article:author" content="https://callumrollo.github.io/author/callum-rollo.html">
+<meta property="article:section" content="FOSS"/>
+<meta property="article:tag" content="linux"/>
+<meta property="article:tag" content="bash"/>
+<meta property="article:tag" content="software"/>
+<meta property="article:tag" content="optimise"/>
+<meta property="article:tag" content="oceanography"/>
+<meta property="article:tag" content="cruise"/>
+<meta property="article:tag" content="bandwidth"/>
+<meta property="og:image" content="/images/mug.jpg">
 
   <title>Callum Rollo &ndash; Automation for oceanographers</title>
 
@@ -72,12 +69,12 @@
 <body class="light-theme">
   <aside>
     <div>
-      <a href="https://callumrollo.github.io/">
-        <img src="https://callumrollo.github.io/images/mug.jpg" alt="Callum Rollo" title="Callum Rollo">
+      <a href="https://callumrollo.github.io">
+        <img src="/images/mug.jpg" alt="Callum Rollo" title="Callum Rollo">
       </a>
 
       <h1>
-        <a href="https://callumrollo.github.io/">Callum Rollo</a>
+        <a href="https://callumrollo.github.io">Callum Rollo</a>
       </h1>
 
 <p>Throwing stuff in the ocean, responsibly</p>
@@ -132,12 +129,12 @@
   <main>
 
     <nav>
-      <a href="https://callumrollo.github.io/">Home</a>
+      <a href="https://callumrollo.github.io">Home</a>
 
       <a href="/categories.html">Categories</a>
       <a href="/tags.html">Tags</a>
 
-      <a href="https://callumrollo.github.io/feeds/all.atom.xml">Atom</a>
+      <a href="/feeds/all.atom.xml">Atom</a>
 
     </nav>
 
@@ -232,14 +229,14 @@
 <h3>Automated emails for data transfer</h3>
 <p>The simplest method I have found for sending automated emails is to install <a href="https://wiki.debian.org/nullmailer#Installation_Examples_-_GMail">nullmailer</a> on a Linux box then run a short shell script.</p>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
-mv /home/pilot/data-to-nbp/most-recent /home/pilot/data-to-nbp/dives-<span class="sb">`</span>date +<span class="s2">&quot;%Y-%m-%dT%H:%M&quot;</span><span class="sb">`</span>
-mv /home/pilot/data-to-nbp/dives-to-nbp.zip /home/pilot/data-to-nbp/dives-to-nbp.zip-<span class="sb">`</span>date +<span class="s2">&quot;%Y-%m-%dT%H:%M&quot;</span><span class="sb">`</span>
-mkdir /home/pilot/data-to-nbp/most-recent
-find /home/sg**/p*.mat -mtime -0.25 -exec cp <span class="o">{}</span> /home/pilot/data-to-nbp/most-recent  <span class="se">\;</span>
-zip -rj /home/pilot/data-to-nbp/dives-to-nbp.zip /home/pilot/data-to-nbp/most-recent
-<span class="nb">echo</span> <span class="s2">&quot;data last 6 hours&quot;</span> <span class="p">|</span> mail -s <span class="s2">&quot;data4u&quot;</span> email@provider -A  /home/pilot/data-to-nbp/dives-to-nbp.zip
-<span class="nb">printf</span> <span class="s1">&#39;\n%s&#39;</span> <span class="s2">&quot;</span><span class="k">$(</span>date <span class="s2">&quot;+%Y-%m-%dT%H:%M:%S&quot;</span><span class="k">)</span><span class="s2">&quot;</span> &gt;&gt; /home/pilot/data-to-nbp/transfer.log
-<span class="nb">printf</span> <span class="s2">&quot;, transferred data&quot;</span> &gt;&gt; /home/pilot/data-to-nbp/transfer.log
+mv<span class="w"> </span>/home/pilot/data-to-nbp/most-recent<span class="w"> </span>/home/pilot/data-to-nbp/dives-<span class="sb">`</span>date<span class="w"> </span>+<span class="s2">&quot;%Y-%m-%dT%H:%M&quot;</span><span class="sb">`</span>
+mv<span class="w"> </span>/home/pilot/data-to-nbp/dives-to-nbp.zip<span class="w"> </span>/home/pilot/data-to-nbp/dives-to-nbp.zip-<span class="sb">`</span>date<span class="w"> </span>+<span class="s2">&quot;%Y-%m-%dT%H:%M&quot;</span><span class="sb">`</span>
+mkdir<span class="w"> </span>/home/pilot/data-to-nbp/most-recent
+find<span class="w"> </span>/home/sg**/p*.mat<span class="w"> </span>-mtime<span class="w"> </span>-0.25<span class="w"> </span>-exec<span class="w"> </span>cp<span class="w"> </span><span class="o">{}</span><span class="w"> </span>/home/pilot/data-to-nbp/most-recent<span class="w">  </span><span class="se">\;</span>
+zip<span class="w"> </span>-rj<span class="w"> </span>/home/pilot/data-to-nbp/dives-to-nbp.zip<span class="w"> </span>/home/pilot/data-to-nbp/most-recent
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;data last 6 hours&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>mail<span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;data4u&quot;</span><span class="w"> </span>email@provider<span class="w"> </span>-A<span class="w">  </span>/home/pilot/data-to-nbp/dives-to-nbp.zip
+<span class="nb">printf</span><span class="w"> </span><span class="s1">&#39;\n%s&#39;</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>date<span class="w"> </span><span class="s2">&quot;+%Y-%m-%dT%H:%M:%S&quot;</span><span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>/home/pilot/data-to-nbp/transfer.log
+<span class="nb">printf</span><span class="w"> </span><span class="s2">&quot;, transferred data&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>/home/pilot/data-to-nbp/transfer.log
 </code></pre></div>
 
 <p>This script performs several useful tasks. Here's a line by line breakdown
@@ -292,9 +289,9 @@ zip -rj /home/pilot/data-to-nbp/dives-to-nbp.zip /home/pilot/data-to-nbp/most-re
 <p>Short bash script that will take any input geotiff and create webtiles for use with leaflet maps. This is how I generated the ice maps for the <a href="https://github.com/callumrollo/itgc-2022-map">nbp2202map</a> and <a href="https://nbp2202map.com/">website</a>. Credit to <a href="https://www.kth.se/profile/liling/">Li Ling</a> for figuring out how to warp the geotiffs to a usable projection.</p>
 <div class="highlight"><pre><span></span><code><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/home/callum/anaconda3/envs/geospatial/bin
 <span class="nv">infile</span><span class="o">=</span>input_filename.tif
-gdalwarp -t_srs EPSG:4326 -te -140 -76 -90 -66 <span class="nv">$infile</span> liproj.tif
-gdal_translate -of vrt -expand rgba liproj.tif li.vr
-gdal2tiles.py li.vrt AMSR  --zoom <span class="m">1</span>-9
+gdalwarp<span class="w"> </span>-t_srs<span class="w"> </span>EPSG:4326<span class="w"> </span>-te<span class="w"> </span>-140<span class="w"> </span>-76<span class="w"> </span>-90<span class="w"> </span>-66<span class="w"> </span><span class="nv">$infile</span><span class="w"> </span>liproj.tif
+gdal_translate<span class="w"> </span>-of<span class="w"> </span>vrt<span class="w"> </span>-expand<span class="w"> </span>rgba<span class="w"> </span>liproj.tif<span class="w"> </span>li.vr
+gdal2tiles.py<span class="w"> </span>li.vrt<span class="w"> </span>AMSR<span class="w">  </span>--zoom<span class="w"> </span><span class="m">1</span>-9
 </code></pre></div>
 
 <p>Line by line:</p>
@@ -336,7 +333,7 @@ gdal2tiles.py li.vrt AMSR  --zoom <span class="m">1</span>-9
 
     <footer>
 <p>
-  &copy; 2022  - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.en_US" target="_blank">Creative Commons Attribution-ShareAlike</a>
+  &copy;  2023 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
 </p>
 <p>
 Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
@@ -363,10 +360,11 @@ Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a 
   "@type" : "Blog",
   "name": " Callum Rollo ",
   "url" : "https://callumrollo.github.io",
-  "image": "https://callumrollo.github.io/images/mug.jpg",
+  "image": "/images/mug.jpg",
   "description": "Science should be open. Software should be free. Borders are rubbish "
 }
 </script>
+
 
 </body>
 </html>

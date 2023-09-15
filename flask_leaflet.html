@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="https://callumrollo.github.io/theme/stylesheet/style.min.css">
 
@@ -22,13 +22,12 @@
   <link rel="stylesheet" type="text/css" href="https://callumrollo.github.io/theme/font-awesome/css/solid.css">
 
 
-    <link href="https://callumrollo.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Callum Rollo Atom">
+    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Callum Rollo Atom">
 
 
-    <link rel="shortcut icon" href="https://callumrollo.github.io/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="https://callumrollo.github.io/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 
-  
 
     <!-- Chrome, Firefox OS and Opera -->
     <meta name="theme-color" content="#333333">
@@ -40,29 +39,27 @@
     <!-- Microsoft EDGE -->
     <meta name="msapplication-TileColor" content="#333333">
 
- 
-
 <meta name="author" content="Callum Rollo" />
 <meta name="description" content="Creating interactive maps using Python-flask and leaflet" />
 <meta name="keywords" content="python, maps, flask, automation, front-end">
 
 
-  <meta property="og:site_name" content="Callum Rollo"/>
-  <meta property="og:title" content="Leaflet maps with Python-flask"/>
-  <meta property="og:description" content="Creating interactive maps using Python-flask and leaflet"/>
-  <meta property="og:locale" content="en_US"/>
-  <meta property="og:url" content="https://callumrollo.github.io/flask_leaflet.html"/>
-  <meta property="og:type" content="article"/>
-  <meta property="article:published_time" content="2022-04-25 17:00:00+01:00"/>
-  <meta property="article:modified_time" content="2022-04-25 17:00:00+01:00"/>
-  <meta property="article:author" content="https://callumrollo.github.io/author/callum-rollo.html">
-  <meta property="article:section" content="FOSS"/>
-  <meta property="article:tag" content="python"/>
-  <meta property="article:tag" content="maps"/>
-  <meta property="article:tag" content="flask"/>
-  <meta property="article:tag" content="automation"/>
-  <meta property="article:tag" content="front-end"/>
-  <meta property="og:image" content="https://callumrollo.github.io/images/mug.jpg">
+<meta property="og:site_name" content="Callum Rollo"/>
+<meta property="og:title" content="Leaflet maps with Python-flask"/>
+<meta property="og:description" content="Creating interactive maps using Python-flask and leaflet"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://callumrollo.github.io/flask_leaflet.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2022-04-25 17:00:00+01:00"/>
+<meta property="article:modified_time" content="2022-04-25 17:00:00+01:00"/>
+<meta property="article:author" content="https://callumrollo.github.io/author/callum-rollo.html">
+<meta property="article:section" content="FOSS"/>
+<meta property="article:tag" content="python"/>
+<meta property="article:tag" content="maps"/>
+<meta property="article:tag" content="flask"/>
+<meta property="article:tag" content="automation"/>
+<meta property="article:tag" content="front-end"/>
+<meta property="og:image" content="/images/mug.jpg">
 
   <title>Callum Rollo &ndash; Leaflet maps with Python-flask</title>
 
@@ -70,12 +67,12 @@
 <body class="light-theme">
   <aside>
     <div>
-      <a href="https://callumrollo.github.io/">
-        <img src="https://callumrollo.github.io/images/mug.jpg" alt="Callum Rollo" title="Callum Rollo">
+      <a href="https://callumrollo.github.io">
+        <img src="/images/mug.jpg" alt="Callum Rollo" title="Callum Rollo">
       </a>
 
       <h1>
-        <a href="https://callumrollo.github.io/">Callum Rollo</a>
+        <a href="https://callumrollo.github.io">Callum Rollo</a>
       </h1>
 
 <p>Throwing stuff in the ocean, responsibly</p>
@@ -130,12 +127,12 @@
   <main>
 
     <nav>
-      <a href="https://callumrollo.github.io/">Home</a>
+      <a href="https://callumrollo.github.io">Home</a>
 
       <a href="/categories.html">Categories</a>
       <a href="/tags.html">Tags</a>
 
-      <a href="https://callumrollo.github.io/feeds/all.atom.xml">Atom</a>
+      <a href="/feeds/all.atom.xml">Atom</a>
 
     </nav>
 
@@ -241,10 +238,10 @@ reboot
 
 <p><em>Recommended</em> follow <a href="https://www.linode.com/docs/guides/set-up-and-secure/">this guide</a> to securing your server</p>
 <h4>Install key packages and libraries for the app</h4>
-<div class="highlight"><pre><span></span><code><span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">-</span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="n">q</span><span class="w"> </span><span class="n">build</span><span class="o">-</span><span class="n">essential</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">unzip</span><span class="w"> </span><span class="n">zip</span><span class="w"> </span><span class="n">nload</span><span class="w"> </span><span class="n">tree</span><span class="w"></span>
-<span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">-</span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="n">q</span><span class="w"> </span><span class="n">python3</span><span class="o">-</span><span class="n">pip</span><span class="w"> </span><span class="n">python3</span><span class="o">-</span><span class="n">dev</span><span class="w"> </span><span class="n">python3</span><span class="o">-</span><span class="n">venv</span><span class="w"></span>
-<span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">-</span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="n">q</span><span class="w"> </span><span class="n">nginx</span><span class="w"></span>
-<span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">install</span><span class="o">-</span><span class="n">recommends</span><span class="w"> </span><span class="o">-</span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="n">q</span><span class="w"> </span><span class="n">libpcre3</span><span class="o">-</span><span class="n">dev</span><span class="w"> </span><span class="n">libz</span><span class="o">-</span><span class="n">dev</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">-</span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="n">q</span><span class="w"> </span><span class="n">build</span><span class="o">-</span><span class="n">essential</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">unzip</span><span class="w"> </span><span class="n">zip</span><span class="w"> </span><span class="n">nload</span><span class="w"> </span><span class="n">tree</span>
+<span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">-</span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="n">q</span><span class="w"> </span><span class="n">python3</span><span class="o">-</span><span class="n">pip</span><span class="w"> </span><span class="n">python3</span><span class="o">-</span><span class="n">dev</span><span class="w"> </span><span class="n">python3</span><span class="o">-</span><span class="n">venv</span>
+<span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">-</span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="n">q</span><span class="w"> </span><span class="n">nginx</span>
+<span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">install</span><span class="o">-</span><span class="n">recommends</span><span class="w"> </span><span class="o">-</span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="n">q</span><span class="w"> </span><span class="n">libpcre3</span><span class="o">-</span><span class="n">dev</span><span class="w"> </span><span class="n">libz</span><span class="o">-</span><span class="n">dev</span>
 </code></pre></div>
 
 <h4>Open ports and enable firewall</h4>
@@ -264,13 +261,13 @@ chmod 777 /apps/itgc-2022-map/
 </code></pre></div>
 
 <h4>Create and activate the app environment</h4>
-<div class="highlight"><pre><span></span><code><span class="n">cd</span><span class="w"> </span><span class="o">/</span><span class="n">apps</span><span class="o">/</span><span class="n">itgc</span><span class="o">-</span><span class="mi">2022</span><span class="o">-</span><span class="n">map</span><span class="w"></span>
-<span class="n">python3</span><span class="w"> </span><span class="o">-</span><span class="n">m</span><span class="w"> </span><span class="n">venv</span><span class="w"> </span><span class="n">venv</span><span class="w"></span>
-<span class="n">source</span><span class="w"> </span><span class="n">venv</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">activate</span><span class="w"></span>
-<span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">--</span><span class="n">upgrade</span><span class="w"> </span><span class="n">pip</span><span class="w"> </span><span class="n">setuptools</span><span class="w"></span>
-<span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">--</span><span class="n">upgrade</span><span class="w"> </span><span class="n">httpie</span><span class="w"> </span><span class="n">glances</span><span class="w"></span>
-<span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">--</span><span class="n">upgrade</span><span class="w"> </span><span class="n">uwsgi</span><span class="w"></span>
-<span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">-</span><span class="n">r</span><span class="w"> </span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="n">cd</span><span class="w"> </span><span class="o">/</span><span class="n">apps</span><span class="o">/</span><span class="n">itgc</span><span class="o">-</span><span class="mi">2022</span><span class="o">-</span><span class="n">map</span>
+<span class="n">python3</span><span class="w"> </span><span class="o">-</span><span class="n">m</span><span class="w"> </span><span class="n">venv</span><span class="w"> </span><span class="n">venv</span>
+<span class="n">source</span><span class="w"> </span><span class="n">venv</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">activate</span>
+<span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">--</span><span class="n">upgrade</span><span class="w"> </span><span class="n">pip</span><span class="w"> </span><span class="n">setuptools</span>
+<span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">--</span><span class="n">upgrade</span><span class="w"> </span><span class="n">httpie</span><span class="w"> </span><span class="n">glances</span>
+<span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">--</span><span class="n">upgrade</span><span class="w"> </span><span class="n">uwsgi</span>
+<span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">-</span><span class="n">r</span><span class="w"> </span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
 </code></pre></div>
 
 <p>In this example I'm using pip. All of these packages are available on conda-forge too though if you prefer conda.</p>
@@ -329,7 +326,7 @@ sudo certbot --nginx
 
     <footer>
 <p>
-  &copy; 2022  - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.en_US" target="_blank">Creative Commons Attribution-ShareAlike</a>
+  &copy;  2023 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
 </p>
 <p>
 Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
@@ -356,10 +353,11 @@ Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a 
   "@type" : "Blog",
   "name": " Callum Rollo ",
   "url" : "https://callumrollo.github.io",
-  "image": "https://callumrollo.github.io/images/mug.jpg",
+  "image": "/images/mug.jpg",
   "description": "Science should be open. Software should be free. Borders are rubbish "
 }
 </script>
+
 
 </body>
 </html>
