@@ -1,6 +1,6 @@
 Title: Analyse web logs
-Date: 2023-15-06 13:40
-Modified:  2023-12-10 11:10
+Date: 2023-06-17 15:00
+Modified: 2023-10-12 11:00
 Category: FOSS
 Tags: software, foss, oceanography, web, logs, python, polars
 Slug: weblogparse
