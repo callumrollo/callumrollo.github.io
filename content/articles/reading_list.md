@@ -1,6 +1,6 @@
 Title: Articles of interest
 Date: 2020-07-13 10:20
-Modified: 2023-15-09 12:40
+Modified: 2023-10-12 12:40
 Category: Reading
 Tags: articles, opinion, academia, nature
 Slug: reading
@@ -63,7 +63,7 @@ Leon Bilton - [How to not hate LaTeX](https://adigitoleo.srht.site/blog/software
 
 Tim Barry - [Just Too Efficient](https://www.tbray.org/ongoing/When/202x/2020/07/05/Too-Efficient)
 
-David Graber - [Bullshit Jobs](https://www.strike.coop/bullshit-jobs/)
+David Graeber - [Bullshit Jobs](https://www.strike.coop/bullshit-jobs/)
 
 ### Rewilding and land rights
 George Monbiot - [Rewilding Manifesto](https://www.monbiot.com/2013/05/27/a-manifesto-for-rewilding-the-world/)
@@ -100,6 +100,8 @@ David Graeber - [Debt: The First 5000 Years](https://www.goodreads.com/book/show
 
 Josh Ryan-Collins - [Why You Can't Afford a Home](https://www.ucl.ac.uk/bartlett/public-purpose/why-cant-you-afford-home)
 
+Vincent Bevins - [The Jakarta Method](https://en.wikipedia.org/wiki/The_Jakarta_Method)
+
 ### Privacy/Surveillance
 
 Edward Snowden - [Permanent Record](https://www.goodreads.com/book/show/46223297-permanent-record)
@@ -115,7 +117,7 @@ Neal Stephenson, Iain (M) Banks, Cory Doctorow, Becky Chambers
 
 ### Academics' websites I enjoy
 
-In my experience, the more poorly formatted the website, the better the quality of ideas.
+The more poorly formatted the website, the better the quality of ideas.
 
 [matt.might.net](matt.might.net)
 
@@ -126,7 +128,7 @@ In my experience, the more poorly formatted the website, the better the quality 
 [Molly White](https://www.mollywhite.net/)
 ## Sites I visit when I Should Be Writing
 
-[Existential comics](https://existentialcomics.com/) an entertainingly good intro to various schools of philosophy
+[Existential comics](https://existentialcomics.com/) a good intro to various schools of philosophy
 
 [Bruce Schneier facts](https://www.schneierfacts.com) crypto jokes
 
