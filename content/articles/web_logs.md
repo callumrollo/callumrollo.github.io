@@ -127,7 +127,7 @@ This last question is of interest for ERDDAP, as users may request difference do
 
 We make figures, inlcuding maps of where users come from and graphs of how the total number of request and daily unique users has changed over time.
 
-![Reqeusts to ERDDAP by country](mages/erddap_visits_by_country.png)
+![Reqeusts to ERDDAP by country](../images/erddap_visits_by_country.png)
 
 
-![Map of requests from Europe](mages/observations_map_europe.png)
+![Map of requests from Europe](../images/observations_map_europe.png)
