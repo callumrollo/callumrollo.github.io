@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://callumrollo.github.io/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://callumrollo.github.io/theme/pygments/monokai.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="https://callumrollo.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://callumrollo.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://callumrollo.github.io/theme/font-awesome/css/solid.css">
+
+
+    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Callum Rollo Atom">
+
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Microsoft EDGE -->
+    <meta name="msapplication-TileColor" content="#333333">
+
+<meta name="author" content="Callum Rollo" />
+<meta name="description" content="Parsing web log files to gain insight into visitors to our ERDDAP server" />
+<meta name="keywords" content="software, foss, oceanography, web, logs, python, polars">
+
+
+<meta property="og:site_name" content="Callum Rollo"/>
+<meta property="og:title" content="Analyse web logs"/>
+<meta property="og:description" content="Parsing web log files to gain insight into visitors to our ERDDAP server"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://callumrollo.github.io/weblogparse.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2023-06-17 15:00:00+01:00"/>
+<meta property="article:modified_time" content="2023-10-12 11:00:00+01:00"/>
+<meta property="article:author" content="https://callumrollo.github.io/author/callum-rollo.html">
+<meta property="article:section" content="FOSS"/>
+<meta property="article:tag" content="software"/>
+<meta property="article:tag" content="foss"/>
+<meta property="article:tag" content="oceanography"/>
+<meta property="article:tag" content="web"/>
+<meta property="article:tag" content="logs"/>
+<meta property="article:tag" content="python"/>
+<meta property="article:tag" content="polars"/>
+<meta property="og:image" content="/images/mug.jpg">
+
+  <title>Callum Rollo &ndash; Analyse web logs</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://callumrollo.github.io">
+        <img src="/images/mug.jpg" alt="Callum Rollo" title="Callum Rollo">
+      </a>
+
+      <h1>
+        <a href="https://callumrollo.github.io">Callum Rollo</a>
+      </h1>
+
+<p>Recovering oceanographer</p>
+
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_self"
+                   href="https://callumrollo.github.io/pages/aboutme.html#aboutme">
+                  About
+                </a>
+              </li>
+              <li>
+                <a target="_self"
+                   href="https://callumrollo.github.io/pages/pay.html#pay">
+                  My income
+                </a>
+              </li>
+              <li>
+                <a target="_self"
+                   href="https://callumrollo.github.io/pages/teaching.html#teaching">
+                  Teaching
+                </a>
+              </li>
+              <li>
+                <a target="_self"
+                   href="https://callumrollo.github.io/pages/toolbox.html#toolbox">
+                  Toolbox
+                </a>
+              </li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/callum_rollo" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-github" href="https://github.com/callumrollo" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://callumrollo.github.io">Home</a>
+
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="weblogparse">Analyse web logs</h1>
+    <p>
+      Posted on Sat 17 June 2023 in <a href="https://callumrollo.github.io/category/foss.html">FOSS</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <p><strong>N.B.</strong> The scripts described in this article are available in a <a href="https://github.com/callumrollo/website-log-parse">github repo</a> as jupyter notebooks.</p>
+<p>Web analytics are big business. Products like Google Analytics enable incredibly granular and detailed examination of every user to your website. However, if you do not wish to collect and retain data at this level using tools like cookies or tracking beacons, either out of respect to your users privacy or because <a href="https://www.theregister.com/2022/02/10/google_analytics_gdpr_breach/,">it's the law</a>, you need to do your own user analysis.</p>
+<p>This blog explains the process I went through to analyse use traffic to my organisation's <a href="https://erddap.observations.voiceoftheocean.org/erddap/index.html">ERDDAP data server</a> to get an idea of what data is being requested and where our users are. I approached this with the following priorities:
+1. No third party trackers on the site
+2. Aggregate data at the regional/national level to preserve anonymity
+3. Search for trends in the data requests that users were making to guide our data sharing strategy</p>
+<h3>Step 0. Get and retain the web logs</h3>
+<p>We first ran our ERDDAP server on apache, then migrated to nginx. In both cases, it's essential to set the retention of your logs to a sufficiently long period such that the log files are not deleted during regular log rotation. I did this in nginx by setting <code>rotate 3650</code> in the file <strong>/etc/logrotate.d/nginx</strong>. This sets the number of days to keep access logs from, in this case 10 years.</p>
+<p>Alternatively, you could regularly copy the logs from your server to the computer you use for analysis with e..g rsync.</p>
+<p><strong>Data snapshot</strong></p>
+<div class="highlight"><pre><span></span><code><span class="mf">137.184.165.96</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="err">[</span><span class="mf">07</span><span class="o">/</span><span class="n">Jan</span><span class="o">/</span><span class="mf">2023</span><span class="p">:</span><span class="mf">00</span><span class="p">:</span><span class="mf">04</span><span class="p">:</span><span class="mf">37</span><span class="w"> </span><span class="o">+</span><span class="mf">0000</span><span class="err">]</span><span class="w"> </span><span class="s">&quot;GET /erddap/tabledap/nrt_SEA056_M57.jsonlKVP?latitude%2Clongitude%2Ctime%2Cdive_num HTTP/1.1&quot;</span><span class="w"> </span><span class="mf">200</span><span class="w"> </span><span class="mf">932348</span><span class="w"> </span><span class="s">&quot;-&quot;</span><span class="w"> </span><span class="s">&quot;axios/0.24.0&quot;</span>
+<span class="mf">137.184.165.96</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="err">[</span><span class="mf">07</span><span class="o">/</span><span class="n">Jan</span><span class="o">/</span><span class="mf">2023</span><span class="p">:</span><span class="mf">00</span><span class="p">:</span><span class="mf">04</span><span class="p">:</span><span class="mf">37</span><span class="w"> </span><span class="o">+</span><span class="mf">0000</span><span class="err">]</span><span class="w"> </span><span class="s">&quot;GET /erddap/tabledap/nrt_SEA045_M73.jsonlKVP?latitude%2Clongitude%2Ctime%2Cdive_num HTTP/1.1&quot;</span><span class="w"> </span><span class="mf">200</span><span class="w"> </span><span class="mf">853145</span><span class="w"> </span><span class="s">&quot;-&quot;</span><span class="w"> </span><span class="s">&quot;axios/0.24.0&quot;</span>
+<span class="mf">185.191.171.4</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="err">[</span><span class="mf">07</span><span class="o">/</span><span class="n">Jan</span><span class="o">/</span><span class="mf">2023</span><span class="p">:</span><span class="mf">00</span><span class="p">:</span><span class="mf">05</span><span class="p">:</span><span class="mf">46</span><span class="w"> </span><span class="o">+</span><span class="mf">0000</span><span class="err">]</span><span class="w"> </span><span class="s">&quot;GET /erddap/tabledap/delayed_SEA066_M41.subset?.bgColor=0xffccccff&amp;.click&amp;.color=0x000000&amp;.colorBar=%7C%7C%7C%7C%7C&amp;.draw=markers&amp;.marker=5%7C5&amp;.viewDistinctMap=true&amp;longitude%2Clatitude%2Ctime HTTP/1.1&quot;</span><span class="w"> </span><span class="mf">200</span><span class="w"> </span><span class="mf">20272</span><span class="w"> </span><span class="s">&quot;-&quot;</span><span class="w"> </span><span class="s">&quot;Mozilla/5.0 (compatible; SemrushBot/7~bl; +http://www.semrush.com/bot.html)&quot;</span>
+<span class="mf">54.36.148.78</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="err">[</span><span class="mf">07</span><span class="o">/</span><span class="n">Jan</span><span class="o">/</span><span class="mf">2023</span><span class="p">:</span><span class="mf">00</span><span class="p">:</span><span class="mf">05</span><span class="p">:</span><span class="mf">47</span><span class="w"> </span><span class="o">+</span><span class="mf">0000</span><span class="err">]</span><span class="w"> </span><span class="s">&quot;GET /erddap/tabledap/delayed_SEA056_M54.graph?longitude,latitude,time&amp;.draw=markers&amp;.colorBar=%7CD%7C%7C%7C%7C HTTP/1.1&quot;</span><span class="w"> </span><span class="mf">200</span><span class="w"> </span><span class="mf">30929</span><span class="w"> </span><span class="s">&quot;-&quot;</span><span class="w"> </span><span class="s">&quot;Mozilla/5.0 (compatible; AhrefsBot/7.0; +http://ahrefs.com/robot/)&quot;</span>
+</code></pre></div>
+
+<h3>Step 1. Parse and combine logs</h3>
+<p>Weserver logs typically have a line by line structure with each line describing a user request. This will include the time of the request, the origin ip and the url requested. The log may also contain information like the user agent (e.g. "Firefox on a Windows PC"). We extract this data into a pandas DataFrame to make it easier to process.</p>
+<p>The logs for apache and nginx are different, so some work is needed to combine them. The trickiest step, as is often the case in Python, was getting the timestamps into the same format.</p>
+<p>With over 1 million lines of logfile, I started hitting a performance bottleneck with pandas, so I put my data in a <a href="https://www.pola.rs/">polars</a> dataframe, which gave a substantial speedup.</p>
+<p><strong>Data snapshop</strong></p>
+<div class="highlight"><pre><span></span><code>┌────────────────┬─────────────────────┬───────────────────────────────────┐
+│ ip             ┆ datetime            ┆ url                               │
+│ ---            ┆ ---                 ┆ ---                               │
+│ str            ┆ datetime[μs]        ┆ str                               │
+╞════════════════╪═════════════════════╪═══════════════════════════════════╡
+│ 54.36.148.29   ┆ 2023-08-13 00:03:31 ┆ /erddap/files/adcp_SEA045_M37/?C… │
+│ 208.115.199.29 ┆ 2023-08-13 00:04:31 ┆ /erddap/index.html                │
+│ 54.36.149.29   ┆ 2023-08-13 00:05:38 ┆ /erddap/metadata/iso19115/xml/nr… │
+│ 54.36.148.227  ┆ 2023-08-13 00:07:37 ┆ /erddap/tabledap/delayed_SEA061_… │
+└────────────────┴─────────────────────┴───────────────────────────────────┘
+</code></pre></div>
+
+<h3>Step 2. Retrieve ip information</h3>
+<p>Several services can be used to fetch information on an ip address, including the approximate location, ISP, country and operating organisation. I used <a href="http://ip-api.com/">http://ip-api.com/</a>. You can make up to 60 freee requests per minute using Python requests, and getting back nice structured json. I first sort the ip addresses by number of requests, so that we prioritise getting information from the visitors that have made the most requests to our site. We store the info and never request the same ip twice, so that over time we build the amount of information we have on the site's users.</p>
+<p><strong>Data snapsho</strong>t</p>
+<div class="highlight"><pre><span></span><code>┌────────────┬─────────┬───────────┬───────────┬───┬───────────┬───────────┬───────────┬───────────┐
+│ query      ┆ status  ┆ country   ┆ countryCo ┆ … ┆ timezone  ┆ isp       ┆ org       ┆ as        │
+│ ---        ┆ ---     ┆ ---       ┆ de        ┆   ┆ ---       ┆ ---       ┆ ---       ┆ ---       │
+│ str        ┆ str     ┆ str       ┆ ---       ┆   ┆ str       ┆ str       ┆ str       ┆ str       │
+│            ┆         ┆           ┆ str       ┆   ┆           ┆           ┆           ┆           │
+╞════════════╪═════════╪═══════════╪═══════════╪═══╪═══════════╪═══════════╪═══════════╪═══════════╡
+│ 137.184.16 ┆ success ┆ Canada    ┆ CA        ┆ … ┆ America/T ┆ DigitalOc ┆ DigitalOc ┆ AS14061   │
+│ 5.96       ┆         ┆           ┆           ┆   ┆ oronto    ┆ ean, LLC  ┆ ean, LLC  ┆ DigitalOc │
+│            ┆         ┆           ┆           ┆   ┆           ┆           ┆           ┆ ean, LLC  │
+│ 208.115.19 ┆ success ┆ United    ┆ US        ┆ … ┆ America/C ┆ Limestone ┆ null      ┆ AS46475   │
+│ 9.29       ┆         ┆ States    ┆           ┆   ┆ hicago    ┆ Networks  ┆           ┆ Limestone │
+│            ┆         ┆           ┆           ┆   ┆           ┆           ┆           ┆ Networks, │
+│            ┆         ┆           ┆           ┆   ┆           ┆           ┆           ┆ Inc.      │
+└────────────┴─────────┴───────────┴───────────┴───┴───────────┴───────────┴───────────┴───────────┘
+</code></pre></div>
+
+<h3>Step 3. Combine requests and ip information</h3>
+<p>This is achieved with a classic dataset merge</p>
+<div class="highlight"><pre><span></span><code>df_pd = pd.merge(df_pd, df_ip, left_on=&quot;ip&quot;, right_on=&quot;query&quot;, how=&quot;left&quot;)
+</code></pre></div>
+
+<p>Now, all the requests from ip addresses that we have information for have that ip metadata added.</p>
+<p><strong>Data snapshot</strong></p>
+<div class="highlight"><pre><span></span><code>┌────────────┬────────────┬────────────┬────────────┬───┬──────┬────────────┬─────────┬────────────┐
+│ ip         ┆ datetime   ┆ url        ┆ query      ┆ … ┆ org  ┆ as         ┆ ip_root ┆ ip_group   │
+│ ---        ┆ ---        ┆ ---        ┆ ---        ┆   ┆ ---  ┆ ---        ┆ ---     ┆ ---        │
+│ str        ┆ datetime[μ ┆ str        ┆ str        ┆   ┆ str  ┆ str        ┆ str     ┆ str        │
+│            ┆ s]         ┆            ┆            ┆   ┆      ┆            ┆         ┆            │
+╞════════════╪════════════╪════════════╪════════════╪═══╪══════╪════════════╪═════════╪════════════╡
+│ 208.115.19 ┆ 2022-09-16 ┆ /erddap/in ┆ 208.115.19 ┆ … ┆ null ┆ AS46475    ┆ 208.115 ┆ 208.115.19 │
+│ 9.29       ┆ 08:19:59   ┆ dex.html   ┆ 9.29       ┆   ┆      ┆ Limestone  ┆         ┆ 9          │
+│            ┆            ┆            ┆            ┆   ┆      ┆ Networks,  ┆         ┆            │
+│            ┆            ┆            ┆            ┆   ┆      ┆ Inc.       ┆         ┆            │
+│ 208.115.19 ┆ 2022-09-16 ┆ /erddap/in ┆ 208.115.19 ┆ … ┆ null ┆ AS46475    ┆ 208.115 ┆ 208.115.19 │
+│ 9.29       ┆ 08:24:59   ┆ dex.html   ┆ 9.29       ┆   ┆      ┆ Limestone  ┆         ┆ 9          │
+│            ┆            ┆            ┆            ┆   ┆      ┆ Networks,  ┆         ┆            │
+│            ┆            ┆            ┆            ┆   ┆      ┆ Inc.       ┆         ┆            │
+└────────────┴────────────┴────────────┴────────────┴───┴──────┴────────────┴─────────┴────────────┘
+</code></pre></div>
+
+<h3>Step 4. Filter requests</h3>
+<p>There are many requests that we do not want to include in our analysis. These include requests from crawlers, which are indexing webpages for search engines like Google, services monitoring uptime, which periodically ping a site to check it hasn't crashed, and various bad actors probing a site for weaknesses, like a mistakenly uploaded credentials file. We remove this from our dataframe so that we only analyse requests from genuine visitors.</p>
+<p>This is far from a foolproof method, but we don't need to be perfect. Here are some of the filters I use:</p>
+<ul>
+<li>Filter out requests from known crawlers, e.g. IPs from  organisations with names including <code>["Google", "Crawlers", "SEMrush"]</code></li>
+<li>Filter out any requests for files that aren't present on the server. Currently <code>".env", "env.", ".php", ".git", "robots.txt", "phpinfo", "/config", "aws", ".xml"]</code></li>
+<li>Filter out reqeusts that do not contain "erddap". All genuine requests to the erddap server will contain this string</li>
+</ul>
+<p>I log the percentage of requests removed by this filtering step. It's usually about one third of all requests.</p>
+<h3>Step 5. Analysis</h3>
+<p>There is a lot of information in these requests! I currently look for a few things:
+- Where are requests coming from?
+- What pages are users visiting most?
+- What filetypes are users requests? </p>
+<p>This last question is of interest for ERDDAP, as users may request difference download types like csv, netCDF, kml and others.</p>
+<p>We make figures, inlcuding maps of where users come from and graphs of how the total number of request and daily unique users has changed over time.</p>
+<p><img alt="Reqeusts to ERDDAP by country" src="mages/erddap_visits_by_country.png"></p>
+<p><img alt="Map of requests from Europe" src="mages/observations_map_europe.png"></p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://callumrollo.github.io/tag/software.html">software</a>
+      <a href="https://callumrollo.github.io/tag/foss.html">foss</a>
+      <a href="https://callumrollo.github.io/tag/oceanography.html">oceanography</a>
+      <a href="https://callumrollo.github.io/tag/web.html">web</a>
+      <a href="https://callumrollo.github.io/tag/logs.html">logs</a>
+      <a href="https://callumrollo.github.io/tag/python.html">python</a>
+      <a href="https://callumrollo.github.io/tag/polars.html">polars</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>
+  &copy;  2023 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Callum Rollo ",
+  "url" : "https://callumrollo.github.io",
+  "image": "/images/mug.jpg",
+  "description": "Science should be open. Software should be free. No one is illegal"
+}
+</script>
+
+
+</body>
+</html>
