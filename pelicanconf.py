@@ -43,8 +43,12 @@ USE_FOLDER_AS_CATEGORY = False
 MAIN_MENU = True
 HOME_HIDE_TAGS = False
 
+GITHUB_URL = 'http://github.com/callumrollo/'
+
+LINKS = (('blog', SITEURL),
+        )
+
 SOCIAL = (
-	('twitter', 	'https://twitter.com/callum_rollo'),
 	 ('github', 	'https://github.com/callumrollo'),
 	)
 
