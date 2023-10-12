@@ -1,9 +1,9 @@
 Title: Analyse web logs
-Date: 2023-06-15 13:40
-Modified:  2023-10-12 11:10
+Date: 2023-15-06 13:40
+Modified:  2023-12-10 11:10
 Category: FOSS
 Tags: software, foss, oceanography, web, logs, python, polars
-Slug: gliderpy
+Slug: weblogparse
 Summary: Parsing web log files to gain insight into visitors to our ERDDAP server
 
 **N.B.** The scripts described in this article are available in a [github repo](https://github.com/callumrollo/website-log-parse) as jupyter notebooks.
