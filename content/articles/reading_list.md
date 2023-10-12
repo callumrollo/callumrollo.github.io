@@ -1,6 +1,6 @@
 Title: Articles of interest
 Date: 2020-07-13 10:20
-Modified: 2021-08-05 10:45
+Modified: 2023-15-09 12:40
 Category: Reading
 Tags: articles, opinion, academia, nature
 Slug: reading
@@ -56,6 +56,8 @@ Bjorn Brembs - [Academic publishers vs scihub. Suggested installation of spyware
 
 ### FOSS
 Daniel Oberhaus - [Succint history of free software vs open source](https://www.vice.com/en/article/43zak3/the-internet-was-built-on-the-free-labor-of-open-source-developers-is-that-sustainable)
+
+Leon Bilton - [How to not hate LaTeX](https://adigitoleo.srht.site/blog/software/not-hate-latex)
 
 ### Work
 
