@@ -35,6 +35,7 @@ I am a Pythonista and proponent of free software for science. Several of my proj
 To request a copy of any of my publications that have ended up behind a paywall, please email me. This is completely legal and scientists actively encourage it.
 
 ### Selected posters and talks
+2023 [EMODnet jamboree, Brussels](../images/emodnet_2023.pdf)
 
 2022 [UG2 Seattle](../images/ug2_2022.pdf)
 
