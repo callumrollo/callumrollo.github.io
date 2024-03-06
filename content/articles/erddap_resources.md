@@ -25,6 +25,7 @@ Transcript of all commands used in the video:  [callumrollo.com/files/erddap-doc
 I have given various talks on ERDDAP,  mostly focused on using erddapy to access various oceanographic datasets. Here are a few of them:
 - Data sharing workshop Gothenburg January 2023
 - ERDDAP webinar series GOOS autumn/winter 2023
+- Low cost sensor workshop Brest, November 2023
 - GOOS Low cost technologies and data workshop, Cape Town June 2023
 - Coastwatch webinar February 2024
 
@@ -32,7 +33,7 @@ I have given various talks on ERDDAP,  mostly focused on using erddapy to access
 
 - [erddapy](https://github.com/ioos/erddapy) essential python client for downloading data from ERDDAP. I contributed to this during Google summer of code 2021 [adding griddap support to erddapy](griddap)
 - [gliderpy](https://github.com/ioos/gliderpy) a wrapper around erddapy to make downloading glider data easier. I contributed to this during OceanHackWeek 2020
-- [ERDDAP log parser](https://github.com/callumrollo/website-log-parse) a tool for ERDDAP admins to get an idea of how their ERDDAP is being used. Work in progress!
+- [ERDDAPlogs](https://github.com/callumrollo/erddaplogs) a tool for ERDDAP admins to get an idea of how their ERDDAP is being used. Work in progress!
 - [VOTO ERDDAP demo](https://github.com/voto-ocean-knowledge/erddap_demo) A series of jupyter notebooks demonstrating how to use ERDDAP to download various datasets, using VOTO glider data as the core examples
 - [GOOS ERDDAP demo](https://github.com/voto-ocean-knowledge/goos-erddap-demo) similar material but using a wider range of datasets with more time focused on gridded data
 
