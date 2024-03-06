@@ -14,13 +14,14 @@
 &lt;p&gt;I have given various talks on ERDDAP,  mostly focused on using erddapy to access various oceanographic datasets. Here are a few of them:
 - Data sharing workshop Gothenburg January 2023
 - ERDDAP webinar series GOOS autumn/winter 2023
+- Low cost sensor workshop Brest, November 2023
 - GOOS Low cost technologies and data workshop, Cape Town June 2023
 - Coastwatch webinar February 2024&lt;/p&gt;
 &lt;h1&gt;Tools&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/ioos/erddapy"&gt;erddapy&lt;/a&gt; essential python client for downloading data from ERDDAP. I contributed to this during Google summer of code 2021 &lt;a href="griddap"&gt;adding griddap support to erddapy&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/ioos/gliderpy"&gt;gliderpy&lt;/a&gt; a wrapper around erddapy to make downloading glider data easier. I contributed to this during OceanHackWeek 2020&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/callumrollo/website-log-parse"&gt;ERDDAP log parser&lt;/a&gt; a tool for ERDDAP admins to get an idea of how their ERDDAP is being used. Work in progress!&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/callumrollo/erddaplogs"&gt;ERDDAPlogs&lt;/a&gt; a tool for ERDDAP admins to get an idea of how their ERDDAP is being used. Work in progress!&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/voto-ocean-knowledge/erddap_demo"&gt;VOTO ERDDAP demo&lt;/a&gt; A series of jupyter notebooks demonstrating how to use ERDDAP to download various datasets, using VOTO glider data as the core examples&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/voto-ocean-knowledge/goos-erddap-demo"&gt;GOOS ERDDAP demo&lt;/a&gt; similar material but using a wider range of datasets with more time focused on gridded data&lt;/li&gt;
 &lt;/ul&gt;
