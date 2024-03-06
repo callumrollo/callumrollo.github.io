@@ -125,7 +125,12 @@ The more poorly formatted the website, the better the quality of ideas.
 
 [datacolada](http://datacolada.org/)
 
+### Good blogs
+
 [Molly White](https://www.mollywhite.net/)
+
+[Smári McCarthy](https://smarimccarthy.is/posts/2022-02-18-cybernetics/)
+
 ## Sites I visit when I Should Be Writing
 
 [Existential comics](https://existentialcomics.com/) a good intro to various schools of philosophy
@@ -133,3 +138,4 @@ The more poorly formatted the website, the better the quality of ideas.
 [Bruce Schneier facts](https://www.schneierfacts.com) crypto jokes
 
 [what the commit](http://whatthecommit.com/) spice up your git commits by pulling a random message from here
+

@@ -13,6 +13,8 @@ I am using this page to bookmark and share some resources I have found useful. I
 ### geospatial
 
 - an introduction to modern geospatial formats https://guide.cloudnativegeo.org
+- regionmask https://github.com/regionmask/regionmask
+- cool shaded relief maps https://github.com/joewdavies/geoblender
 
 ### ERDDAP
 - coastwatch R tutorials https://github.com/CoastWatch-WestCoast/r_code/blob/master/README.md
