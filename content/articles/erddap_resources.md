@@ -22,12 +22,6 @@ You can download the video here [callumrollo.com/files/docker-erddap.mp4](https:
 
 Transcript of all commands used in the video:  [callumrollo.com/files/erddap-docker-transcript.md](https://callumrollo.com/files/erddap-docker-transcript.md)
 
-I have given various talks on ERDDAP,  mostly focused on using erddapy to access various oceanographic datasets. Here are a few of them:
-- Data sharing workshop Gothenburg January 2023
-- ERDDAP webinar series GOOS autumn/winter 2023
-- Low cost sensor workshop Brest, November 2023
-- GOOS Low cost technologies and data workshop, Cape Town June 2023
-- Coastwatch webinar February 2024
 
 # Tools
 
@@ -36,6 +30,14 @@ I have given various talks on ERDDAP,  mostly focused on using erddapy to access
 - [ERDDAPlogs](https://github.com/callumrollo/erddaplogs) a tool for ERDDAP admins to get an idea of how their ERDDAP is being used. Work in progress!
 - [VOTO ERDDAP demo](https://github.com/voto-ocean-knowledge/erddap_demo) A series of jupyter notebooks demonstrating how to use ERDDAP to download various datasets, using VOTO glider data as the core examples
 - [GOOS ERDDAP demo](https://github.com/voto-ocean-knowledge/goos-erddap-demo) similar material but using a wider range of datasets with more time focused on gridded data
+
+I have given various talks on ERDDAP,  mostly focused on using erddapy to access various oceanographic datasets. Here are a few of them:
+
+- Data sharing workshop Gothenburg January 2023
+- ERDDAP webinar series GOOS autumn/winter 2023
+- Low cost sensor workshop Brest, November 2023
+- GOOS Low cost technologies and data workshop, Cape Town June 2023
+- Coastwatch webinar February 2024
 
 ---------------------------------------------------
 
