@@ -59,6 +59,10 @@ Daniel Oberhaus - [Succint history of free software vs open source](https://www.
 
 Leon Bilton - [How to not hate LaTeX](https://adigitoleo.srht.site/blog/software/not-hate-latex)
 
+### The web
+
+From Jaon - [Where have all the websites gone?](https://www.fromjason.xyz/p/notebook/where-have-all-the-websites-gone/)
+
 ### Work
 
 Tim Barry - [Just Too Efficient](https://www.tbray.org/ongoing/When/202x/2020/07/05/Too-Efficient)
