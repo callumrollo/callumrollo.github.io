@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Callum Rollo - Reading</title><link href="https://callumrollo.github.io/" rel="alternate"></link><link href="/feeds/reading.atom.xml" rel="self"></link><id>https://callumrollo.github.io/</id><updated>2023-10-12T12:40:00+01:00</updated><subtitle>Recovering oceanographer</subtitle><entry><title>Articles of interest</title><link href="https://callumrollo.github.io/reading.html" rel="alternate"></link><published>2020-07-13T10:20:00+01:00</published><updated>2023-10-12T12:40:00+01:00</updated><author><name>Callum Rollo</name></author><id>tag:callumrollo.github.io,2020-07-13:/reading.html</id><summary type="html">&lt;p&gt;What I'm reading&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Articles&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Callum Rollo - Reading</title><link href="https://callumrollo.github.io/" rel="alternate"></link><link href="/feeds/reading.atom.xml" rel="self"></link><id>https://callumrollo.github.io/</id><updated>2024-03-28T13:00:00+00:00</updated><subtitle>Recovering oceanographer</subtitle><entry><title>Articles of interest</title><link href="https://callumrollo.github.io/reading.html" rel="alternate"></link><published>2020-07-13T10:20:00+01:00</published><updated>2024-03-28T13:00:00+00:00</updated><author><name>Callum Rollo</name></author><id>tag:callumrollo.github.io,2020-07-13:/reading.html</id><summary type="html">&lt;p&gt;What I'm reading&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Articles&lt;/h2&gt;
 &lt;h3&gt;Oeanography&lt;/h3&gt;
 &lt;p&gt;Erik M. Bruvik, Ilker Fer, Kjetil Våge, and Peter M. Haugan - &lt;a href="https://os.copernicus.org/articles/16/291/2020/os-16-291-2020.pdf"&gt;A revised ocean glider concept to realize Stommel’s vision and supplement Argo floats&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Annie P. S. Wong et. al. &lt;a href="https://www.frontiersin.org/articles/10.3389/fmars.2020.00700/full"&gt;20 years of ARGO. Great overview with tech details, error sources and more&lt;/a&gt;&lt;/p&gt;
@@ -59,10 +59,23 @@
 &lt;p&gt;&lt;a href="matt.might.net"&gt;matt.might.net&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="betterfigures.org/"&gt;betterfigures.org/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://datacolada.org/"&gt;datacolada&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://ivory.idyll.org"&gt;Titus Brown&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;Good blogs&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://www.mollywhite.net/"&gt;Molly White&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://michael.orlitzky.com"&gt;Michael Orlitzky&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://smarimccarthy.is/posts/2022-02-18-cybernetics/"&gt;Smári McCarthy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.kalzumeus.com/"&gt;Patrick McKenzie&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://jvns.ca/"&gt;Julia Evans&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Sites I visit when I Should Be Writing&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://existentialcomics.com/"&gt;Existential comics&lt;/a&gt; a good intro to various schools of philosophy&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.schneierfacts.com"&gt;Bruce Schneier facts&lt;/a&gt; crypto jokes&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://whatthecommit.com/"&gt;what the commit&lt;/a&gt; spice up your git commits by pulling a random message from here&lt;/p&gt;</content><category term="Reading"></category><category term="articles"></category><category term="opinion"></category><category term="academia"></category><category term="nature"></category></entry></feed>
+&lt;p&gt;&lt;a href="http://whatthecommit.com/"&gt;what the commit&lt;/a&gt; spice up your git commits by pulling a random message from here&lt;/p&gt;
+&lt;h2&gt;Blog posts I should write&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;What I love and loathe about living in Sweden&lt;/li&gt;
+&lt;li&gt;What a scientist should do with software&lt;/li&gt;
+&lt;li&gt;My dalliances with effective altruism, and whether I should revisit it&lt;/li&gt;
+&lt;li&gt;Climate anxiety/guilt&lt;/li&gt;
+&lt;li&gt;Takes on efficiency culture. The tensions between excessive self optimisation and apathy&lt;/li&gt;
+&lt;li&gt;Nostalgia for the early net. Something I never experienced&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Reading"></category><category term="articles"></category><category term="opinion"></category><category term="academia"></category><category term="nature"></category></entry></feed>
