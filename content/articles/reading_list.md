@@ -1,6 +1,6 @@
 Title: Articles of interest
 Date: 2020-07-13 10:20
-Modified: 2023-10-12 12:40
+Modified: 2024-03-28 13:00
 Category: Reading
 Tags: articles, opinion, academia, nature
 Slug: reading
@@ -125,11 +125,19 @@ The more poorly formatted the website, the better the quality of ideas.
 
 [datacolada](http://datacolada.org/)
 
+[Titus Brown](http://ivory.idyll.org)
+
 ### Good blogs
 
 [Molly White](https://www.mollywhite.net/)
 
+[Michael Orlitzky](https://michael.orlitzky.com)
+
 [Smári McCarthy](https://smarimccarthy.is/posts/2022-02-18-cybernetics/)
+
+[Patrick McKenzie](https://www.kalzumeus.com/)
+
+[Julia Evans](https://jvns.ca/)
 
 ## Sites I visit when I Should Be Writing
 
@@ -139,3 +147,13 @@ The more poorly formatted the website, the better the quality of ideas.
 
 [what the commit](http://whatthecommit.com/) spice up your git commits by pulling a random message from here
 
+
+
+## Blog posts I should write
+
+- What I love and loathe about living in Sweden
+- What a scientist should do with software
+- My dalliances with effective altruism, and whether I should revisit it
+- Climate anxiety/guilt
+- Takes on efficiency culture. The tensions between excessive self optimisation and apathy
+- Nostalgia for the early net. Something I never experienced
