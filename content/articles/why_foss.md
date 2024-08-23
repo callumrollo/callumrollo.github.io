@@ -1,6 +1,6 @@
 Title: Why do I contribute to open source
-Date: 2024-03-28 13:00
-Modified: 2024-03-28 13:00
+Date: 2024-08-28 13:00
+Modified: 2024-08-28 13:00
 Category: FOSS
 Tags:  python, FOSS, oceanography, science, motivation, opinion
 Slug: why_foss
