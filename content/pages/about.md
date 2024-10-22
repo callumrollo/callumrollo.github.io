@@ -1,4 +1,4 @@
-Title: About
+Title: About me
 Date: 2020-06-05
 Category: Generic
 Slug: aboutme
