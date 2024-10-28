@@ -45,7 +45,7 @@ HOME_HIDE_TAGS = False
 
 GITHUB_URL = 'http://github.com/callumrollo/'
 
-LINKS = (('blog', SITEURL),
+LINKS = (('blog', '/'),
         )
 
 SOCIAL = (
