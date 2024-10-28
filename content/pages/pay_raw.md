@@ -10,7 +10,7 @@ In the interests of transparency, inspired by [George Monbiot](https://www.monbi
 
 # Salary
 
-In my role as data scientist at VOTO, I receive **58.200 SEK**/month. This is equivalent to **CONV;698400;SEK;[SEK,GBP,USD]** per year at current exchange rates. This high salary is partly a consequence of my migration status. To work in Sweden I require a [blue card](https://ec.europa.eu/home-affairs/policies/migration-and-asylum/legal-migration-and-integration/work/eu-blue-card_en), a visa aimed at attracting high skill professionals to fill a labour market gap. The eligibility for this card includes a [high minimum salary threshold](https://ec.europa.eu/immigration/blue-card/sweden_en).
+In my role as data scientist at VOTO, I receive **58 200 SEK**/month. This is equivalent to **CONV;698400;SEK;[SEK,GBP,USD]** per year at current exchange rates. This high salary is partly a consequence of my migration status. To work in Sweden I require a [blue card](https://ec.europa.eu/home-affairs/policies/migration-and-asylum/legal-migration-and-integration/work/eu-blue-card_en), a visa aimed at attracting high skill professionals to fill a labour market gap. The eligibility for this card includes a [high minimum salary threshold](https://ec.europa.eu/immigration/blue-card/sweden_en).
 
 I pay around 35 % in taxes to the Swedish government, and an additional 5 % on my UK student loan repayments. This leaves me with ~ **CONV;419040;SEK;[SEK,GBP,USD]** in take home pay. 
 

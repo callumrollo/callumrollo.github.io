@@ -37,7 +37,7 @@ def format_amounts(amounts, sig_fig):
         elif key=='USD':
             format_str += '$' + format(int(np.round(val,-sig_fig)), ",") + '/'
         elif key=='SEK':
-            format_str += format(int(np.round(val,-sig_fig-1)), ",").replace(",", ".") + 'SEK' '/'            
+            format_str += format(int(np.round(val,-sig_fig-1)), ",").replace(",", " ") + 'SEK' '/'            
     return format_str[:-1]
 
 def convert_str(raw_str):
