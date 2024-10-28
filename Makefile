@@ -41,6 +41,7 @@ help:
 	@echo '                                                                          '
 
 html:
+	python $(BASEDIR)/scripts/currency_convert.py
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
 clean:

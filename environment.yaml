@@ -6,4 +6,6 @@ dependencies:
        - markdown
        - typogrify
        - ghp-import
+       - numpy
+       - requests
 
