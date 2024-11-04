@@ -8,7 +8,7 @@ Since late 2021, I work as a data scientist at [Voice of the Ocean foundation (V
 
 I work a lot with [ERDDAP](https://github.com/ERDDAP/erddap), a data broker server that makes it much easier to share well standardised oceanographic data. I manage the [VOTO ERDDAP](https://erddap.observations.voiceoftheocean.org/erddap/index.html) where all our data are hosted. I have co-organised and presented several in person and online webinars teaching data users and admins how to best use ERDDAP for distributing oceanographic data.
 
-I am a Pythonista and proponent of free software for science. Several of my projects are available on my [github](https://github.com/callumrollo). I have completed collaborative programming projects as part of [OceanHackWeek](https://callumrollo.github.io/hackweek.html) and [Google Summer of Code](https://summerofcode.withgoogle.com/). During my PhD, I led the [UEA scientific python](https://ueapy.github.io/) group.
+I am a Pythonista and proponent of free software for science. Several of my projects are available on my [github](https://github.com/callumrollo). I have completed collaborative programming projects as part of [OceanHackWeek](/hackweek.html) and [Google Summer of Code](https://summerofcode.withgoogle.com/). During my PhD, I led the [UEA scientific python](https://ueapy.github.io/) group.
 
 [Blog posts](/)
 
@@ -105,6 +105,6 @@ See also [reading list](/reading.html)
 
 ### About this website
 
-Source code is available on my [Github](https://github.com/callumrollo/callumrollo.github.io). See [this article](https://callumrollo.github.io/howto.html#howto) for more info on why I promote open sharing  of source code, as well as links to academic websites that do the same.
+Source code is available on my [Github](https://github.com/callumrollo/callumrollo.github.io). See [this article](howto.html) for more info on why I promote open sharing  of source code, as well as links to academic websites that do the same.
 
 This website has no trackers, cookies, data collection or visitor logging. I am opposed to online surveillance.

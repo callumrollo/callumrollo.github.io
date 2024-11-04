@@ -59,4 +59,4 @@ First published June 2020
 
 Last updated October 2024
 
-Currency conversion using [this python script](https://github.com/callumrollo/callumrollo.github.io/blob/source/scripts/currency_conversion.py) and [freecurrencyapi.com](https://api.freecurrencyapi.com)
+Currency conversion using [this python script](https://github.com/callumrollo/callumrollo.github.io/blob/source/scripts/currency_convert.py) and [freecurrencyapi.com](https://api.freecurrencyapi.com)
