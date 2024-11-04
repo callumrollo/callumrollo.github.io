@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://callumrollo.github.io/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://callumrollo.github.io/theme/pygments/monokai.min.css">
+
+
+
+  <link rel="stylesheet" type="text/css" href="https://callumrollo.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://callumrollo.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://callumrollo.github.io/theme/font-awesome/css/solid.css">
+
+
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#333333">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#333333">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Microsoft EDGE -->
+  <meta name="msapplication-TileColor" content="#333333">
+
+  <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Callum Rollo Atom">
+
+
+
+
+
+
+
+
+ 
+
+<meta name="author" content="Callum Rollo" />
+<meta name="description" content="How I went about profiling and optimising our data portal for a 4 X speedup of load times" />
+<meta name="keywords" content="linux, python, software, foss, automation, web, cache, tutorial">
+
+
+  <meta property="og:site_name" content="Callum Rollo"/>
+  <meta property="og:title" content="Speeding up flask performance"/>
+  <meta property="og:description" content="How I went about profiling and optimising our data portal for a 4 X speedup of load times"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:url" content="https://callumrollo.github.io/cache_money.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2024-11-04 11:30:00+00:00"/>
+  <meta property="article:modified_time" content="2024-11-04 11:30:00+00:00"/>
+  <meta property="article:author" content="https://callumrollo.github.io/author/callum-rollo.html">
+  <meta property="article:section" content="FOSS"/>
+  <meta property="article:tag" content="linux"/>
+  <meta property="article:tag" content="python"/>
+  <meta property="article:tag" content="software"/>
+  <meta property="article:tag" content="foss"/>
+  <meta property="article:tag" content="automation"/>
+  <meta property="article:tag" content="web"/>
+  <meta property="article:tag" content="cache"/>
+  <meta property="article:tag" content="tutorial"/>
+  <meta property="og:image" content="/images/mug.jpg">
+
+  <title>Callum Rollo &ndash; Speeding up flask performance</title>
+
+
+</head>
+<body class="light-theme">
+
+<aside>
+  <div>
+    <a href="https://callumrollo.github.io/">
+      <img src="/images/mug.jpg" alt="Callum Rollo" title="Callum Rollo">
+    </a>
+
+    <h1>
+      <a href="https://callumrollo.github.io/">Callum Rollo</a>
+    </h1>
+
+    <p>Recovering oceanographer</p>
+
+
+    <nav>
+      <ul class="list">
+
+
+            <li>
+              <a target="_self"
+                 href="https://callumrollo.github.io/pages/aboutme.html#aboutme">
+                About me
+              </a>
+            </li>
+            <li>
+              <a target="_self"
+                 href="https://callumrollo.github.io/pages/open.html#open">
+                Open sofa policy
+              </a>
+            </li>
+            <li>
+              <a target="_self"
+                 href="https://callumrollo.github.io/pages/pay.html#pay">
+                My income
+              </a>
+            </li>
+            <li>
+              <a target="_self"
+                 href="https://callumrollo.github.io/pages/teaching.html#teaching">
+                Teaching
+              </a>
+            </li>
+            <li>
+              <a target="_self"
+                 href="https://callumrollo.github.io/pages/toolbox.html#toolbox">
+                Toolbox
+              </a>
+            </li>
+
+          <li>
+            <a target="_self" href="/" >blog</a>
+          </li>
+      </ul>
+    </nav>
+
+    <ul class="social">
+      <li>
+        <a class="sc-github"
+           href="https://github.com/callumrollo"
+           target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</aside>
+  <main>
+
+<nav>
+  <a href="https://callumrollo.github.io/">Home</a>
+
+  <a href="/categories.html">Categories</a>
+  <a href="/tags.html">Tags</a>
+
+  <a href="/feeds/all.atom.xml">Atom</a>
+
+</nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="cache_money">Speeding up flask performance</h1>
+    <p>
+      Posted on Mon 04 November 2024 in <a href="https://callumrollo.github.io/category/foss.html">FOSS</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <h1>Summary</h1>
+<p>A worked example of how I reduced the page load on the VOTO observations portal from about 4 seconds to 1 second by improving use of the backend database and implementing a simple server-side cache.
+Website stack: python, flask, mongodb, boostrap, leaflet maps, sellotape, prayers
+Methods used: inspect element, firefox network profiler, ipython <code>%%timeit</code> function, decorators, json
+Related articles: <a href="/flask_leaflet.html">Overview of python-flask with leaflet maps</a></p>
+<h1>Motivation</h1>
+<p>I have been aware for some time that the landing page of our observations portal is painfully slow to load (around 4 seconds). This has steadily become worse as the total number of platforms we have deployed has grown, as has the database that must be queired when users visit this webpage. As various web-dev people will tell you, if your web page takes a long page to load, people will not visit it! Also it seems pretty wasteful, a slow loading page is indicative of inefficiencies. We don't want to waste CPU cycles and come across as incompetent!</p>
+<p>So how do we speed this up?</p>
+<h1>Investigation</h1>
+<h3>Inspect web page</h3>
+<p>First we need to find out which part of the request is causing the slow page load. To do this we inspect the web page with Inspect Element (<a href="https://mango.pdf.zone/finding-former-australian-prime-minister-tony-abbotts-passport-number-on-instagram#were-not-done-just-because-a-web-page-says-were-done">not a crime</a>) and do a hard refresh of the page. We can then cehck the "Network" tab to see how long various elements of the page took to load.</p>
+<p>Here we can see that the basically everything loads in milliseconds, except for the page itself index.html which takes over 3 seconds. This means that the slow performance is in the page, not loading other resources like the leaflet javascript library that drives the map or the images. </p>
+<p><img alt="loading times" src="../images/load.png"></p>
+<p>We also see that index.html is only 20 kB, so it is extremely unlikely that the slow load is due to transfer time.s WE can see pic images 10 times as large loading in less than 200 ms.</p>
+<h3>Profiling</h3>
+<p>Having established that it is the creation of the webpage that is the prime culprit, let's find the parts of the code that cause it. An admission: I've never used a real code profiler. There are many purpose built tools for such things, but for me, I've found it simpler to just paste the code into a jupyter notebook and run the magic <code>%%timeit</code> decorator on functions to track down where code is going slow</p>
+<p><img alt="profile code" src="../images/profile.png"></p>
+<p>Here we can see that the two methods <code>totals</code> and <code>check_missions</code> of the <code>Basic</code> class are the main causes of the slowdown. Let's try to speed up these methods.</p>
+<h1>Fixing</h1>
+<h3>Method one: use the database properly</h3>
+<p><code>totals</code> and <code>check_missions</code> are calling functions under the hood, <code>totals</code> and <code>recent_glidermissions</code>, both from the <code>voto.services.mission_service</code>. These functions both work by making a series of calls to the mongodb database and have big for loops. Here's <code>recent_glidermissions</code> before the fix:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recent_glidermissions_old</span><span class="p">(</span><span class="n">timespan</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">24</span><span class="p">),</span> <span class="n">baltic_only</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="n">missions</span> <span class="o">=</span> <span class="n">GliderMission</span><span class="o">.</span><span class="n">objects</span><span class="p">()</span>
+    <span class="n">recent_gliders</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">recent_missions</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">mission</span> <span class="ow">in</span> <span class="n">missions</span><span class="p">:</span>
+        <span class="n">basin</span> <span class="o">=</span> <span class="n">mission</span><span class="o">.</span><span class="n">basin</span>
+        <span class="k">if</span> <span class="n">baltic_only</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">basin</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">since_last_dive</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="n">mission</span><span class="o">.</span><span class="n">end</span>
+        <span class="k">if</span> <span class="n">since_last_dive</span> <span class="o">&lt;</span> <span class="n">timespan</span><span class="p">:</span>
+            <span class="n">recent_gliders</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mission</span><span class="o">.</span><span class="n">glider</span><span class="p">)</span>
+            <span class="n">recent_missions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mission</span><span class="o">.</span><span class="n">mission</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">recent_gliders</span><span class="p">,</span> <span class="n">recent_missions</span>
+</code></pre></div>
+
+<p>It grabs all the missions from the database (240 at time of writing), with all their metadata, then loops over them. It's just looking for missions which have an "end" (ie most recent data point) within the last 24 hours and are situated within the Baltic. It takes the glider number and mission number, appends those to lists, then returns those lists.</p>
+<p>This works, but is highly inefficient! It's not an issue when you run it once during development (it takes just over a second) but when this is being run on <strong>every visit to our home page</strong> it adds up. Here's the code after optmising:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recent_glidermissions_new</span><span class="p">(</span><span class="n">timespan</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">24</span><span class="p">),</span> <span class="n">baltic_only</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>  
+    <span class="n">time_cut</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="n">timespan</span>  
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>  
+        <span class="n">GliderMission</span><span class="o">.</span><span class="n">objects</span><span class="p">(</span><span class="n">end__gte</span><span class="o">=</span><span class="n">time_cut</span><span class="p">,</span> <span class="n">basin__exists</span><span class="o">=</span><span class="n">baltic_only</span><span class="p">)</span>  
+        <span class="o">.</span><span class="n">only</span><span class="p">(</span><span class="s2">&quot;mission&quot;</span><span class="p">,</span> <span class="s2">&quot;glider&quot;</span><span class="p">)</span>  
+        <span class="o">.</span><span class="n">as_pymongo</span><span class="p">()</span>  
+    <span class="p">)</span>  
+    <span class="k">if</span> <span class="n">df</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>  
+        <span class="k">return</span> <span class="p">[],</span> <span class="p">[]</span>  
+    <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">glider</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">mission</span>
+</code></pre></div>
+
+<p>Now, rather than grabbing all the missions from the database and looping over them, we have mongdb do the filtering. <code>end__gte</code> is how pymongo encodes Greater Than or Equal, iei &gt;= our time cut of 24 hours ago. We also check if the mission has an assigned basin (that's how we know it's in the Baltic). We only return mission number and glider number, not all the fields for these missions, and we pass them to pandas to make a DataFrame from the list of dicts, rather than looping over the objects to extract these values. The new code is not only more concise, it is <em>40 times faster</em></p>
+<p><img alt="profile code" src="../images/speedup.png"></p>
+<p>We also run a check to reassure ourselves that the old function and the new one give the same results.</p>
+<h3>Method two: Poor man's caching</h3>
+<p>The second function causing issues is <code>totals</code>. This is a long messy function that calculates a bunch of stats that managers love to see: total time of gliders in the water, number of dives completed, horizontal and vertical distances travelled etc. Because these are stats across the whole database, it's much harder to find database efficiencies as we did for the recent glider missions function. But, as these are totals stats for the 4 + years of operation, they don't need to be updated every time a user refreshes the page. This seems like a good candidate for caching data.</p>
+<p>I looked at a few built in methods, like Python's <a href="https://docs.python.org/3.9/library/functools.html#functools.lru_cache">functools.lru_cache</a>. This caches a return value for <em>n</em> calls, so the stats would be recalculate every time the <em>nth</em> page visit occurred. This didn't really fit my use case though, I want calculate these stats at a set interval, say once each day, not have the number of refreshes dependant on how frequently the page is visited.  </p>
+<p>Then there are third party libraries like <a href="https://github.com/tkem/cachetools">cachetools</a> which do have the capacity to set a time limit on cached items. But these contained warnings of thread safety, and I wasn't sure how this would interact with <a href="https://uwsgi-docs.readthedocs.io/en/latest/">uWSGI</a> server that runs the website with multiple processes and threads.</p>
+<p>Instead I opted for a far simpler solution where I use a json file as storage. In pseudocode the solution is:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">calculate_totals</span><span class="p">():</span>
+    <span class="n">stats</span> <span class="o">=</span> <span class="n">load_from_json</span><span class="p">(</span><span class="n">json_cache_file</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">stats</span><span class="o">.</span><span class="n">time_edited</span> <span class="o">&gt;</span> <span class="n">now</span> <span class="o">-</span> <span class="mi">24</span> <span class="n">hours</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">stats</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="o">...</span><span class="n">lots</span> <span class="n">of</span> <span class="n">stats</span> <span class="n">calculations</span> <span class="n">on</span> <span class="n">the</span> <span class="n">database</span><span class="o">...</span>
+        <span class="n">write_stats_to_json</span><span class="p">(</span><span class="n">json_cache_file</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">stats</span>
+</code></pre></div>
+
+<p>This way, we only re-calculate the stats once every 24 hours. </p>
+<h1>Results</h1>
+<p>The main web page now loads in less than 500 ms! The total page load is just over 1 second. Not bad for an afternoon's work.</p>
+<p>I'm sure there are more elegant and efficient ways I could have solved this, but these methods worked and took me an afternoon to investigate and implement.</p>
+<p>Why didn't I do this before? Mostly because it wasn't a problem before. When I started this website we had been operating for a year with far fewer gliders in the water. The database was smaller, the pages more basic and expectations were lower. Just having a publicly viewable map and some pngs of near real time data was a huge win. I'm also aware of the pitfalls of premature optimisation, where you put a lot of time into improving something that turns out not to be a critical application/performance bottleneck. Performance isn't something anyone has asked me about (does anyone really care that the page took 4 seconds to load?) But I think it's important to take a little professional pride in these things. </p>
+<h1>Reflection</h1>
+<ul>
+<li>Speeding stuff up is very pleasing. But I'm sure after this I would hit marginal gains, having made the big savings of 75 % time cut with these two interventions.</li>
+<li>It's nice to have complete control over our data portal. Rather than needing to raise a ticket or kick the problem to another team I was able to remedy it myself in half a day. Though if we had a proper team of developers we probably wouldn't have shipped code with these performance flaws in the first place!!</li>
+<li>There was no oceanography in this process. It would work for kind of any website with a similar stack and user needs. I guess I'm just a plain dev now?</li>
+<li>I wrote this blog post while working on the problem, rather than after, to try to capture the process in the most accurate way possible. Inspired by the way <a href="https://jvns.ca/">Julia Evans</a> writes her brilliant technical explainers.</li>
+</ul>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://callumrollo.github.io/tag/linux.html">linux</a>
+      <a href="https://callumrollo.github.io/tag/python.html">python</a>
+      <a href="https://callumrollo.github.io/tag/software.html">software</a>
+      <a href="https://callumrollo.github.io/tag/foss.html">foss</a>
+      <a href="https://callumrollo.github.io/tag/automation.html">automation</a>
+      <a href="https://callumrollo.github.io/tag/web.html">web</a>
+      <a href="https://callumrollo.github.io/tag/cache.html">cache</a>
+      <a href="https://callumrollo.github.io/tag/tutorial.html">tutorial</a>
+    </p>
+  </div>
+
+
+
+
+
+
+</article>
+
+<footer>
+<p>
+  &copy; 2024  - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.en_US" target="_blank">Creative Commons Attribution-ShareAlike</a>
+</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p></footer>  </main>
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Callum Rollo ",
+  "url" : "https://callumrollo.github.io",
+  "image": "/images/mug.jpg",
+  "description": "Science should be open. Software should be free. No one is illegal"
+}
+</script>
+</body>
+</html>
