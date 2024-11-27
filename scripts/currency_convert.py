@@ -1,6 +1,7 @@
 import numpy as np
 import requests
 import json
+import datetime
 
 with open("secrets.json") as json_file:
     secrets = json.load(json_file)
@@ -61,10 +62,10 @@ def main():
                     if len(part) == 0:
                         continue
                     if part[:4]=="CONV":
-                        #print(part)
                         parts[i] = convert_str(part)
                 new_line = "**".join(parts)
                 outfile.write(new_line)
+            outfile.write(f" Currency conversion perfomed on {str(datetime.datetime.now())[:11]}.")
 
 
 if __name__ == "__main__":

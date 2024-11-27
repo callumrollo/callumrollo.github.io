@@ -54,6 +54,8 @@ James Heathers - [Demand pay for reviewing papers for profit making publishers](
 
 Bjorn Brembs - [Academic publishers vs scihub. Suggested installation of spyware on university library servers](http://bjoern.brembs.net/2020/10/is-the-snsi-the-new-prism/)
 
+Daniel Engber - [The Business-School Scandal That Just Keeps Getting Bigger](https://www.theatlantic.com/magazine/archive/2025/01/business-school-fraud-research/680669/)
+
 ### FOSS
 Daniel Oberhaus - [Succint history of free software vs open source](https://www.vice.com/en/article/43zak3/the-internet-was-built-on-the-free-labor-of-open-source-developers-is-that-sustainable)
 

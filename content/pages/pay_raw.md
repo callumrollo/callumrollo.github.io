@@ -34,11 +34,11 @@ You can read a short article on the pros and cons of publishing salaries [here](
 
 In 2023 I bought a flat in Gothenburg, Sweden with a down payment of **CONV;750000;SEK;[SEK,GBP,USD]** and a bank loan of **CONV;2400000;SEK;[SEK,GBP,USD]** I was only able to do this with financial assistance of **CONV;30000;GBP;[GBP,SEK,USD]**  from my parents. I expect to pay my mortgage off in 50 years time, as is common in Sweden.
 
-I have a workplace pension and ~ **CONV;50000;SEK;[SEK,GBP,USD]** invested in index funds. Though tbh retirement seems pretty unlikely on a burning planet.
+I have a workplace pension and ~ **CONV;117000;SEK;[SEK,GBP,USD]** invested in index funds. Though tbh retirement seems pretty unlikely on a burning planet.
 
-I hold **CONV;6000;GBP;[GBP,SEK,USD]** in non-profit bearing  community shares in [The Locks Inn Community Pub Limited](https://thelocksinn.com/). This is a successful community takeover of a well loved local pub.
+I hold **CONV;500;GBP;[GBP,SEK,USD]** in non-profit bearing  community shares in [The Locks Inn Community Pub Limited](https://thelocksinn.com/). This is a successful community takeover of a well loved local pub.
 
-I have **CONV;47000;GBP;[GBP,SEK,USD]** of student debt in the UK. Currently the interest rate of 7 % means my repayments do not even cover the interest.
+I have **CONV;45000;GBP;[GBP,SEK,USD]** of student debt in the UK. Currently the interest rate of 7 % means my repayments do not even cover the interest.
 
 # Giving
 
@@ -59,4 +59,4 @@ First published June 2020
 
 Last updated October 2024
 
-Currency conversion using [this python script](https://github.com/callumrollo/callumrollo.github.io/blob/source/scripts/currency_convert.py) and [freecurrencyapi.com](https://api.freecurrencyapi.com)
+Currency conversion using [this python script](https://github.com/callumrollo/callumrollo.github.io/blob/source/scripts/currency_convert.py) and [freecurrencyapi.com](https://api.freecurrencyapi.com).
