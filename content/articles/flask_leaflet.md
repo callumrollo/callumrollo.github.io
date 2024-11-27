@@ -13,8 +13,8 @@ This may sound like a word salad, but it's a useful and simple (trust me) softwa
 I call it a gimmick because I've used the same core method to create:
 
 - The UEA glider group [piloting website](https://ueaglider.uea.ac.uk/) ([source](https://github.com/ueaglider/ueaglider-web))
-- The NBP 2202 cruise [data website](https://nbp2202map.com/) (the main subject of this article) [source](https://github.com/callumrollo/itgc-2022-map)
-- The VOTO public facing live data website (work in progress) ([source]())
+- The NBP 2202 cruise data website (the main subject of this article) [source](https://github.com/callumrollo/itgc-2022-map)
+- The VOTO public facing live [observations portal](https://observations.voiceoftheocean.org/)  ([source]())
 
 ### Why you might want a site like this
 If you want to display geospatial data:

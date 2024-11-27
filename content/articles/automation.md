@@ -158,7 +158,7 @@ for b1 in b0:
 
 ### GDAL for creating webtiles
 
-Short bash script that will take any input geotiff and create webtiles for use with leaflet maps. This is how I generated the ice maps for the [nbp2202map](https://github.com/callumrollo/itgc-2022-map) and [website](https://nbp2202map.com/). Credit to [Li Ling](https://www.kth.se/profile/liling/) for figuring out how to warp the geotiffs to a usable projection.
+Short bash script that will take any input geotiff and create webtiles for use with leaflet maps. This is how I generated the ice maps for the [nbp2202map](https://github.com/callumrollo/itgc-2022-map). Credit to [Li Ling](https://github.com/luxiya01) for figuring out how to warp the geotiffs to a usable projection.
 
 ```bash
 PATH=$PATH:/home/callum/anaconda3/envs/geospatial/bin
@@ -178,14 +178,13 @@ Line by line:
 ### Other handy scripts
 - [ADCP GNSS mash](https://github.com/callumrollo/adcp-gnss-mash) a Python script that combines two timestamped datasets from an autonomous platform to add location information to ADCP data. Includes parsing NMEA, manipulating files and using datetime
 - [webscraping](https://github.com/callumrollo/github-scraper) a nice little example of scraping data from GitHub
-- [geotiff-generator](https://github.com/callumrollo/geotiff-generato) A Python program to generate geotiffs from EMODnet, GEBCO or user supplied bathymetry. Includes taking user input from the command-line, stitching together EMODnet netCDFs and working with tri-band rasters
-- [move your mouse every 30 seconds](https://github.com/callumrollo/coding/blob/master/handy_scripts/mousemove) you never know when you might [need it](https://xkcd.com/196/)
+- [geotiff-generator](https://github.com/callumrollo/geotiff-generator) A Python program to generate geotiffs from EMODnet, GEBCO or user supplied bathymetry. Includes taking user input from the command-line, stitching together EMODnet netCDFs and working with tri-band rasters
 
 --------------------------------
 
 
 ### Tools used
-These scripts use python and/or bash. The Python stuff probably works on Windows, but all were developed on Linux. For more tools check out out [my toolbox](/pages/toolbox.html)
+These scripts use python and/or bash. The Python stuff probably works on Windows, but all were developed on Linux. For more tools check out out [my toolbox]({filename}/pages/toolbox.md)
 
 
 

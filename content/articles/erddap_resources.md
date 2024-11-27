@@ -25,7 +25,7 @@ Transcript of all commands used in the video:  [callumrollo.com/files/erddap-doc
 
 # Tools
 
-- [erddapy](https://github.com/ioos/erddapy) essential python client for downloading data from ERDDAP. I contributed to this during Google summer of code 2021 [adding griddap support to erddapy](griddap)
+- [erddapy](https://github.com/ioos/erddapy) essential python client for downloading data from ERDDAP. I contributed to this during Google summer of code 2021 [adding griddap support to erddapy]({filename}/articles/griddap.md)
 - [gliderpy](https://github.com/ioos/gliderpy) a wrapper around erddapy to make downloading glider data easier. I contributed to this during OceanHackWeek 2020
 - [ERDDAPlogs](https://github.com/callumrollo/erddaplogs) a tool for ERDDAP admins to get an idea of how their ERDDAP is being used. Work in progress!
 - [VOTO ERDDAP demo](https://github.com/voto-ocean-knowledge/erddap_demo) A series of jupyter notebooks demonstrating how to use ERDDAP to download various datasets, using VOTO glider data as the core examples

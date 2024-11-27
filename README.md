@@ -11,4 +11,6 @@ repo for the website https://callumrollo.github.io/
 - Test site with `make html && make serve`
 - Push to github with `make github` this will push content to master to make it a pages site
 
+### Additional tools
 
+- [makrdown link check](https://github.com/tcort/markdown-link-check) to catch dead urls
