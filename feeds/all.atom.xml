@@ -3,7 +3,7 @@
 &lt;p&gt;A worked example of how I reduced the page load on the VOTO observations portal from about 4 seconds to 1 second by improving use of the backend database and implementing a simple server-side cache.&lt;/p&gt;
 &lt;p&gt;Website stack: python, flask, mongodb, boostrap, leaflet maps, sellotape, prayers&lt;/p&gt;
 &lt;p&gt;Methods used: inspect element, firefox network profiler, ipython &lt;code&gt;%%timeit&lt;/code&gt; function, decorators, json&lt;/p&gt;
-&lt;p&gt;Related articles: &lt;a href="/flask_leaflet.html"&gt;Overview of python-flask with leaflet maps&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Related articles: &lt;a href="https://callumrollo.github.io/flask_leaflet.html"&gt;Overview of python-flask with leaflet maps&lt;/a&gt;&lt;/p&gt;
 &lt;h1&gt;Motivation&lt;/h1&gt;
 &lt;p&gt;I have been aware for some time that the landing page of our &lt;a href="https://observations.voiceoftheocean.org/"&gt;observations portal&lt;/a&gt; is painfully slow to load (around 4 seconds). This has steadily become worse as the total number of platforms we have deployed has grown, as has the database that must be queried when users visit this webpage. As various web-dev people will tell you, if your web page takes a long page to load, people will not visit it Also it seems pretty wasteful. A slow loading page is indicative of inefficiencies. We don't want to waste CPU cycles and be laughed at by other code slingers!&lt;/p&gt;
 &lt;p&gt;So how do we speed this up?&lt;/p&gt;
@@ -94,7 +94,7 @@
 &lt;p&gt;Basically, I am a programmer (though patio11 would tell me to call myself &lt;a href="https://www.kalzumeus.com/2011/10/28/dont-call-yourself-a-programmer/"&gt;anything else&lt;/a&gt;).  I haven't done any oceanography in the classic sense since I finished my PhD. I don't really miss it to be honest. Occasionally other more interesting duties come up like going to sea, contributing to scientific papers in a small way and, my personal favourite, teaching and mentoring through projects like &lt;a href="https://github.com/oceanhackweek/"&gt;OceanHackWeek&lt;/a&gt; and &lt;a href="https://summerofcode.withgoogle.com/"&gt;Google Summer of Code&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Why do I do it?&lt;/h2&gt;
 &lt;p&gt;When I started this job, fresh from my PhD, I had a lot of freedom to define it. There are benefits to being a data department of one person! I decided from the start that I would use and contribute to open source software as much as possible. This was partly an ideological choice. I believe and openness, giving and collaboration for their own sake. When the time came for me to give the traditional final-year PhD student departmental seminar, I used my 40 minutes to promote the use of open source within oceanography, rather than presenting the results on my PhD.&lt;/p&gt;
-&lt;p&gt;I enjoy a position of great privilege, I have a steady open ended contract (thanks unions!), no pressure to publish and freedom to choose whatever tech stack I want as long as I keep the data flowing and the websites up for the requisite number of 9s. I have used my working hours to improve and expand various libraries that our dataflow depends on, like &lt;a href="https://github.com/c-proof/pyglider"&gt;pyglider&lt;/a&gt;, &lt;a href="https://github.com/ERDDAP/erddap"&gt;ERDDAP&lt;/a&gt; and &lt;a href="https://github.com/ioos/erddapy"&gt;erddapy&lt;/a&gt;. I have also dedicated a lot of time to writing and presenting various tutorials, mostly in the realm of accessing data from and administering, ERDDAP servers (full list &lt;a href="/erddaptools.html"&gt;here&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;I enjoy a position of great privilege, I have a steady open ended contract (thanks unions!), no pressure to publish and freedom to choose whatever tech stack I want as long as I keep the data flowing and the websites up for the requisite number of 9s. I have used my working hours to improve and expand various libraries that our dataflow depends on, like &lt;a href="https://github.com/c-proof/pyglider"&gt;pyglider&lt;/a&gt;, &lt;a href="https://github.com/ERDDAP/erddap"&gt;ERDDAP&lt;/a&gt; and &lt;a href="https://github.com/ioos/erddapy"&gt;erddapy&lt;/a&gt;. I have also dedicated a lot of time to writing and presenting various tutorials, mostly in the realm of accessing data from and administering, ERDDAP servers (full list &lt;a href="https://callumrollo.github.io/erddaptools.html"&gt;here&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;I am dedicated to the cause of open science. I ensure that everything I write is openly accessible, and where possible I contribute to existing community projects, rather than re-inventing them myself. While I believe in this mission, I wonder if it is the most effective and socially beneficial use of my working hours.&lt;/p&gt;
 &lt;h2&gt;What next?&lt;/h2&gt;
 &lt;p&gt;As a one person data science team, my opportunities for professional growth are limited. I am acutely aware that my technical skills are not developing as they would in a full-time software development job. What improvements I do make are mostly via learning from the small number of professionals in similar roles to mine, notable the inimitable &lt;a href="https://github.com/ocefpaf"&gt;ocefpaf&lt;/a&gt;, whose packages, PRs, guides and personal advice have given me some of the most valuable insights of my career. Being a software developer in the 21st century, there are near infinite opportunities to self improve and collaborate across companies, disciplines and borders. It's one of the things I appreciate most about my profession. But it's hard to take advantage of these opportunities. It is all to easy to  become caught in the day to day cycle of error reports, PRs, failing CI and refactoring, and kick long term development down the road. I am amassing technical debt in my codebases and my skillset.&lt;/p&gt;
@@ -113,7 +113,7 @@
 &lt;p&gt;Transcript of all commands used in the video:  &lt;a href="https://callumrollo.com/files/erddap-docker-transcript.md"&gt;callumrollo.com/files/erddap-docker-transcript.md&lt;/a&gt;&lt;/p&gt;
 &lt;h1&gt;Tools&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/ioos/erddapy"&gt;erddapy&lt;/a&gt; essential python client for downloading data from ERDDAP. I contributed to this during Google summer of code 2021 &lt;a href="griddap"&gt;adding griddap support to erddapy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ioos/erddapy"&gt;erddapy&lt;/a&gt; essential python client for downloading data from ERDDAP. I contributed to this during Google summer of code 2021 &lt;a href="https://callumrollo.github.io/griddap.html"&gt;adding griddap support to erddapy&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/ioos/gliderpy"&gt;gliderpy&lt;/a&gt; a wrapper around erddapy to make downloading glider data easier. I contributed to this during OceanHackWeek 2020&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/callumrollo/erddaplogs"&gt;ERDDAPlogs&lt;/a&gt; a tool for ERDDAP admins to get an idea of how their ERDDAP is being used. Work in progress!&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/voto-ocean-knowledge/erddap_demo"&gt;VOTO ERDDAP demo&lt;/a&gt; A series of jupyter notebooks demonstrating how to use ERDDAP to download various datasets, using VOTO glider data as the core examples&lt;/li&gt;
@@ -146,11 +146,11 @@
 &lt;/ul&gt;
 &lt;h3&gt;ERDDAP&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;coastwatch R tutorials https://github.com/CoastWatch-WestCoast/r_code/blob/master/README.md&lt;/li&gt;
+&lt;li&gt;coastwatch R tutorials https://github.com/CoastWatch-WestCoast/r_course_materials&lt;/li&gt;
 &lt;li&gt;coastwatch tutorials on satellite data https://github.com/coastwatch-training/CoastWatch-Tutorials&lt;/li&gt;
 &lt;li&gt;UMD extract goespatial data within a polygon https://umd.instructure.com/courses/1336575/pages/python-tutorial-3-extract-data-within-a-shapefile-using-erddap?module_item_id=12039958&lt;/li&gt;
 &lt;/ul&gt;</content><category term="FOSS"></category><category term="software"></category><category term="foss"></category><category term="oceanography"></category><category term="web"></category><category term="geospatial"></category><category term="tutorial"></category><category term="reading"></category><category term="resource"></category></entry><entry><title>Analyse web logs</title><link href="https://callumrollo.github.io/weblogparse.html" rel="alternate"></link><published>2023-06-17T15:00:00+01:00</published><updated>2023-10-12T11:00:00+01:00</updated><author><name>Callum Rollo</name></author><id>tag:callumrollo.github.io,2023-06-17:/weblogparse.html</id><summary type="html">&lt;p&gt;Parsing web log files to gain insight into visitors to our ERDDAP server&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;N.B.&lt;/strong&gt; The scripts described in this article are available in a &lt;a href="https://github.com/callumrollo/website-log-parse"&gt;github repo&lt;/a&gt; as jupyter notebooks.&lt;/p&gt;
-&lt;p&gt;Web analytics are big business. Products like Google Analytics enable incredibly granular and detailed examination of every user to your website. However, if you do not wish to collect and retain data at this level using tools like cookies or tracking beacons, either out of respect to your users privacy or because &lt;a href="https://www.theregister.com/2022/02/10/google_analytics_gdpr_breach/,"&gt;it's the law&lt;/a&gt;, you need to do your own user analysis.&lt;/p&gt;
+&lt;p&gt;Web analytics are big business. Products like Google Analytics enable incredibly granular and detailed examination of every user to your website. However, if you do not wish to collect and retain data at this level using tools like cookies or tracking beacons, either out of respect to your users privacy or because &lt;a href="https://www.theregister.com/2022/06/24/italy_google_analytics/"&gt;it's the law&lt;/a&gt;, you need to do your own user analysis.&lt;/p&gt;
 &lt;p&gt;This blog explains the process I went through to analyse use traffic to my organisation's &lt;a href="https://erddap.observations.voiceoftheocean.org/erddap/index.html"&gt;ERDDAP data server&lt;/a&gt; to get an idea of what data is being requested and where our users are. I approached this with the following priorities:
 1. No third party trackers on the site
 2. Aggregate data at the regional/national level to preserve anonymity
@@ -247,8 +247,8 @@
 &lt;p&gt;I call it a gimmick because I've used the same core method to create:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The UEA glider group &lt;a href="https://ueaglider.uea.ac.uk/"&gt;piloting website&lt;/a&gt; (&lt;a href="https://github.com/ueaglider/ueaglider-web"&gt;source&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;The NBP 2202 cruise &lt;a href="https://nbp2202map.com/"&gt;data website&lt;/a&gt; (the main subject of this article) &lt;a href="https://github.com/callumrollo/itgc-2022-map"&gt;source&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;The VOTO public facing live data website (work in progress) (&lt;a href=""&gt;source&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;The NBP 2202 cruise data website (the main subject of this article) &lt;a href="https://github.com/callumrollo/itgc-2022-map"&gt;source&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The VOTO public facing live &lt;a href="https://observations.voiceoftheocean.org/"&gt;observations portal&lt;/a&gt;  (&lt;a href=""&gt;source&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Why you might want a site like this&lt;/h3&gt;
 &lt;p&gt;If you want to display geospatial data:&lt;/p&gt;
@@ -283,7 +283,7 @@
 &lt;li&gt;Create a Python environment using pip and the requirements.txt file or conda and the environment.yml file. Each works as well as the other&lt;/li&gt;
 &lt;li&gt;navigate to the directory where the environment files are and run the command &lt;code&gt;python itgc/app.py&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Open a browser window and go to &lt;a href="http://127.0.0.1:5000/"&gt;127.0.0.1:5000&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;That's it! You're running the app on your very own PC. You should see a website that looks and functions just like the one at &lt;a href="https://nbp2202map.com"&gt;nbp2202map.com&lt;/a&gt; but it is running solely on your PC&lt;/li&gt;
+&lt;li&gt;That's it! You're running the app on your very own PC. You should see a website that looks and functions just the the source website but it is running solely on your PC (127.0.0.1 is a special IP address for local resources).&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1&gt;Next, remix&lt;/h1&gt;
 &lt;p&gt;I recommend using &lt;a href="https://git-scm.com/docs/gittutorial"&gt;git&lt;/a&gt; to keep track of changes to the codebase of this project. If you're particularly keen, maybe you already forked the repo in step 1 to start editing your own version.&lt;/p&gt;
@@ -324,13 +324,13 @@ Here are some suggestions of things you might change:&lt;/p&gt;
 &lt;h1&gt;On to the web&lt;/h1&gt;
 &lt;p&gt;You've done it! A website of your own. Assuming you wish to share it with others (why else would you make a website?) you now need to host this on a server somewhere. This can seem daunting at first, but it's just a few easy steps. I have included the exact commands necessary in code blocks&lt;/p&gt;
 &lt;h4&gt;Get a cloud server running Ubuntu&lt;/h4&gt;
-&lt;p&gt;Check out links at the bottom of this page for some suggestions. I have used a Shared CPU Nanode (1 GB) from &lt;a href="linode.com"&gt;linode&lt;/a&gt; running Ubuntu 20.04 LTS.&lt;/p&gt;
+&lt;p&gt;Check out links at the bottom of this page for some suggestions. I have used a Shared CPU Nanode (1 GB) from &lt;a href="https://www.linode.com/"&gt;linode&lt;/a&gt; running Ubuntu 20.04 LTS.&lt;/p&gt;
 &lt;h4&gt;Login with SSH and update your server&lt;/h4&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;apt update &amp;amp;&amp;amp; apt upgrade -y
 reboot
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;em&gt;Recommended&lt;/em&gt; follow &lt;a href="https://www.linode.com/docs/guides/set-up-and-secure/"&gt;this guide&lt;/a&gt; to securing your server&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Recommended&lt;/em&gt; follow &lt;a href="https://techdocs.akamai.com/cloud-computing/docs/set-up-and-secure-a-compute-instance"&gt;this guide&lt;/a&gt; to securing your server&lt;/p&gt;
 &lt;h4&gt;Install key packages and libraries for the app&lt;/h4&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;build&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;essential&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;unzip&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;zip&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;nload&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;tree&lt;/span&gt;
 &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pip&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;venv&lt;/span&gt;
@@ -396,9 +396,9 @@ sudo certbot --nginx
 &lt;hr&gt;
 &lt;h3&gt;Resources and links&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;I learned flask from &lt;a href="https://training.talkpython.fm/courses/explore_flask/building-data-driven-web-applications-in- python-with-flask-sqlalchemy-and-bootstrap"&gt;TalkPython Training's Flask course&lt;/a&gt; it goes into a lot more detail and enables you to make a really powerful, flexible website. It also covers deployment to the web in good detail&lt;/li&gt;
-&lt;li&gt;You can learn enough html and CSS to get by just by googling things when they break. &lt;a href="www.w3schools.com"&gt;w3schools&lt;/a&gt; have some good resources though, and the &lt;a href="https://getbootstrap.com/docs/3.4/css/"&gt;bootstap docs&lt;/a&gt; are pretty good.&lt;/li&gt;
-&lt;li&gt;&lt;a href="leafletjs.com"&gt;leaflet maps&lt;/a&gt; have some great tutorials. You could get most of the functionality of this app just using leaflet and json.&lt;/li&gt;
+&lt;li&gt;I learned flask from &lt;a href="https://training.talkpython.fm/courses/explore_flask/building-data-driven-web-applications-in-python-with-flask-sqlalchemy-and-bootstrap"&gt;TalkPython Training's Flask course&lt;/a&gt; it goes into a lot more detail and enables you to make a really powerful, flexible website. It also covers deployment to the web in good detail&lt;/li&gt;
+&lt;li&gt;You can learn enough html and CSS to get by just by googling things when they break. &lt;a href="https://www.w3schools.com/"&gt;w3schools&lt;/a&gt; have some good resources though, and the &lt;a href="https://getbootstrap.com/docs/3.4/css/"&gt;bootstap docs&lt;/a&gt; are pretty good.&lt;/li&gt;
+&lt;li&gt;&lt;a href="lhttps://leafletjs.com/"&gt;leaflet maps&lt;/a&gt; have some great tutorials. You could get most of the functionality of this app just using leaflet and json.&lt;/li&gt;
 &lt;li&gt;You can set yourself up with a cloud server for less than $/£/€ 10 a month from a cloud host like &lt;a href="https://www.linode.com/docs/guides/set-up-and-secure/"&gt;Linode&lt;/a&gt; or &lt;a href="https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04"&gt;DigitalOcean&lt;/a&gt;. Personally I'd avoid AWS at first as the learning curve is steeper, and it's a lot easier to end up accidentally running up a large bill. You can also search for credit codes/sign up links. You can typically get several months free this way.&lt;/li&gt;
 &lt;/ul&gt;</content><category term="FOSS"></category><category term="python"></category><category term="maps"></category><category term="flask"></category><category term="automation"></category><category term="front-end"></category></entry><entry><title>Automation for oceanographers</title><link href="https://callumrollo.github.io/automation.html" rel="alternate"></link><published>2022-01-07T15:20:00+00:00</published><updated>2022-04-18T14:15:00+01:00</updated><author><name>Callum Rollo</name></author><id>tag:callumrollo.github.io,2022-01-07:/automation.html</id><summary type="html">&lt;p&gt;Writing hacky scripts for oceanography&lt;/p&gt;</summary><content type="html">&lt;p&gt;As a physical oceanographer, I occasionally spend chunks of time at sea. Typically this will be aboard a scientific research vessel with very limited shoreside connectivity. In order to keep oceanographic data flowing, I have developed several hacky scripts to perform routine analysis and transfer data in an efficient manner.&lt;/p&gt;
 &lt;h3&gt;Read emails in Python&lt;/h3&gt;
@@ -536,7 +536,7 @@ zip&lt;span class="w"&gt; &lt;/span&gt;-rj&lt;span class="w"&gt; &lt;/span&gt;/h
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3&gt;GDAL for creating webtiles&lt;/h3&gt;
-&lt;p&gt;Short bash script that will take any input geotiff and create webtiles for use with leaflet maps. This is how I generated the ice maps for the &lt;a href="https://github.com/callumrollo/itgc-2022-map"&gt;nbp2202map&lt;/a&gt; and &lt;a href="https://nbp2202map.com/"&gt;website&lt;/a&gt;. Credit to &lt;a href="https://www.kth.se/profile/liling/"&gt;Li Ling&lt;/a&gt; for figuring out how to warp the geotiffs to a usable projection.&lt;/p&gt;
+&lt;p&gt;Short bash script that will take any input geotiff and create webtiles for use with leaflet maps. This is how I generated the ice maps for the &lt;a href="https://github.com/callumrollo/itgc-2022-map"&gt;nbp2202map&lt;/a&gt;. Credit to &lt;a href="https://github.com/luxiya01"&gt;Li Ling&lt;/a&gt; for figuring out how to warp the geotiffs to a usable projection.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nv"&gt;PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$PATH&lt;/span&gt;:/home/callum/anaconda3/envs/geospatial/bin
 &lt;span class="nv"&gt;infile&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;input_filename.tif
 gdalwarp&lt;span class="w"&gt; &lt;/span&gt;-t_srs&lt;span class="w"&gt; &lt;/span&gt;EPSG:4326&lt;span class="w"&gt; &lt;/span&gt;-te&lt;span class="w"&gt; &lt;/span&gt;-140&lt;span class="w"&gt; &lt;/span&gt;-76&lt;span class="w"&gt; &lt;/span&gt;-90&lt;span class="w"&gt; &lt;/span&gt;-66&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$infile&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;liproj.tif
@@ -556,12 +556,11 @@ gdal2tiles.py&lt;span class="w"&gt; &lt;/span&gt;li.vrt&lt;span class="w"&gt; &l
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/callumrollo/adcp-gnss-mash"&gt;ADCP GNSS mash&lt;/a&gt; a Python script that combines two timestamped datasets from an autonomous platform to add location information to ADCP data. Includes parsing NMEA, manipulating files and using datetime&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/callumrollo/github-scraper"&gt;webscraping&lt;/a&gt; a nice little example of scraping data from GitHub&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/callumrollo/geotiff-generato"&gt;geotiff-generator&lt;/a&gt; A Python program to generate geotiffs from EMODnet, GEBCO or user supplied bathymetry. Includes taking user input from the command-line, stitching together EMODnet netCDFs and working with tri-band rasters&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/callumrollo/coding/blob/master/handy_scripts/mousemove"&gt;move your mouse every 30 seconds&lt;/a&gt; you never know when you might &lt;a href="https://xkcd.com/196/"&gt;need it&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/callumrollo/geotiff-generator"&gt;geotiff-generator&lt;/a&gt; A Python program to generate geotiffs from EMODnet, GEBCO or user supplied bathymetry. Includes taking user input from the command-line, stitching together EMODnet netCDFs and working with tri-band rasters&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h3&gt;Tools used&lt;/h3&gt;
-&lt;p&gt;These scripts use python and/or bash. The Python stuff probably works on Windows, but all were developed on Linux. For more tools check out out &lt;a href="/pages/toolbox.html"&gt;my toolbox&lt;/a&gt;&lt;/p&gt;</content><category term="FOSS"></category><category term="linux"></category><category term="bash"></category><category term="software"></category><category term="optimise"></category><category term="oceanography"></category><category term="cruise"></category><category term="bandwidth"></category></entry><entry><title>Erddapy griddap support</title><link href="https://callumrollo.github.io/griddap.html" rel="alternate"></link><published>2021-08-18T17:00:00+01:00</published><updated>2021-08-18T17:00:00+01:00</updated><author><name>Callum Rollo</name></author><id>tag:callumrollo.github.io,2021-08-18:/griddap.html</id><summary type="html">&lt;p&gt;Supporting gridded dataset access via erddapy&lt;/p&gt;</summary><content type="html">&lt;p&gt;As part of the &lt;a href="https://summerofcode.withgoogle.com/"&gt;Google Summer of Code&lt;/a&gt; I have been working with &lt;a href="https://github.com/ocefpaf"&gt;Filipe Fernandes&lt;/a&gt; to add &lt;a href="https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html"&gt;griddap&lt;/a&gt; support to the &lt;a href="https://github.com/ioos/erddapy"&gt;erddapy&lt;/a&gt; package, along with other features and performance improvements.&lt;/p&gt;
+&lt;p&gt;These scripts use python and/or bash. The Python stuff probably works on Windows, but all were developed on Linux. For more tools check out out &lt;a href="https://callumrollo.github.io/pages/toolbox.html"&gt;my toolbox&lt;/a&gt;&lt;/p&gt;</content><category term="FOSS"></category><category term="linux"></category><category term="bash"></category><category term="software"></category><category term="optimise"></category><category term="oceanography"></category><category term="cruise"></category><category term="bandwidth"></category></entry><entry><title>Erddapy griddap support</title><link href="https://callumrollo.github.io/griddap.html" rel="alternate"></link><published>2021-08-18T17:00:00+01:00</published><updated>2021-08-18T17:00:00+01:00</updated><author><name>Callum Rollo</name></author><id>tag:callumrollo.github.io,2021-08-18:/griddap.html</id><summary type="html">&lt;p&gt;Supporting gridded dataset access via erddapy&lt;/p&gt;</summary><content type="html">&lt;p&gt;As part of the &lt;a href="https://summerofcode.withgoogle.com/"&gt;Google Summer of Code&lt;/a&gt; I have been working with &lt;a href="https://github.com/ocefpaf"&gt;Filipe Fernandes&lt;/a&gt; to add &lt;a href="https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html"&gt;griddap&lt;/a&gt; support to the &lt;a href="https://github.com/ioos/erddapy"&gt;erddapy&lt;/a&gt; package, along with other features and performance improvements.&lt;/p&gt;
 &lt;p&gt;erddapy is a well used Python package that enables programmatic access to the wealth of oceanographic data stored on ERDDAP servers around the world. &lt;a href="https://coastwatch.pfeg.noaa.gov/erddap/index.html"&gt;ERDDAP&lt;/a&gt; supplies data via two methods, tabledap and griddap.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html"&gt;Tabledap&lt;/a&gt; is used for any data that can be formatted into a tabular datastructure such as a csv, an excel spreadsheet or a pandas DataFrame. This tends to be simple time series data from oceanographic moorings, floats or gliders. erddapy supports all the standard methods of accessing tabledap data, including ERDDAP's powerful server-side subsetting and plethora of data formats.&lt;/p&gt;
 &lt;p&gt;Griddap is used for higher-dimensional regularly spaced data such as satellite datasets and model output. Prior to GSoC, support for griddap was limited to the user downloading the entire dataset into an xarray object. This is workable for smaller datasets, but impractical for model outputs that can be terabytes in size, and unworkable if the user only wants small subsets of many large datasets.&lt;/p&gt;
@@ -943,8 +942,8 @@ awk&lt;span class="w"&gt; &lt;/span&gt;-F&lt;span class="w"&gt; &lt;/span&gt;,&l
 &lt;h3&gt;The bottom line&lt;/h3&gt;
 &lt;p&gt;After a year or so of dabbling around the edges of free software, writing my own basic programs,and porting other people's stuff to Python, OHW is the first time I've felt like I am really contributing to the free software community. This has been a great experience and I plan to use what I have learned to help others at my institution and further afield. Hacking, much like science, is a team effort where we all benefit from greater sharing and co-operation.&lt;/p&gt;
 &lt;p&gt;I would encourage any oceanographer who wants to better understand the computational tools of our trade, or learn how to give back to the free software community to take part in OHW. The pace was great, the online delivery was seamless and the people were awesome. I hope the organisers are able to run the event again in future years. There is a real demand for more free software and the expertise to operate it in oceanography.&lt;/p&gt;
-&lt;p&gt;If you want updates on future OHW activity, You can follow them on &lt;a href="https://twitter.com/oceanhackweek"&gt;twitter&lt;/a&gt; or sign up to their low volume &lt;a href="http://mailman11.u.washington.edu/mailman/listinfo/oceanhackweek"&gt;mailing list&lt;/a&gt;. I am also happy to answer questions about my experience of it.&lt;/p&gt;
-&lt;p&gt;How does such a great event come together to provide a perfect venue for learning and hacking? I assume it takes a lot of effort, organising, and ingenuity from &lt;a href="https://oceanhackweek.github.io/our-team.html"&gt;the committee&lt;/a&gt; (once more a massive thank you, you're all awesome). But I suspect &lt;a href="https://twitter.com/ocefpaf"&gt;Filipe&lt;/a&gt; would say it's&lt;/p&gt;
+&lt;p&gt;If you want updates on future OHW activity, You can follow them on &lt;a href="https://twitter.com/oceanhackweek"&gt;twitter&lt;/a&gt; or sign up to their low volume &lt;a href="https://oceanhackweek.org/about/contact.html"&gt;mailing list&lt;/a&gt;. I am also happy to answer questions about my experience of it.&lt;/p&gt;
+&lt;p&gt;How does such a great event come together to provide a perfect venue for learning and hacking? I assume it takes a lot of effort, organising, and ingenuity from &lt;a href="https://oceanhackweek.github.io/our-team.html"&gt;the committee&lt;/a&gt; (once more a massive thank you, you're all awesome). But I suspect &lt;a href="https://github.com/ocefpaf"&gt;Filipe&lt;/a&gt; would say it's&lt;/p&gt;
 &lt;p&gt;&lt;img alt="magic" src="https://media.giphy.com/media/12NUbkX6p4xOO4/giphy.gif"&gt;&lt;/p&gt;</content><category term="FOSS"></category><category term="academia"></category><category term="FOSS"></category><category term="hack"></category><category term="oceanography"></category></entry><entry><title>Garden trailcam videos</title><link href="https://callumrollo.github.io/trailcam.html" rel="alternate"></link><published>2020-08-11T11:30:00+01:00</published><updated>2020-08-11T11:30:00+01:00</updated><author><name>Callum Rollo</name></author><id>tag:callumrollo.github.io,2020-08-11:/trailcam.html</id><summary type="html">&lt;p&gt;Some trailcam captures from my back garden in Norwich&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Hedegehogs frequented the garden of my shared house in west Norwich&lt;/h3&gt;
 &lt;p&gt;&lt;img alt="hedgehog pic" src="../images/hog.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;I noticed that they would run along the low walls of the garden and try to climb them, without succes. So, I installed some hi-tech hedgehog steps (3 bricks and an old plant basket).&lt;/p&gt;
@@ -959,7 +958,7 @@ awk&lt;span class="w"&gt; &lt;/span&gt;-F&lt;span class="w"&gt; &lt;/span&gt;,&l
 &lt;h3&gt;Oeanography&lt;/h3&gt;
 &lt;p&gt;Erik M. Bruvik, Ilker Fer, Kjetil Våge, and Peter M. Haugan - &lt;a href="https://os.copernicus.org/articles/16/291/2020/os-16-291-2020.pdf"&gt;A revised ocean glider concept to realize Stommel’s vision and supplement Argo floats&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Annie P. S. Wong et. al. &lt;a href="https://www.frontiersin.org/articles/10.3389/fmars.2020.00700/full"&gt;20 years of ARGO. Great overview with tech details, error sources and more&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Wenbo Wu, Zhongwen Zhan1, Shirui Peng, Sidao Ni, Jörn Callies &lt;a href="https://science.sciencemag.org/content/369/6510/1510"&gt;Hearing the heat - Seismic ocean thermometry&lt;/a&gt; (paywalled)&lt;/p&gt;
+&lt;p&gt;Wenbo Wu, Zhongwen Zhan1, Shirui Peng, Sidao Ni, Jörn Callies &lt;a href="https://www.science.org/doi/10.1126/science.abb9519"&gt;Hearing the heat - Seismic ocean thermometry&lt;/a&gt; (paywalled)&lt;/p&gt;
 &lt;p&gt;Fabio Crameri - &lt;a href="https://blogs.egu.eu/divisions/gd/2017/08/23/the-rainbow-colour-map/"&gt;The Rainbow Colour Map (repeatedly) considered harmful&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Joseph Gum - &lt;a href="https://github.com/asx-/reproducible-science/blob/master/reproducible_science.pdf"&gt;Reproducible Science&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Ocean best practices - &lt;a href="https://repository.oceanbestpractices.org/handle/11329/1253"&gt;EGO netCDF version 1.3 glider data standardised format&lt;/a&gt;&lt;/p&gt;
@@ -979,14 +978,15 @@ awk&lt;span class="w"&gt; &lt;/span&gt;-F&lt;span class="w"&gt; &lt;/span&gt;,&l
 &lt;p&gt;Jonathan P Tennant - &lt;a href="https://ese.arphahub.com/article/51839/download/pdf/428643"&gt;Time to stop the exploitation of free academic labour&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;James Heathers - &lt;a href="https://medium.com/@jamesheathers/the-450-movement-1f86132a29bd"&gt;Demand pay for reviewing papers for profit making publishers&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Bjorn Brembs - &lt;a href="http://bjoern.brembs.net/2020/10/is-the-snsi-the-new-prism/"&gt;Academic publishers vs scihub. Suggested installation of spyware on university library servers&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Daniel Engber - &lt;a href="https://www.theatlantic.com/magazine/archive/2025/01/business-school-fraud-research/680669/"&gt;The Business-School Scandal That Just Keeps Getting Bigger&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;FOSS&lt;/h3&gt;
 &lt;p&gt;Daniel Oberhaus - &lt;a href="https://www.vice.com/en/article/43zak3/the-internet-was-built-on-the-free-labor-of-open-source-developers-is-that-sustainable"&gt;Succint history of free software vs open source&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Leon Bilton - &lt;a href="https://adigitoleo.srht.site/blog/software/not-hate-latex"&gt;How to not hate LaTeX&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Leon Bilton - &lt;a href="https://adigitoleo.srht.site/not-hate-latex/"&gt;How to not hate LaTeX&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;The web&lt;/h3&gt;
 &lt;p&gt;From Jaon - &lt;a href="https://www.fromjason.xyz/p/notebook/where-have-all-the-websites-gone/"&gt;Where have all the websites gone?&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;Work&lt;/h3&gt;
 &lt;p&gt;Tim Barry - &lt;a href="https://www.tbray.org/ongoing/When/202x/2020/07/05/Too-Efficient"&gt;Just Too Efficient&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;David Graeber - &lt;a href="https://www.strike.coop/bullshit-jobs/"&gt;Bullshit Jobs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;David Graeber - &lt;a href="https://web.archive.org/web/20190906050523/http://www.strike.coop/bullshit-jobs/"&gt;Bullshit Jobs&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;Rewilding and land rights&lt;/h3&gt;
 &lt;p&gt;George Monbiot - &lt;a href="https://www.monbiot.com/2013/05/27/a-manifesto-for-rewilding-the-world/"&gt;Rewilding Manifesto&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Mark Cocker - &lt;a href="https://www.newstatesman.com/british-countryside-access-wild-child-patrick-barkham-bringing-back-beaver-derek-gow-trespass-nick-hayes-framing-nature-lawrence-rose-review"&gt;The need for more publicly accessible green space&lt;/a&gt;&lt;/p&gt;
@@ -1014,8 +1014,8 @@ awk&lt;span class="w"&gt; &lt;/span&gt;-F&lt;span class="w"&gt; &lt;/span&gt;,&l
 &lt;p&gt;Neal Stephenson, Iain (M) Banks, Cory Doctorow, Becky Chambers&lt;/p&gt;
 &lt;h3&gt;Academics' websites I enjoy&lt;/h3&gt;
 &lt;p&gt;The more poorly formatted the website, the better the quality of ideas.&lt;/p&gt;
-&lt;p&gt;&lt;a href="matt.might.net"&gt;matt.might.net&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="betterfigures.org/"&gt;betterfigures.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://matt.might.net/"&gt;matt.might.net&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://betterfigures.org/"&gt;betterfigures.org/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://datacolada.org/"&gt;datacolada&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://ivory.idyll.org"&gt;Titus Brown&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;Good blogs&lt;/h3&gt;
@@ -1044,28 +1044,34 @@ awk&lt;span class="w"&gt; &lt;/span&gt;-F&lt;span class="w"&gt; &lt;/span&gt;,&l
 &lt;tr&gt;
 &lt;th&gt;Website&lt;/th&gt;
 &lt;th&gt;Source code&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;a href="https://dennissergeev.github.io/"&gt;Denis Sergeev&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;a href="https://github.com/dennissergeev/dennissergeev.github.io"&gt;source&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;a href="https://www.leouieda.com/"&gt;Leo Uida&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;a href="https://github.com/leouieda/website"&gt;source&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;a href="https://kieranhealy.org/"&gt;Kieran Healy&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;a href="https://github.com/kjhealy/kieranhealy.hugo/"&gt;source&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;a href="https://alxd.org/pages/about.html#about"&gt;Pawel Ngei&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;a href="https://github.com/pawelngei/alxd.org"&gt;source&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;a href="https://clarkrichards.org/"&gt;Clark Richards&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href="https://github.com/richardsc/richardsc.github.io"&gt;source&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="https://github.com/richardsc"&gt;github&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</content><category term="FOSS"></category><category term="pelican"></category><category term="publishing"></category><category term="academia"></category></entry></feed>

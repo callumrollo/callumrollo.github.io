@@ -170,8 +170,8 @@
 <p>I call it a gimmick because I've used the same core method to create:</p>
 <ul>
 <li>The UEA glider group <a href="https://ueaglider.uea.ac.uk/">piloting website</a> (<a href="https://github.com/ueaglider/ueaglider-web">source</a>)</li>
-<li>The NBP 2202 cruise <a href="https://nbp2202map.com/">data website</a> (the main subject of this article) <a href="https://github.com/callumrollo/itgc-2022-map">source</a></li>
-<li>The VOTO public facing live data website (work in progress) (<a href="">source</a>)</li>
+<li>The NBP 2202 cruise data website (the main subject of this article) <a href="https://github.com/callumrollo/itgc-2022-map">source</a></li>
+<li>The VOTO public facing live <a href="https://observations.voiceoftheocean.org/">observations portal</a>  (<a href="">source</a>)</li>
 </ul>
 <h3>Why you might want a site like this</h3>
 <p>If you want to display geospatial data:</p>
@@ -206,7 +206,7 @@
 <li>Create a Python environment using pip and the requirements.txt file or conda and the environment.yml file. Each works as well as the other</li>
 <li>navigate to the directory where the environment files are and run the command <code>python itgc/app.py</code></li>
 <li>Open a browser window and go to <a href="http://127.0.0.1:5000/">127.0.0.1:5000</a></li>
-<li>That's it! You're running the app on your very own PC. You should see a website that looks and functions just like the one at <a href="https://nbp2202map.com">nbp2202map.com</a> but it is running solely on your PC</li>
+<li>That's it! You're running the app on your very own PC. You should see a website that looks and functions just the the source website but it is running solely on your PC (127.0.0.1 is a special IP address for local resources).</li>
 </ol>
 <h1>Next, remix</h1>
 <p>I recommend using <a href="https://git-scm.com/docs/gittutorial">git</a> to keep track of changes to the codebase of this project. If you're particularly keen, maybe you already forked the repo in step 1 to start editing your own version.</p>
@@ -247,13 +247,13 @@ Here are some suggestions of things you might change:</p>
 <h1>On to the web</h1>
 <p>You've done it! A website of your own. Assuming you wish to share it with others (why else would you make a website?) you now need to host this on a server somewhere. This can seem daunting at first, but it's just a few easy steps. I have included the exact commands necessary in code blocks</p>
 <h4>Get a cloud server running Ubuntu</h4>
-<p>Check out links at the bottom of this page for some suggestions. I have used a Shared CPU Nanode (1 GB) from <a href="linode.com">linode</a> running Ubuntu 20.04 LTS.</p>
+<p>Check out links at the bottom of this page for some suggestions. I have used a Shared CPU Nanode (1 GB) from <a href="https://www.linode.com/">linode</a> running Ubuntu 20.04 LTS.</p>
 <h4>Login with SSH and update your server</h4>
 <div class="highlight"><pre><span></span><code>apt update &amp;&amp; apt upgrade -y
 reboot
 </code></pre></div>
 
-<p><em>Recommended</em> follow <a href="https://www.linode.com/docs/guides/set-up-and-secure/">this guide</a> to securing your server</p>
+<p><em>Recommended</em> follow <a href="https://techdocs.akamai.com/cloud-computing/docs/set-up-and-secure-a-compute-instance">this guide</a> to securing your server</p>
 <h4>Install key packages and libraries for the app</h4>
 <div class="highlight"><pre><span></span><code><span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">-</span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="n">q</span><span class="w"> </span><span class="n">build</span><span class="o">-</span><span class="n">essential</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">unzip</span><span class="w"> </span><span class="n">zip</span><span class="w"> </span><span class="n">nload</span><span class="w"> </span><span class="n">tree</span>
 <span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">-</span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="n">q</span><span class="w"> </span><span class="n">python3</span><span class="o">-</span><span class="n">pip</span><span class="w"> </span><span class="n">python3</span><span class="o">-</span><span class="n">dev</span><span class="w"> </span><span class="n">python3</span><span class="o">-</span><span class="n">venv</span>
@@ -319,9 +319,9 @@ sudo certbot --nginx
 <hr>
 <h3>Resources and links</h3>
 <ul>
-<li>I learned flask from <a href="https://training.talkpython.fm/courses/explore_flask/building-data-driven-web-applications-in- python-with-flask-sqlalchemy-and-bootstrap">TalkPython Training's Flask course</a> it goes into a lot more detail and enables you to make a really powerful, flexible website. It also covers deployment to the web in good detail</li>
-<li>You can learn enough html and CSS to get by just by googling things when they break. <a href="www.w3schools.com">w3schools</a> have some good resources though, and the <a href="https://getbootstrap.com/docs/3.4/css/">bootstap docs</a> are pretty good.</li>
-<li><a href="leafletjs.com">leaflet maps</a> have some great tutorials. You could get most of the functionality of this app just using leaflet and json.</li>
+<li>I learned flask from <a href="https://training.talkpython.fm/courses/explore_flask/building-data-driven-web-applications-in-python-with-flask-sqlalchemy-and-bootstrap">TalkPython Training's Flask course</a> it goes into a lot more detail and enables you to make a really powerful, flexible website. It also covers deployment to the web in good detail</li>
+<li>You can learn enough html and CSS to get by just by googling things when they break. <a href="https://www.w3schools.com/">w3schools</a> have some good resources though, and the <a href="https://getbootstrap.com/docs/3.4/css/">bootstap docs</a> are pretty good.</li>
+<li><a href="lhttps://leafletjs.com/">leaflet maps</a> have some great tutorials. You could get most of the functionality of this app just using leaflet and json.</li>
 <li>You can set yourself up with a cloud server for less than $/£/€ 10 a month from a cloud host like <a href="https://www.linode.com/docs/guides/set-up-and-secure/">Linode</a> or <a href="https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04">DigitalOcean</a>. Personally I'd avoid AWS at first as the learning curve is steeper, and it's a lot easier to end up accidentally running up a large bill. You can also search for credit codes/sign up links. You can typically get several months free this way.</li>
 </ul>
   </div>

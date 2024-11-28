@@ -3,7 +3,7 @@
 &lt;h3&gt;Oeanography&lt;/h3&gt;
 &lt;p&gt;Erik M. Bruvik, Ilker Fer, Kjetil Våge, and Peter M. Haugan - &lt;a href="https://os.copernicus.org/articles/16/291/2020/os-16-291-2020.pdf"&gt;A revised ocean glider concept to realize Stommel’s vision and supplement Argo floats&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Annie P. S. Wong et. al. &lt;a href="https://www.frontiersin.org/articles/10.3389/fmars.2020.00700/full"&gt;20 years of ARGO. Great overview with tech details, error sources and more&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Wenbo Wu, Zhongwen Zhan1, Shirui Peng, Sidao Ni, Jörn Callies &lt;a href="https://science.sciencemag.org/content/369/6510/1510"&gt;Hearing the heat - Seismic ocean thermometry&lt;/a&gt; (paywalled)&lt;/p&gt;
+&lt;p&gt;Wenbo Wu, Zhongwen Zhan1, Shirui Peng, Sidao Ni, Jörn Callies &lt;a href="https://www.science.org/doi/10.1126/science.abb9519"&gt;Hearing the heat - Seismic ocean thermometry&lt;/a&gt; (paywalled)&lt;/p&gt;
 &lt;p&gt;Fabio Crameri - &lt;a href="https://blogs.egu.eu/divisions/gd/2017/08/23/the-rainbow-colour-map/"&gt;The Rainbow Colour Map (repeatedly) considered harmful&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Joseph Gum - &lt;a href="https://github.com/asx-/reproducible-science/blob/master/reproducible_science.pdf"&gt;Reproducible Science&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Ocean best practices - &lt;a href="https://repository.oceanbestpractices.org/handle/11329/1253"&gt;EGO netCDF version 1.3 glider data standardised format&lt;/a&gt;&lt;/p&gt;
@@ -23,14 +23,15 @@
 &lt;p&gt;Jonathan P Tennant - &lt;a href="https://ese.arphahub.com/article/51839/download/pdf/428643"&gt;Time to stop the exploitation of free academic labour&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;James Heathers - &lt;a href="https://medium.com/@jamesheathers/the-450-movement-1f86132a29bd"&gt;Demand pay for reviewing papers for profit making publishers&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Bjorn Brembs - &lt;a href="http://bjoern.brembs.net/2020/10/is-the-snsi-the-new-prism/"&gt;Academic publishers vs scihub. Suggested installation of spyware on university library servers&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Daniel Engber - &lt;a href="https://www.theatlantic.com/magazine/archive/2025/01/business-school-fraud-research/680669/"&gt;The Business-School Scandal That Just Keeps Getting Bigger&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;FOSS&lt;/h3&gt;
 &lt;p&gt;Daniel Oberhaus - &lt;a href="https://www.vice.com/en/article/43zak3/the-internet-was-built-on-the-free-labor-of-open-source-developers-is-that-sustainable"&gt;Succint history of free software vs open source&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Leon Bilton - &lt;a href="https://adigitoleo.srht.site/blog/software/not-hate-latex"&gt;How to not hate LaTeX&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Leon Bilton - &lt;a href="https://adigitoleo.srht.site/not-hate-latex/"&gt;How to not hate LaTeX&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;The web&lt;/h3&gt;
 &lt;p&gt;From Jaon - &lt;a href="https://www.fromjason.xyz/p/notebook/where-have-all-the-websites-gone/"&gt;Where have all the websites gone?&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;Work&lt;/h3&gt;
 &lt;p&gt;Tim Barry - &lt;a href="https://www.tbray.org/ongoing/When/202x/2020/07/05/Too-Efficient"&gt;Just Too Efficient&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;David Graeber - &lt;a href="https://www.strike.coop/bullshit-jobs/"&gt;Bullshit Jobs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;David Graeber - &lt;a href="https://web.archive.org/web/20190906050523/http://www.strike.coop/bullshit-jobs/"&gt;Bullshit Jobs&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;Rewilding and land rights&lt;/h3&gt;
 &lt;p&gt;George Monbiot - &lt;a href="https://www.monbiot.com/2013/05/27/a-manifesto-for-rewilding-the-world/"&gt;Rewilding Manifesto&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Mark Cocker - &lt;a href="https://www.newstatesman.com/british-countryside-access-wild-child-patrick-barkham-bringing-back-beaver-derek-gow-trespass-nick-hayes-framing-nature-lawrence-rose-review"&gt;The need for more publicly accessible green space&lt;/a&gt;&lt;/p&gt;
@@ -58,8 +59,8 @@
 &lt;p&gt;Neal Stephenson, Iain (M) Banks, Cory Doctorow, Becky Chambers&lt;/p&gt;
 &lt;h3&gt;Academics' websites I enjoy&lt;/h3&gt;
 &lt;p&gt;The more poorly formatted the website, the better the quality of ideas.&lt;/p&gt;
-&lt;p&gt;&lt;a href="matt.might.net"&gt;matt.might.net&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="betterfigures.org/"&gt;betterfigures.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://matt.might.net/"&gt;matt.might.net&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://betterfigures.org/"&gt;betterfigures.org/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://datacolada.org/"&gt;datacolada&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://ivory.idyll.org"&gt;Titus Brown&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;Good blogs&lt;/h3&gt;

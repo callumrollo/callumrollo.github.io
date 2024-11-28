@@ -172,7 +172,7 @@
 <p>A worked example of how I reduced the page load on the VOTO observations portal from about 4 seconds to 1 second by improving use of the backend database and implementing a simple server-side cache.</p>
 <p>Website stack: python, flask, mongodb, boostrap, leaflet maps, sellotape, prayers</p>
 <p>Methods used: inspect element, firefox network profiler, ipython <code>%%timeit</code> function, decorators, json</p>
-<p>Related articles: <a href="/flask_leaflet.html">Overview of python-flask with leaflet maps</a></p>
+<p>Related articles: <a href="https://callumrollo.github.io/flask_leaflet.html">Overview of python-flask with leaflet maps</a></p>
 <h1>Motivation</h1>
 <p>I have been aware for some time that the landing page of our <a href="https://observations.voiceoftheocean.org/">observations portal</a> is painfully slow to load (around 4 seconds). This has steadily become worse as the total number of platforms we have deployed has grown, as has the database that must be queried when users visit this webpage. As various web-dev people will tell you, if your web page takes a long page to load, people will not visit it Also it seems pretty wasteful. A slow loading page is indicative of inefficiencies. We don't want to waste CPU cycles and be laughed at by other code slingers!</p>
 <p>So how do we speed this up?</p>

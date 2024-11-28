@@ -303,7 +303,7 @@ zip<span class="w"> </span>-rj<span class="w"> </span>/home/pilot/data-to-nbp/di
 </code></pre></div>
 
 <h3>GDAL for creating webtiles</h3>
-<p>Short bash script that will take any input geotiff and create webtiles for use with leaflet maps. This is how I generated the ice maps for the <a href="https://github.com/callumrollo/itgc-2022-map">nbp2202map</a> and <a href="https://nbp2202map.com/">website</a>. Credit to <a href="https://www.kth.se/profile/liling/">Li Ling</a> for figuring out how to warp the geotiffs to a usable projection.</p>
+<p>Short bash script that will take any input geotiff and create webtiles for use with leaflet maps. This is how I generated the ice maps for the <a href="https://github.com/callumrollo/itgc-2022-map">nbp2202map</a>. Credit to <a href="https://github.com/luxiya01">Li Ling</a> for figuring out how to warp the geotiffs to a usable projection.</p>
 <div class="highlight"><pre><span></span><code><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/home/callum/anaconda3/envs/geospatial/bin
 <span class="nv">infile</span><span class="o">=</span>input_filename.tif
 gdalwarp<span class="w"> </span>-t_srs<span class="w"> </span>EPSG:4326<span class="w"> </span>-te<span class="w"> </span>-140<span class="w"> </span>-76<span class="w"> </span>-90<span class="w"> </span>-66<span class="w"> </span><span class="nv">$infile</span><span class="w"> </span>liproj.tif
@@ -323,12 +323,11 @@ gdal2tiles.py<span class="w"> </span>li.vrt<span class="w"> </span>AMSR<span cla
 <ul>
 <li><a href="https://github.com/callumrollo/adcp-gnss-mash">ADCP GNSS mash</a> a Python script that combines two timestamped datasets from an autonomous platform to add location information to ADCP data. Includes parsing NMEA, manipulating files and using datetime</li>
 <li><a href="https://github.com/callumrollo/github-scraper">webscraping</a> a nice little example of scraping data from GitHub</li>
-<li><a href="https://github.com/callumrollo/geotiff-generato">geotiff-generator</a> A Python program to generate geotiffs from EMODnet, GEBCO or user supplied bathymetry. Includes taking user input from the command-line, stitching together EMODnet netCDFs and working with tri-band rasters</li>
-<li><a href="https://github.com/callumrollo/coding/blob/master/handy_scripts/mousemove">move your mouse every 30 seconds</a> you never know when you might <a href="https://xkcd.com/196/">need it</a></li>
+<li><a href="https://github.com/callumrollo/geotiff-generator">geotiff-generator</a> A Python program to generate geotiffs from EMODnet, GEBCO or user supplied bathymetry. Includes taking user input from the command-line, stitching together EMODnet netCDFs and working with tri-band rasters</li>
 </ul>
 <hr>
 <h3>Tools used</h3>
-<p>These scripts use python and/or bash. The Python stuff probably works on Windows, but all were developed on Linux. For more tools check out out <a href="/pages/toolbox.html">my toolbox</a></p>
+<p>These scripts use python and/or bash. The Python stuff probably works on Windows, but all were developed on Linux. For more tools check out out <a href="https://callumrollo.github.io/pages/toolbox.html">my toolbox</a></p>
   </div>
   <div class="tag-cloud">
     <p>
