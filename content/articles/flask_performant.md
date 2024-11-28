@@ -13,7 +13,7 @@ Website stack: python, flask, mongodb, boostrap, leaflet maps, sellotape, prayer
 
 Methods used: inspect element, firefox network profiler, ipython `%%timeit` function, decorators, json
 
-Related articles: [Overview of python-flask with leaflet maps](/flask_leaflet.html)
+Related articles: [Overview of python-flask with leaflet maps]({filename}/articles/flask_leaflet.md)
 
 # Motivation
 

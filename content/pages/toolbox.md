@@ -44,7 +44,7 @@ Summary: The tools I use
 - [gliderpy](https://github.com/ioos/gliderpy) A Python tool to fetch glider data from ERDDAP servers. This is in the initial stages of development.
 - [GliderTools](https://github.com/GliderToolsCommunity/GliderTools) a collaborative toolbox for glider data processing.
 - [pyglider](https://github.com/c-proof/pyglider) A Python tool to convert/combine Slocum and SeaExplorer data files into standardised netCDFs.
-- [geotiff-generator](https://github.com/callumrollo/geotiff-generato) A Python program to generate geotiffs from EMODnet, GEBCO or user supplied bathymetry.
+- [geotiff-generator](https://github.com/callumrollo/geotiff-generator) A Python program to generate geotiffs from EMODnet, GEBCO or user supplied bathymetry.
 
 ### Miscellaneous
 - [Clementine](https://www.clementine-player.org/) is my preferred music player

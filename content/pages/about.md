@@ -8,7 +8,7 @@ Since late 2021, I work as a data scientist at [Voice of the Ocean foundation (V
 
 I work a lot with [ERDDAP](https://github.com/ERDDAP/erddap), a data broker server that makes it much easier to share well standardised oceanographic data. I manage the [VOTO ERDDAP](https://erddap.observations.voiceoftheocean.org/erddap/index.html) where all our data are hosted. I have co-organised and presented several in person and online webinars teaching data users and admins how to best use ERDDAP for distributing oceanographic data.
 
-I am a Pythonista and proponent of free software for science. Several of my projects are available on my [github](https://github.com/callumrollo). I have completed collaborative programming projects as part of [OceanHackWeek](/hackweek.html) and [Google Summer of Code](https://summerofcode.withgoogle.com/). During my PhD, I led the [UEA scientific python](https://ueapy.github.io/) group.
+I am a Pythonista and proponent of free software for science. Several of my projects are available on my [github](https://github.com/callumrollo). I have completed collaborative programming projects as part of [OceanHackWeek]({filename}/articles/hackweek.md) and [Google Summer of Code](https://summerofcode.withgoogle.com/). During my PhD, I led the [UEA scientific python](https://ueapy.github.io/) group.
 
 [Blog posts](/)
 
@@ -47,11 +47,11 @@ To request a copy of any of my publications that have ended up behind a paywall,
 
 During 2017-2021 I completed a PhD at the University of East Anglia (UEA) in Norwich, UK. I work with marine gliders, specifically the integration on Acoustic Doppler Current Profilers (ADCPs) onto gliders to directly measure currents in the ocean.
 
-Data and live location information from this glider, and others in the fleet, is available on the [UEA glider website](https://ueaglider.uea.ac.uk). I rebuilt the website in 2021, based on the original by [Bastien Queste](http://byqueste.com/).
+Data and live location information from this glider, and others in the fleet, is available on the [UEA glider website](https://ueaglider.uea.ac.uk). I rebuilt the website in 2021, based on the original by [Bastien Queste](https://www.flow-lab.org/).
 
 ##### PhD Supervisory Team
 
-[Prof. Karen Heywood](https://people.uea.ac.uk/k_heywood), [Dr. Rob Hall](https://people.uea.ac.uk/robert_hall), [Dr. Alex Phillips](https://www.noc.ac.uk/people/abp)
+[Prof. Karen Heywood](https://people.uea.ac.uk/k_heywood), [Dr. Rob Hall](https://people.uea.ac.uk/robert_hall), [Dr. Alex Phillips](https://noc.ac.uk/n/Alexander+Phillips)
 
 ### Academic background
 
@@ -99,12 +99,12 @@ With varying levels of competence
 - Infosec, cryptography, [online security](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 - Trail cameras for wildlife observation
 
-See also [reading list](/reading.html)
+See also [reading list]({filename}/articles/reading_list.md)
 
 -------------------
 
 ### About this website
 
-Source code is available on my [Github](https://github.com/callumrollo/callumrollo.github.io). See [this article](howto.html) for more info on why I promote open sharing  of source code, as well as links to academic websites that do the same.
+Source code is available on my [Github](https://github.com/callumrollo/callumrollo.github.io). See [this article]({filename}/articles/how_to.md) for more info on why I promote open sharing  of source code, as well as links to academic websites that do the same.
 
 This website has no trackers, cookies, data collection or visitor logging. I am opposed to online surveillance.

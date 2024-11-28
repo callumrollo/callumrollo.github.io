@@ -65,9 +65,9 @@ After a year or so of dabbling around the edges of free software, writing my own
 
 I would encourage any oceanographer who wants to better understand the computational tools of our trade, or learn how to give back to the free software community to take part in OHW. The pace was great, the online delivery was seamless and the people were awesome. I hope the organisers are able to run the event again in future years. There is a real demand for more free software and the expertise to operate it in oceanography.
 
-If you want updates on future OHW activity, You can follow them on [twitter](https://twitter.com/oceanhackweek) or sign up to their low volume [mailing list](http://mailman11.u.washington.edu/mailman/listinfo/oceanhackweek). I am also happy to answer questions about my experience of it.
+If you want updates on future OHW activity, You can follow them on [twitter](https://twitter.com/oceanhackweek) or sign up to their low volume [mailing list](https://oceanhackweek.org/about/contact.html). I am also happy to answer questions about my experience of it.
 
-How does such a great event come together to provide a perfect venue for learning and hacking? I assume it takes a lot of effort, organising, and ingenuity from [the committee](https://oceanhackweek.github.io/our-team.html) (once more a massive thank you, you're all awesome). But I suspect [Filipe](https://twitter.com/ocefpaf) would say it's
+How does such a great event come together to provide a perfect venue for learning and hacking? I assume it takes a lot of effort, organising, and ingenuity from [the committee](https://oceanhackweek.github.io/our-team.html) (once more a massive thank you, you're all awesome). But I suspect [Filipe](https://github.com/ocefpaf) would say it's
 
 ![magic](https://media.giphy.com/media/12NUbkX6p4xOO4/giphy.gif)
 

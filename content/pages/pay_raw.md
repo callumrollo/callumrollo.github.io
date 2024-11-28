@@ -6,8 +6,7 @@ Summary: Registry of interests
 Status: draft
 
 
-In the interests of transparency, inspired by [George Monbiot](https://www.monbiot.com/registry-of-interests/), I publish and update my salary here. Studies indicate that pay transparency is [a key tool](https://www.payscale.com/data/pay-transparency) in [combatting unequal pay](https://www.aauw.org/resources/news/media/press-releases/salary-transparency-linked-to-smaller-gender-pay-gap/). Universities are [not exempt](https://hbr.org/2020/02/can-transparency-laws-fix-the-gender-wage-gap) from the gender pay gap.
-
+In the interests of transparency, inspired by [George Monbiot](https://www.monbiot.com/registry-of-interests/), I publish and update my salary here. Studies indicate that pay transparency is [a key tool](https://www.payscale.com/research-and-insights/pay-transparency/) in [combatting unequal pay](https://www.aauw.org/resources/news/media/press-releases/salary-transparency-linked-to-smaller-gender-pay-gap/). Universities are [not exempt](https://hbr.org/2020/02/can-transparency-laws-fix-the-gender-wage-gap) from the gender pay gap.
 # Salary
 
 In my role as data scientist at VOTO, I receive **58 200 SEK**/month. This is equivalent to **CONV;698400;SEK;[SEK,GBP,USD]** per year at current exchange rates. This high salary is partly a consequence of my migration status. To work in Sweden I require a [blue card](https://ec.europa.eu/home-affairs/policies/migration-and-asylum/legal-migration-and-integration/work/eu-blue-card_en), a visa aimed at attracting high skill professionals to fill a labour market gap. The eligibility for this card includes a [high minimum salary threshold](https://ec.europa.eu/immigration/blue-card/sweden_en).
@@ -59,4 +58,4 @@ First published June 2020
 
 Last updated October 2024
 
-Currency conversion using [this python script](https://github.com/callumrollo/callumrollo.github.io/blob/source/scripts/currency_convert.py) and [freecurrencyapi.com](https://api.freecurrencyapi.com).
+Currency conversion using [this python script](https://github.com/callumrollo/callumrollo.github.io/blob/source/scripts/currency_convert.py) and [freecurrencyapi.com](https://freecurrencyapi.com).

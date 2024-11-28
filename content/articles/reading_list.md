@@ -14,7 +14,7 @@ Erik M. Bruvik, Ilker Fer, Kjetil Våge, and Peter M. Haugan - [A revised ocean 
 
 Annie P. S. Wong et. al. [20 years of ARGO. Great overview with tech details, error sources and more](https://www.frontiersin.org/articles/10.3389/fmars.2020.00700/full)
 
-Wenbo Wu, Zhongwen Zhan1, Shirui Peng, Sidao Ni, Jörn Callies [Hearing the heat - Seismic ocean thermometry](https://science.sciencemag.org/content/369/6510/1510) (paywalled)
+Wenbo Wu, Zhongwen Zhan1, Shirui Peng, Sidao Ni, Jörn Callies [Hearing the heat - Seismic ocean thermometry](https://www.science.org/doi/10.1126/science.abb9519) (paywalled)
 
 Fabio Crameri - [The Rainbow Colour Map (repeatedly) considered harmful](https://blogs.egu.eu/divisions/gd/2017/08/23/the-rainbow-colour-map/)
 
@@ -59,7 +59,7 @@ Daniel Engber - [The Business-School Scandal That Just Keeps Getting Bigger](htt
 ### FOSS
 Daniel Oberhaus - [Succint history of free software vs open source](https://www.vice.com/en/article/43zak3/the-internet-was-built-on-the-free-labor-of-open-source-developers-is-that-sustainable)
 
-Leon Bilton - [How to not hate LaTeX](https://adigitoleo.srht.site/blog/software/not-hate-latex)
+Leon Bilton - [How to not hate LaTeX](https://adigitoleo.srht.site/not-hate-latex/)
 
 ### The web
 
@@ -69,7 +69,7 @@ From Jaon - [Where have all the websites gone?](https://www.fromjason.xyz/p/note
 
 Tim Barry - [Just Too Efficient](https://www.tbray.org/ongoing/When/202x/2020/07/05/Too-Efficient)
 
-David Graeber - [Bullshit Jobs](https://www.strike.coop/bullshit-jobs/)
+David Graeber - [Bullshit Jobs](https://web.archive.org/web/20190906050523/http://www.strike.coop/bullshit-jobs/)
 
 ### Rewilding and land rights
 George Monbiot - [Rewilding Manifesto](https://www.monbiot.com/2013/05/27/a-manifesto-for-rewilding-the-world/)
@@ -125,9 +125,9 @@ Neal Stephenson, Iain (M) Banks, Cory Doctorow, Becky Chambers
 
 The more poorly formatted the website, the better the quality of ideas.
 
-[matt.might.net](matt.might.net)
+[matt.might.net](https://matt.might.net/)
 
-[betterfigures.org/](betterfigures.org/)
+[betterfigures.org/](https://betterfigures.org/)
 
 [datacolada](http://datacolada.org/)
 

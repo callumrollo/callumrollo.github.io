@@ -8,7 +8,7 @@ Summary: Parsing web log files to gain insight into visitors to our ERDDAP serve
 
 **N.B.** The scripts described in this article are available in a [github repo](https://github.com/callumrollo/website-log-parse) as jupyter notebooks.
 
-Web analytics are big business. Products like Google Analytics enable incredibly granular and detailed examination of every user to your website. However, if you do not wish to collect and retain data at this level using tools like cookies or tracking beacons, either out of respect to your users privacy or because [it's the law](https://www.theregister.com/2022/02/10/google_analytics_gdpr_breach/,), you need to do your own user analysis.
+Web analytics are big business. Products like Google Analytics enable incredibly granular and detailed examination of every user to your website. However, if you do not wish to collect and retain data at this level using tools like cookies or tracking beacons, either out of respect to your users privacy or because [it's the law](https://www.theregister.com/2022/06/24/italy_google_analytics/), you need to do your own user analysis.
 
 This blog explains the process I went through to analyse use traffic to my organisation's [ERDDAP data server](https://erddap.observations.voiceoftheocean.org/erddap/index.html) to get an idea of what data is being requested and where our users are. I approached this with the following priorities:
 1. No third party trackers on the site

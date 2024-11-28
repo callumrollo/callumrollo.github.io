@@ -12,10 +12,10 @@ Very little programming expertise is required. As long as you are comfortable cr
 
 I spent an excessive amount of time looking for academic sites to emulate/shamelessly copy before making this one. There are some great sites out there that provide all their source code online. I highly recommend finding one you like; imitation is, after all, the highest form of flattery. Here are some samples:
 
-|Website| Source code|
-|---------|----------|
-|[Denis Sergeev](https://dennissergeev.github.io/) |[source](https://github.com/dennissergeev/dennissergeev.github.io)|
-|[Leo Uida](https://www.leouieda.com/)|[source](https://github.com/leouieda/website)|
-|[Kieran Healy](https://kieranhealy.org/)|[source](https://github.com/kjhealy/kieranhealy.hugo/)|
-|[Pawel Ngei](https://alxd.org/pages/about.html#about) |[source](https://github.com/pawelngei/alxd.org) | 
-| [Clark Richards](https://clarkrichards.org/) | [source](https://github.com/richardsc/richardsc.github.io) |
+| Website                                               | Source code                                                        |     |
+| ----------------------------------------------------- | ------------------------------------------------------------------ | --- |
+| [Denis Sergeev](https://dennissergeev.github.io/)     | [source](https://github.com/dennissergeev/dennissergeev.github.io) |     |
+| [Leo Uida](https://www.leouieda.com/)                 | [source](https://github.com/leouieda/website)                      |     |
+| [Kieran Healy](https://kieranhealy.org/)              | [source](https://github.com/kjhealy/kieranhealy.hugo/)             |     |
+| [Pawel Ngei](https://alxd.org/pages/about.html#about) | [source](https://github.com/pawelngei/alxd.org)                    |     |
+| [Clark Richards](https://clarkrichards.org/)          | [github](https://github.com/richardsc)                             |     |

@@ -17,6 +17,6 @@ I am using this page to bookmark and share some resources I have found useful. I
 - cool shaded relief maps https://github.com/joewdavies/geoblender
 
 ### ERDDAP
-- coastwatch R tutorials https://github.com/CoastWatch-WestCoast/r_code/blob/master/README.md
+- coastwatch R tutorials https://github.com/CoastWatch-WestCoast/r_course_materials
 - coastwatch tutorials on satellite data https://github.com/coastwatch-training/CoastWatch-Tutorials
 - UMD extract goespatial data within a polygon https://umd.instructure.com/courses/1336575/pages/python-tutorial-3-extract-data-within-a-shapefile-using-erddap?module_item_id=12039958
