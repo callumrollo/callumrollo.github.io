@@ -6,7 +6,7 @@ Tags: pelican, publishing, linkrot, web, posse
 Slug: deadlinks
 Summary: Tending to my little garden of links
 
-I recently decided to change how I internally link to other parts of this site, so that the links won't break when the urls change (this site is currently hosted both at https://callumrollo.com/ and https://callumrollo.github.io/). In the process, I found many links that no longer worked, or never worked in the first place! 
+I recently decided to change how I internally link to other parts of this site, so that the links won't break when the urls change (this site is currently hosted both at [https://callumrollo.com/](https://callumrollo.com)and [https://callumrollo.github.io/](https://callumrollo.github.io/)). In the process, I found many links that no longer worked, or never worked in the first place! 
 
 I used the cool tool [markdown link check](https://github.com/tcort/markdown-link-check) to perform this. It reads all the markdown files in a folder and checks each of the links, producing a pretty shell output
 
@@ -38,18 +38,22 @@ FILE: content/articles/automation.md
 ```
 
 There were several reasons for these failures:
-- incorrectly written links, copy paste errors by me!
-- Resources that had moved
-- Sites no longer in existence, like the map I made for the nbp2202 cruise, described in [my leaflet article]({filename}/articles/flask_leaflet.md)
-- Articles that had disappeared from the internet
-- Trying to link to a private resources (e.g. script in one of my private github repos)
-- "forbidden", ie the tool was not allowed to check the resource
-- improperly/incompletely formatted urls e.g. betterfigures.org not https://betterfigures.org
 
-Most of these I was able to resolve, several of the moved resources had redirects operating on their original urls. Others I was able to find by exploring their host site. I fixed my typos and used complete urls everywhere. I removed links to resources that have dropped off the internet and cannot be easily recreated, like my old nbp2202 map app, and used the internet archive's wayback machine to link to a saved copy of the late, great [David Graeber's Bullshit Jobs article](https://web.archive.org/web/20190906050523/http://www.strike.coop/bullshit-jobs/).  But some resources were lost for good.
+- Incorrectly written links, copy paste errors by me!
+- Resources that had moved
+- Trying to link to a private resources (e.g. script in one of my private github repos)
+- "Forbidden links", ie the tool was not allowed to check the resource. Seems to happen with paywalled scientific papers
+- Improperly/incompletely formatted urls e.g. betterfigures.org not https://betterfigures.org
+- Sites no longer in existence, like the map I made for the nbp2202 cruise, described in [my leaflet article]({filename}/articles/flask_leaflet.md)
+- Web pages that had disappeared from the internet
+
+Most of these I was able to resolve, several of the moved resources had redirects operating on their original urls. Others I was able to find by exploring their host site. I fixed my typos and used complete urls everywhere. I removed links to resources that have dropped off the internet and cannot be easily recreated, like my old nbp2202 map app, and used the [internet archive](https://archive.org/)'s Wayback Machine to link to a saved copy of the late, great [David Graeber's Bullshit Jobs article](https://web.archive.org/web/20190906050523/http://www.strike.coop/bullshit-jobs/).  But some resources were lost for good.
+
+
+--------------------------
 
 Our internet is such a fragile thing. Not a monolith, but a series of ramshackle structures in constant decay, adding extensions, changing street signs, erecting roadblocks and sometimes burning to the ground.
 
-I don't know how long I will keep tending to this little corner of the internet (I bought a 10 year lease on the domain at least!) but this exercise has reminded me of how ephemeral a lot of this is. If this site sinks sinks back into the rich loam of the internet some day in the future, will there be any links left dangling? Pointing to words that no longer exists?
+I don't know how long I will keep tending to this little corner of the internet (I bought a 10 year lease on the domain at least!) but this exercise has reminded me of how ephemeral a lot of this is. When this site sinks back into the rich loam of the internet some day in the future, will there be any links elsewhere left dangling? Like vestigial limbs, pointing to words that no longer exist.
 
-We die once when we draw our final breath, and again the last ever time another person speaks our name.
+It is said that we die twice. Once when we draw our final breath, and again the last ever time another person speaks our name.
