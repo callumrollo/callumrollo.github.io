@@ -165,7 +165,7 @@
 
 
   <div>
-    <p>I recently decided to change how I internally link to other parts of this site, so that the links won't break when the urls change (this site is currently hosted both at https://callumrollo.com/ and https://callumrollo.github.io/). In the process, I found many links that no longer worked, or never worked in the first place! </p>
+    <p>I recently decided to change how I internally link to other parts of this site, so that the links won't break when the urls change (this site is currently hosted both at <a href="https://callumrollo.com">https://callumrollo.com/</a>and <a href="https://callumrollo.github.io/">https://callumrollo.github.io/</a>). In the process, I found many links that no longer worked, or never worked in the first place! </p>
 <p>I used the cool tool <a href="https://github.com/tcort/markdown-link-check">markdown link check</a> to perform this. It reads all the markdown files in a folder and checks each of the links, producing a pretty shell output</p>
 <div class="highlight"><pre><span></span><code>FILE:<span class="w"> </span>content/articles/automation.md
 <span class="w">  </span><span class="o">[</span>✓<span class="o">]</span><span class="w"> </span>https://support.google.com/accounts/answer/185833?hl<span class="o">=</span>en
@@ -192,18 +192,21 @@
 <span class="w">  </span><span class="o">[</span>✖<span class="o">]</span><span class="w"> </span>/pages/toolbox.html<span class="w"> </span>→<span class="w"> </span>Status:<span class="w"> </span><span class="m">400</span>
 </code></pre></div>
 
-<p>There were several reasons for these failures:
-- incorrectly written links, copy paste errors by me!
-- Resources that had moved
-- Sites no longer in existence, like the map I made for the nbp2202 cruise, described in <a href="https://callumrollo.github.io/flask_leaflet.html">my leaflet article</a>
-- Articles that had disappeared from the internet
-- Trying to link to a private resources (e.g. script in one of my private github repos)
-- "forbidden", ie the tool was not allowed to check the resource
-- improperly/incompletely formatted urls e.g. betterfigures.org not https://betterfigures.org</p>
-<p>Most of these I was able to resolve, several of the moved resources had redirects operating on their original urls. Others I was able to find by exploring their host site. I fixed my typos and used complete urls everywhere. I removed links to resources that have dropped off the internet and cannot be easily recreated, like my old nbp2202 map app, and used the internet archive's wayback machine to link to a saved copy of the late, great <a href="https://web.archive.org/web/20190906050523/http://www.strike.coop/bullshit-jobs/">David Graeber's Bullshit Jobs article</a>.  But some resources were lost for good.</p>
+<p>There were several reasons for these failures:</p>
+<ul>
+<li>Incorrectly written links, copy paste errors by me!</li>
+<li>Resources that had moved</li>
+<li>Trying to link to a private resources (e.g. script in one of my private github repos)</li>
+<li>"Forbidden links", ie the tool was not allowed to check the resource. Seems to happen with paywalled scientific papers</li>
+<li>Improperly/incompletely formatted urls e.g. betterfigures.org not https://betterfigures.org</li>
+<li>Sites no longer in existence, like the map I made for the nbp2202 cruise, described in <a href="https://callumrollo.github.io/flask_leaflet.html">my leaflet article</a></li>
+<li>Web pages that had disappeared from the internet</li>
+</ul>
+<p>Most of these I was able to resolve, several of the moved resources had redirects operating on their original urls. Others I was able to find by exploring their host site. I fixed my typos and used complete urls everywhere. I removed links to resources that have dropped off the internet and cannot be easily recreated, like my old nbp2202 map app, and used the <a href="https://archive.org/">internet archive</a>'s Wayback Machine to link to a saved copy of the late, great <a href="https://web.archive.org/web/20190906050523/http://www.strike.coop/bullshit-jobs/">David Graeber's Bullshit Jobs article</a>.  But some resources were lost for good.</p>
+<hr>
 <p>Our internet is such a fragile thing. Not a monolith, but a series of ramshackle structures in constant decay, adding extensions, changing street signs, erecting roadblocks and sometimes burning to the ground.</p>
-<p>I don't know how long I will keep tending to this little corner of the internet (I bought a 10 year lease on the domain at least!) but this exercise has reminded me of how ephemeral a lot of this is. If this site sinks sinks back into the rich loam of the internet some day in the future, will there be any links left dangling? Pointing to words that no longer exists?</p>
-<p>We die once when we draw our final breath, and again the last ever time another person speaks our name.</p>
+<p>I don't know how long I will keep tending to this little corner of the internet (I bought a 10 year lease on the domain at least!) but this exercise has reminded me of how ephemeral a lot of this is. When this site sinks back into the rich loam of the internet some day in the future, will there be any links elsewhere left dangling? Like vestigial limbs, pointing to words that no longer exist.</p>
+<p>It is said that we die twice. Once when we draw our final breath, and again the last ever time another person speaks our name.</p>
   </div>
   <div class="tag-cloud">
     <p>
