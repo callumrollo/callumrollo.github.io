@@ -1,5 +1,7 @@
 repo for the website https://callumrollo.github.io/
 
+This uses the simple footnotes plugin https://github.com/pelican-plugins/simple-footnotes
+
 ## Steps to making this github pages site:
 
 - Install and activate the environment in the yaml file
