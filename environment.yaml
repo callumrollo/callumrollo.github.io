@@ -8,4 +8,6 @@ dependencies:
        - ghp-import
        - numpy
        - requests
-
+       - pip
+pip:
+  - pelican-simple-footnotes

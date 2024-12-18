@@ -1,17 +1,16 @@
 Title: Face Blindness
-Date: 2024-11-28 17:10
-Modified:  2024-11-28 17:10
+Date: 2024-12-09 17:10
+Modified:  2024-12-18 17:10
 Category: personal
 Tags: health, social, interaction
 Slug: faceblind
-Status: draft
 Summary: A real condition that I have
 
 ### What is it?
 
 I have face blindness ([**Prosopagnosia**](https://en.wikipedia.org/wiki/Prosopagnosia)) "a [cognitive disorder](https://en.wikipedia.org/wiki/Cognitive_disorder "Cognitive disorder") of [face perception](https://en.wikipedia.org/wiki/Face_perception "Face perception") in which the ability to recognize familiar faces including one's own face (self-recognition), is impaired, while other aspects of visual processing (e.g., object discrimination) and intellectual functioning (e.g., [decision-making](https://en.wikipedia.org/wiki/Decision-making "Decision-making")) remain intact". It has a prevalence of roughly 2 percent.
 
-I only found out that this was a medical condition a few years ago from my mother, who also has it <sup>[1]</sup>.Putting a name to something is powerful. Not knowing what face blindness was, I had struggled and developed ad-hoc systems for dealing with it over time. As is common for people with face blindness, I am highly dependant on context clues to identify people. Meet a colleague at the supermarket? They are a stranger to me. A gym buddy in the streeet? ditto. Friend gets a haircut? Total reset. I have kept and abandoned dozens of lists on my phone trying to retain names and tie them to non- facial aspects. Here's a sample of a current one from my kickboxing gym ([Ironman Majorna](https://www.ironmanmajorna.se/) if you wanna come train!)
+I only found out that this was a medical condition a few years ago from my mother, who also has it[ref] this is not unusual. The wikipeida article states that many people do not realise that they have face blindness until later in life. It has also been suggested that a genetic factor is responsible for the condition. "Many adults with developmental prosopagnosia report that for a long time they had no idea that they had a deficit in face processing, unaware that others could distinguish people solely on facial differences"[/ref].Putting a name to something is powerful. Not knowing what face blindness was, I had struggled and developed ad-hoc systems for dealing with it over time. As is common for people with face blindness, I am highly dependant on context clues to identify people. Meet a colleague at the supermarket? They are a stranger to me. A gym buddy in the streeet? ditto. Friend gets a haircut? Total reset. I have kept and abandoned dozens of lists on my phone trying to retain names and tie them to non- facial aspects. Here's a sample of a current one from my kickboxing gym ([Ironman Majorna](https://www.ironmanmajorna.se/) if you wanna come train!)
 
 - Anna - floppy hair youth. Super fast
 - Bert - The Beast. hexagonal tattoo on shoulder
@@ -57,7 +56,7 @@ Realising that I suffer from an identifiable medical condition has allowed me to
 - I was very late to an understanding/appreciation of beauty standards, the effects of makeup etc. I couldn't say until I was in my late teens who was attractive.
 - I cannot connect/identify people in old childhood photographs, photos of celebrities before they were famous etc.
 
-This may additionally explain why I struggled making friends as a child. Or maybe I just had bad vibes idk<sup>[2]</sup>.
+This may additionally explain why I struggled making friends as a child. Or maybe I just had bad vibes idk[ref]Prosopagnosia in children may be overlooked; they may just appear to be very shy or slightly odd due to their inability to recognize faces." lol[/ref].
 
 
 ### Further reading
@@ -67,13 +66,6 @@ This may additionally explain why I struggled making friends as a child. Or mayb
 
 -------------
 ### Footnotes
-
-<sup>[1]</sup>this is not unusual. The wikipeida article states that many people do not realise that they have face blindness until later in life. It has also been suggested that a genetic factor is responsible for the condition. "Many adults with developmental prosopagnosia report that for a long time they had no idea that they had a deficit in face processing, unaware that others could distinguish people solely on facial differences"
-
-<sup>[2]</sup>"Prosopagnosia in children may be overlooked; they may just appear to be very shy or slightly odd due to their inability to recognize faces." lol
-
-
-
 
 
 
