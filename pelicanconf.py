@@ -22,6 +22,7 @@ SITELOGO = SITEURL + '/images/mug.jpg'
 FAVICON = SITEURL + '/images/favicon.ico'
 BROWSER_COLOR = '#333333'
 PYGMENTS_STYLE = 'monokai'
+ARTICLE_ORDER_BY = 'reversed-modified'
 
 ROBOTS = 'index, follow'
 
