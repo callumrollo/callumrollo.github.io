@@ -21,7 +21,7 @@ I only found out that this was a medical condition a few years ago from my mothe
 - Godot - the gymnast
 - Harriet - cropped blond hair, spin kick
 
-Note how none of these depend on facial features and a lot of it is context specific (I'm probably not gonna identify a guy with a good spin kick on the tram). I also depend a lot on haircuts, so please don't change yours. After Bert shaved I though there was another overpowered hitter to survive sparring with.
+Note how none of these depend on facial features and a lot of it is context specific (I'm probably not gonna identify a guy with a good spin kick on the tram). I also depend a lot on haircuts, so please don't change yours. For two weeks after Bert shaved I though there was another overpowered hitter to survive sparring with.
 
 **N.B.** names have been changed throughout this article. If you think you recognise yourself in one of these stories, sorry!
 
@@ -44,19 +44,26 @@ Now that I have a name for this condition, I can be up-front about it with peopl
 
 ### Some side effects
 
-Realising that I suffer from an identifiable medical condition has allowed me to explain quite a few seemingly unrelated issues that I have long struggled with. Some of these are obvious (Failing to recognise classmates and colleagues in different contexts, ) others less so. Here are some of the less obvious effects of my face blindness:
+Realising that I suffer from an identifiable medical condition has allowed me to explain quite a few seemingly unrelated issues that I have long struggled with. Here are some of the less obvious effects of my face blindness:
 
 - I cannot identify/visualise family resemblance
 - More broadly - I can't identify when people "look similar"
 - I cannot picture people in my head - typically old photographs I have seen many times come to mind instead
 - I sometimes do not identify myself in group photographs
-- I struggle differentiating characters in films, especially if they all have similar clothes (legal thrillers, war films etc.) If a character changes hairstyle/clothes I often think they are a new character
+- I struggle differentiating characters in films, especially if they all have similar clothes (legal thrillers, war films etc.) If a character changes hairstyle/clothes I may think they are a new character
 - I am often anxious in situations where I will meet new people (though, aren't we all?)
 - As a child I frequently got lost/lost track of my parents
 - I was very late to an understanding/appreciation of beauty standards, the effects of makeup etc. I couldn't say until I was in my late teens who was attractive.
 - I cannot connect/identify people in old childhood photographs, photos of celebrities before they were famous etc.
 
 This may additionally explain why I struggled making friends as a child. Or maybe I just had bad vibes idk[ref]Prosopagnosia in children may be overlooked; they may just appear to be very shy or slightly odd due to their inability to recognize faces." lol[/ref].
+
+
+### Coda
+
+Writing this has been quite cathartic. I don't know if it will be of help to others, face blindness is a fairly widely acknowledged condition these days. If you struggle recognising people, especially in unexpected contexts, perhaps it affects you too!
+
+Sorry I didn't recognise you last time we met! Hope this explains it.
 
 
 ### Further reading

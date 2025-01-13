@@ -56,4 +56,4 @@ Our internet is such a fragile thing. Not a monolith, but a series of ramshackle
 
 I don't know how long I will keep tending to this little corner of the internet (I bought a 10 year lease on the domain at least!) but this exercise has reminded me of how ephemeral a lot of this is. When this site sinks back into the rich loam of the internet some day in the future, will there be any links elsewhere left dangling? Like vestigial limbs, pointing to words that no longer exist.
 
-It is said that we die twice. Once when we draw our final breath, and again the last ever time another person speaks our name.
+It is said that we die twice. Once when we draw our final breath, and again the last time another person speaks our name.
