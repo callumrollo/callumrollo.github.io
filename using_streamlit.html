@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://callumrollo.github.io/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://callumrollo.github.io/theme/pygments/monokai.min.css">
+
+
+
+  <link rel="stylesheet" type="text/css" href="https://callumrollo.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://callumrollo.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://callumrollo.github.io/theme/font-awesome/css/solid.css">
+
+
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#333333">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#333333">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Microsoft EDGE -->
+  <meta name="msapplication-TileColor" content="#333333">
+
+  <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Callum Rollo Atom">
+
+
+
+
+
+
+
+
+ 
+
+<meta name="author" content="Callum Rollo" />
+<meta name="description" content="When you just wanna chuck some stuff on the net" />
+<meta name="keywords" content="python, web-dev, science, tutorials">
+
+
+  <meta property="og:site_name" content="Callum Rollo"/>
+  <meta property="og:title" content="A Python web app in under an hour"/>
+  <meta property="og:description" content="When you just wanna chuck some stuff on the net"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:url" content="https://callumrollo.github.io/using_streamlit.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2025-01-13 13:15:00+00:00"/>
+  <meta property="article:modified_time" content="2025-01-13 14:15:00+00:00"/>
+  <meta property="article:author" content="https://callumrollo.github.io/author/callum-rollo.html">
+  <meta property="article:section" content="FOSS"/>
+  <meta property="article:tag" content="python"/>
+  <meta property="article:tag" content="web-dev"/>
+  <meta property="article:tag" content="science"/>
+  <meta property="article:tag" content="tutorials"/>
+  <meta property="og:image" content="/images/mug.jpg">
+
+  <title>Callum Rollo &ndash; A Python web app in under an hour</title>
+
+
+</head>
+<body class="light-theme">
+
+<aside>
+  <div>
+    <a href="https://callumrollo.github.io/">
+      <img src="/images/mug.jpg" alt="Callum Rollo" title="Callum Rollo">
+    </a>
+
+    <h1>
+      <a href="https://callumrollo.github.io/">Callum Rollo</a>
+    </h1>
+
+    <p>Recovering oceanographer</p>
+
+
+    <nav>
+      <ul class="list">
+
+
+            <li>
+              <a target="_self"
+                 href="https://callumrollo.github.io/pages/aboutme.html#aboutme">
+                About me
+              </a>
+            </li>
+            <li>
+              <a target="_self"
+                 href="https://callumrollo.github.io/pages/open.html#open">
+                Open sofa policy
+              </a>
+            </li>
+            <li>
+              <a target="_self"
+                 href="https://callumrollo.github.io/pages/pay.html#pay">
+                My income
+              </a>
+            </li>
+            <li>
+              <a target="_self"
+                 href="https://callumrollo.github.io/pages/teaching.html#teaching">
+                Teaching
+              </a>
+            </li>
+            <li>
+              <a target="_self"
+                 href="https://callumrollo.github.io/pages/toolbox.html#toolbox">
+                Toolbox
+              </a>
+            </li>
+
+          <li>
+            <a target="_self" href="/" >blog</a>
+          </li>
+      </ul>
+    </nav>
+
+    <ul class="social">
+      <li>
+        <a class="sc-github"
+           href="https://github.com/callumrollo"
+           target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</aside>
+  <main>
+
+<nav>
+  <a href="https://callumrollo.github.io/">Home</a>
+
+  <a href="/categories.html">Categories</a>
+  <a href="/tags.html">Tags</a>
+
+  <a href="/feeds/all.atom.xml">Atom</a>
+
+</nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="using_streamlit">A Python web app in under an hour</h1>
+    <p>
+      Posted on Mon 13 January 2025 in <a href="https://callumrollo.github.io/category/foss.html">FOSS</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>As I was packing up on Friday, I received an email from a old scientific collaborator Dr. D. asking for advice on how to share some scientific data on the internet. He wanted to share the real time status of some <a href="https://en.wikipedia.org/wiki/Automatic_weather_station">automatic weather stations</a> (AWS, not the Bezos one) and some timeseries of temperature humidity etc. My interest was sufficiently piqued that ,when I got home<sup id="sf-using_streamlit-1-back"><a href="#sf-using_streamlit-1" class="simple-footnote" title="I do not endorse working outside of office hours. Do as I say not as I do.">1</a></sup>, I gave myself an hour to knock together the best solution I could. It resulted in this:</p>
+<p><a href="https://aws-demo.streamlit.app/">https://aws-demo.streamlit.app/</a></p>
+<p>Source code: <a href="https://github.com/callumrollo/streamlit-demo-aws">https://github.com/callumrollo/streamlit-demo-aws</a></p>
+<h3>Requirements/Motivation</h3>
+<p>As communicated by Dr. D., the web app needed to:</p>
+<ul>
+<li>Show near real time uptime stas and science time-series data</li>
+<li>Be easy to implement and maintain</li>
+<li>Be python based</li>
+</ul>
+<p>Some additional requests were:</p>
+<ul>
+<li>To run locally on-site where the weather station is</li>
+<li>Be interactive (zoom/pan data)</li>
+</ul>
+<p>I had been meaning to try out streamlit for a while now. While my usual go-to is to whip up a python-flask app for all my website and slippy map purposes (for more see <a href="https://callumrollo.github.io/flask_leaflet.html">this post</a>), this request called for something much simpler and more user-friendly to create.</p>
+<h3>Steps</h3>
+<ol>
+<li>Search the internet for "streamlit"</li>
+<li>Copy and paste their <a href="https://streamlit.io/#install">quickstart</a> <code>pip install streamlit &amp;&amp; streamlit hello</code><sup id="sf-using_streamlit-2-back"><a href="#sf-using_streamlit-2" class="simple-footnote" title=" After creating and activating a virtual environment. I'm not a monster">2</a></sup></li>
+<li>Realise I actually wanted more of a chart</li>
+<li>Read the <a href="https://docs.streamlit.io/">Docs</a> (yuck)</li>
+<li>Copy and paste an <a href="https://docs.streamlit.io/get-started/fundamentals/main-concepts">example</a> with a chart I wanted</li>
+<li>Run that locally with <code>streamlit run app.py</code></li>
+<li>Make some fake data in a pandas dataframe</li>
+<li>Edit the example to show the two basic charts I wanted</li>
+<li>Add some <a href="https://docs.streamlit.io/develop/api-reference/widgets/st.download_button">download functionality</a></li>
+<li>Publish the app to github</li>
+<li>Deploy the app to streamlit community</li>
+<li>Add instructions</li>
+<li>Present this to Dr. D.</li>
+<li>Write this blog post in case others may benefit!</li>
+</ol>
+<p>Steps 1 - 12 took just under an hour. I chatted with Dr. D. for 30 minutes about the solution (he was very happy!) and took another 30 to write this blog post. It's rough and ready but does the job.</p>
+<h3>Reflection</h3>
+<p>When I talk to friends in tech, they are often surprised/alarmed by the outdated tech stack and approaches that scientists use to do our work. Public perception is that we're at the cutting edge, most people would be shocked to see how old-school and just plain old a lot of the tools we depend on are. While I personally think novelty is overrated (climate models are fine in FORTRAN, please stop suggesting we rewrite X in rust) a lot of science, particularly on the data-viz/public outreach front, could be much better if it used modern, dynamic tooling.</p>
+<p>It's brings me a lot of joy to help colleagues with things like this. If there is any through line to my career and personal ethos, it is creating/improving/teaching tooling that makes other scientists more effective. Some of my proudest moments during my PhD were spending a few hours writing bash scripts that saved my fellow students weeks of manual work.</p>
+<hr>
+<h3>Footnotes</h3>
+<ul>
+<li>I listened to <a href="https://www.youtube.com/watch?v=ITgslYJhfx0&amp;list=PLJ7QPuvv91JvpyTZ0qvs9bKeUXhYdKNuF">Deafheaven - Ordinary Corrupt Human Love</a>and <a href="https://www.youtube.com/watch?v=nwNQexRDAf0&amp;list=OLAK5uy_n0UZxsAiOCnXxbPeznWGzuV4Ly4Mf-I6c&amp;index=1">Charli XCX- Crash</a> while writing this post</li>
+</ul><ol class="simple-footnotes"><li id="sf-using_streamlit-1">I do not endorse working outside of office hours. Do as I say not as I do. <a href="#sf-using_streamlit-1-back" class="simple-footnote-back">↩︎</a></li><li id="sf-using_streamlit-2"> After creating and activating a virtual environment. I'm not a monster <a href="#sf-using_streamlit-2-back" class="simple-footnote-back">↩︎</a></li></ol>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://callumrollo.github.io/tag/python.html">python</a>
+      <a href="https://callumrollo.github.io/tag/web-dev.html">web-dev</a>
+      <a href="https://callumrollo.github.io/tag/science.html">science</a>
+      <a href="https://callumrollo.github.io/tag/tutorials.html">tutorials</a>
+    </p>
+  </div>
+
+
+
+
+
+
+</article>
+
+<footer>
+<p>
+  &copy; 2025  - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.en_US" target="_blank">Creative Commons Attribution-ShareAlike</a>
+</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p></footer>  </main>
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Callum Rollo ",
+  "url" : "https://callumrollo.github.io",
+  "image": "/images/mug.jpg",
+  "description": "Science should be open. Software should be free. No one is illegal"
+}
+</script>
+</body>
+</html>
