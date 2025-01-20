@@ -1,6 +1,6 @@
 Title: A Python web app in under an hour
 Date: 2025-01-13 13:15
-Modified:  2025-01-13 14:15
+Modified:  2025-01-20 14:15
 Category: FOSS
 Tags: python, web-dev, science,tutorials
 Slug: using_streamlit
@@ -16,7 +16,7 @@ Source code: [https://github.com/callumrollo/streamlit-demo-aws](https://github.
 
 As communicated by Dr. D., the web app needed to:
 
-- Show near real time uptime stas and science time-series data
+- Show near real time uptime stats and science time-series data
 - Be easy to implement and maintain
 - Be python based
 
@@ -41,23 +41,23 @@ I had been meaning to try out streamlit for a while now. While my usual go-to is
 9. Add some [download functionality](https://docs.streamlit.io/develop/api-reference/widgets/st.download_button)
 10. Publish the app to github
 11. Deploy the app to streamlit community
-12. Add instructions
+12. Add instructions to the repo's [README](https://github.com/callumrollo/streamlit-demo-aws/blob/main/README.md)
 13. Present this to Dr. D.
 14. Write this blog post in case others may benefit!
 
 Steps 1 - 12 took just under an hour. I chatted with Dr. D. for 30 minutes about the solution (he was very happy!) and took another 30 to write this blog post. It's rough and ready but does the job.
 ### Reflection
 
-When I talk to friends in tech, they are often surprised/alarmed by the outdated tech stack and approaches that scientists use to do our work. Public perception is that we're at the cutting edge, most people would be shocked to see how old-school and just plain old a lot of the tools we depend on are. While I personally think novelty is overrated (climate models are fine in FORTRAN, please stop suggesting we rewrite X in rust) a lot of science, particularly on the data-viz/public outreach front, could be much better if it used modern, dynamic tooling.
+When I talk to friends in tech, they are often surprised/alarmed by the outdated tech stack and approaches that scientists use to do our work. Public perception is that we're at the cutting edge, most people would be shocked to see how old-school and just plain old a lot of the tools we depend on are (Dr D.'s initial thought was to just whack some png plots from matplotlib on a website). While I personally think novelty is overrated (climate models are fine in FORTRAN, please stop suggesting we rewrite X in rust) a lot of science, particularly on the data-viz/public outreach front, could be much better if it used modern, dynamic tooling.
 
-It's brings me a lot of joy to help colleagues with things like this. If there is any through line to my career and personal ethos, it is creating/improving/teaching tooling that makes other scientists more effective. Some of my proudest moments during my PhD were spending a few hours writing bash scripts that saved my fellow students weeks of manual work.
+It's brings me a lot of joy to help colleagues with things like this. If there is any through-line to my career and personal ethos, it is creating/improving/demonstrating tooling that makes other scientists more effective. Some of my proudest moments during my PhD were spending a few hours writing bash scripts that saved my fellow students weeks of manual work. It really helps how much of the Python ecosystem is focused around well standardised data formats like pandas DataFrames and xarray DataSets. [PANGEO](https://www.pangeo.io/) deserve a lot of credit for this community standardisation.
 
 
 
 -------------
 ### Footnotes
 
-- I listened to [Deafheaven - Ordinary Corrupt Human Love](https://www.youtube.com/watch?v=ITgslYJhfx0&list=PLJ7QPuvv91JvpyTZ0qvs9bKeUXhYdKNuF)and [Charli XCX- Crash](https://www.youtube.com/watch?v=nwNQexRDAf0&list=OLAK5uy_n0UZxsAiOCnXxbPeznWGzuV4Ly4Mf-I6c&index=1) while writing this post
+- I listened to [Deafheaven - Ordinary Corrupt Human Love](https://www.youtube.com/watch?v=ITgslYJhfx0&list=PLJ7QPuvv91JvpyTZ0qvs9bKeUXhYdKNuF)and [Charli XCX- Crash](https://www.youtube.com/watch?v=nwNQexRDAf0&list=OLAK5uy_n0UZxsAiOCnXxbPeznWGzuV4Ly4Mf-I6c&index=1) while writing this post[ref]It's my website I'll do what I want with footnotes[/ref]
 
 
 
