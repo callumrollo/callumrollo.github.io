@@ -59,7 +59,7 @@
   <meta property="og:url" content="https://callumrollo.github.io/using_streamlit.html"/>
   <meta property="og:type" content="article"/>
   <meta property="article:published_time" content="2025-01-13 13:15:00+00:00"/>
-  <meta property="article:modified_time" content="2025-01-13 14:15:00+00:00"/>
+  <meta property="article:modified_time" content="2025-01-20 14:15:00+00:00"/>
   <meta property="article:author" content="https://callumrollo.github.io/author/callum-rollo.html">
   <meta property="article:section" content="FOSS"/>
   <meta property="article:tag" content="python"/>
@@ -136,6 +136,20 @@
           <i class="fa-brands fa-github"></i>
         </a>
       </li>
+      <li>
+        <a class="sc-bluesky"
+           href="https://bsky.app/profile/callumrollo.com"
+           target="_blank">
+          <i class="fa-brands fa-bluesky"></i>
+        </a>
+      </li>
+      <li>
+        <a class="sc-signal-messenger"
+           href="https://signal.me/#eu/vVTfRWX6HkcX5wsuomv2wg_b_JyA5TQDgLStqYOtkpDZUvpL8UZCt4IvThrqhY-j"
+           target="_blank">
+          <i class="fa-brands fa-signal-messenger"></i>
+        </a>
+      </li>
     </ul>
   </div>
 
@@ -170,7 +184,7 @@
 <h3>Requirements/Motivation</h3>
 <p>As communicated by Dr. D., the web app needed to:</p>
 <ul>
-<li>Show near real time uptime stas and science time-series data</li>
+<li>Show near real time uptime stats and science time-series data</li>
 <li>Be easy to implement and maintain</li>
 <li>Be python based</li>
 </ul>
@@ -193,19 +207,19 @@
 <li>Add some <a href="https://docs.streamlit.io/develop/api-reference/widgets/st.download_button">download functionality</a></li>
 <li>Publish the app to github</li>
 <li>Deploy the app to streamlit community</li>
-<li>Add instructions</li>
+<li>Add instructions to the repo's <a href="https://github.com/callumrollo/streamlit-demo-aws/blob/main/README.md">README</a></li>
 <li>Present this to Dr. D.</li>
 <li>Write this blog post in case others may benefit!</li>
 </ol>
 <p>Steps 1 - 12 took just under an hour. I chatted with Dr. D. for 30 minutes about the solution (he was very happy!) and took another 30 to write this blog post. It's rough and ready but does the job.</p>
 <h3>Reflection</h3>
-<p>When I talk to friends in tech, they are often surprised/alarmed by the outdated tech stack and approaches that scientists use to do our work. Public perception is that we're at the cutting edge, most people would be shocked to see how old-school and just plain old a lot of the tools we depend on are. While I personally think novelty is overrated (climate models are fine in FORTRAN, please stop suggesting we rewrite X in rust) a lot of science, particularly on the data-viz/public outreach front, could be much better if it used modern, dynamic tooling.</p>
-<p>It's brings me a lot of joy to help colleagues with things like this. If there is any through line to my career and personal ethos, it is creating/improving/teaching tooling that makes other scientists more effective. Some of my proudest moments during my PhD were spending a few hours writing bash scripts that saved my fellow students weeks of manual work.</p>
+<p>When I talk to friends in tech, they are often surprised/alarmed by the outdated tech stack and approaches that scientists use to do our work. Public perception is that we're at the cutting edge, most people would be shocked to see how old-school and just plain old a lot of the tools we depend on are (Dr D.'s initial thought was to just whack some png plots from matplotlib on a website). While I personally think novelty is overrated (climate models are fine in FORTRAN, please stop suggesting we rewrite X in rust) a lot of science, particularly on the data-viz/public outreach front, could be much better if it used modern, dynamic tooling.</p>
+<p>It's brings me a lot of joy to help colleagues with things like this. If there is any through-line to my career and personal ethos, it is creating/improving/demonstrating tooling that makes other scientists more effective. Some of my proudest moments during my PhD were spending a few hours writing bash scripts that saved my fellow students weeks of manual work. It really helps how much of the Python ecosystem is focused around well standardised data formats like pandas DataFrames and xarray DataSets. <a href="https://www.pangeo.io/">PANGEO</a> deserve a lot of credit for this community standardisation.</p>
 <hr>
 <h3>Footnotes</h3>
 <ul>
-<li>I listened to <a href="https://www.youtube.com/watch?v=ITgslYJhfx0&amp;list=PLJ7QPuvv91JvpyTZ0qvs9bKeUXhYdKNuF">Deafheaven - Ordinary Corrupt Human Love</a>and <a href="https://www.youtube.com/watch?v=nwNQexRDAf0&amp;list=OLAK5uy_n0UZxsAiOCnXxbPeznWGzuV4Ly4Mf-I6c&amp;index=1">Charli XCX- Crash</a> while writing this post</li>
-</ul><ol class="simple-footnotes"><li id="sf-using_streamlit-1">I do not endorse working outside of office hours. Do as I say not as I do. <a href="#sf-using_streamlit-1-back" class="simple-footnote-back">↩︎</a></li><li id="sf-using_streamlit-2"> After creating and activating a virtual environment. I'm not a monster <a href="#sf-using_streamlit-2-back" class="simple-footnote-back">↩︎</a></li></ol>
+<li>I listened to <a href="https://www.youtube.com/watch?v=ITgslYJhfx0&amp;list=PLJ7QPuvv91JvpyTZ0qvs9bKeUXhYdKNuF">Deafheaven - Ordinary Corrupt Human Love</a>and <a href="https://www.youtube.com/watch?v=nwNQexRDAf0&amp;list=OLAK5uy_n0UZxsAiOCnXxbPeznWGzuV4Ly4Mf-I6c&amp;index=1">Charli XCX- Crash</a> while writing this post<sup id="sf-using_streamlit-3-back"><a href="#sf-using_streamlit-3" class="simple-footnote" title="It's my website I'll do what I want with footnotes">3</a></sup></li>
+</ul><ol class="simple-footnotes"><li id="sf-using_streamlit-1">I do not endorse working outside of office hours. Do as I say not as I do. <a href="#sf-using_streamlit-1-back" class="simple-footnote-back">↩︎</a></li><li id="sf-using_streamlit-2"> After creating and activating a virtual environment. I'm not a monster <a href="#sf-using_streamlit-2-back" class="simple-footnote-back">↩︎</a></li><li id="sf-using_streamlit-3">It's my website I'll do what I want with footnotes <a href="#sf-using_streamlit-3-back" class="simple-footnote-back">↩︎</a></li></ol>
   </div>
   <div class="tag-cloud">
     <p>
