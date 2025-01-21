@@ -51,6 +51,8 @@ LINKS = (('blog', '/'),
 
 SOCIAL = (
 	 ('github', 	'https://github.com/callumrollo'),
+	 ('bluesky', 	'https://bsky.app/profile/callumrollo.com'),
+	 ('signal-messenger', 	'https://signal.me/#eu/vVTfRWX6HkcX5wsuomv2wg_b_JyA5TQDgLStqYOtkpDZUvpL8UZCt4IvThrqhY-j'),
 	)
 
 MENUITEMS = (('Categories', '/categories.html'),

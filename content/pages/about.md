@@ -4,7 +4,7 @@ Category: Generic
 Slug: aboutme
 Summary: About the author
 
-Since late 2021, I work as a data scientist at [Voice of the Ocean foundation (VOTO)](https://voiceoftheocean.org/en). I am responsible for processing, correcting, standardising and distributing scientific data from our fleet of autonomous platforms. In my day-to-day work, I build and monitor pipelines for processing near real time data, maintain servers and create websites for viewing/interrogating data. I also work with other data managers at organisations like [SMHI](https://www.smhi.se/en),  [EMODnet](https://emodnet.ec.europa.eu/en) and [IOOS/NOAA](https://ioos.noaa.gov/)to standardise and efficiently distribute data.
+As of late 2021, I work as a data scientist at [Voice of the Ocean foundation (VOTO)](https://observations.voiceoftheocean.org/). I am responsible for processing, correcting, standardising and distributing scientific data from our fleet of autonomous platforms. In my day-to-day work, I build and monitor pipelines for processing near real time data, maintain servers and create websites for viewing/interrogating data. I also work with other data managers at organisations like [SMHI](https://www.smhi.se/en),  [EMODnet](https://emodnet.ec.europa.eu/en) and [IOOS/NOAA](https://ioos.noaa.gov/)to standardise and efficiently distribute data.
 
 I work a lot with [ERDDAP](https://github.com/ERDDAP/erddap), a data broker server that makes it much easier to share well standardised oceanographic data. I manage the [VOTO ERDDAP](https://erddap.observations.voiceoftheocean.org/erddap/index.html) where all our data are hosted. I have co-organised and presented several in person and online webinars teaching data users and admins how to best use ERDDAP for distributing oceanographic data.
 
@@ -14,11 +14,11 @@ I am a Pythonista and proponent of free software for science. Several of my proj
 
 ### Career
 
-**2021-present** Data scientist/physical oceanographer Voice of the Ocean Foundation
+**2021 - present** Data scientist/physical oceanographer Voice of the Ocean Foundation
 
-**2017- 2021** Postgraduate Researcher University of East Anglia
+**2017 - 2021** Postgraduate Researcher University of East Anglia
 
-**2013-2017** MSci Geophysics University of Southampton
+**2013 - 2017** MSci Geophysics University of Southampton
 
 ### CV
 
@@ -45,9 +45,9 @@ To request a copy of any of my publications that have ended up behind a paywall,
 
 ### PhD
 
-During 2017-2021 I completed a PhD at the University of East Anglia (UEA) in Norwich, UK. I work with marine gliders, specifically the integration on Acoustic Doppler Current Profilers (ADCPs) onto gliders to directly measure currents in the ocean.
+I completed a PhD at the University of East Anglia (UEA) in Norwich, UK during 2017-2021. I work with marine gliders, specifically the integration on Acoustic Doppler Current Profilers (ADCPs) onto gliders to directly measure currents in the ocean. During my time at UEA I took part in several field campaigns in the North Sea, tropical North Atlantic and Amundsen Sea.
 
-Data and live location information from this glider, and others in the fleet, is available on the [UEA glider website](https://ueaglider.uea.ac.uk). I rebuilt the website in 2021, based on the original by [Bastien Queste](https://www.flow-lab.org/).
+Data and live location information from the glider I worked with (SG637), and others in the fleet, is available on the [UEA glider website](https://ueaglider.uea.ac.uk). I rebuilt the website in 2021, based on the original by [Bastien Queste](https://www.flow-lab.org/).
 
 ##### PhD Supervisory Team
 
@@ -55,7 +55,7 @@ Data and live location information from this glider, and others in the fleet, is
 
 ### Academic background
 
-Integrated Master of Science (MSci) geophysics with study abroad First class, University of Southampton, UK. Included a year studying at Utrecht University, Netherlands under the Erasmus program
+2013 - 2017 Integrated Master of Science (MSci) geophysics with study abroad First class, University of Southampton, UK. Included a year studying at Utrecht University, Netherlands under the Erasmus program
 
 Thesis title: Approximating 3D seismic velocities under Sumatra using ambient noise tomography.
 Supervisor: Dr Nicholas Harmon
@@ -66,11 +66,14 @@ Supervisor: Dr Nicholas Harmon
 
 [c.rollo@outlook.com](mailto:c.rollo@outlook.com)
 
-If you have my phone number, please contact me using [Signal](https://www.signal.org/).
+I prefer [Signal](https://www.signal.org/) as a messaging app. If you have my Swedish +46 number you'll find me there, you can alse search for callum.16 or use my [Signal link](https://signal.me/#eu/vVTfRWX6HkcX5wsuomv2wg_b_JyA5TQDgLStqYOtkpDZUvpL8UZCt4IvThrqhY-j).
+
+If you're in/near Gothenburg, why not come meet me irl? [open invitation]({filename}/pages/open.md)
 
 ### Various internet presences:
 
 - [github](https://github.com/callumrollo)
+- [bluesky](https://bsky.app/profile/callumrollo.com)
 - [twitter](https://twitter.com/callum_rollo) (no longer used, thanks Elon)
 - [stack overflow](https://stackoverflow.com/users/13208790/marcos)
 - [Voice of the Ocean team page](https://voiceoftheocean.org/meet-the-crew/)
@@ -86,6 +89,7 @@ With varying levels of competence
 - ERDDAP
 - Task automation
 - Python
+- Cycling and bicycle maintenance
 - Standardisation of data processing
 - FOSS in the geosciences
 - The pros/cons of preprints and open peer review
