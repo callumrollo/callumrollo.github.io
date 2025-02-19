@@ -6,6 +6,7 @@ Summary: Stuff I have
 
 I have a lot of stuff! It spends too much time in the cupboard. Here are some things you can borrow from me:
 
+# Outdoor gear
 ### Camping
 
 - 2 man tent northface. Pale blue, roomy
@@ -22,6 +23,7 @@ I have a lot of stuff! It spends too much time in the cupboard. Here are some th
 - Water carrier 10 L
 - Gas stove and pans
 - Camping plates, cutlery, flasks etc.
+- First aid kit
 
 ### Water
 
@@ -67,5 +69,17 @@ I have a lot of stuff! It spends too much time in the cupboard. Here are some th
 
 Bear in mind that if I'm joining for your adventure I'll need some of this gear for me!
 
+# Tools and home
 
+- Sewing machine with lots of thread and extras
+- Hand sewing kit
+- Cordless drill, bits and screws
+- Basic carpentry tools
+- Access to a shared carpentry room in my apartment complex
+- Extensive bike tools
+- Bolt croppers and angle grinder
+- Knife steel and whetstones
+- Electronics toolset (small scredrivers, phone screen removal tools etc.)
+- Router, ethernet cables, switch, old Linux laptops
 
+Some of this stuff I'm pretty good with (especially bike tools), for others you'll need to bring your own expertise! I suck at sewing and knife sharpening.
