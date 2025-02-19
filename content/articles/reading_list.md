@@ -137,6 +137,8 @@ The more poorly formatted the website, the better the quality of ideas.
 
 [Kamila Zdybał](https://kamilazdybal.github.io/)
 
+[Dion Haefner](https://dionhaefner.github.io/)
+
 ### Good blogs
 
 [Molly White](https://www.mollywhite.net/)
