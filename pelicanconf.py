@@ -54,6 +54,7 @@ SOCIAL = (
 	 ('bluesky', 	'https://bsky.app/profile/callumrollo.com'),
 	 ('signal-messenger', 	'https://signal.me/#eu/vVTfRWX6HkcX5wsuomv2wg_b_JyA5TQDgLStqYOtkpDZUvpL8UZCt4IvThrqhY-j'),
      ('orcid', 	'https://orcid.org/0000-0002-5134-7886'),
+     ('strava', 	'https://strava.app.link/9jlwUcNykRb'),
      ('usb', 	'mailto:c.rollo@outlook.com'),
 	)
 
