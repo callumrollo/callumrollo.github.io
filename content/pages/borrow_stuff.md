@@ -9,8 +9,8 @@ I have a lot of stuff! It spends too much time in the cupboard. Here are some th
 # Outdoor gear
 ### Camping
 
-- 2 man tent northface. Pale blue, roomy
-- 2 man tent MSR. Green, lighter weight, snug
+- 2 person tent northface. Pale blue, roomy
+- 2 person tent MSR. Green, lighter weight, snug
 - Bivvy bag. Semi-waterproof. Olive green for your stealth camping needs
 - Hammock X 2
 - Summer sleeping bag X 2
@@ -31,6 +31,7 @@ I have a lot of stuff! It spends too much time in the cupboard. Here are some th
 - Buoyancy aid X 2
 - Various dry bags
 - Waterproof phone case
+- Wet suit Womens M
 
 ### Winter
 
@@ -39,14 +40,19 @@ I have a lot of stuff! It spends too much time in the cupboard. Here are some th
 - Hockey skates size 46
 - Hockey stakes size 39
 - Ice skate safety gear: ice safety spikes X 2, throw rope, ice testing pole
+- Sled
 
 ### Clothing
 
 - Mens XL waterproof jacket X 2
 - Womens M waterproof jacket
+- Unisex L winter jacket
 - Snowsports clothes XL man
 - Snowsports clothes M woman
+- Hiking boots 38 EU
+- Snow boots with metal grips 38 EU
 - Cycling clothes XL man X 3
+- Cycling shorts M woman x 1
 - SPD cycling shoes size 45
 - Climbing shoes size 45
 
@@ -67,12 +73,13 @@ I have a lot of stuff! It spends too much time in the cupboard. Here are some th
 - Pretty complete set of tools
 - Various spare parts
 
-Bear in mind that if I'm joining for your adventure I'll need some of this gear for me!
+Bear in mind that if I'm joining for your adventure, I'll need some of this gear for me!
 
 # Tools and home
 
 - Sewing machine with lots of thread and extras
 - Hand sewing kit
+- Knitting needles and yarn
 - Cordless drill, bits and screws
 - Basic carpentry tools
 - Access to a shared carpentry room in my apartment complex
@@ -81,5 +88,6 @@ Bear in mind that if I'm joining for your adventure I'll need some of this gear 
 - Knife steel and whetstones
 - Electronics toolset (small scredrivers, phone screen removal tools etc.)
 - Router, ethernet cables, switch, old Linux laptops
+- 35mm film camera (Minolta) and external flash for the hotshoe
 
 Some of this stuff I'm pretty good with (especially bike tools), for others you'll need to bring your own expertise! I suck at sewing and knife sharpening.
