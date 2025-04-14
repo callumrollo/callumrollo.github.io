@@ -57,6 +57,17 @@ Summary: The tools I use
 - [liferea](https://lzone.de/liferea/) to aggregate RSS feeds
 - [Pelican](https://blog.getpelican.com/) to make this static website
 
+### Good android apps
+
+- Aegis: FOSS OTP authenticator
+- Antenna pod: FOSS podcast app
+- Black Player for music
+- KDE conect: bliateral control of phone/laptop running KDE
+- Komoot: nice cycling maps
+- MAPS.ME: Great offline maps provider. Essential for hiking
+- Sigal: My preferred E2E encrypted, privacy respecting messaging/video call app
+- Wise: Decent multicurrency cash card and transfers
+- Yr: Best weather service for the nordic region
 
 
 

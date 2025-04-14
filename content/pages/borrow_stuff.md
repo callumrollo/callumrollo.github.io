@@ -23,6 +23,7 @@ I have a lot of stuff! It spends too much time in the cupboard. Here are some th
 - Water carrier 10 L
 - Gas stove and pans
 - Camping plates, cutlery, flasks etc.
+- various portable coffee makers
 - First aid kit
 
 ### Water
@@ -31,7 +32,8 @@ I have a lot of stuff! It spends too much time in the cupboard. Here are some th
 - Buoyancy aid X 2
 - Various dry bags
 - Waterproof phone case
-- Wet suit Womens M
+- 5 mm wetsuit mens XL
+- 3 mm Wet suit Womens M
 
 ### Winter
 
@@ -50,7 +52,7 @@ I have a lot of stuff! It spends too much time in the cupboard. Here are some th
 - Snowsports clothes XL man
 - Snowsports clothes M woman
 - Hiking boots 38 EU
-- Snow boots with metal grips 38 EU
+- Ice bug snow boots with metal grips 38 EU
 - Cycling clothes XL man X 3
 - Cycling shorts M woman x 1
 - SPD cycling shoes size 45
