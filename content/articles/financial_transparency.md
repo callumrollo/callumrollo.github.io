@@ -1,6 +1,6 @@
 Title: Financial Transparency and Me
 Date: 2024-12-28 12:50
-Modified:  2024-12-28 12:50
+Modified:  2025-04-28 12:50
 Category: personal
 Tags: finance, transparency, morality, open
 Slug: financial_transparency
@@ -20,9 +20,7 @@ As explained in the main article, I was originally inspired by the excellent inv
 # Evolution
 
 - In summer 2024 I added a conversion function for GBP, SEK and USD. This makes all the numbers in the page easily comparable. As a side effect if reminds of the [depressing trend in the Swedish kronor since I moved here in 2021](https://www.xe.com/currencycharts/?from=SEK&to=GBP&view=5Y)
-- In 2024 I added the financial information of the flat that I purchased with a loan in 2023
-- privilege of family money
-- I don't show the current balances of my bank account and credit cards as they a) change monthly by non-trivial amounts and b) feel a bit too personal.
+- In 2024 I added the financial information of the flat that I purchased with a loan in 2023.
 
 ### Future plans
 
@@ -41,11 +39,6 @@ A lot of asterisks apply to my exhortations of financial transparency. I have ma
 - **What about comparative advantage/salary negotiation?** it has been [persuasively argued](https://www.kalzumeus.com/2012/01/23/salary-negotiation/) that making your current salary known to an employer puts you at a stark disadvantage during salary negotiation. I am not motivated by money. If I make enough to keep a roof over my head and beers in the fridge I'm good. Yes, this harms my total lifetime earnings.
 
 ### Morality of this stance
-
-- a more genearal morailty of openness
-- limits of this
-- This Should Be Normal
-
 
 If you have read this far, I would encourage you to follow suit! If you don't feel comfortable posting your salary the internet for all to see, at least be open to discussing your salary and financial situation with colleagues, friends and acquaintances. Except for exploitative bosses, we all benefit from increased openness around this old taboo topic.
 
