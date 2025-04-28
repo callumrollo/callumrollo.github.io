@@ -1,4 +1,4 @@
-repo for the website https://callumrollo.github.io/
+repo for the website https://callumrollo.com
 
 This uses the simple footnotes plugin https://github.com/pelican-plugins/simple-footnotes
 
