@@ -29,19 +29,21 @@ During my PhD I was a member of the [University and Colleges Union](https://www.
 
 You can read a short article on the pros and cons of publishing salaries [here](https://time.com/5353848/salary-pay-transparency-work/). The practice is becoming more common, in some countries it is [mandatory](https://www.bbc.co.uk/news/magazine-40669239). This is the case in Sweden, you can get a copy of anyone's tax returns from the government and deduce their income from it. I'd rather make it as easy as possible.
 
+You can read more about my reasons for doing this in [this blog post]({filename}/articles/financial_transparency.md).
+
 # Interests
 
 In 2023 I bought a flat in Gothenburg, Sweden with a down payment of **CONV;750000;SEK;[SEK,GBP,USD]** and a bank loan of **CONV;2400000;SEK;[SEK,GBP,USD]** I was only able to do this with financial assistance of **CONV;30000;GBP;[GBP,SEK,USD]**  from my parents. I expect to pay my mortgage off in 50 years time, as is common in Sweden.
 
-I have a workplace pension and ~ **CONV;117000;SEK;[SEK,GBP,USD]** invested in index funds. Though tbh retirement seems pretty unlikely on a burning planet.
+I have a workplace pension and ~ **CONV;117000;SEK;[SEK,GBP,USD]** invested in index funds (in May 2025 this number has one hell of an error bar). Though tbh retirement seems pretty unlikely on a burning planet.
 
-I hold **CONV;500;GBP;[GBP,SEK,USD]** in non-profit bearing  community shares in [The Locks Inn Community Pub Limited](https://thelocksinn.com/). This is a successful community takeover of a well loved local pub.
+I hold **CONV;500;GBP;[GBP,SEK,USD]** in non-profit bearing  community shares in [The Locks Inn Community Pub Limited](https://thelocksinn.com/). This is a successful community takeover of a well loved local pub. I do not expect to reclaim this money.
 
 I have **CONV;45000;GBP;[GBP,SEK,USD]** of student debt in the UK. Currently the interest rate of 7 % means my repayments do not even cover the interest.
 
 # Giving
 
-I sporadically give to causes including humanitarian relief, medical aid, refugee shelters, local food redistribution/waste reduction efforts, union strike funds, rewilding initiatives, mutual aid and individuals in need. I am not presently giving regularly, except for my union dues. I have previously applied a version of [effective altruism](https://en.wikipedia.org/wiki/Effective_altruism) to my charitable giving, inspired by Peter Singer. As of 2020 I no longer align with this philosophy. I am particularly opposed to the silicon valley "longtermist" sub-movement.
+I sporadically give to causes including humanitarian relief, medical aid, refugee shelters, local food redistribution/waste reduction efforts, union strike funds, rewilding initiatives, mutual aid and individuals in need. I am not presently giving regularly, except for my union dues. I have previously applied a version of [effective altruism](https://en.wikipedia.org/wiki/Effective_altruism) to my charitable giving, inspired by Peter Singer. As of 2020 I no longer align with this philosophy. I am particularly opposed to the silicon valley "longtermist" sub-movement. It is currently on my todo list to return to some form of regular charitable giving.
 
 ### Volunteering
 
@@ -56,6 +58,6 @@ I have been volunteering with food redistribution groups and bike kitchens since
 
 First published June 2020
 
-Last updated October 2024
+Last updated May 2025
 
 Currency conversion using [this python script](https://github.com/callumrollo/callumrollo.github.io/blob/source/scripts/currency_convert.py) and [freecurrencyapi.com](https://freecurrencyapi.com).

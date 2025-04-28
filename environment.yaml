@@ -1,13 +1,13 @@
 name: webdev
 channels:
-        - conda-forge
+  - conda-forge
 dependencies:
-       - pelican
-       - markdown
-       - typogrify
-       - ghp-import
-       - numpy
-       - requests
-       - pip
-pip:
-  - pelican-simple-footnotes
+  - pelican
+  - markdown
+  - typogrify
+  - ghp-import
+  - numpy
+  - requests
+  - pip
+  - pip:
+    - pelican-simple-footnotes

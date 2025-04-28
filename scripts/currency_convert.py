@@ -65,7 +65,7 @@ def main():
                         parts[i] = convert_str(part)
                 new_line = "**".join(parts)
                 outfile.write(new_line)
-            outfile.write(f" Currency conversion perfomed on {str(datetime.datetime.now())[:11]}.")
+            outfile.write(f" Currency conversion performed on {str(datetime.datetime.now())[:11]}.")
 
 
 if __name__ == "__main__":
