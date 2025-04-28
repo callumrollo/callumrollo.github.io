@@ -10,11 +10,11 @@ I am a big fan of maps (see my [post on leaflet maps with Python]({filename}/art
 
 I use maps.me offline maps for android as my primary navigation tool. You can import these .kml files easily as bookmarks. Alternatively, you can convert them to GPX files for use with e.g. oruxmaps.
 
-- bohusleden [homepage](https://www.westswedentrails.com/en/delled/bohusleden) [route as kml file](https://callumrollo.com/files/bohusleden.kml) 350 km of trails that wind from Gothenburg up to the Norwegian border. I've only hiked the southern ~ 100 km
-- pilgrimsleden [homepage](https://www.vastsverige.com/mellerud/produkter/pilgrimsleden/) [route as kml file](https://callumrollo.com/files/Pilgrimsleden-Norra-Dalsland.kml). Lovely 3-4 day hike ending in Åmål. Good in winter as well.
-- vindskyddskartan [vindskyddskartan.se](https://vindskyddskartan.se/en/) [windshelters kml file](https://callumrollo.com/files/vindskyddskartan.kml). Incredibly useful resource. Over 4000 windshelters in Sweden that you can sleep in for free, no booking required.
-- kattegatleden [kattegattleden.se](https://kattegattleden.se/en)  [route as kml file]((https://callumrollo.com/files/vindskyddskartan.kml)400 km cycling route along the coast from Gothenburg to Helsinborg
-- gravel trails around Gothenburg [all roads as kml file]((https://callumrollo.com/files/vindskyddskartan.kml). This is a files copied from mollbrink.se, described below. Warning! It's 200 MB
+- bohusleden [homepage](https://www.westswedentrails.com/en/delled/bohusleden) 350 km of trails that wind from Gothenburg up to the Norwegian border. I've only hiked the southern ~ 100 km [download route as kml file](https://callumrollo.com/files/bohusleden.kml) 
+- pilgrimsleden [homepage](https://www.vastsverige.com/mellerud/produkter/pilgrimsleden/) Lovely 3-4 day hike ending in Åmål. Good in winter as well. [Download route as kml file](https://callumrollo.com/files/Pilgrimsleden-Norra-Dalsland.kml). 
+- vindskyddskartan [vindskyddskartan.se](https://vindskyddskartan.se/en/) . Incredibly useful resource. Over 4000 windshelters in Sweden that you can sleep in for free, no booking required. [download all locations of windshelters as kml file](https://callumrollo.com/files/vindskyddskartan.kml)
+- kattegatleden [kattegattleden.se](https://kattegattleden.se/en) 00 km cycling route along the coast from Gothenburg to Helsinborg.  [Download route as kml file](https://callumrollo.com/files/vindskyddskartan.kml)4
+- gravel trails around Gothenburg . This is a files copied from mollbrink.se, described below. [Download all roads as kml file](https://callumrollo.com/files/vindskyddskartan.kml) Warning! This file is > 200 MB
 
 
 ### Cool sites
