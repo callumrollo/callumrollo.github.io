@@ -61,11 +61,12 @@ Summary: The tools I use
 
 - Aegis: FOSS OTP authenticator
 - Antenna pod: FOSS podcast app
-- Black Player for music
+- Black Player: Good music player
 - KDE conect: bliateral control of phone/laptop running KDE
 - Komoot: nice cycling maps
 - MAPS.ME: Great offline maps provider. Essential for hiking
-- Sigal: My preferred E2E encrypted, privacy respecting messaging/video call app
+- Signal: My preferred E2E encrypted, privacy respecting messaging/video call app
+- Strava: The one good social network (until Wilhelm replaces it with something on ATprotocol)
 - Wise: Decent multicurrency cash card and transfers
 - Yr: Best weather service for the nordic region
 
