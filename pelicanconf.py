@@ -23,6 +23,7 @@ FAVICON = SITEURL + '/images/favicon.ico'
 BROWSER_COLOR = '#333333'
 PYGMENTS_STYLE = 'monokai'
 ARTICLE_ORDER_BY = 'reversed-modified'
+DISABLE_URL_HASH = True
 
 ROBOTS = 'index, follow'
 

@@ -47,7 +47,10 @@ def convert_str(raw_str):
     currencies_out = currencies_out[1:-1].split(",")
     sig_fig = max(len(str(amount_in))-3, 1)
     converted_amounts = convert_currencies(amount_in, currency_in, currencies_out)
-    out_str = format_amounts(converted_amounts, sig_fig)
+    try:
+        out_str = format_amounts(converted_amounts, sig_fig)
+    except:
+        return f"{amount_in} currency_in"
     return out_str
 
 
