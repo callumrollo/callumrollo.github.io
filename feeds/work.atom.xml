@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Callum Rollo - work</title><link href="https://callumrollo.github.io/" rel="alternate"></link><link href="/feeds/work.atom.xml" rel="self"></link><id>https://callumrollo.github.io/</id><updated>2025-06-09T21:30:00+01:00</updated><subtitle>Recovering oceanographer</subtitle><entry><title>A More Perfect Union?</title><link href="https://callumrollo.github.io/swedish-unions.html" rel="alternate"></link><published>2025-06-09T21:00:00+01:00</published><updated>2025-06-09T21:30:00+01:00</updated><author><name>Callum Rollo</name></author><id>tag:callumrollo.github.io,2025-06-09:/swedish-unions.html</id><summary type="html">&lt;p&gt;How unions work in Sweden, from a British perspective&lt;/p&gt;</summary><content type="html">&lt;h1&gt;work in progress!&lt;/h1&gt;
+&lt;h3&gt;to include&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The Nordic model&lt;/li&gt;
+&lt;li&gt;History of unions in Sweden&lt;/li&gt;
+&lt;li&gt;The current state of affairs (with numbers)&lt;/li&gt;
+&lt;li&gt;Pro-worker results of this&lt;/li&gt;
+&lt;li&gt;Comparison to e.g. UK&lt;/li&gt;
+&lt;li&gt;Labour strife wrt union density&lt;/li&gt;
+&lt;li&gt;recent wins&lt;/li&gt;
+&lt;li&gt;where to next?&lt;/li&gt;
+&lt;li&gt;unions and me&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Swedish unions and me&lt;/h1&gt;
+&lt;p&gt;As a labour migrant to Sweden, my experience of unions started before I ever set foot on Swedish soil. One of the mandatory pre-requisites before being granted a work visa, is that a trade union representative must evaluate the contract you have been offered and confirm that it is "at least on par with Swedish collective agreements or common practice in your profession or industry" (&lt;a href="https://www.migrationsverket.se/en/you-want-to-apply/work/employee-or-self-employed/employees.html#svid10_2cd2e409193b84c506a30059"&gt;migration agency website&lt;/a&gt;). These collective agreements cover some 90 % of workers in Sweden. A statistic that has remained pretty stable, even as the rate of unionisation has dropped below 70 % in recent years.&lt;/p&gt;
+&lt;p&gt;As a data engineer/oceanographer and one-person data department at a small non-profit, I do not have a union-drafted collective contract at my job. However, I am a member, of &lt;a href="https://www.naturvetarna.se/"&gt;naturvetarna&lt;/a&gt; , the Swedish union of natural scientists. One of 23 constituent members of Saco, the academics union. This provides me with a number of benefits including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Negotiating sector-wide salary rises&lt;/li&gt;
+&lt;li&gt;Providing legal support and advice in case of a dispute&lt;/li&gt;
+&lt;li&gt;Providing granular annual salary statistics of similar professionals&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;What a union does for you&lt;/h1&gt;
+&lt;p&gt;As well as approving all contracts in covered industries, unions are responsible for negotiating with business owners each year to set "the mark". This is the percentage pay rise that the unions agree, at national, industry, and company level, to use as the basis of negotiations. This number is often referred to as "a floor, not a ceiling". Each worker has the right to an individual salary negotiation each year, and this mark is typically used as the agreed starting point of negotiations. A manager must justify in writing if they give a worker a pay rise that is below the agreed mark for that year.&lt;/p&gt;
+&lt;h1&gt;A UK comparison&lt;/h1&gt;
+&lt;p&gt;I was a member of UCU, the UK academic union for the 4 years of my PhD. The working conditions for PhD candidates in Sweden are vastly superior, due in no short part to union advocacy for PhD candidates as workers, not students/free labour.&lt;/p&gt;
+&lt;h1&gt;The history of Swedish unions&lt;/h1&gt;
+&lt;p&gt;Swedish unions arose from a period of great conflict between workers and owners at the beginning of the 20th century. Working conditions were poor, and large strikes regularly crippled the nation's economy. Eventually, owners and labour leaders came to an agreement. The business owners would negotiate directly with union leaders on to ensure good wages and working conditions. In turn, the unions leaders would maintain discipline amongst the workforce and disavow wildcat strikes.&lt;/p&gt;
+&lt;p&gt;This lead to a counter-intuitive state of affairs. One of the most union-dense countries in the world has vanishingly few strikes, the traditional tool or organised labour.&lt;/p&gt;
+&lt;p&gt;described in &lt;a href="https://callumrollo.github.io/flask_leaflet.html"&gt;internalarticle&lt;/a&gt;
+a regular sentence&lt;sup id="sf-swedish-unions-1-back"&gt;&lt;a href="#sf-swedish-unions-1" class="simple-footnote" title="this will be a footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;Resources&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Here's a &lt;a href="https://www.unionen.se/in-english/how-swedish-labour-market-works"&gt;great explainer&lt;/a&gt; of how Swedish unions work from unionen ("the union"), Sweden's largest union.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;references will appear here&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-swedish-unions-1"&gt;this will be a footnote &lt;a href="#sf-swedish-unions-1-back" class="simple-footnote-back"&gt;↩︎&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="work"></category><category term="sweden"></category><category term="work"></category><category term="union"></category><category term="social"></category></entry></feed>
