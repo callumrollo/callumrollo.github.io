@@ -151,6 +151,8 @@ The more poorly formatted the website, the better the quality of ideas.
 
 [Julia Evans](https://jvns.ca/)
 
+[Robert Heaton](https://robertheaton.com)
+
 ## Sites I visit when I Should Be Writing
 
 [Existential comics](https://existentialcomics.com/) a good intro to various schools of philosophy

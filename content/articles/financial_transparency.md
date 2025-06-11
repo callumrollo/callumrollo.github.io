@@ -26,12 +26,12 @@ As explained in the main article, I was originally inspired by the excellent inv
 
 - I should return to some regular form of charitable giving, rather than my current rather scattergun approach
 - When my parents eventually pass away, I expect to inherit something on the order of £100'000. I hope that, when the time comes, I have the financial position and moral integrity to give it away.
-- Once I have saved enough, I have a vague plan to gift a close friend of mine enough to get them onto the housing ladder.
-- I have no plans to have children, and you can't take it with you so...
+- Once I have saved enough, I have a vague plan to gift a close friend of mine enough to get them onto the housing ladder. I have also been inspired by the idea of housing coops. Maybe I could gift/loan my savings to an organisation like Radical Routes that supply funding for new housing cooperatives
+- I do not plan to have children, and you can't take it with you!
 
 # Limitations and wider context
 
-A lot of asterisks apply to my exhortations of financial transparency. I have many compounding privileges of being a highly paid & educated white cis-hetero man living in the global North. These privileges insulate me from many potential harms. To me, benefiting from these privileges makes it all the more important that I share this financial information. Systems of dominance and hierarchy are easier to maintain when those who are disadvantaged don't know they details of the inequality. 
+A lot of asterisks apply to my exhortations of financial transparency. I have many compounding privileges of being a highly paid & educated white cis-hetero man living in the global North. These privileges insulate me from many potential harms. To me, benefiting from these privileges makes it all the more important that I share this financial information. Systems of dominance and hierarchy are easier to maintain when those who are disadvantaged don't know the details of the inequality. This kind of individual action is no substitute for the much increased financial transparency that is essential for a fairer society.
 ### Counter arguments
 
 - **How could this be used against me?** If you are looking to blackmail me, this is probably quite useful information to have, but I am not a politically exposed person.
@@ -40,7 +40,7 @@ A lot of asterisks apply to my exhortations of financial transparency. I have ma
 
 ### Morality of this stance
 
-If you have read this far, I would encourage you to follow suit! If you don't feel comfortable posting your salary the internet for all to see, at least be open to discussing your salary and financial situation with colleagues, friends and acquaintances. Except for exploitative bosses, we all benefit from increased openness around this old taboo topic.
+If you have read this far, I would encourage you to follow suit! If you don't feel comfortable posting your salary on the internet for all to see, at least be open to discussing your salary and financial situation with colleagues, friends and acquaintances. Except for exploitative bosses, we all benefit from increased openness around this old taboo topic.
 
 
 
