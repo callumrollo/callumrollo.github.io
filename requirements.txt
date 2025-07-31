@@ -1,0 +1,7 @@
+pelican
+markdown
+typogrify
+ghp-import
+numpy
+requests
+pelican-simple-footnotes
