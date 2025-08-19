@@ -1,12 +1,12 @@
 Title: Recipes
 Date: 2025-08-12 13:10
-Modified: 2025-08-12 13:10
+Modified: 2025-08-19 13:10
 Category: home
 Tags: home, recipe, list
 Slug: recipes
 Summary: Food that I endorse
 
-All of these recipes have been used, adapted  and endorsed by me, an actual human being. They are vegan but don't let that put you off.
+All of these recipes have been used, adapted  and endorsed by me, a real person. They are vegan but don't let that put you off.
 
 ### Aubergine and tomato curry
 
@@ -58,6 +58,40 @@ An all time favourite mil flavourful curry.I have prepared this more than any ot
 6. When cooked, stir in fresh coriander leaves and/or spinach
 
 **Origin:** Mum. 
+
+
+### Tagine
+
+A very pleasing sweet spicy dish. having a tagine pan that can go in the oven really helps with the caramelisation, but you can make do with a casserole dish
+
+**Ingredients**
+
+- 1 sweet potato (about 300g/10½oz), peeled and cut into roughly 2cm chunks
+- 1 aubergine, cut into roughly 2.5cm chunks
+- 2 courgettes, halved lengthways, sliced into 2cm half-moons
+- 1 red pepper, stalk removed, seeds removed, cut into thick slices 
+- 1 small onion, thinly sliced
+- 4 garlic cloves, thinly sliced
+- 1 tsp ground coriander
+- 1 tsp ground cumin
+- 400g tin chopped tomatoes
+- 1 tbsp harissa paste
+- 2 tbsp clear honey or e.g. agave syrup
+- 100gready-to-eat dried apricots, halved
+- 400g tin chickpeas, rinsed and drained
+- handful chopped fresh coriander, to garnish
+- salt and freshly ground black pepper
+
+
+**Instructions**
+
+1. Preheat the oven to 190 C
+2. Mix the sweet potato, aubergine, courgette and red pepper in a large bowl. Drizzle over 2 tablespoons of the oil and mix to coat. Season generously with salt and pepper
+3. Roast vegetables until browned
+4. Heat the remaining oil in a lidded casserole over a medium heat. Add the onions and fry for 3–5 minutes, stirring regularly, until softened. Add the garlic, coriander and cumin and fry for 1–2 minutes, stirring frequently, while the vegetables roast
+5. Stir in the chopped tomatoes, harissa paste, honey, apricots and chickpeas until well combined. Add the vegetables and cook for 2–3 minutes.
+6. Cover and transfer to the oven. Cook for 30 minutes, then stir in 200ml/7fl oz cold water until well combined and return to the oven, covered, for a further 15 minutes, or until the tagine is thick and the vegetables are tender.
+7. Sprinkle the tagine with the chopped coriander and serve with freshly cooked couscous or bread
 
 
 -------------
