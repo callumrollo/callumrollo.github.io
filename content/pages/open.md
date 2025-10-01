@@ -16,16 +16,24 @@ To take advantage of this offer, email c.rollo@outlook.com or text SOFA to 1-800
 
 ----------------------------------
 
+### Hosted 2025
+
+- Birte for ~ 10 days for Theo's graduation 
+- Pete for another summer adventure - 5 nights
+- Asmara's friends Elise and Holden for 4 nights including Way out West
+- Natalia and Erik for midsommar - 2 nights
+- Various family visits
+
 ### Hosted 2024
 
 - Birte for ~ 10 days for PhD graduation
 - Salar for a week when moving back to Gothenburg
 - Natalia for 2 nights (work trip and D&D)
-- Natalia (again) and Eric for new year - two nights
+- Natalia (again) and Erik for new year - two nights
 - Peter for our annual Scandinavian adventure - four nights
 - 6 separate groups of warm showers cyclists for one or two nights each
 
-Last updated January 2025
+Last updated September 2025
 
 
 -------------
