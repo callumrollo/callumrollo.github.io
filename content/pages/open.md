@@ -22,6 +22,7 @@ To take advantage of this offer, email c.rollo@outlook.com or text SOFA to 1-800
 - Pete for another summer adventure - 5 nights
 - Asmara's friends Elise and Holden for 4 nights including Way out West
 - Natalia and Erik for midsommar - 2 nights
+- Vincent for 2 weeks while between apartments
 - Various family visits
 
 ### Hosted 2024

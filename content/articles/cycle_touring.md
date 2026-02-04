@@ -58,7 +58,7 @@ For a longer trip (2 weeks or more) I will also pack
 - Make sure you can use your tools and that e.g. spare tube is correct size and valve
 # Software and navigation
 
-I use maps.me offline maps for android as my primary navigation tool. This is preferably to google/apple maps as you can download the regions you will cycle in ahead of time. You just need some storage space on your phone. The entirety of the UK takes up a couple of GBs, equivalent to a film or ~ 20 albums of music.
+I use "organic maps" offline maps for android as my primary navigation tool. This is preferably to google/apple maps as you can download the regions you will cycle in ahead of time. You just need some storage space on your phone. The entirety of the UK takes up a couple of GBs, equivalent to a film or ~ 20 albums of music.
 
 While on the bike, I have my phone in aeroplane mode to cut down on battery usage. maps.me just uses location data from the phone GPS, which is not disabled by aeroplane mode. I will often record my route on strava too, which takes some battery.  I like to use a phone holder on my handlebars for ease of access. But often make do with a cycle jersey pocket.
 
@@ -81,7 +81,7 @@ For day to day navigation I will:
 - On the bike I will not use active/voice navigation as it takes a lot of battery. Instead i will just periodically check that I am en route and remember the next few junctions/turns
 - maps.me is pretty good for finding grocery stores/cafes etc. But I will sometimes use google maps for e..g opening times
 
-I have some useful routefiles, mostly Swedish, in  [maps page]({filename}/pages/maps.md)
+I have some useful routefiles, mostly in Sweden, on the [maps page]({filename}/pages/maps.md)
 
 ### Wild camping
 

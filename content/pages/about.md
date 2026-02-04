@@ -66,7 +66,7 @@ Supervisor: Dr Nicholas Harmon
 
 [c.rollo@outlook.com](mailto:c.rollo@outlook.com)
 
-I prefer [Signal](https://www.signal.org/) as a messaging app. If you have my Swedish +46 number you'll find me there, you can alse search for callum.16 or use my [Signal link](https://signal.me/#eu/vVTfRWX6HkcX5wsuomv2wg_b_JyA5TQDgLStqYOtkpDZUvpL8UZCt4IvThrqhY-j).
+I prefer [Signal](https://www.signal.org/) as a messaging app. If you have my Swedish +46 number you'll find me there, you can alse search for callum.16 or use my [Signal link](https://signal.me/#eu/jh5GwDQAULGS7IWcOgGuKkOetEnR7gnKu3wVtqYeBHqI7h6HhThGpp71xsSDz8_j).
 
 If you're in/near Gothenburg, why not come meet me irl? [open invitation]({filename}/pages/open.md)
 

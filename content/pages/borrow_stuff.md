@@ -4,7 +4,7 @@ Category: Generic
 Slug: gear
 Summary: Stuff I have
 
-I have a lot of stuff! It spends too much time in the cupboard. Here are some things you can borrow from me:
+I have a lot of stuff! It spends too much time in the cupboard. Here are some things you can borrow from me
 
 # Outdoor gear
 ### Camping
@@ -17,9 +17,7 @@ I have a lot of stuff! It spends too much time in the cupboard. Here are some th
 - Winter sleeping bag to 5 C
 - Down sleeping bag to -10 C 
 - Inflatable mat X 2
-- Rucksack 65 L
-- Rucksack 35 L
-- Rucksack 20 L
+- Rucksacks: 70 L, 60 L, 35 L, 30 L, 20 L
 - Water carrier 10 L
 - Gas stove and pans
 - Camping plates, cutlery, flasks etc.
@@ -60,14 +58,12 @@ I have a lot of stuff! It spends too much time in the cupboard. Here are some th
 
 ### Bikes
 
-- Shopping bike 170 - 190 cm rider
+- 3 speed hipster bike 170 - 190 cm rider
 - Road bike 170 - 190 cm rider
 - Touring bike 170 - 190 cm rider
-- Mountain bike 160 mm full suspension 170 - 190 cm rider
 - Gravel bike 170 - 190 cm rider
 - Touring bike 160 - 180 cm rider
 - Shopping bike 160 - 180 cm rider
-- Folding bike 150 - 190 cm rider
 - E-cargo bike 180 - 190 cm rider
 - Helmet X 2
 - Ortlieb top roller panniers one pair
@@ -84,12 +80,13 @@ Bear in mind that if I'm joining for your adventure, I'll need some of this gear
 - Knitting needles and yarn
 - Cordless drill, bits and screws
 - Basic carpentry tools
-- Access to a shared carpentry room in my apartment complex
 - Extensive bike tools
-- Bolt croppers and angle grinder
+- Bolt cutters and angle grinder
 - Knife steel and whetstones
 - Electronics toolset (small scredrivers, phone screen removal tools etc.)
+- Soldering iron
 - Router, ethernet cables, switch, old Linux laptops
+- Baking stuff
 - 35mm film camera (Minolta) and external flash for the hotshoe
 
 Some of this stuff I'm pretty good with (especially bike tools), for others you'll need to bring your own expertise! I suck at sewing and knife sharpening.
