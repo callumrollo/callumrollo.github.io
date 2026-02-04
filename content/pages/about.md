@@ -4,7 +4,12 @@ Category: Generic
 Slug: aboutme
 Summary: About the author
 
-As of late 2021, I work as a data scientist at [Voice of the Ocean foundation (VOTO)](https://observations.voiceoftheocean.org/). I am responsible for processing, correcting, standardising and distributing scientific data from our fleet of autonomous platforms. In my day-to-day work, I build and monitor pipelines for processing near real time data, maintain servers and create websites for viewing/interrogating data. I also work with other data managers at organisations like [SMHI](https://www.smhi.se/en),  [EMODnet](https://emodnet.ec.europa.eu/en) and [IOOS/NOAA](https://ioos.noaa.gov/)to standardise and efficiently distribute data.
+
+[link to personal section](#personal)
+
+### Career
+
+As of late 2021, I work as a data scientist at [Voice of the Ocean foundation (VOTO)](https://observations.voiceoftheocean.org/). I am responsible for processing, correcting, standardising and distributing scientific data from our fleet of autonomous platforms. In my day-to-day work, I build and monitor pipelines for processing near real time data, maintain servers and create websites for viewing/interrogating data. I also work with other data managers at organisations like [SMHI](https://www.smhi.se/en),  [EMODnet](https://emodnet.ec.europa.eu/en) and [IOOS/NOAA](https://ioos.noaa.gov/) to standardise and efficiently distribute data.
 
 I work a lot with [ERDDAP](https://github.com/ERDDAP/erddap), a data broker server that makes it much easier to share well standardised oceanographic data. I manage the [VOTO ERDDAP](https://erddap.observations.voiceoftheocean.org/erddap/index.html) where all our data are hosted. I have co-organised and presented several in person and online webinars teaching data users and admins how to best use ERDDAP for distributing oceanographic data.
 
@@ -12,7 +17,6 @@ I am a Pythonista and proponent of free software for science. Several of my proj
 
 [Blog posts](/)
 
-### Career
 
 **2021 - present** Data scientist/physical oceanographer Voice of the Ocean Foundation
 
@@ -35,6 +39,7 @@ I am a Pythonista and proponent of free software for science. Several of my proj
 To request a copy of any of my publications that have ended up behind a paywall, please email me. This is completely legal and scientists actively encourage it.
 
 ### Selected posters and talks
+
 2023 [EMODnet jamboree, Brussels](../images/emodnet_2023.pdf)
 
 2022 [UG2 Seattle](../images/ug2_2022.pdf)
@@ -61,14 +66,13 @@ Thesis title: Approximating 3D seismic velocities under Sumatra using ambient no
 Supervisor: Dr Nicholas Harmon
 
 -----------------------
+<h3 id="personal">Personal</h3>
 
-### Contact me
-
-[c.rollo@outlook.com](mailto:c.rollo@outlook.com)
+Why not send me an email :) [c.rollo@outlook.com](mailto:c.rollo@outlook.com)
 
 I prefer [Signal](https://www.signal.org/) as a messaging app. If you have my Swedish +46 number you'll find me there, you can alse search for callum.16 or use my [Signal link](https://signal.me/#eu/jh5GwDQAULGS7IWcOgGuKkOetEnR7gnKu3wVtqYeBHqI7h6HhThGpp71xsSDz8_j).
 
-If you're in/near Gothenburg, why not come meet me irl? [open invitation]({filename}/pages/open.md)
+If you're in/near Gothenburg, come meet me irl! [open invitation]({filename}/pages/open.md)
 
 ### Various internet presences:
 
@@ -90,6 +94,7 @@ With varying levels of competence
 - Task automation
 - Python
 - Cycling and bicycle maintenance
+- Dumpster diving
 - Standardisation of data processing
 - FOSS in the geosciences
 - The pros/cons of preprints and open peer review
@@ -99,9 +104,12 @@ With varying levels of competence
 - Climate breakdown
 - Unions and why you should join one
 - Heterodox economics
-- Rewilding as a method of environmental and social regeneration
+- Rewilding
+- Ice skating
+- Cybernetics
 - Infosec, cryptography, [online security](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 - Trail cameras for wildlife observation
+- Cyberpunk (RIP)
 
 See also [reading list]({filename}/articles/reading_list.md)
 
