@@ -20,6 +20,7 @@ You can import these .kml files easily as bookmarks/routes into maps.me. Alterna
 
 ### Cool sites
 
+- [westswedentrails](https://westswedentrails.se/en) has a lot of the long distance hiking and cyling trails in west sweden.
 - [https://gpx2kml.com](https://gpx2kml.com) convert between GPX and KML formats
 - Lots of gravel data available on [mollbrink.se](https://www.mollbrink.se/). The author has extracted all the gravel maps in Sweden from OSM data.
 ### Navigation and software
