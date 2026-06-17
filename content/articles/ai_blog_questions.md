@@ -1,4 +1,4 @@
-Title: title
+Title: AI questions blog challenge
 Date: 2026-06-17 12:00
 Modified: 2026-06-17 12:00
 Category: ai
@@ -6,7 +6,7 @@ Tags: ai, writing, oceanography, sci-fi
 Slug: aiblogquestions
 Summary: 7 questions prompt on my thoughts on AI
 
-Inspired by [Kev Quirk's writing](https://kevquirk.com/ai-blog-questions-challenge)
+Inspired by [Kev Quirk's writing](https://kevquirk.com/ai-blog-questions-challenge) it's a challenge that's doing the rounds and I would like to Engage with the Discourse without going back on social media.
 
 
 ### 1. How was your first experience with AI models?
@@ -33,7 +33,7 @@ I find it morally offensive to use LLMs to imitate art and skip out the creative
 ### 6. Internet is flooded with AI slop now, full of generated text, images, audio, and videos. How do you filter it from authentic human creation? Do you have a strategy?
 
 
-I will never forgive these bastards for what they did to the internet. A network that allowed unparalleled connection to other people around the globe now filled with botshit and engagement farming noise. I read writing from people who I know are people.
+I will never forgive these wreckers for what they did to the internet. A network that allowed unparalleled connection to other people around the globe now filled with botshit and engagement farming noise. I read writing from people who I know are people.
 
 
 ### 7. Are you hopeful for a better future with A.I. or a dystopian one?
