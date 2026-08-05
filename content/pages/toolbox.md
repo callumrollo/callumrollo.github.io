@@ -67,7 +67,7 @@ Summary: The tools I use
 - Organic Maps: Great offline maps provider. Essential for hiking.Made by some of the maps.me devs after the original project was enshittified
 - Paprika3: Extract recipes from the essay-lenght sites that are the norm these days. Lifesaver
 - Signal: My preferred E2E encrypted, privacy respecting messaging/video call app
-  Storygraph: An open alternative to GoodReads for sharing your reading lists
+-  Storygraph: An open alternative to GoodReads for sharing your reading lists
 - Strava: The one good social network (until Wilhelm replaces it with something on ATprotocol)
 - Wise: Decent multicurrency cash card and transfers
 - Yr: Best weather service for the nordic region

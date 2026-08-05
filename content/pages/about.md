@@ -80,7 +80,7 @@ If you're in/near Gothenburg, come meet me irl! [open invitation]({filename}/pag
 - [bluesky](https://bsky.app/profile/callumrollo.com)
 - [twitter](https://twitter.com/callum_rollo) (no longer used, thanks Elon)
 - [stack overflow](https://stackoverflow.com/users/13208790/marcos)
-- [Voice of the Ocean team page](https://voiceoftheocean.org/meet-the-crew/)
+- [Voice of the Ocean team page](https://voiceoftheocean.org/about-us/employees/)
 - [ORCID](https://orcid.org/0000-0002-5134-7886)
 - [UEA Python presentations](https://ueapy.github.io/author/callum-rollo.html) 
 

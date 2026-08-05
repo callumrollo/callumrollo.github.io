@@ -67,7 +67,6 @@ I would encourage any oceanographer who wants to better understand the computati
 
 If you want updates on future OHW activity, You can follow them on [twitter](https://twitter.com/oceanhackweek) or sign up to their low volume [mailing list](https://oceanhackweek.org/about/contact.html). I am also happy to answer questions about my experience of it.
 
-How does such a great event come together to provide a perfect venue for learning and hacking? I assume it takes a lot of effort, organising, and ingenuity from [the committee](https://oceanhackweek.github.io/our-team.html) (once more a massive thank you, you're all awesome). But I suspect [Filipe](https://github.com/ocefpaf) would say it's
+How does such a great event come together to provide a perfect venue for learning and hacking? I assume it takes a lot of effort, organising, and ingenuity from [the committee](https://oceanhackweek.github.io/our-team.html) (once more a massive thank you, you're all awesome). But I suspect [Filipe](https://github.com/ocefpaf) would say it's magic.
 
-![magic](https://media.giphy.com/media/12NUbkX6p4xOO4/giphy.gif)
 

@@ -28,7 +28,7 @@ Strap yourself in buddy, because in this tutorial, we're going to make that drea
 ### Prerequisites
 
 - A basic understanding of the terminal, Python and git 
-- An account on [GitHub](https://github.com/join)
+- An account on [GitHub](https://github.com)
 - An account on [TestPyPI](https://test.pypi.org/account/register/)
 - A cool script*
 

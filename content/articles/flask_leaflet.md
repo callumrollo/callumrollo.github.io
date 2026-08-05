@@ -104,7 +104,7 @@ Exploring this file, you will see similar functions for adding isobaths and may 
 You've done it! A website of your own. Assuming you wish to share it with others (why else would you make a website?) you now need to host this on a server somewhere. This can seem daunting at first, but it's just a few easy steps. I have included the exact commands necessary in code blocks
 
 #### Get a cloud server running Ubuntu
-Check out links at the bottom of this page for some suggestions. I have used a Shared CPU Nanode (1 GB) from [linode](https://www.linode.com/) running Ubuntu 20.04 LTS.
+Check out links at the bottom of this page for some suggestions. I have used a Shared CPU Nanode (1 GB) from [akamai](https://www.akamai.com/) running Ubuntu 20.04 LTS.
 #### Login with SSH and update your server
 ```
 apt update && apt upgrade -y
@@ -184,4 +184,4 @@ This app only has one webpage, but you can easily add more. You could also try a
 - I learned flask from [TalkPython Training's Flask course](https://training.talkpython.fm/courses/explore_flask/building-data-driven-web-applications-in-python-with-flask-sqlalchemy-and-bootstrap) it goes into a lot more detail and enables you to make a really powerful, flexible website. It also covers deployment to the web in good detail
 - You can learn enough html and CSS to get by just by googling things when they break. [w3schools](https://www.w3schools.com/) have some good resources though, and the [bootstap docs](https://getbootstrap.com/docs/3.4/css/) are pretty good.
 - [leaflet maps](lhttps://leafletjs.com/) have some great tutorials. You could get most of the functionality of this app just using leaflet and json.
-- You can set yourself up with a cloud server for less than $/£/€ 10 a month from a cloud host like [Linode](https://www.linode.com/docs/guides/set-up-and-secure/) or [DigitalOcean](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04). Personally I'd avoid AWS at first as the learning curve is steeper, and it's a lot easier to end up accidentally running up a large bill. You can also search for credit codes/sign up links. You can typically get several months free this way.
+- You can set yourself up with a cloud server for less than $/£/€ 10 a month from a cloud host like [akamai](https://techdocs.akamai.com/cloud-computing/docs/set-up-and-secure-a-compute-instance) or [DigitalOcean](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04). Personally I'd avoid AWS at first as the learning curve is steeper, and it's a lot easier to end up accidentally running up a large bill. You can also search for credit codes/sign up links. You can typically get several months free this way.

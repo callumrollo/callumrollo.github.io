@@ -50,7 +50,7 @@ I sporadically give to causes including humanitarian relief, medical aid, refuge
 I currently volunteer at:
 
 - [solikyl](https://solikyl.se/): An organisation redistributing food that would be thrown out by bakeries and shops to anyone who wants it
-- [cykelkoket Gothenburg](https://www.cykelkoket.org/faq): An open workshop where anyone can learn to fix their bike
+- [cykelkoket Gothenburg](https://www.cykelkoket.org): An open workshop where anyone can learn to fix their bike
 
 I have been volunteering with food redistribution groups and bike kitchens since 2016 in Utrecht, Southampton, Norwich and Gothenburg.
 

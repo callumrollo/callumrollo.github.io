@@ -122,7 +122,7 @@ while [ 1 ]; do
 done
 ```
 
-Use [imagemagick](https://imagemagick.org/index.php) to crop and animate a bunch of figures into a gif. Written the night before a conference, don't judge me.
+Use [imagemagick](https://imagemagick.org) to crop and animate a bunch of figures into a gif. Written the night before a conference, don't judge me.
 
 ```
 #!/bin/bash
