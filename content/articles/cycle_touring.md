@@ -51,16 +51,16 @@ For a longer trip (2 weeks or more) I will also pack
 - Aero bars are also very nice, let you rest on your elbows
 - I use SPD pedals to keep my feet in position
 - Loading panniers on a front rack can help keep the wheel down when climbing
-- Having an barbag/small feedbag you can reach while riding is good for keeping fueled
+- Having an barbag/small feedbag you can reach while riding is good for keeping fuelled
 - When you pack for a trip, aim to have at least 10 % free space in your bags. You will never pack this efficiently again and will need space for food/rubbish/wet clothes
 - Setup your bike for comfort over speed. 
 - A second pair of open shoes (sandals/slides/flip-flops) are a huge quality of life improvement for evenings/breaks
 - Make sure you can use your tools and that e.g. spare tube is correct size and valve
 # Software and navigation
 
-I use "organic maps" offline maps for android as my primary navigation tool. This is preferably to google/apple maps as you can download the regions you will cycle in ahead of time. You just need some storage space on your phone. The entirety of the UK takes up a couple of GBs, equivalent to a film or ~ 20 albums of music.
+I use "organic maps" offline maps for android as my primary navigation tool. This is preferable to google/apple maps as you can download the regions you will cycle in ahead of time. You just need some storage space on your phone. The entirety of the UK takes up a couple of GBs, equivalent to a film or ~ 20 albums of music.
 
-While on the bike, I have my phone in aeroplane mode to cut down on battery usage. maps.me just uses location data from the phone GPS, which is not disabled by aeroplane mode. I will often record my route on strava too, which takes some battery.  I like to use a phone holder on my handlebars for ease of access. But often make do with a cycle jersey pocket.
+While on the bike, I have my phone in aeroplane mode to cut down on battery usage. organic maps just uses location data from the phone GPS, which is not disabled by aeroplane mode. I will often record my route on strava too, which takes some battery.  I like to use a phone holder on my handlebars for ease of access. But often make do with a cycle jersey pocket.
 
 When not wanting to look at a screen, I have used komoot with turn-by-turn navigation over bone conduction bluetooth headphones (I used trekx titanium) so as not to block my ears. This works pretty well.
 
@@ -77,9 +77,9 @@ My method for route planning:
 For day to day navigation I will:
 
 - Use a kml route if I have one
-- If not, I will pick where I want to go and manually put pins on the map of maps.me at junctions I need to take. I try to take back roads/tracks for a car-free ride. This takes some experience and has led to various off-road adventures that friends and family have (mostly) forgiven me for
+- If not, I will pick where I want to go and manually put pins on the map at junctions I need to take. I try to take back roads/tracks for a car-free ride. This takes some experience and has led to various off-road adventures that friends and family have (mostly) forgiven me for
 - On the bike I will not use active/voice navigation as it takes a lot of battery. Instead i will just periodically check that I am en route and remember the next few junctions/turns
-- maps.me is pretty good for finding grocery stores/cafes etc. But I will sometimes use google maps for e..g opening times
+- organic maps is pretty good for finding grocery stores/cafes etc. But I will sometimes use google maps for e..g opening times
 
 I have some useful routefiles, mostly in Sweden, on the [maps page]({filename}/pages/maps.md)
 
@@ -89,6 +89,7 @@ It is perfectly possible to wild camp in many places that it is not legal. There
 
 - Wait until near dusk before setting up if possible
 - Have an extra bottle to fill up with water before making camp for cooking etc.
+- Often it's nicer to cook a meal somewhere scenic mid evening before you make camp (ideal is a place with picnic bench and/or water source) then do a few more km to your campsite. You'll arrive closer to dusk and won't need to find water/make noise with cooking pans
 - Learn to read a map to find good camping spots
 - Think of line of site from roads, just the other side of a hedge can work great
 - Most people are nice and will not bother you!

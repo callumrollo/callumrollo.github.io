@@ -4,12 +4,12 @@ Category: Generic
 Slug: maps
 Summary: Useful map data
 
-I am a big fan of maps (see my [post on leaflet maps with Python]({filename}/articles/flask_leaflet.md)). I have collected various useful map files that I will share here. 
+I am a big fan of maps (see my [post on leaflet maps with Python]({filename}/articles/flask_leaflet.md)). I have collected various useful map files that I will share here. If you plan to do a bike tour, check out my post on  [cycle touring]({filename}/articles/cycle_touring.md).
 
 ### Useful files
 
 
-- Vindskyddskartan ([vindskyddskartan.se](https://vindskyddskartan.se/en/)) . Incredibly useful resource. Locationss and descriptions of over 4000 windshelters in Sweden that you can sleep in for free, no booking required. [download all locations of windshelters as kml file](https://callumrollo.com/files/vindskyddskartan.kml)
+- Vindskyddskartan ([vindskyddskartan.se](https://vindskyddskartan.se/en/)) . Incredibly useful resource. Locations and descriptions of over 4000 windshelters in Sweden that you can sleep in for free, no booking required. [download all locations of windshelters as kml file](https://callumrollo.com/files/vindskyddskartan.kml)
 - Bohusleden ([homepage](https://www.westswedentrails.com/en/delled/bohusleden)) 350 km of hiking trails that wind from Gothenburg up to the Norwegian border. I've only hiked the southern ~ 100 km [download route as kml file](https://callumrollo.com/files/bohusleden.kml) 
 - Pilgrimsleden ([homepage](https://www.vastsverige.com/mellerud/produkter/pilgrimsleden/)) Lovely 3-4 day pretty remote hike ending in Åmål. Good in winter as well. [Download route as kml file](https://callumrollo.com/files/Pilgrimsleden-Norra-Dalsland.kml). 
 - Kattegatleden ([kattegattleden.se](https://kattegattleden.se/en)) 400 km cycling route along the coast from Gothenburg to Helsinborg. Nice and gentle, mostly on cycle paths/quiet roads. [Download route as kml file](https://callumrollo.com/files/Kattegattleden.kml)
@@ -23,9 +23,12 @@ You can import these .kml files easily as bookmarks/routes into maps.me. Alterna
 - [westswedentrails](https://westswedentrails.se/en) has a lot of the long distance hiking and cyling trails in west sweden.
 - [https://gpx2kml.com](https://gpx2kml.com) convert between GPX and KML formats
 - Lots of gravel data available on [mollbrink.se](https://www.mollbrink.se/). The author has extracted all the gravel maps in Sweden from OSM data.
+- Gravel routes in west sweden https://westswedentrails.se/en
+- Gravel trails in Norway https://cyclenorway.com/en/national-gravel-routes/
+- Eurovelo routes - long distance cycle routes across europe https://en.eurovelo.com/
 ### Navigation and software
 
 I describe my navigation setup in some detail in [cycle touring]({filename}/articles/cycle_touring.md).
 ### Future work
 
-One day I might include a dynamic leaflet map here which displays all this data. But then this wouldn't be a pure clean static site anymore...
+One day I might include a dynamic leaflet map here which displays all this data. But then this wouldn't be a pure clean static site anymore!
