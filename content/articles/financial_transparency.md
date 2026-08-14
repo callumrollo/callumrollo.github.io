@@ -1,6 +1,6 @@
 Title: Financial Transparency and Me
 Date: 2024-12-28 12:50
-Modified:  2025-04-28 12:50
+Modified:  2026-08-14 12:50
 Category: personal
 Tags: finance, transparency, morality, open
 Slug: financial_transparency
@@ -17,6 +17,15 @@ In a way this could be considered a [warrant canary](https://en.wikipedia.org/wi
 # Original Inspiration
 
 As explained in the main article, I was originally inspired by the excellent investigative journalist and author [George Monbiot](https://www.monbiot.com/registry-of-interests/) to publish my income and financial interests. Monbiot makes the case that, as a journalist, he is in a public position of influence and, therefore, there is a public interest in knowing who pays him. I strongly agree with this and, though not in a public position myself (I doubt anyone who doesn't know me already has ever read this site) it is good to set an example of transparency and encourage others to do so.
+# Limitations and wider context
+
+A lot of asterisks apply to my exhortations of financial transparency. I have many compounding privileges of being a highly paid & educated white cis-hetero man living in the global North. These privileges insulate me from many potential harms. To me, benefiting from these privileges makes it all the more important that I share this financial information. Systems of dominance and hierarchy are easier to maintain when those who are disadvantaged don't know the details of the inequality. This kind of individual action is no substitute for the much increased financial transparency that is essential for a fairer society.
+### Counter arguments
+
+- **How could this be used against me?** If you are looking to blackmail me, this is probably quite useful information to have, but I am not a politically exposed person.
+- **Is this boastful? taboo?** It is not my intention. I am, frankly, embarrassed by how much money I make (no doubt the late great [David Graeber](https://web.archive.org/web/20190906050523/http://www.strike.coop/bullshit-jobs/) would have something to say about that). But this is not a boast. I started when I earned less than the [UK minimum wage](https://www.gov.uk/national-minimum-wage-rates) (yay for PhD stipends) and will continue to update now that I am near the top decile of Swedish earners. I respect [Kev Quirk's view](https://kevquirk.com/on-publishing-your-salary) that a salary statement can often come across as a boast. I try to elide that by explaining my position here.
+- **What about comparative advantage/salary negotiation?** it has been [persuasively argued](https://www.kalzumeus.com/2012/01/23/salary-negotiation/) that making your current salary known to an employer puts you at a stark disadvantage during salary negotiation. I am not motivated by money. If I make enough to keep a roof over my head and beers in the fridge I'm good. Yes, this harms my total lifetime earnings.
+
 # Evolution
 
 - In summer 2024 I added a conversion function for GBP, SEK and USD. This makes all the numbers in the page easily comparable. As a side effect if reminds of the [depressing trend in the Swedish kronor since I moved here in 2021](https://www.xe.com/currencycharts/?from=SEK&to=GBP&view=5Y)
@@ -29,16 +38,7 @@ As explained in the main article, I was originally inspired by the excellent inv
 - Once I have saved enough, I have a vague plan to gift a close friend of mine enough to get them onto the housing ladder. I have also been inspired by the idea of housing coops. Maybe I could gift/loan my savings to an organisation like Radical Routes that supply funding for new housing cooperatives
 - I do not plan to have children, and you can't take it with you!
 
-# Limitations and wider context
-
-A lot of asterisks apply to my exhortations of financial transparency. I have many compounding privileges of being a highly paid & educated white cis-hetero man living in the global North. These privileges insulate me from many potential harms. To me, benefiting from these privileges makes it all the more important that I share this financial information. Systems of dominance and hierarchy are easier to maintain when those who are disadvantaged don't know the details of the inequality. This kind of individual action is no substitute for the much increased financial transparency that is essential for a fairer society.
-### Counter arguments
-
-- **How could this be used against me?** If you are looking to blackmail me, this is probably quite useful information to have, but I am not a politically exposed person.
-- **Is this boastful? taboo?** It is not my intention. I am, frankly, embarrassed by how much money I make (no doubt the late great [David Graeber](https://web.archive.org/web/20190906050523/http://www.strike.coop/bullshit-jobs/) would have something to say about that). But this is not a boast. I started when I earned less than the [UK minimum wage](https://www.gov.uk/national-minimum-wage-rates) (yay for PhD stipends) and will continue to update now that I am near the top decile of Swedish earners.
-- **What about comparative advantage/salary negotiation?** it has been [persuasively argued](https://www.kalzumeus.com/2012/01/23/salary-negotiation/) that making your current salary known to an employer puts you at a stark disadvantage during salary negotiation. I am not motivated by money. If I make enough to keep a roof over my head and beers in the fridge I'm good. Yes, this harms my total lifetime earnings.
-
-### Morality of this stance
+# What about you?
 
 If you have read this far, I would encourage you to follow suit! If you don't feel comfortable posting your salary on the internet for all to see, at least be open to discussing your salary and financial situation with colleagues, friends and acquaintances. Except for exploitative bosses, we all benefit from increased openness around this old taboo topic.
 

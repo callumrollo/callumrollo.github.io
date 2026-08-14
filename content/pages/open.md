@@ -15,7 +15,11 @@ I have hosted family members, former colleagues, old friends, new friends, frien
 To take advantage of this offer, email c.rollo@outlook.com or text SOFA to 1-800-GBG-4-LIFE[ref]Standard carrier charges and terms and conditions apply. c.rollo industries cannot be held liable for the weather, lack of nightlife, or general vibes of Gothenburg. This does not affect your statutory rights. (For real though, message me on Signal: [callum.16](https://signal.me/#eu/vVTfRWX6HkcX5wsuomv2wg_b_JyA5TQDgLStqYOtkpDZUvpL8UZCt4IvThrqhY-j))[/ref].
 
 ----------------------------------
+### Hosted 2026
 
+- Vincent for another week or two while moving
+- Tristan twice for a long weekend, while he prepped for a cool research voyage to Svalbard
+- Asmara's good friend Jeremy from Texas for a few days
 ### Hosted 2025
 
 - Birte for ~ 10 days for Theo's graduation 
@@ -34,7 +38,7 @@ To take advantage of this offer, email c.rollo@outlook.com or text SOFA to 1-800
 - Peter for our annual Scandinavian adventure - four nights
 - 6 separate groups of warm showers cyclists for one or two nights each
 
-Last updated September 2025
+Last updated August 2026
 
 
 -------------

@@ -44,15 +44,12 @@ Swedish unions arose from a period of great conflict between workers and owners 
 This lead to a counter-intuitive state of affairs. One of the most union-dense countries in the world has vanishingly few strikes, the traditional tool or organised labour.
 
 
-described in [internalarticle]({filename}/articles/flask_leaflet.md)
-a regular sentence[ref]this will be a footnote[/ref].
 
 -------------
 ### Resources
 
 - Here's a [great explainer](https://www.unionen.se/in-english/how-swedish-labour-market-works) of how Swedish unions work from unionen ("the union"), Sweden's largest union.
 
-references will appear here
 
 
 
